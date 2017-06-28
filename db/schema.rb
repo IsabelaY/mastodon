@@ -972,6 +972,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_11_23_195926) do
     t.integer "visibility", default: 0, null: false
     t.text "spoiler_text", default: "", null: false
     t.boolean "reply", default: false, null: false
+    t.boolean "public_in_local"
     t.string "language"
     t.bigint "conversation_id"
     t.boolean "local"

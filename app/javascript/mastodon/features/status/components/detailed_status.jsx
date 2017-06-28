@@ -147,6 +147,7 @@ class DetailedStatus extends ImmutablePureComponent {
     }
 
     let media           = '';
+    let mediaIcon       = null;
     let applicationLink = '';
     let reblogLink = '';
     let localOnly = '';
@@ -205,6 +206,7 @@ class DetailedStatus extends ImmutablePureComponent {
             onToggleVisibility={this.props.onToggleMediaVisibility}
           />
         );
+        mediaIcon = 'video-camera';
       } else {
         media = (
           <MediaGallery
@@ -218,10 +220,9 @@ class DetailedStatus extends ImmutablePureComponent {
             onToggleVisibility={this.props.onToggleMediaVisibility}
           />
         );
+        mediaIcon = 'picture-o';
       }
-    } else if (status.get('spoiler_text').length === 0) {
-      media = <Card sensitive={status.get('sensitive')} onOpenMedia={this.props.onOpenMedia} card={status.get('card', null)} />;
-    }
+    } else media = <Card sensitive={status.get('sensitive')} onOpenMedia={this.props.onOpenMedia} card={status.get('card', null)} />;
 
     if (status.get('application')) {
       applicationLink = <> · <a className='detailed-status__application' href={status.getIn(['application', 'website'])} target='_blank' rel='noopener noreferrer'>{status.getIn(['application', 'name'])}</a></>;
@@ -320,11 +321,11 @@ class DetailedStatus extends ImmutablePureComponent {
             expanded={status.get('activity_pub_type') === 'Article' || !status.get('hidden')}
             onExpandedToggle={this.handleExpandedToggle}
             onTranslate={this.handleTranslate}
+            mediaIcon={mediaIcon}
             {...statusContentProps}
-          />
-
-          {status.get('activity_pub_type') === 'Article' ? null : media}
-
+          >
+            {status.get('activity_pub_type') === 'Article' ? null : media}
+          </StatusContent>
           {expanded && hashtagBar}
 
           <div className='detailed-status__meta'>
