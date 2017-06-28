@@ -346,8 +346,8 @@ class Status extends ImmutablePureComponent {
 
   render () {
     const { intl, hidden, featured, unread, showThread, scrollKey, pictureInPicture, previousId, nextInReplyToId, rootId } = this.props;
-
     let { status, account, ...other } = this.props;
+    let mediaIcon = null;
 
     if (status === null) {
       return null;
@@ -500,6 +500,7 @@ class Status extends ImmutablePureComponent {
             )}
           </Bundle>
         );
+        mediaIcon = 'video-camera';
       } else {
         media = (
           <Bundle fetchComponent={MediaGallery} loading={this.renderLoadingMediaGallery}>
@@ -518,6 +519,7 @@ class Status extends ImmutablePureComponent {
             )}
           </Bundle>
         );
+        mediaIcon = 'picture-o';
       }
     } else if (status.get('spoiler_text').length === 0 && status.get('card')) {
       media = (
@@ -573,6 +575,7 @@ class Status extends ImmutablePureComponent {
             </div>
 
             <StatusContent
+              mediaIcon={mediaIcon}
               status={status}
               onClick={this.handleClick}
               expanded={expanded}
@@ -581,9 +584,9 @@ class Status extends ImmutablePureComponent {
               collapsible
               onCollapsedToggle={this.handleCollapsedToggle}
               {...statusContentProps}
-            />
-
-            {status.get('activity_pub_type') === 'Article' ? null : media}
+            >
+              {status.get('activity_pub_type') === 'Article' ? null : media}
+            </StatusContent>
 
             {expanded && hashtagBar}
 
