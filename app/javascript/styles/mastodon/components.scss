@@ -1210,6 +1210,30 @@
     color: $highlight-text-color;
   }
 
+  .status__content__spoiler-link {
+    background: $action-button-color;
+
+    &:hover,
+    &:focus {
+      background: lighten($action-button-color, 7%);
+      text-decoration: none;
+    }
+
+    &::-moz-focus-inner {
+      border: 0;
+    }
+
+    &::-moz-focus-inner,
+    &:focus,
+    &:active {
+      outline: 0 !important;
+    }
+  }
+
+  .status__content__spoiler-icon {
+    margin: 0 0 0 4px;
+  }
+
   .status__content__text {
     display: none;
 
