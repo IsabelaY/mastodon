@@ -313,6 +313,7 @@ class Status extends ImmutablePureComponent {
     let statusAvatar, prepend, rebloggedByText;
 
     const { intl, hidden, featured, unread, showThread, scrollKey, pictureInPicture } = this.props;
+    let mediaIcon = null;
 
     let { status, account, ...other } = this.props;
 
@@ -458,6 +459,7 @@ class Status extends ImmutablePureComponent {
             )}
           </Bundle>
         );
+        mediaIcon = 'video-camera';
       } else {
         media = (
           <Bundle fetchComponent={MediaGallery} loading={this.renderLoadingMediaGallery}>
@@ -475,6 +477,7 @@ class Status extends ImmutablePureComponent {
             )}
           </Bundle>
         );
+        mediaIcon = 'picture-o';
       }
     } else if (status.get('spoiler_text').length === 0 && status.get('card') && !this.props.muted) {
       media = (
@@ -526,16 +529,18 @@ class Status extends ImmutablePureComponent {
             </div>
 
             <StatusContent
+              mediaIcon={mediaIcon}
               status={status}
               onClick={this.handleClick}
               expanded={!status.get('hidden')}
+              showThread={showThread}
               onExpandedToggle={this.handleExpandedToggle}
               onTranslate={this.handleTranslate}
               collapsable
               onCollapsedToggle={this.handleCollapsedToggle}
-            />
-
-            {status.get('activity_pub_type') === 'Article' ? null : media}
+            >
+              {status.get('activity_pub_type') === 'Article' ? null : media}
+            </StatusContent>
 
             <StatusActionBar scrollKey={scrollKey} status={status} account={account} onFilter={matchedFilters ? this.handleFilterClick : null} {...other} />
           </div>
