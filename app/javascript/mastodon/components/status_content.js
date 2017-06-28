@@ -69,6 +69,8 @@ class StatusContent extends React.PureComponent {
     collapsable: PropTypes.bool,
     onCollapsedToggle: PropTypes.func,
     intl: PropTypes.object,
+    mediaIcon: PropTypes.string,
+    children: PropTypes.element,
   };
 
   state = {
@@ -227,7 +229,7 @@ class StatusContent extends React.PureComponent {
   }
 
   render () {
-    const { status, intl } = this.props;
+    const { status, intl, children, mediaIcon } = this.props;
 
     const hidden = this.props.onExpandedToggle ? !this.props.expanded : this.state.hidden;
     const renderReadMore = this.props.onClick && status.get('collapsed');
@@ -273,7 +275,7 @@ class StatusContent extends React.PureComponent {
         </Permalink>
       )).reduce((aggregate, item) => [...aggregate, item, ' '], []);
 
-      const toggleText = hidden ? <FormattedMessage id='status.show_more' defaultMessage='Show more' /> : <FormattedMessage id='status.show_less' defaultMessage='Show less' />;
+      const toggleText = hidden ? [<FormattedMessage id='status.show_more' defaultMessage='Show more' key='0' />, mediaIcon ? <i className={`fa fa-fw fa-${mediaIcon} status__content__spoiler-icon`} aria-hidden='true' key='1' /> : null] : [<FormattedMessage id='status.show_less' defaultMessage='Show less' key='0' />];
 
       if (hidden) {
         mentionsPlaceholder = <div>{mentionLinks}</div>;
@@ -290,6 +292,7 @@ class StatusContent extends React.PureComponent {
           {mentionsPlaceholder}
 
           <div tabIndex={!hidden ? 0 : null} className={`status__content__text ${!hidden ? 'status__content__text--visible' : ''} ${status.get('activity_pub_type') === 'Article' ? 'article-type' : ''} translate`} lang={lang} dangerouslySetInnerHTML={content} />
+          {!hidden && children}
           {!hidden && poll}
           {!hidden && translateButton}
         </div>,
@@ -306,6 +309,7 @@ class StatusContent extends React.PureComponent {
           <div className={classNames} ref={this.setRef} tabIndex='0' onMouseDown={this.handleMouseDown} onMouseUp={this.handleMouseUp} key='status-content' onMouseEnter={this.handleMouseEnter} onMouseLeave={this.handleMouseLeave}>
             <div className='status__content__text status__content__text--visible translate' lang={lang} dangerouslySetInnerHTML={content} />
 
+            {children}
             {poll}
             {translateButton}
           </div>
@@ -318,6 +322,7 @@ class StatusContent extends React.PureComponent {
         <div className={classNames} ref={this.setRef} tabIndex='0' onMouseEnter={this.handleMouseEnter} onMouseLeave={this.handleMouseLeave}>
           <div className='status__content__text status__content__text--visible translate' lang={lang} dangerouslySetInnerHTML={content} />
 
+          {children}
           {poll}
           {translateButton}
         </div>
