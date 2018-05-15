@@ -1486,8 +1486,11 @@ pt-BR:
     does_not_match_previous_name: não corresponde ao nome anterior
   themes:
     contrast: Mastodon  (Alto contraste)
-    default: Mastodon (Noturno)
+    default: Colorides
     mastodon-light: Mastodon (Diurno)
+    mastodon: Mastodon (Noturno)
+    macaron: Macaron (Pastel claro)
+    fairy-floss: Fairy Floss (Pastel escuro)
   time:
     formats:
       default: "%H:%M em %d de %b de %Y"
