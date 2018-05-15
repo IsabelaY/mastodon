@@ -1615,8 +1615,9 @@ en:
     does_not_match_previous_name: does not match the previous name
   themes:
     contrast: Mastodon (High contrast)
-    default: Mastodon (Dark)
+    default: Colorides
     mastodon-light: Mastodon (Light)
+    mastodon: Mastodon (Dark)
     macaron: Macaron (Pastel light)
     fairy-floss: Fairy Floss (Pastel dark)
   time:
