@@ -1529,8 +1529,11 @@ pt-PT:
     does_not_match_previous_name: não coincide com o nome anterior
   themes:
     contrast: Mastodon (Elevado contraste)
-    default: Mastodon
+    default: Mastodon Colorides
     mastodon-light: Mastodon (Claro)
+    mastodon: Mastodon
+    macaron: Macaron (Pastel claro)
+    fairy-floss: Fairy Floss (Pastel escuro)
   time:
     formats:
       default: "%H:%M em %d de %b de %Y"
