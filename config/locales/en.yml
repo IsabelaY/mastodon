@@ -2064,8 +2064,9 @@ en:
     title: The terms of service of %{domain} are changing
   themes:
     contrast: Mastodon (High contrast)
-    default: Mastodon (Dark)
+    default: Colorides
     mastodon-light: Mastodon (Light)
+    mastodon: Mastodon (Dark)
     macaron: Macaron (Pastel light)
     fairy-floss: Fairy Floss (Pastel dark)
     system: Automatic (use system theme)
