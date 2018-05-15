@@ -2004,9 +2004,12 @@ pt-PT:
     title: Os termos de serviço de %{domain} estão a ser alterados
   themes:
     contrast: Mastodon (alto contraste)
-    default: Mastodon (escuro)
+    default: Mastodon Colorides
     mastodon-light: Mastodon (claro)
+    mastodon: Mastodon
+    macaron: Macaron (Pastel claro)
     system: Automático (usar tema do sistema)
+    fairy-floss: Fairy Floss (Pastel escuro)
   time:
     formats:
       default: "%H:%M em %d de %b de %Y"

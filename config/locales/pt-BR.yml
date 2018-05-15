@@ -2005,9 +2005,12 @@ pt-BR:
     title: Os termos de serviço do %{domain} estão mudando
   themes:
     contrast: Mastodon  (Alto contraste)
-    default: Mastodon (Noturno)
+    default: Colorides
     mastodon-light: Mastodon (Diurno)
     system: Automático (usar tema do sistema)
+    mastodon: Mastodon (Noturno)
+    macaron: Macaron (Pastel claro)
+    fairy-floss: Fairy Floss (Pastel escuro)
   time:
     formats:
       default: "%H:%M em %d de %b de %Y"
