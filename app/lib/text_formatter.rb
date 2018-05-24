@@ -116,6 +116,8 @@ class TextFormatter
       return link_to_artstation(username)
     when 'github.com'
       return link_to_github(username)
+    when 'instagram.com'
+      return link_to_instagram(username)
     end
 
     domain           = nil if local_domain?(domain)
@@ -166,6 +168,10 @@ class TextFormatter
 
   def link_to_github(username)
     "<span class=\"h-card\"><a href=\"https://github.com/#{username}\" target=\"blank\" rel=\"noopener noreferrer\" class=\"u-url mention\">@<span>#{username}@github.com</span></a></span>"
+  end
+
+  def link_to_instagram(username)
+    "<span class=\"h-card\"><a href=\"https://www.instagram.com/#{username}\" target=\"blank\" rel=\"noopener noreferrer\" class=\"u-url mention\">@<span>#{username}@instagram.com</span></a></span>"
   end
 
   def entity_cache
