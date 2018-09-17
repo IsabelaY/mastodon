@@ -6,7 +6,7 @@ class REST::StatusSerializer < ActiveModel::Serializer
   attributes :id, :created_at, :in_reply_to_id, :in_reply_to_account_id,
              :sensitive, :spoiler_text, :visibility, :language,
              :uri, :url, :replies_count, :reblogs_count,
-             :favourites_count, :edited_at
+             :favourites_count, :edited_at, :public_in_local
 
   attribute :favourited, if: :current_user?
   attribute :reblogged, if: :current_user?
@@ -78,6 +78,10 @@ class REST::StatusSerializer < ActiveModel::Serializer
 
   def url
     ActivityPub::TagManager.instance.url_for(object)
+  end
+  
+  def public_in_local
+    object.public_in_local == true
   end
 
   def favourited
