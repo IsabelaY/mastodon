@@ -21,6 +21,7 @@ class PostStatusService < BaseService
   # @option [Status] :quoted_status Optional status to quote
   # @option [String] :quote_approval_policy Approval policy for quotes, one of `public`, `followers` or `nobody`
   # @option [Boolean] :sensitive
+  # @option [Boolean] :public_in_local
   # @option [String] :visibility
   # @option [String] :spoiler_text
   # @option [String] :language
@@ -245,6 +246,7 @@ class PostStatusService < BaseService
       sensitive: @sensitive,
       spoiler_text: @options[:spoiler_text] || '',
       visibility: @visibility,
+      public_in_local: @options[:public_in_local],
       language: valid_locale_cascade(@options[:language], @account.user&.preferred_posting_language, I18n.default_locale),
       application: @options[:application],
       rate_limit: @options[:with_rate_limit],

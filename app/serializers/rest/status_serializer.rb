@@ -9,7 +9,7 @@ class REST::StatusSerializer < ActiveModel::Serializer
              :sensitive, :spoiler_text, :visibility, :language,
              :uri, :url, :replies_count, :reblogs_count,
              :favourites_count, :quotes_count, :edited_at,
-             :local_only, :activity_pub_type
+             :local_only, :public_in_local, :activity_pub_type
 
   attribute :favourited, if: :current_user?
   attribute :reblogged, if: :current_user?
@@ -94,6 +94,10 @@ class REST::StatusSerializer < ActiveModel::Serializer
 
   def url
     ActivityPub::TagManager.instance.url_for(object)
+  end
+  
+  def public_in_local
+    object.public_in_local == true
   end
 
   def reblogs_count

@@ -1953,6 +1953,8 @@ pt-PT:
       public_long: Qualquer pessoa dentro e fora do Mastodon
       unlisted: Não listado
       unlisted_long: Oculto dos resultados de pesquisa, tendências e linhas do tempo públicas do Mastodon
+      local: Local
+      local_long: Todos podem ver, porém será listado somente na timeline pública local
   statuses_cleanup:
     enabled: Eliminar publicações antigas automaticamente
     enabled_hint: Elimina automaticamente as tuas publicações assim que atingirem um certo limite de tempo, a não ser que correspondam a uma das seguintes exceções

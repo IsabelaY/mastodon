@@ -9,6 +9,7 @@ import Overlay from 'react-overlays/Overlay';
 
 import AlternateEmailIcon from '@/material-icons/400-24px/alternate_email.svg?react';
 import LockIcon from '@/material-icons/400-24px/lock.svg?react';
+import GroupIcon from '@/material-icons/400-24px/group.svg?react'
 import PublicIcon from '@/material-icons/400-24px/public.svg?react';
 import QuietTimeIcon from '@/material-icons/400-24px/quiet_time.svg?react';
 import { DropdownSelector } from 'mastodon/components/dropdown_selector';
@@ -23,6 +24,8 @@ export const messages = defineMessages({
   private_long: { id: 'privacy.private.long', defaultMessage: 'Only your followers' },
   direct_short: { id: 'privacy.direct.short', defaultMessage: 'Specific people' },
   direct_long: { id: 'privacy.direct.long', defaultMessage: 'Everyone mentioned in the post' },
+  local_short: { id: 'privacy.local.short', defaultMessage: 'Local' },
+  local_long: { id: 'privacy.local.long', defaultMessage: 'Post local public timeline'},
   change_privacy: { id: 'privacy.change', defaultMessage: 'Change post privacy' },
   unlisted_extra: { id: 'privacy.unlisted.additional', defaultMessage: 'This behaves exactly like public, except the post will not appear in live feeds or hashtags, explore, or Mastodon search, even if you are opted-in account-wide.' },
 });
@@ -90,6 +93,7 @@ class PrivacyDropdown extends PureComponent {
 
     this.options = [
       { icon: 'globe', iconComponent: PublicIcon, value: 'public', text: formatMessage(messages.public_short), meta: formatMessage(messages.public_long) },
+      { icon: 'users', iconComponent: GroupIcon, value: 'local', text: formatMessage(messages.local_short), meta: formatMessage(messages.local_long) },
       { icon: 'unlock', iconComponent: QuietTimeIcon,  value: 'unlisted', text: formatMessage(messages.unlisted_short), meta: formatMessage(messages.unlisted_long), extra: formatMessage(messages.unlisted_extra) },
       { icon: 'lock', iconComponent: LockIcon, value: 'private', text: formatMessage(messages.private_short), meta: formatMessage(messages.private_long) },
     ];

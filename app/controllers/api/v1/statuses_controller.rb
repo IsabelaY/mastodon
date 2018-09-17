@@ -93,6 +93,7 @@ class Api::V1::StatusesController < Api::BaseController
       application: doorkeeper_token.application,
       poll: status_params[:poll],
       allowed_mentions: status_params[:allowed_mentions],
+      public_in_local: status_params[:public_in_local],
       idempotency: request.headers['Idempotency-Key'],
       with_rate_limit: true,
       local_only: status_params[:local_only]
@@ -186,6 +187,7 @@ class Api::V1::StatusesController < Api::BaseController
       :quote_approval_policy,
       :sensitive,
       :spoiler_text,
+      :public_in_local,
       :visibility,
       :language,
       :scheduled_at,

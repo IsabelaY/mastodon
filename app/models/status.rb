@@ -127,6 +127,8 @@ class Status < ApplicationRecord
   scope :not_replying_to_account, ->(account) { where.not(in_reply_to_account: account) }
   scope :without_reblogs, -> { where(statuses: { reblog_of_id: nil }) }
   scope :without_local_only, -> { where(local_only: [false, nil]) }
+  scope :with_public_visibility, -> { where(visibility: :public) }
+  scope :with_local_public_visibility, -> { where(visibility: :public).or(where(visibility: :unlisted).where(public_in_local: TRUE)) }
   scope :tagged_with, ->(tag_ids) { joins(:statuses_tags).where(statuses_tags: { tag_id: tag_ids }) }
   scope :not_excluded_by_account, ->(account) { where.not(account_id: account.excluded_from_timeline_account_ids) }
   scope :not_domain_blocked_by_account, ->(account) { account.excluded_from_timeline_domains.blank? ? left_outer_joins(:account) : left_outer_joins(:account).merge(Account.not_domain_blocked_by_account(account)) }
