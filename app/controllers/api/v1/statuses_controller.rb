@@ -48,6 +48,7 @@ class Api::V1::StatusesController < Api::BaseController
       scheduled_at: status_params[:scheduled_at],
       application: doorkeeper_token.application,
       poll: status_params[:poll],
+      public_in_local: status_params[:public_in_local],
       idempotency: request.headers['Idempotency-Key'],
       with_rate_limit: true
     )
@@ -107,6 +108,7 @@ class Api::V1::StatusesController < Api::BaseController
       :in_reply_to_id,
       :sensitive,
       :spoiler_text,
+      :public_in_local,
       :visibility,
       :language,
       :scheduled_at,
