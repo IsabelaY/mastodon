@@ -1483,6 +1483,8 @@ pt-PT:
       public_long: Todos podem ver
       unlisted: Público, mas não mostre no timeline público
       unlisted_long: Todos podem ver, porém não será postado nas timelines públicas
+      local: Local
+      local_long: Todos podem ver, porém será listado somente na timeline pública local
   statuses_cleanup:
     enabled: Apagar publicações antigas automaticamente
     enabled_hint: Apaga automaticamente as suas publicações assim que atingirem um limite de idade específico, a não ser que correspondam a uma das exceções abaixo
