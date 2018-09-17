@@ -1440,6 +1440,8 @@ pt-BR:
       public_long: Todos podem ver
       unlisted: Não listado
       unlisted_long: Todos podem ver, mas não é listado em linhas do tempo públicas
+      local: Local
+      local_long: Todos podem ver, porém será listado somente na timeline pública local
   statuses_cleanup:
     enabled: Excluir publicações antigas automaticamente
     enabled_hint: Exclui suas publicações automaticamente assim que elas alcançam sua validade, a não ser que se enquadrem em alguma das exceções abaixo
