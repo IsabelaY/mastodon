@@ -12,6 +12,7 @@ class PostStatusService < BaseService
   # @option [String] :text Message
   # @option [Status] :thread Optional status to reply to
   # @option [Boolean] :sensitive
+  # @option [Boolean] :public_in_local
   # @option [String] :visibility
   # @option [String] :spoiler_text
   # @option [String] :language
@@ -166,6 +167,7 @@ class PostStatusService < BaseService
       sensitive: @sensitive,
       spoiler_text: @options[:spoiler_text] || '',
       visibility: @visibility,
+      public_in_local: @options[:public_in_local],
       language: valid_locale_cascade(@options[:language], @account.user&.preferred_posting_language, I18n.default_locale),
       application: @options[:application],
       rate_limit: @options[:with_rate_limit],
