@@ -184,7 +184,7 @@ class FanOutOnWriteService < BaseService
   end
 
   def broadcastable?
-    @status.public_visibility? && !@status.reblog? && !@account.silenced?
+    (@status.public_visibility? || @status.public_in_local?) && !@status.reblog? && !@account.silenced?
   end
 
   def subscribed_to_streaming_api?(account_id)

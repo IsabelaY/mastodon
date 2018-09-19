@@ -121,7 +121,7 @@ class RemoveStatusService < BaseService
       featured_tag.decrement(@status)
     end
 
-    return unless @status.public_visibility?
+    return unless @status.public_visibility? || @status.public_in_local?
 
     return if skip_streaming?
 
@@ -132,7 +132,7 @@ class RemoveStatusService < BaseService
   end
 
   def remove_from_public
-    return unless @status.public_visibility?
+    return unless @status.public_visibility? || @status.public_in_local?
 
     return if skip_streaming?
 
@@ -141,7 +141,7 @@ class RemoveStatusService < BaseService
   end
 
   def remove_from_media
-    return unless @status.public_visibility?
+    return unless @status.public_visibility? || @status.public_in_local?
 
     return if skip_streaming?
 
