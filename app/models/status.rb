@@ -175,6 +175,10 @@ class Status < ApplicationRecord
   def local?
     attributes['local'] || uri.nil?
   end
+  
+  def public_in_local?
+    unlisted_visibility? && attributes['public_in_local']
+  end
 
   def in_reply_to_local_account?
     reply? && thread&.account&.local?
