@@ -48,6 +48,9 @@ class InitialStateSerializer < ActiveModel::Serializer
       store[:delete_modal]      = object.current_account.user.setting_delete_modal
       store[:auto_play_gif]     = object.current_account.user.setting_auto_play_gif
       store[:expand_usernames]  = object.current_account.user.setting_expand_usernames
+      store[:emoji_size_simple] = object.current_account.user.setting_emoji_size_simple
+      store[:emoji_size_detailed] = object.current_account.user.setting_emoji_size_detailed
+      store[:emoji_size_name] = object.current_account.user.setting_emoji_size_name
       store[:display_media]     = object.current_account.user.setting_display_media
       store[:expand_spoilers]   = object.current_account.user.setting_expand_spoilers
       store[:reduce_motion]     = object.current_account.user.setting_reduce_motion

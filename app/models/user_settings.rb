@@ -40,6 +40,9 @@ class UserSettings
 
     # Hometown: Show full username (including domain) for remote users
     setting :expand_usernames, default: true
+    setting :emoji_size_simple, default: 20
+    setting :emoji_size_detailed, default: 24
+    setting :emoji_size_name, default: 16
   end
 
   namespace :notification_emails do
