@@ -29,6 +29,9 @@ class InitialStateSerializer < ActiveModel::Serializer
       store[:auto_play_gif]     = object_account_user.setting_auto_play_gif
       store[:display_media]     = object_account_user.setting_display_media
       store[:expand_spoilers]   = object_account_user.setting_expand_spoilers
+      store[:emoji_size_simple] = object.current_account.user.setting_emoji_size_simple
+      store[:emoji_size_detailed] = object.current_account.user.setting_emoji_size_detailed
+      store[:emoji_size_name] = object.current_account.user.setting_emoji_size_name
       store[:reduce_motion]     = object_account_user.setting_reduce_motion
       store[:disable_swiping]   = object_account_user.setting_disable_swiping
       store[:disable_hover_cards] = object_account_user.setting_disable_hover_cards
