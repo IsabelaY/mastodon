@@ -147,4 +147,22 @@ module HasUserSettings
   def setting_norss
     settings['norss']
   end
+
+  def clamp_emoji_size(emoji_size)
+    return 1 if emoji_size <= 0
+    return 50 if emoji_size >= 50
+    return emoji_size
+  end
+
+  def setting_emoji_size_simple
+    clamp_emoji_size(settings['web.emoji_size_simple'].to_i)
+  end
+
+  def setting_emoji_size_detailed
+    clamp_emoji_size(settings['web.emoji_size_detailed'].to_i)
+  end
+
+  def setting_emoji_size_name
+    clamp_emoji_size(settings['web.emoji_size_name'].to_i)
+  end
 end

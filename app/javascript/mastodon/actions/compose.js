@@ -213,7 +213,7 @@ export function submitCompose(routerHistory) {
         media_attributes,
         sensitive: getState().getIn(['compose', 'sensitive']),
         spoiler_text: getState().getIn(['compose', 'spoiler']) ? getState().getIn(['compose', 'spoiler_text'], '') : '',
-        visibility: getState().getIn(['compose', 'privacy']),
+        visibility: visibility,
         public_in_local: publicInLocal,
         poll: getState().getIn(['compose', 'poll'], null),
         local_only: !getState().getIn(['compose', 'federation']),

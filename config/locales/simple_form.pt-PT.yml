@@ -213,6 +213,9 @@ pt-PT:
         setting_display_media_default: Pré-definição
         setting_display_media_hide_all: Esconder todos
         setting_display_media_show_all: Mostrar todos
+        setting_emoji_size_simple: "Tamanho de emoji em toots simples (padrão: 20)"
+        setting_emoji_size_detailed: "Tamanho de emoji em toots detalhados (padrão: 24)"
+        setting_emoji_size_name: "Tamanho de emoji em nome público (padrão: 16)"
         setting_expand_spoilers: Expandir sempre as publicações marcadas com avisos de conteúdo
         setting_hide_network: Esconder a tua rede
         setting_reduce_motion: Reduz movimento em animações
