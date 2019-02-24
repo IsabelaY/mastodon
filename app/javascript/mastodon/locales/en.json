@@ -765,6 +765,8 @@
   "privacy.unlisted.additional": "This behaves exactly like public, except the post will not appear in live feeds or hashtags, explore, or Mastodon search, even if you are opted-in account-wide.",
   "privacy.unlisted.long": "Hidden from Mastodon search results, trending, and public timelines",
   "privacy.unlisted.short": "Quiet public",
+  "privacy.local.long": "Everyone can see, but only listed on local public timelines",
+  "privacy.local.short": "Local",
   "privacy_policy.last_updated": "Last updated {date}",
   "privacy_policy.title": "Privacy Policy",
   "quote_error.edit": "Quotes cannot be added when editing a post.",
