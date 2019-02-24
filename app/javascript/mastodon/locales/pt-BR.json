@@ -462,6 +462,8 @@
   "privacy.unlisted.short": "Não-listado",
   "privacy_policy.last_updated": "Atualizado {date}",
   "privacy_policy.title": "Política de privacidade",
+  "privacy.local.long": "Todos podem ver, porém será listado somente na timeline pública local",
+  "privacy.local.short": "Local",
   "refresh": "Atualizar",
   "regeneration_indicator.label": "Carregando…",
   "regeneration_indicator.sublabel": "Sua página inicial está sendo preparada!",
