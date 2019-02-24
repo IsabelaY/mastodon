@@ -765,6 +765,8 @@
   "privacy.unlisted.additional": "Isso se comporta exatamente como público, exceto que a publicação não aparecerá nos _feeds ao vivo_ ou nas _hashtags_, explorar, ou barra de busca, mesmo que você seja escolhido em toda a conta.",
   "privacy.unlisted.long": "Oculto para os resultados de busca do Mastodon, tendências e linhas do tempo públicas",
   "privacy.unlisted.short": "Público silencioso",
+  "privacy.local.long": "Todos podem ver, porém será listado somente na timeline pública local",
+  "privacy.local.short": "Local",
   "privacy_policy.last_updated": "Atualizado {date}",
   "privacy_policy.title": "Política de privacidade",
   "quote_error.edit": "Citações não podem ser adicionadas durante a edição de uma publicação.",
