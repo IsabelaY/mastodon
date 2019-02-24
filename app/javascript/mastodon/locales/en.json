@@ -465,6 +465,8 @@
   "privacy.unlisted.short": "Unlisted",
   "privacy_policy.last_updated": "Last updated {date}",
   "privacy_policy.title": "Privacy Policy",
+  "privacy.local.long": "Everyone can see, but only listed on local public timelines",
+  "privacy.local.short": "Local",
   "refresh": "Refresh",
   "regeneration_indicator.label": "Loading…",
   "regeneration_indicator.sublabel": "Your home feed is being prepared!",
