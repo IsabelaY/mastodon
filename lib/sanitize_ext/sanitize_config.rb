@@ -32,6 +32,7 @@ class Sanitize
         next true if /^(mention|hashtag)$/.match?(e) # semantic classes
         next true if /^(ellipsis|invisible)$/.match?(e) # link formatting classes
         next true if e == 'quote-inline'
+        next true if /^(bbcode__spin|bbcode__pulse|fa|fa-2x|fa-flip-vertical|fa-flip-horizontal|bbcode__b|bbcode__i|quote|fa-3x|fa-4x|fa-5x)$/.match?(e)
       end
 
       node['class'] = class_list.join(' ')
