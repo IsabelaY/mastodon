@@ -133,6 +133,7 @@ class User < ApplicationRecord
 
   delegate :auto_play_gif, :default_sensitive, :unfollow_modal, :boost_modal, :delete_modal, :emoji_size_simple, :emoji_size_detailed, :emoji_size_name,
            :reduce_motion, :system_font_ui, :noindex, :norss, :theme, :display_media,
+           :bbcode_spin, :bbcode_pulse, :bbcode_b, :bbcode_i, :bbcode_color, :bbcode_s, :bbcode_large, :bbcode_size, :bbcode_u, :bbcode_flip,
            :expand_spoilers, :default_language, :aggregate_reblogs, :show_application,
            :advanced_layout, :use_blurhash, :use_pending_items, :trends, :crop_images,
            :disable_swiping, :default_federation, :always_send_emails, :expand_usernames,
