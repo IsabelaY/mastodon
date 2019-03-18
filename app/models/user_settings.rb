@@ -43,6 +43,16 @@ class UserSettings
     setting :emoji_size_simple, default: 20
     setting :emoji_size_detailed, default: 24
     setting :emoji_size_name, default: 16
+    setting :bbcode_spin, default: false
+    setting :bbcode_pulse, default: false
+    setting :bbcode_flip, default: false
+    setting :bbcode_color, default: false
+    setting :bbcode_large, default: false
+    setting :bbcode_size, default: false
+    setting :bbcode_b, default: false
+    setting :bbcode_i, default: false
+    setting :bbcode_u, default: false
+    setting :bbcode_s, default: false
   end
 
   namespace :notification_emails do

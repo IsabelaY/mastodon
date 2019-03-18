@@ -165,4 +165,45 @@ module HasUserSettings
   def setting_emoji_size_name
     clamp_emoji_size(settings['web.emoji_size_name'].to_i)
   end
+
+  def setting_bbcode_spin
+    settings['web.bbcode_spin']
+  end
+
+  def setting_bbcode_pulse
+    settings['web.bbcode_pulse']
+  end
+
+  def setting_bbcode_flip
+    settings['web.bbcode_flip']
+  end
+
+  def setting_bbcode_color
+    settings['web.bbcode_color']
+  end
+
+  def setting_bbcode_large
+    settings['web.bbcode_large']
+  end
+
+  def setting_bbcode_size
+    settings['web.bbcode_size']
+  end
+
+  def setting_bbcode_b
+    settings['web.bbcode_b']
+  end
+
+  def setting_bbcode_i
+    settings['web.bbcode_i']
+  end
+
+  def setting_bbcode_u
+    settings['web.bbcode_u']
+  end
+
+  def setting_bbcode_s
+    settings['web.bbcode_s']
+  end
+  
 end
