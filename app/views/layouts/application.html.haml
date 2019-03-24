@@ -62,6 +62,7 @@
       %style{nonce: request.content_security_policy_nonce}
         :plain
           .bbcode__spin {
+            display: inline !important;
             -webkit-animation: none !important;
             animation: none !important;
           }
@@ -84,32 +85,30 @@
     - unless current_bbcode_size
       %style{nonce: request.content_security_policy_nonce}
         :plain
-          .status__content span:not(.fa-2x):not(.fa-3x):not(.fa-4x):not(.fa-5x) {
+          .status__content > div:first-child span:not(.fa-2x):not(.fa-3x):not(.fa-4x):not(.fa-5x):not(.invisible) {
             font-size: inherit !important;
           }
         
     - unless current_bbcode_color
       %style{nonce: request.content_security_policy_nonce}
         :plain
-          .status__content span {
+          .status__content > div:first-child span {
             color: inherit !important;
           }
         
     - unless current_bbcode_flip
       %style{nonce: request.content_security_policy_nonce}
         :plain
-          .status__content .fa-flip-vertical .fa-flip-horizontal {
+          .status__content .fa-flip-vertical,
+          .status__content .fa-flip-horizontal,
+          .status__content .bbcode__flip-vertical, 
+          .status__content .bbcode__flip-horizontal {
+            display: inline !important;
             -webkit-transform: none !important;
+            -ms-fiter: none !important;
             transform: none !important;
           }
     
-    - unless current_bbcode_flip
-      %style{nonce: request.content_security_policy_nonce}
-        :plain
-          .status__content .fa-flip-vertical .fa-flip-horizontal {
-            -webkit-transform: none !important;
-            transform: none !important;
-          }
         
     - unless current_bbcode_b
       %style{nonce: request.content_security_policy_nonce}
@@ -137,7 +136,7 @@
     - unless current_bbcode_s
       %style{nonce: request.content_security_policy_nonce}
         :plain
-          .status__content span {
+          .status__content > div:first-child span {
             text-decoration: none !important;
           }
 
