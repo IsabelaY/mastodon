@@ -44,7 +44,16 @@
       = ff.input :'web.emoji_size_name', wrapper: :with_label, label: I18n.t('simple_form.labels.defaults.setting_emoji_size_name')
 
     %h4= t 'appearance.bbcode'
-    .fields-group
+    .fields-group.setting_bbcode
+      %strong= t('bbcode.title')
+      %p= t('bbcode.explanation_html')
+      .fields-row
+        %button#bbcode_enable_all(type="button")
+          = t 'bbcode.setting_enable_all'
+        %button#bbcode_disable_all(type="button")
+          = t 'bbcode.setting_disable_all'
+      = javascript_include_tag '/jquery-3.3.1.slim.min.js'
+      = javascript_include_tag '/bbcode_setting.js'
       = ff.input :'web.bbcode_spin', wrapper: :with_label, label: I18n.t('simple_form.labels.defaults.setting_bbcode_spin')
       = ff.input :'web.bbcode_pulse', wrapper: :with_label, label: I18n.t('simple_form.labels.defaults.setting_bbcode_pulse')
       = ff.input :'web.bbcode_flip', wrapper: :with_label, label: I18n.t('simple_form.labels.defaults.setting_bbcode_flip')
