@@ -443,6 +443,10 @@ class Status extends ImmutablePureComponent {
       );
     }
 
+    if (status.get('poll')) {
+      mediaIcon = 'tasks';
+    }
+
     if (pictureInPicture.get('inUse')) {
       media = <PictureInPicturePlaceholder aspectRatio={this.getAttachmentAspectRatio()} />;
     } else if (status.get('media_attachments').size > 0) {
