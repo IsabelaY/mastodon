@@ -398,6 +398,10 @@ class Status extends ImmutablePureComponent {
       );
     }
 
+    if (status.get('poll')) {
+      mediaIcon = 'tasks';
+    }
+
     if (pictureInPicture.get('inUse')) {
       media = <PictureInPicturePlaceholder width={this.props.cachedMediaWidth} />;
     } else if (status.get('media_attachments').size > 0) {
