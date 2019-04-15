@@ -132,6 +132,10 @@ class DetailedStatus extends ImmutablePureComponent {
       outerStyle.height = `${this.state.height}px`;
     }
 
+    if (status.get('poll')) {
+      mediaIcon = 'tasks';
+    }
+
     if (pictureInPicture.get('inUse')) {
       media = <PictureInPicturePlaceholder />;
     } else if (status.get('media_attachments').size > 0) {
