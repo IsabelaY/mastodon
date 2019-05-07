@@ -710,7 +710,8 @@ h1 a.brand {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 50px;
+    padding-top: 50px;
+    padding-bottom: 50px;
 
     .logo {
       fill: $primary-text-color;
