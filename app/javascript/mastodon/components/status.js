@@ -459,6 +459,7 @@ class Status extends ImmutablePureComponent {
                 deployPictureInPicture={pictureInPicture.get('available') ? this.handleDeployPictureInPicture : undefined}
                 visible={this.state.showMedia}
                 onToggleVisibility={this.handleToggleMediaVisibility}
+                parentHidden={status.get('hidden')}
               />
             )}
           </Bundle>
