@@ -1000,6 +1000,7 @@ en:
     warning: Be very careful with this data. Never share it with anyone!
     your_token: Your access token
   auth:
+    advanced_layout: Enable Advanced Multicolumn Layout (can be changed later)
     apply_for_account: Get on waitlist
     change_password: Password
     delete_account: Delete account
