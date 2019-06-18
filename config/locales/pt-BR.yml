@@ -899,6 +899,7 @@ pt-BR:
     warning: Tenha cuidado com estes dados. Nunca compartilhe com alguém!
     your_token: Seu código de acesso
   auth:
+    advanced_layout: Habilitar layout de múltiplas colunas (pode ser mudado mais tarde)
     apply_for_account: Entrar na lista de espera
     change_password: Senha
     delete_account: Excluir conta
