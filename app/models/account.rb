@@ -79,6 +79,7 @@ class Account < ApplicationRecord
   USERNAME_LENGTH_LIMIT = 30
   DISPLAY_NAME_LENGTH_LIMIT = 40
   NOTE_LENGTH_LIMIT = 800
+  MIN_FOLLOWERS_DISCOVERY = 5
 
   # Hard limits for federated content
   USERNAME_LENGTH_HARD_LIMIT = 2048
@@ -156,7 +157,7 @@ class Account < ApplicationRecord
   scope :without_unapproved, -> { left_outer_joins(:user).merge(User.approved.confirmed).or(remote) }
   scope :auditable, -> { where(id: Admin::ActionLog.select(:account_id).distinct) }
   scope :searchable, -> { without_unapproved.without_suspended.where(moved_to_account_id: nil) }
-  scope :discoverable, -> { searchable.without_silenced.where(discoverable: true).joins(:account_stat) }
+  scope :discoverable, -> { searchable.without_silenced.where(discoverable: true).joins(:account_stat).where(AccountStat.arel_table[:followers_count].gteq(MIN_FOLLOWERS_DISCOVERY)) }
   scope :by_recent_status, -> { includes(:account_stat).merge(AccountStat.by_recent_status).references(:account_stat) }
   scope :by_recent_activity, -> { left_joins(:user, :account_stat).order(coalesced_activity_timestamps.desc).order(id: :desc) }
   scope :by_domain_and_subdomains, ->(domain) { where(domain: Instance.by_domain_and_subdomains(domain).select(:domain)) }
