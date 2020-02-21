@@ -13,7 +13,8 @@
 
 class UserInviteRequest < ApplicationRecord
   TEXT_SIZE_LIMIT = 5000
+  MIN_TEXT_SIZE = 20
 
   belongs_to :user, inverse_of: :invite_request
-  validates :text, presence: true, length: { maximum: TEXT_SIZE_LIMIT }
+  validates :text, presence: true, length: { maximum: TEXT_SIZE_LIMIT, minimum: MIN_TEXT_SIZE }
 end

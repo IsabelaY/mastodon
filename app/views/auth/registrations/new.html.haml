@@ -71,7 +71,8 @@
                                       label: false,
                                       input_html: { maxlength: UserInviteRequest::TEXT_SIZE_LIMIT },
                                       required: Setting.require_invite_text,
-                                      wrapper: :with_block_label
+                                      wrapper: :with_block_label,
+                                      placeholder: t('simple_form.labels.defaults.invite_request')
 
   = hidden_field_tag :accept, params[:accept]
   = f.input :invite_code, as: :hidden
