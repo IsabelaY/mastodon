@@ -1200,8 +1200,8 @@ pt-BR:
     poll:
       subject: Uma enquete por %{name} terminou
     reblog:
-      body: "%{name} deu boost no seu toot:"
-      subject: "%{name} deu boost no seu toot"
+      body: "%{name} compartilhou seu toot:"
+      subject: "%{name} compartilhou seu toot"
       title: Novo boost
     status:
       subject: "%{name} acabou de postar"
