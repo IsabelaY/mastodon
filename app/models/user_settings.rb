@@ -53,6 +53,7 @@ class UserSettings
     setting :bbcode_i, default: false
     setting :bbcode_u, default: false
     setting :bbcode_s, default: false
+    setting :show_cw_box, default: true
   end
 
   namespace :notification_emails do
