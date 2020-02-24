@@ -52,6 +52,7 @@ class InitialStateSerializer < ActiveModel::Serializer
       store[:disable_swiping]   = object.current_account.user.setting_disable_swiping
       store[:advanced_layout]   = object.current_account.user.setting_advanced_layout
       store[:use_blurhash]      = object.current_account.user.setting_use_blurhash
+      store[:show_cw_box]       = object.current_account.user.setting_show_cw_box
       store[:use_pending_items] = object.current_account.user.setting_use_pending_items
       store[:trends]            = Setting.trends && object.current_account.user.setting_trends
       store[:crop_images]       = object.current_account.user.setting_crop_images
