@@ -11,6 +11,7 @@ interface InitialStateMeta {
   boost_modal?: boolean;
   quick_boosting?: boolean;
   max_toot_chars?: number;
+  show_cw_box?: boolean;
   delete_modal?: boolean;
   missing_alt_text_modal?: boolean;
   disable_swiping?: boolean;
@@ -96,6 +97,7 @@ export const quickBoosting = getMeta('quick_boosting');
 export const deleteModal = getMeta('delete_modal');
 // Hometown: max chars
 export const maxChars = getMeta('max_toot_chars') ?? 500;
+export const showCwBox = getMeta('show_cw_box');
 export const missingAltTextModal = getMeta('missing_alt_text_modal');
 export const disableSwiping = getMeta('disable_swiping');
 export const disableHoverCards = getMeta('disable_hover_cards');
