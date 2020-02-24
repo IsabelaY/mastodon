@@ -205,5 +205,9 @@ module HasUserSettings
   def setting_bbcode_s
     settings['web.bbcode_s']
   end
+
+  def setting_show_cw_box
+    settings['web.show_cw_box']
+  end
   
 end
