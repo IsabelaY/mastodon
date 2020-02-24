@@ -124,6 +124,7 @@ export const profile_directory = getMeta('profile_directory');
 export const reduceMotion = getMeta('reduce_motion');
 export const registrationsOpen = getMeta('registrations_open');
 export const repository = getMeta('repository');
+export const showCwBox = getMeta('show_cw_box');
 export const searchEnabled = getMeta('search_enabled');
 export const showTrends = getMeta('trends');
 export const singleUserMode = getMeta('single_user_mode');
