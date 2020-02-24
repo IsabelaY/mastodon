@@ -10,6 +10,7 @@ import {
   cancelPasteLinkCompose,
 } from '@/mastodon/actions/compose_typed';
 import { timelineDelete } from 'mastodon/actions/timelines_typed';
+import { showCwBox } from '../initial_state';
 
 import {
   COMPOSE_MOUNT,
@@ -121,7 +122,7 @@ function clearAll(state) {
   return state.withMutations(map => {
     map.set('id', null);
     map.set('text', '');
-    map.set('spoiler', false);
+    map.set('spoiler', showCwBox);
     map.set('spoiler_text', '');
     map.set('is_submitting', false);
     map.set('is_changing_upload', false);
@@ -154,7 +155,7 @@ function appendMedia(state, media, file) {
     map.set('idempotencyKey', uuid());
     map.update('pending_media_attachments', n => n - 1);
 
-    if (prevSize === 0 && (state.get('default_sensitive') || state.get('spoiler'))) {
+    if (prevSize === 0 && (state.get('default_sensitive') || (state.get('spoiler') && state.get('spoiler_text')))) {
       map.set('sensitive', true);
     }
   });
@@ -386,7 +387,7 @@ export const composeReducer = (state = initialState, action) => {
       );
   case COMPOSE_SENSITIVITY_CHANGE:
     return state.withMutations(map => {
-      if (!state.get('spoiler')) {
+      if (!state.get('spoiler') || !state.get('spoiler_text')) {
         map.set('sensitive', !state.get('sensitive'));
       }
 

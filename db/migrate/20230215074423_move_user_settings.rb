@@ -40,6 +40,7 @@ class MoveUserSettings < ActiveRecord::Migration[6.1]
     bbcode_i: 'web.bbcode_i',
     bbcode_u: 'web.bbcode_u',
     bbcode_s: 'web.bbcode_s',
+    show_cw_box: 'web.show_cw_box',
     notification_emails: {
       follow: 'notification_emails.follow',
       reblog: 'notification_emails.reblog',
