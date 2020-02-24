@@ -53,6 +53,7 @@ import { Map as ImmutableMap, List as ImmutableList, OrderedSet as ImmutableOrde
 import uuid from '../uuid';
 import { me } from '../initial_state';
 import { unescapeHTML } from '../utils/html';
+import { showCwBox } from '../initial_state';
 
 const initialState = ImmutableMap({
   mounted: 0,
@@ -113,7 +114,7 @@ function clearAll(state) {
   return state.withMutations(map => {
     map.set('id', null);
     map.set('text', '');
-    map.set('spoiler', false);
+    map.set('spoiler', showCwBox);
     map.set('spoiler_text', '');
     map.set('is_submitting', false);
     map.set('is_changing_upload', false);
@@ -140,7 +141,7 @@ function appendMedia(state, media, file) {
     map.set('idempotencyKey', uuid());
     map.update('pending_media_attachments', n => n - 1);
 
-    if (prevSize === 0 && (state.get('default_sensitive') || state.get('spoiler'))) {
+    if (prevSize === 0 && (state.get('default_sensitive') || (state.get('spoiler') && state.get('spoiler_text')))) {
       map.set('sensitive', true);
     }
   });
@@ -287,7 +288,7 @@ export default function compose(state = initialState, action) {
       .set('is_composing', false);
   case COMPOSE_SENSITIVITY_CHANGE:
     return state.withMutations(map => {
-      if (!state.get('spoiler')) {
+      if (!state.get('spoiler') || !state.get('spoiler_text')) {
         map.set('sensitive', !state.get('sensitive'));
       }
 
@@ -297,16 +298,17 @@ export default function compose(state = initialState, action) {
     return state.withMutations(map => {
       map.set('spoiler', !state.get('spoiler'));
       map.set('idempotencyKey', uuid());
-
-      if (!state.get('sensitive') && state.get('media_attachments').size >= 1) {
-        map.set('sensitive', true);
-      }
     });
   case COMPOSE_SPOILER_TEXT_CHANGE:
     if (!state.get('spoiler')) return state;
-    return state
-      .set('spoiler_text', action.text)
-      .set('idempotencyKey', uuid());
+    return state.withMutations(map => {
+      map.set('spoiler_text', action.text);
+      map.set('idempotencyKey', uuid());
+
+      if (!state.get('sensitive') && state.get('media_attachments').size >= 1 && action.text) {
+        map.set('sensitive', true);
+      }
+    });
   case COMPOSE_VISIBILITY_CHANGE:
     return state
       .set('privacy', action.value)
