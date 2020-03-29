@@ -215,7 +215,7 @@ class Request
   end
 
   module ClientLimit
-    def truncated_body(limit = 1.megabyte)
+    def truncated_body(limit = 2.megabyte)
       if charset.nil?
         encoding = Encoding::BINARY
       else
