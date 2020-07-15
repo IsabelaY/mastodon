@@ -490,6 +490,7 @@ class User < ApplicationRecord
   end
 
   def notify_staff_about_pending_account!
+    return if !invite_request.nil? && invite_request.text =~ /http/i
     User.those_who_can(:manage_users).includes(:account).find_each do |u|
       next unless u.allows_pending_account_emails?
       AdminMailer.new_pending_account(u.account, self).deliver_later
