@@ -51,7 +51,7 @@ pt-BR:
         application_id: Chave do cliente
         callback_urls: Links de retorno
         scopes: Autorizações
-        secret: Segredo do cliente
+        secret: Segredo de cliente
         title: 'Aplicativo: %{name}'
     authorizations:
       buttons:
@@ -77,8 +77,8 @@ pt-BR:
         title: Aplicativos autorizados
     errors:
       messages:
-        access_denied: O proprietário do recurso ou servidor de autorização recusou a solicitação.
-        credential_flow_not_configured: Fluxo das Credenciais de Senha do Proprietário do Recurso falhou porque Doorkeeper.configure.resource_owner_from_credentials não foi configurado.
+        access_denied: A solicitação foi rejeitada por ume proprietárie ou por um servidor de autorização.
+        credential_flow_not_configured: Fluxo das Credenciais de Senha do Proprietárie do Recurso falhou porque não há configuração para Doorkeeper.configure.resource_owner_from_credentials.
         invalid_client: Autenticação do cliente falhou por causa de um cliente desconhecido, nenhum cliente de autenticação foi incluído ou o método de autenticação não é suportado.
         invalid_grant: A garantia de autorização está inválida, expirou ou foi revogada, não é equivalente ao link de redirecionamento usado na solicitação de autorização ou foi emitido por outro cliente.
         invalid_redirect_uri: O link de redirecionamento é inválido.
@@ -92,9 +92,9 @@ pt-BR:
           expired: O código de acesso expirou
           revoked: O código de acesso foi revogado
           unknown: O código de acesso é inválido
-        resource_owner_authenticator_not_configured: A procura pelo Proprietário do Recurso falhou porque Doorkeeper.configure.resource_owner_authenticator não foi configurado.
+        resource_owner_authenticator_not_configured: Procura por proprietárie falhou porque o item Doorkeeper.configure.resource_owner_authenticator não foi configurado.
         server_error: O servidor de autorização encontrou uma condição inesperada que impediu a solicitação de ser respondida.
-        temporarily_unavailable: O servidor de autorização não consegue lidar com a solicitação no momento devido à múltiplas solicitações ou manutenção programada.
+        temporarily_unavailable: O servidor de autorização é incapaz de lidar com a solicitação no momento por causa de múltiplas requisições ou manutenção programada.
         unauthorized_client: O cliente não possui autorização para executar esta solicitação usando este método.
         unsupported_grant_type: O tipo de garantia de autorização não é suportado pelo servidor de autorização.
         unsupported_response_type: O servidor de autorização não suporta este tipo de resposta.
@@ -114,7 +114,7 @@ pt-BR:
         accounts: Contas
         all: Tudo
         blocks: Blocos
-        bookmarks: Salvos
+        bookmarks: Guardados
         conversations: Conversas
         crypto: Criptografia de ponta a ponta
         favourites: Favoritos
@@ -126,7 +126,7 @@ pt-BR:
         push: Notificações push
         reports: Denúncias
         search: Buscar
-        statuses: Posts
+        statuses: Brilhos
     layouts:
       admin:
         nav:
@@ -142,31 +142,31 @@ pt-BR:
       admin:write:accounts: executar ações de moderação em contas
       admin:write:reports: executar ações de moderação em denúncias
       crypto: usar criptografia de ponta-a-ponta
-      follow: alterar o relacionamento das contas
+      follow: alterar relacionamentos entre contas
       push: receber notificações push
       read: ler todos os dados da sua conta
       read:accounts: ver informações das contas
-      read:blocks: ver seus bloqueados
-      read:bookmarks: ver seus salvos
+      read:blocks: ver seus bloqueios
+      read:bookmarks: ver seus brilhos guardados
       read:favourites: ver seus favoritos
       read:filters: ver seus filtros
-      read:follows: ver quem você segue
+      read:follows: ver quem você acompanha
       read:lists: ver suas listas
-      read:mutes: ver seus silenciados
+      read:mutes: ver seus silêncios
       read:notifications: ver suas notificações
       read:reports: ver suas denúncias
-      read:search: pesquisar em seu nome
-      read:statuses: ver todos os toots
+      read:search: buscar em seu nome
+      read:statuses: ver todos os brilhos
       write: alterar todos os dados da sua conta
       write:accounts: alterar seu perfil
       write:blocks: bloquear contas e domínios
-      write:bookmarks: salvar toots
-      write:favourites: favoritar toots
+      write:bookmarks: guardar brilhos
+      write:favourites: favoritar
       write:filters: criar filtros
-      write:follows: seguir pessoas
+      write:follows: acompanhar pessoas
       write:lists: criar listas
       write:media: enviar arquivos de mídia
       write:mutes: silenciar pessoas e conversas
-      write:notifications: limpar notificações
-      write:reports: denunciar outras pessoas
-      write:statuses: postar toots
+      write:notifications: limpar suas notificações
+      write:reports: denunciar outras contas
+      write:statuses: publicar brilhos
