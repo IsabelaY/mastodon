@@ -24,6 +24,7 @@ const messages = defineMessages({
   private_short: { id: 'privacy.private.short', defaultMessage: 'Followers-only' },
   direct_short: { id: 'privacy.direct.short', defaultMessage: 'Direct' },
   local_only: { id: 'status.local_only', defaultMessage: 'This post is only visible by other users of your instance' },
+  local_short: { id: 'privacy.local.short', defaultMessage: 'Local' },
 });
 
 export default  @injectIntl
@@ -205,9 +206,10 @@ class DetailedStatus extends ImmutablePureComponent {
       'unlisted': { icon: 'unlock', text: intl.formatMessage(messages.unlisted_short) },
       'private': { icon: 'lock', text: intl.formatMessage(messages.private_short) },
       'direct': { icon: 'at', text: intl.formatMessage(messages.direct_short) },
+      'local': { icon: 'users', text: intl.formatMessage(messages.local_short) },
     };
 
-    const visibilityIcon = visibilityIconInfo[status.get('visibility')];
+    const visibilityIcon = status.get('public_in_local') ? visibilityIconInfo.local : visibilityIconInfo[status.get('visibility')];
     const visibilityLink = <React.Fragment> · <Icon id={visibilityIcon.icon} title={visibilityIcon.text} /></React.Fragment>;
 
     if (['private', 'direct'].includes(status.get('visibility'))) {
