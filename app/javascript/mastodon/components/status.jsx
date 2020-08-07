@@ -44,6 +44,7 @@ const messages = defineMessages({
   unlisted_short: { id: 'privacy.unlisted.short', defaultMessage: 'Quiet public' },
   private_short: { id: 'privacy.private.short', defaultMessage: 'Followers' },
   direct_short: { id: 'privacy.direct.short', defaultMessage: 'Specific people' },
+  local_short: { id: 'privacy.local.short', defaultMessage: 'Local' },
   edited: { id: 'status.edited', defaultMessage: 'Edited {date}' },
   quote_noun: { id: 'status.quote_noun', defaultMessage: 'Quote', description: 'Quote as a noun' },
   contains_quote: { id: 'status.contains_quote', defaultMessage: 'Contains quote' },
@@ -554,6 +555,8 @@ class Status extends ImmutablePureComponent {
     }
 
     const statusActivityObjectType = status.get('activity_pub_type');
+
+    const visibilityIcon = status.get('public_in_local') ? 'local' : status.get('visibility');
     const {statusContentProps, hashtagBar} = getHashtagBarForStatus(status);
 
     return (
@@ -579,7 +582,7 @@ class Status extends ImmutablePureComponent {
 
             <div onClick={this.handleHeaderClick} onAuxClick={this.handleHeaderClick} className='status__info'>
               <Link to={`/@${status.getIn(['account', 'acct'])}/${status.get('id')}`} className='status__relative-time'>
-                <span className='status__visibility-icon'><VisibilityIcon visibility={status.get('visibility')} /></span>
+                <span className='status__visibility-icon'><VisibilityIcon visibility={visibilityIcon} /></span>
                 <RelativeTimestamp timestamp={status.get('created_at')} />{status.get('edited_at') && <abbr title={intl.formatMessage(messages.edited, { date: intl.formatDate(status.get('edited_at'), { year: 'numeric', month: 'short', day: '2-digit', hour: '2-digit', minute: '2-digit' }) })}> *</abbr>}
               </Link>
 

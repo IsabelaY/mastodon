@@ -4,6 +4,7 @@ import AlternateEmailIcon from '@/material-icons/400-24px/alternate_email.svg?re
 import LockIcon from '@/material-icons/400-24px/lock.svg?react';
 import PublicIcon from '@/material-icons/400-24px/public.svg?react';
 import QuietTimeIcon from '@/material-icons/400-24px/quiet_time.svg?react';
+import GroupIcon from '@/material-icons/400-24px/group.svg?react';
 import type { StatusVisibility } from 'mastodon/models/status';
 
 import { Icon } from './icon';
@@ -21,6 +22,10 @@ const messages = defineMessages({
   direct_short: {
     id: 'privacy.direct.short',
     defaultMessage: 'Specific people',
+  },
+  local_short: {
+    id: 'privacy.local.short',
+    defaultMessage: 'Local',
   },
 });
 
@@ -49,6 +54,11 @@ export const VisibilityIcon: React.FC<{ visibility: StatusVisibility }> = ({
       icon: 'at',
       iconComponent: AlternateEmailIcon,
       text: intl.formatMessage(messages.direct_short),
+    },
+    local: {
+      icon: 'users',
+      iconComponent: GroupIcon,
+      text: intl.formatMessage(messages.local_short),
     },
   };
 
