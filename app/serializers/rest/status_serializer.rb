@@ -86,7 +86,7 @@ class REST::StatusSerializer < ActiveModel::Serializer
   end
   
   def public_in_local
-    object.public_in_local == true
+    object.public_in_local?
   end
 
   def favourited
