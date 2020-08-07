@@ -73,6 +73,11 @@ class PostStatusService < BaseService
     @visibility   = :private if @quoted_status&.private_visibility? && %i(public unlisted).include?(@visibility&.to_sym)
     @scheduled_at = @options[:scheduled_at]&.to_datetime
     @scheduled_at = nil if scheduled_in_the_past?
+
+    if @visibility&.to_sym == :local
+      @visibility = :unlisted
+      @public_in_local = true
+    end
   rescue ArgumentError
     raise ActiveRecord::RecordInvalid
   end
