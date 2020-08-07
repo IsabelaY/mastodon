@@ -219,9 +219,11 @@ const insertEmoji = (state, position, emojiData, needsSpace) => {
   });
 };
 
-const privacyPreference = (a, b) => {
-  const order = ['public', 'unlisted', 'private', 'direct'];
-  return order[Math.max(order.indexOf(a), order.indexOf(b), 0)];
+const privacyPreference = (a, b, c) => {
+  const order = ['public', 'local', 'unlisted', 'private', 'direct'];
+  const indexOfA = c ? order.indexOf('local') : order.indexOf(a);
+  const indexOfB = order.indexOf(b);
+  return order[Math.max(indexOfA, indexOfB, 0)];
 };
 
 const hydrate = (state, hydratedState) => {
@@ -339,7 +341,7 @@ export default function compose(state = initialState, action) {
       map.set('id', null);
       map.set('in_reply_to', action.status.get('id'));
       map.set('text', statusToTextMentions(state, action.status));
-      map.set('privacy', privacyPreference(action.status.get('visibility'), state.get('default_privacy')));
+      map.set('privacy', privacyPreference(action.status.get('visibility'), state.get('default_privacy'), action.status.get('public_in_local')));
       map.set('federation', !action.status.get('local_only'));
       map.set('focusDate', new Date());
       map.set('caretPosition', null);
