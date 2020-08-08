@@ -1488,6 +1488,7 @@ pt-BR:
   tags:
     does_not_match_previous_name: não corresponde ao nome anterior
   themes:
+    colorwave: Colorwave
     contrast: Mastodon  (Alto contraste)
     default: Colorides
     mastodon-light: Mastodon (Diurno)

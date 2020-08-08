@@ -1625,6 +1625,7 @@ en:
   tags:
     does_not_match_previous_name: does not match the previous name
   themes:
+    colorwave: Colorwave
     contrast: Mastodon (High contrast)
     default: Colorides
     mastodon-light: Mastodon (Light)
