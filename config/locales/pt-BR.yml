@@ -2006,6 +2006,7 @@ pt-BR:
     review_link: Revisar os termos do serviço
     title: Os termos de serviço do %{domain} estão mudando
   themes:
+    colorwave: Colorwave
     contrast: Mastodon  (Alto contraste)
     default: Colorides
     mastodon-light: Mastodon (Diurno)
