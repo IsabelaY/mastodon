@@ -54,6 +54,7 @@ class UserSettings
     setting :bbcode_u, default: false
     setting :bbcode_s, default: false
     setting :show_cw_box, default: true
+    setting :column_size, default: 350
   end
 
   namespace :notification_emails do

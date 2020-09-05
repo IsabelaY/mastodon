@@ -148,10 +148,14 @@ module HasUserSettings
     settings['norss']
   end
 
+  def clamp(size, min, max)
+    return min if size <= min
+    return max if size >= max
+    return size
+  end
+
   def clamp_emoji_size(emoji_size)
-    return 1 if emoji_size <= 0
-    return 50 if emoji_size >= 50
-    return emoji_size
+    clamp(emoji_size, 1, 64)
   end
 
   def setting_emoji_size_simple
@@ -208,6 +212,10 @@ module HasUserSettings
 
   def setting_show_cw_box
     settings['web.show_cw_box']
+  end
+
+  def setting_column_size
+    clamp(settings['web.column_size'].to_i, 150, 5000)
   end
   
 end

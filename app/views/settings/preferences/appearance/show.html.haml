@@ -42,9 +42,12 @@
       = ff.input :'web.show_cw_box', as: :boolean, wrapper: :with_label, label: I18n.t('simple_form.labels.defaults.setting_show_cw_box')
 
     .fields-group
-      = ff.input :'web.emoji_size_simple', wrapper: :with_label, label: I18n.t('simple_form.labels.defaults.setting_emoji_size_simple')
-      = ff.input :'web.emoji_size_detailed', wrapper: :with_label, label: I18n.t('simple_form.labels.defaults.setting_emoji_size_detailed')
-      = ff.input :'web.emoji_size_name', wrapper: :with_label, label: I18n.t('simple_form.labels.defaults.setting_emoji_size_name')
+      = ff.input :'web.emoji_size_simple', input_html: { min: '1', step: '1', max: '64' }, wrapper: :with_label, label: I18n.t('simple_form.labels.defaults.setting_emoji_size_simple')
+      = ff.input :'web.emoji_size_detailed', input_html: { min: '1', step: '1', max: '64' }, wrapper: :with_label, label: I18n.t('simple_form.labels.defaults.setting_emoji_size_detailed')
+      = ff.input :'web.emoji_size_name', input_html: { min: '1', step: '1', max: '64' }, wrapper: :with_label, label: I18n.t('simple_form.labels.defaults.setting_emoji_size_name')
+
+    .fields-group
+      = ff.input :'web.column_size', input_html: { min: '150', step: '1', max: '5000' }, wrapper: :with_label, label: I18n.t('simple_form.labels.defaults.setting_column_size')
 
     %h4= t 'appearance.bbcode'
     .fields-group.setting_bbcode
