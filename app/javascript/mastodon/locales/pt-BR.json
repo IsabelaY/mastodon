@@ -21,7 +21,7 @@
   "account.browse_more_on_origin_server": "Veja mais no perfil original",
   "account.cancel_follow_request": "Cancelar solicitação para seguir",
   "account.direct": "Enviar mensagem direta para @{name}",
-  "account.disable_notifications": "Cancelar notificações de @{name}",
+  "account.disable_notifications": "Parar de me notificar quando @{name} publicar brilhos",
   "account.domain_blocked": "Domínio bloqueado",
   "account.edit_profile": "Editar perfil",
   "account.enable_notifications": "Notificar-me quando @{name} publicar brilhos",
