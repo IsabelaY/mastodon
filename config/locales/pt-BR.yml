@@ -1301,7 +1301,7 @@ pt-BR:
       unrecognized_emoji: não é um emoji reconhecido
   relationships:
     activity: Atividade da conta
-    dormant: Inative
+    dormant: Inativa
     follow_selected_followers: Acompanhar estas contas que te acompanham
     followers: Acompanham você
     following: Acompanhando
