@@ -673,11 +673,11 @@ pt-BR:
       domain_blocks_rationale:
         title: Mostrar motivo
       hero:
-        desc_html: Aparece na página inicial. Ao menos 600x100px é recomendado. Se não estiver definida, a miniatura da instância é usado no lugar
+        desc_html: Aparece na página inicial. Recomenda-se ao menos 600x100px. Se não estiver definida, a miniatura da instância é usada no lugar
         title: Imagem de capa
       mascot:
-        desc_html: Mostrado em diversas páginas. Recomendado ao menos 293×205px. Quando não está definido, o mascote padrão é mostrado
-        title: Imagem do mascote
+        desc_html: Mostrada em diversas páginas. Recomenda-se ao menos 293×205px. Quando não está definida, mascote padrão é mostrade
+        title: Imagem de mascote
       peers_api_enabled:
         desc_html: Nomes de domínio que essa instância encontrou no fediverso
         title: Publicar lista de instâncias descobertas
@@ -1256,7 +1256,7 @@ pt-BR:
       unrecognized_emoji: não é um emoji reconhecido
   relationships:
     activity: Atividade da conta
-    dormant: Inative
+    dormant: Inativa
     follow_selected_followers: Acompanhar estas contas que te acompanham
     followers: Acompanham você
     following: Acompanhando
