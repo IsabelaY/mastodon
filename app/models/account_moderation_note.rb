@@ -13,7 +13,7 @@
 #
 
 class AccountModerationNote < ApplicationRecord
-  CONTENT_SIZE_LIMIT = 2_000
+  CONTENT_SIZE_LIMIT = 4_000
 
   belongs_to :account
   belongs_to :target_account, class_name: 'Account'
