@@ -36,7 +36,7 @@ pt-BR:
         current_username: Para confirmar, por favor, digite o nome de tela (@usuárie) da conta atual
         digest: Enviado apenas após um longo período de inatividade com um resumo das menções recebidas durante sua ausência
         email: Você receberá um e-mail de confirmação
-        fields: Você pode ter até 4 itens mostrados em forma de tabela no seu perfil
+        fields: Você pode ter até 6 itens mostrados em forma de tabela no seu perfil
         header: PNG, GIF or JPG. Arquivos de até %{size}. Eles serão redimensionados para %{dimensions}px
         inbox_url: Copie a URL da página inicial do repetidor que você quer usar
         irreversible: Os brilhos filtrados vão desaparecer irreversivelmente, mesmo se o filtro for removido depois
