@@ -12,7 +12,7 @@ class REST::InstanceSerializer < ActiveModel::Serializer
 
   attributes :domain, :title, :version, :source_url, :description,
              :usage, :thumbnail, :icon, :languages, :configuration,
-             :registrations, :api_versions, :max_toot_chars
+             :registrations, :api_versions, :max_toot_chars, :max_bio_chars
 
   has_one :contact, serializer: ContactSerializer
   has_many :rules, serializer: REST::RuleSerializer
@@ -48,6 +48,10 @@ class REST::InstanceSerializer < ActiveModel::Serializer
 
   def max_toot_chars
     StatusLengthValidator::MAX_CHARS
+  end
+
+  def max_bio_chars
+    Account::NOTE_LENGTH_LIMIT
   end
 
   def usage
