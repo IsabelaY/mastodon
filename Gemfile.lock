@@ -629,7 +629,7 @@ GEM
       unf (~> 0.1.0)
     tzinfo (2.0.4)
       concurrent-ruby (~> 1.0)
-    tzinfo-data (1.2021.1)
+    tzinfo-data (1.2022.1)
       tzinfo (>= 1.0.0)
     unf (0.1.4)
       unf_ext
@@ -773,9 +773,8 @@ DEPENDENCIES
   rspec_junit_formatter (~> 0.4)
   rubocop (~> 1.14)
   rubocop-rails (~> 2.10)
-  ruby-progressbar (~> 1.11)
   ruby-bbcode
-  ruby-progressbar (~> 1.10)
+  ruby-progressbar (~> 1.11)
   sanitize (~> 5.2)
   scenic (~> 1.5)
   sidekiq (~> 6.2)
@@ -793,7 +792,7 @@ DEPENDENCIES
   thor (~> 1.1)
   tty-prompt (~> 0.23)
   twitter-text (~> 3.1.0)
-  tzinfo-data (~> 1.2021)
+  tzinfo-data (~> 1.2022)
   webauthn (~> 3.0.0.alpha1)
   webmock (~> 3.12)
   webpacker (~> 5.3)
