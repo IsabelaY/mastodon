@@ -219,7 +219,7 @@ GEM
       ruby2_keywords
     faraday-net_http (1.0.1)
     fast_blank (1.0.0)
-    fastimage (2.2.3)
+    fastimage (2.2.6)
     ffi (1.15.0)
     ffi-compiler (1.0.1)
       ffi (>= 1.0.0)
@@ -773,9 +773,8 @@ DEPENDENCIES
   rspec_junit_formatter (~> 0.4)
   rubocop (~> 1.14)
   rubocop-rails (~> 2.10)
-  ruby-progressbar (~> 1.11)
   ruby-bbcode
-  ruby-progressbar (~> 1.10)
+  ruby-progressbar (~> 1.11)
   sanitize (~> 5.2)
   scenic (~> 1.5)
   sidekiq (~> 6.2)
