@@ -99,7 +99,7 @@ class Status < ApplicationRecord
   scope :without_reblogs, -> { where('statuses.reblog_of_id IS NULL') }
   scope :without_local_only, -> { where(local_only: [false, nil]) }
   scope :with_public_visibility, -> { where(visibility: :public) }
-  scope :with_local_public_visibility, -> { where(visibility: :public).or(where(visibility: :unlisted).where(public_in_local: TRUE)) }
+  scope :with_local_public_visibility, -> { where(visibility: :public).or(where(visibility: :unlisted).where(public_in_local: true)) }
   scope :tagged_with, ->(tag_ids) { joins(:statuses_tags).where(statuses_tags: { tag_id: tag_ids }) }
   scope :excluding_silenced_accounts, -> { left_outer_joins(:account).where(accounts: { silenced_at: nil }) }
   scope :including_silenced_accounts, -> { left_outer_joins(:account).where.not(accounts: { silenced_at: nil }) }
