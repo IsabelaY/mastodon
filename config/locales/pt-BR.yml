@@ -1174,7 +1174,7 @@ pt-BR:
       mention: "%{name} te mencionou em:"
       new_followers_summary:
         one: Uma conta começou a acompanhar você! Uia!
-        other: %{count} contas começaram a acompanhar a sua! Andou brilhando bastante, hein?
+        other: "%{count} contas começaram a acompanhar a sua! Andou brilhando bastante, hein?"
       subject:
         one: "Uma nova notificação desde o seu último acesso 🐘"
         other: "%{count} novas notificações desde o seu último acesso 🐘"
