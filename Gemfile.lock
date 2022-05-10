@@ -829,9 +829,8 @@ DEPENDENCIES
   rspec_junit_formatter (~> 0.5)
   rubocop (~> 1.27)
   rubocop-rails (~> 2.14)
-  ruby-progressbar (~> 1.11)
   ruby-bbcode
-  ruby-progressbar (~> 1.10)
+  ruby-progressbar (~> 1.11)
   sanitize (~> 6.0)
   scenic (~> 1.6)
   sidekiq (~> 6.4)
@@ -855,3 +854,9 @@ DEPENDENCIES
   webpacker (~> 5.4)
   webpush (~> 0.3)
   xorcist (~> 1.1)
+
+RUBY VERSION
+   ruby 3.0.3p157
+
+BUNDLED WITH
+   2.2.32

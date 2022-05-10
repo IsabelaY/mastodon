@@ -222,7 +222,7 @@ export default class StatusContent extends React.PureComponent {
           {mentionsPlaceholder}
 
           {!hidden &&
-          <div tabIndex={!hidden ? 0 : null} className={`status__content__text ${!hidden ? 'status__content__text--visible' : ''} translate`}>
+          <div tabIndex={!hidden ? 0 : null} className={`status__content__text ${!hidden ? 'status__content__spoiler--visible' : ''} translate`}>
 
             <div
               onMouseDown={this.handleMouseDown}
@@ -238,7 +238,7 @@ export default class StatusContent extends React.PureComponent {
     } else if (this.props.onClick) {
       const output = [
         <div className={classNames} ref={this.setRef} tabIndex='0' onMouseDown={this.handleMouseDown} onMouseUp={this.handleMouseUp} key='status-content' onMouseEnter={this.handleMouseEnter} onMouseLeave={this.handleMouseLeave}>
-          <div className='status__content__text status__content__text--visible translate' dangerouslySetInnerHTML={content} />
+          <div className='status__content__text status__content__spoiler--visible translate' dangerouslySetInnerHTML={content} />
           {children}
 
           {!!status.get('poll') && <PollContainer pollId={status.get('poll')} />}
@@ -255,7 +255,7 @@ export default class StatusContent extends React.PureComponent {
     } else {
       return (
         <div className={classNames} ref={this.setRef} tabIndex='0' onMouseEnter={this.handleMouseEnter} onMouseLeave={this.handleMouseLeave}>
-          <div className='status__content__text status__content__text--visible translate' dangerouslySetInnerHTML={content} />
+          <div className='status__content__text status__content__spoiler--visible translate' dangerouslySetInnerHTML={content} />
 
           {children}
 

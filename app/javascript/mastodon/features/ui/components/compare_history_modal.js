@@ -70,7 +70,7 @@ class CompareHistoryModal extends React.PureComponent {
               </React.Fragment>
             )}
 
-            <div className='status__content__text status__content__text--visible translate' dangerouslySetInnerHTML={content} />
+            <div className='status__content__text status__content__spoiler--visible translate' dangerouslySetInnerHTML={content} />
 
             {!!currentVersion.get('poll') && (
               <div className='poll'>

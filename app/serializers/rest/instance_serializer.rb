@@ -7,7 +7,7 @@ class REST::InstanceSerializer < ActiveModel::Serializer
              :version, :urls, :stats, :thumbnail,
              :languages, :registrations, :approval_required, :invites_enabled,
              :configuration,
-             :max_toot_chars, :max_bio_chars,
+             :max_toot_chars, :max_bio_chars
 
   has_one :contact_account, serializer: REST::AccountSerializer
 
