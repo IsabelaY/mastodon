@@ -1,3 +1,11 @@
+// cores
+// #17093f fundo mais escuro
+// #3a277d fundo menos escuro
+// #58d9ba verde (destaques)
+// #30ddef links
+// #f8f8f8 ¨branco" padrão, usado em textos e afins, às vezes usa-se #fff em lugares de destaque
+// #dadada cinza para propriedades apagadas no fundo escuro
+
 @namespace url(http://www.w3.org/1999/xhtml);
 
 
@@ -1598,3 +1606,50 @@ button.icon-button i.fa-retweet:hover {
 .accounts-table .fa.active {
     color: #58d9ba;
 }
+
+// 3.5.2 10/05/2021
+
+.report-dialog-modal {
+    color: #f8f8f8;
+  }
+  
+  .report-dialog-modal__lead {
+    color: #dadada;
+  }
+  
+  .report-dialog-modal .poll__option.dialog-option > .poll__option__text {
+    color: #dadada;
+  }
+  
+  .report-dialog-modal .dialog-option .poll__input {
+    border-color: #58d9ba;
+  }
+  
+  .report-dialog-modal .poll__option.dialog-option > .poll__option__text strong {
+    color: #f8f8f8;
+  }
+  
+  .report-dialog-modal .dialog-option .poll__input:active, .report-dialog-modal .dialog-option .poll__input:focus, .report-dialog-modal .dialog-option .poll__input:hover {
+    border-color: #30ddef;
+  }
+  
+  .report-dialog-modal .button.button-secondary {
+    color: #f8f8f8;
+  }
+  
+  .report-dialog-modal .button.button-secondary:hover, .report-dialog-modal .button.button-secondary:focus, .report-dialog-modal .button.button-secondary:active {
+    border-color: #30ddef;
+    color: #30ddef;
+  }
+  
+  .report-dialog-modal__container {
+    border-color: #58d9ba;
+  }
+  
+  .report-dialog-modal .status__content, .report-dialog-modal .status__content p {
+    color: #f8f8f8;
+  }
+  
+  .report-dialog-modal {
+      border-radius: 0px;
+  }
