@@ -2509,8 +2509,11 @@ div.quote {
   color: #ddd;
 }
 
-  @media screen and (max-width: 600px)
-.admin-wrapper .sidebar ul a, .admin-wrapper .sidebar ul ul a, .dimension__item {
+  @media screen and (max-width: 600px) { .admin-wrapper .sidebar ul a, .admin-wrapper .sidebar ul ul a {
+  border-color: #333;
+} }
+
+.dimension__item {
   border-color: #333;
 }
 
@@ -2520,7 +2523,7 @@ div.quote {
 }
 
 .sparkline__graph path:first-child, .trends__item--requires-review .trends__item__sparkline path:first-child {
-fill: transparent !important
+fill: transparent !important;
 }
 
 .sparkline__graph path:last-child {
