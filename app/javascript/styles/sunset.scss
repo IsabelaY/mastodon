@@ -1024,7 +1024,7 @@ body .muted-hint a:hover, .admin-wrapper .content .muted-hint a:hover, body .mut
   border-color: #B31313;
 }
 
-.report-modal__comment, .report-modal__statuses .status-check-box, .report-modal__container {
+.report-modal__comment, .report-modal__statuses .status-check-box, .report-modal__container, .report-dialog-modal__container, .report-dialog-modal .poll__option.dialog-option {
   border-color: #8C5D00;
 }
 
@@ -1311,4 +1311,19 @@ body .muted-hint a:hover, .admin-wrapper .content .muted-hint a:hover, body .mut
 
 .picture-in-picture-placeholder:active, .picture-in-picture-placeholder:focus, .picture-in-picture-placeholder:hover {
     border-color: #DFA125;
+}
+
+// 13/05/22 - 3.5.2
+
+.report-dialog-modal .dialog-option .poll__input.active {
+    border-color: #8c0000;
+	background: #8c0000;
+}
+
+.report-dialog-modal .dialog-option .poll__input:active, .report-dialog-modal .dialog-option .poll__input:focus, .report-dialog-modal .dialog-option .poll__input:hover {
+	border-color: #8c0000;
+}
+
+.spoiler-button__overlay {
+	background: #8c3f00;
 }

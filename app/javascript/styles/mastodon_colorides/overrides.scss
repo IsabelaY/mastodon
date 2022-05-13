@@ -1493,7 +1493,7 @@ pre {
     color: #f8f8f8;
 }
 
-.notice-widget a, .placeholder-widget a {
+.notice-widget a, .placeholder-widget a, .empty-column-indicator a, .error-column a, .follow_requests-unlocked_explanation a {
     color: #30ddef;
 }
 
@@ -1611,6 +1611,7 @@ button.icon-button i.fa-retweet:hover {
 
 .report-dialog-modal {
     color: #f8f8f8;
+	background: #1d0b53;
   }
   
   .report-dialog-modal__lead {
@@ -1649,7 +1650,21 @@ button.icon-button i.fa-retweet:hover {
   .report-dialog-modal .status__content, .report-dialog-modal .status__content p {
     color: #f8f8f8;
   }
+
+
   
   .report-dialog-modal {
       border-radius: 0px;
   }
+
+// 13/05/2022
+
+.conversation__unread {
+	background: #58d9ba;
+}
+
+.scrollable .account-card {
+  background: #1d0b53;
+}
+
+
