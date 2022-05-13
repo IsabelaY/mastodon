@@ -521,7 +521,7 @@ pt-BR:
       language: Na língua
       status: Situação
       suppress: Remover recomendação de contas
-      suppressed: Removida
+      suppressed: Removidas
       title: Recomendações de contas
       unsuppress: Restaurar recomendação de contas
     instances:
@@ -566,7 +566,7 @@ pt-BR:
         instance_reports_measure: denúncias acerca delus
         instance_statuses_measure: publicações armazenadas
       delivery:
-        all: Todos
+        all: Todas
         clear: Limpar erros de entrega
         failing: Falhando
         restart: Reiniciar a entrega
