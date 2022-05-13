@@ -434,13 +434,13 @@ pt-BR:
         create: Adicionar domínio
         resolve: Resolver domínio
         title: Novo bloqueio de domínio de e-mail
-      title: Lista de e-mails bloqueados
+      title: E-mails bloqueados
     follow_recommendations:
       description_html: "<strong>A recomendação de contas ajuda noves usuáries a encontrar rapidamente conteúdo interessante</strong>. Quando ume usuárie ainda não tiver interagido o suficiente para gerar recomendações de contas, essas contas serão recomendadas. Essas recomendações são recalculadas diariamente a partir de uma lista de contas com alto engajamento e maior número de acompanhamentos locais em uma dada língua."
       language: Na língua
       status: Situação
       suppress: Remover recomendação de contas
-      suppressed: Removida
+      suppressed: Removidas
       title: Recomendações de contas
       unsuppress: Restaurar recomendação de contas
     instances:
@@ -453,7 +453,7 @@ pt-BR:
       content_policies:
         policy: Políticas
       delivery:
-        all: Todos
+        all: Todas
         clear: Limpar erros de entrega
         restart: Reiniciar a entrega
         stop: Parar entrega
@@ -1238,7 +1238,7 @@ pt-BR:
     preferences: Preferências
     profile: Perfil
     relationships: Acompanhamentos
-    statuses_cleanup: Exclusão automatizada de brilhos
+    statuses_cleanup: Exclusão automatizada
     two_factor_authentication: Autenticação de dois fatores
     webauthn_authentication: Chaves de segurança
   statuses:

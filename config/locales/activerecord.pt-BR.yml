@@ -11,7 +11,7 @@ pt-BR:
         locale: Idioma
         password: Senha
       user/account:
-        username: Usuário
+        username: Conta
       user/invite_request:
         text: Razão
     errors:

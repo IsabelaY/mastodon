@@ -188,7 +188,7 @@ body .muted-hint a, .admin-wrapper .content .muted-hint a {
   background: #bebebe;
 }
 
-.report-modal__container {
+.report-modal__container, .report-dialog-modal__container {
     border-top: 1px solid #ffffff90;
 }
 
@@ -229,9 +229,9 @@ body .muted-hint a, .admin-wrapper .content .muted-hint a {
     border: 2px groove #fff;
 }
 
-.directory__card__extra .account__header__content, .status.status-direct:not(.read) {
-    border-bottom: 1px solid #ffffff90;
-}
+//.directory__card__extra .account__header__content, .status.status-direct:not(.read) {
+//    border-bottom: 1px solid #ffffff90;
+//}
 
 .account__header__fields .verified {
     background: rgba(166, 230, 185,.25);
@@ -249,11 +249,7 @@ body .muted-hint a, .admin-wrapper .content .muted-hint a {
     background: #00000011;
 }
 
-.conversation {
-border-bottom: 1px solid #ffffff90;
-}
-
-.status__wrapper {
+.status__wrapper, .conversation {
     border-width: 1px 1px 0px 1px;
     border-color: #ffffff90;
     border-style: solid;
@@ -368,15 +364,15 @@ border-bottom: 1px solid #ffffff90;
     border-bottom: 1px solid hsla(0,0%,100%,.56);
 }
 
-.poll__input {
+.poll__input, .report-dialog-modal .dialog-option .poll__input {
     border: 1px solid #fff;
 }
 
-.poll__input:hover {
+.poll__input:hover, .report-dialog-modal .dialog-option .poll__input:hover {
     border-color: #ffffff90;
 }
 
-.poll__input.active {
+.poll__input.active, .report-dialog-modal .dialog-option .poll__input.active {
     border: 0;
     background: linear-gradient(180deg, rgba(246,64,255,1) 0%, rgba(255,177,56,1) 30%, transparent 30%, transparent 40%, rgba(255,177,56,1) 40%, rgba(255,177,56,1) 50%, transparent 50%, transparent 60%, rgba(255,177,56,1) 60%, rgba(255,246,198,1) 70%, transparent 70%, transparent 80%, rgba(255,246,198,1) 80%, rgba(255,246,198,1) 100%);
 }
@@ -392,7 +388,7 @@ border-bottom: 1px solid #ffffff90;
 
 //13/08/2020
 
-.account__header__bio .account__header__fields, .account__header__fields, .account__header__bar, .account, .admin-wrapper .content hr {
+.account__header__bio .account__header__fields, .account__header__fields, .account__header__bar, .account, .admin-wrapper .content hr, .report-dialog-modal .poll__option.dialog-option, .dimension__item {
     border-color: #ffffff90;
 }
 
@@ -429,7 +425,7 @@ border-bottom: 1px solid #ffffff90;
     background: #c3c3c3;
 }
 
-.poll__input:active, .poll__input:focus {
+.poll__input:active, .poll__input:focus, .report-dialog-modal:active .dialog-option .poll__input:focus {
     border-color: #40177d;
 }
 
@@ -500,3 +496,51 @@ border-bottom: 1px solid #ffffff90;
 .picture-in-picture-placeholder:active, .picture-in-picture-placeholder:focus, .picture-in-picture-placeholder:hover {
     border: 2px dashed hsla(0,0%,100%,.56);
 }
+
+
+//12/05/2022, 3.5.2
+
+
+.empty-column-indicator, .error-column, .follow_requests-unlocked_explanation {
+	color: #222;
+}
+
+.follow_requests-unlocked_explanation a, .empty-column-indicator a, .error-column a {
+	color: #2929FF;
+}
+
+.report-dialog-modal {
+background: linear-gradient(315deg, rgb(255, 198, 222) 0%, rgb(198, 198, 255) 50%, rgb(198, 255, 222) 100%);
+border-radius: 0px; 
+border: 2px groove #fff; }
+
+.flash-message.warning {
+  color: #222;
+}
+
+.account {
+    border-bottom: 0;
+}
+
+.report-dialog-modal .dialog-option .poll__input {
+    color: #40177d;
+}
+
+.sparkline {
+    background: #0001;
+}
+
+.button:active, .button:focus, .button:hover, .dashboard__quick-access:active, .dashboard__quick-access:focus, .dashboard__quick-access:hover {
+    color: #fff;
+}
+
+.filters .filter-subset a {
+	border-color: #fff;
+}
+
+.filters .filter-subset a:hover {
+    border-color: #77f;
+}
+
+
+
