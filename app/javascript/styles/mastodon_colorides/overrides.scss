@@ -1,3 +1,5 @@
+@use "sass:math";
+
 // cores
 // #17093f fundo mais escuro
 // #3a277d fundo menos escuro
@@ -1424,7 +1426,7 @@ pre {
     top: 19px;
 }
 
-.trends__item__sparkline path:last-child {
+.trends__item__sparkline path:last-child, .sparkline__graph path:last-child {
     stroke: #30ddef !important;
 }
 
@@ -1445,7 +1447,7 @@ pre {
     color: #dfdfdf;
 }
 
-.trends__item__sparkline path:first-child {
+.trends__item__sparkline path:first-child, .sparkline__graph path:first-child {
     fill: transparent !important;
 }
 
@@ -1640,8 +1642,13 @@ button.icon-button i.fa-retweet:hover {
   
   .report-dialog-modal .button.button-secondary:hover, .report-dialog-modal .button.button-secondary:focus, .report-dialog-modal .button.button-secondary:active {
     border-color: #30ddef;
-    color: #30ddef;
   }
+
+.report-dialog-modal .dialog-option .poll__input.active {
+  border-color: #58d9ba;
+  background: #58d9ba;
+  color: #170941;
+}
   
   .report-dialog-modal__container {
     border-color: #58d9ba;
@@ -1653,7 +1660,7 @@ button.icon-button i.fa-retweet:hover {
 
 
   
-  .report-dialog-modal {
+  .report-dialog-modal, .dashboard__quick-access, .flash-message-stack .flash-message:last-child:first-child {
       border-radius: 0px;
   }
 
@@ -1669,8 +1676,8 @@ button.icon-button i.fa-retweet:hover {
 
 // 13/05/2022 part deux revenge of colorides
 
-.simple_form input[type="email"]:hover, .simple_form input[type="number"]:hover, .simple_form input[type="password"]:hover, .simple_form input[type="text"]:hover, .simple_form select:hover, .simple_form textarea:hover {
-	border: 0px;
+.simple_form input[type="email"]:hover, .simple_form input[type="number"]:hover, .simple_form input[type="password"]:hover, .simple_form input[type="text"]:hover, .simple_form select:hover, .simple_form textarea:hover, .flash-message.warning {
+	border-color: transparent;
 }
 
 .explore__search-header .search__input::placeholder {
@@ -1685,3 +1692,20 @@ button.icon-button i.fa-retweet:hover {
   border: 1px solid #58d9ba;
   border-radius: 0px;
 }
+
+$destaque: #58d9ba;
+
+.dimension {
+  &__item {
+    border-bottom: 1px solid lighten($ui-base-color, 4%);
+    &__indicator {
+      background: $destaque;
+      @for $i from 0 through 10 {
+        &--#{10 * $i} {
+          background-color: rgba($destaque, 1 * (math.div(max(1, $i), 10)));
+        }
+      }
+    }
+  }
+}
+
