@@ -247,10 +247,6 @@ background-color: rgba(232, 246, 190, 0.8)
     border: none;
   }
 
-  .status__relative-time
-  {
-    color: rgb(197, 216, 130);
-  }
 
 .card .counter, .card .counter:after, .card .counter:before, .card .counter.active:after, .card .counter.active:before, .account__action-bar__tab, .account__header .account__header__fields dl, .account__header__fields, .account__action-bar, .account__disclaimer, .table th
 {
@@ -1464,11 +1460,11 @@ pre {
     border-bottom: 1px solid #c5d882;
 }
 
-.trends__item__sparkline path:first-child {
+.trends__item__sparkline path:first-child, .sparkline__graph path:first-child {
     fill: rgba(167,38,69,.25) !important;
 }
 
-.trends__item__sparkline path:last-child {
+.trends__item__sparkline path:last-child, .sparkline__graph path:last-child {
     stroke: #a72c4c !important;
 }
 
@@ -1488,7 +1484,7 @@ pre {
     color: #cf2210;
 }
 
-.button.disabled, .button:disabled {
+.button:disabled {
     background-color: #e8f6be;
 }
 
@@ -1742,4 +1738,70 @@ pre {
 .icon-with-badge__badge {
     border: transparent;
     border-radius: 0px;
+}
+
+// 13/05/22 - 3.5.2
+
+.explore__search-header {
+  background: transparent;
+}
+  
+.account__header__account-note, .actions-modal, .announcements, .block-modal, .boost-modal, .compare-history-modal, .confirmation-modal, .embed-modal, .error-modal, .mute-modal, .onboarding-modal, .picture-in-picture__footer, .picture-in-picture__header, .reactions-bar__item, .report-dialog-modal, .report-modal, .report-modal__comment .setting-text, .report-modal__comment .setting-text__wrapper, .report-dialog-modal__container, .compare-history-modal .report-modal__target, .dropdown-menu__container__header, .dropdown-menu__item.edited-timestamp__history__item, .dropdown-menu__separator, .report-dialog-modal .poll__option.dialog-option, .dimension__item {
+  border-color: rgb(197, 216, 130);
+}
+
+.account__header__extra__links {
+  color: #252525;
+}
+
+.account__header__bio .account__header__joined {
+  color: #3a3a3a;
+}
+
+.account__header__account-note textarea::placeholder {
+  color: #3a3a3a;
+}
+
+.account__header__account-note textarea:active, .account__header__account-note textarea:focus {
+  background: rgb(197, 216, 130);
+}
+
+.account__header__account-note textarea {
+  border-radius: 0px;
+}
+
+.actions-modal, .announcements, .block-modal, .boost-modal, .compare-history-modal, .confirmation-modal, .embed-modal, .error-modal, .mute-modal, .onboarding-modal, .picture-in-picture__footer, .picture-in-picture__header, .reactions-bar__item, .report-dialog-modal, .report-modal, .report-modal__comment .setting-text, .report-modal__comment .setting-text__wrapper {
+	background: #e8f6be;
+	border-radius: 0px;
+}
+
+.report-dialog-modal .dialog-option .poll__input.active {
+  border-color: #a72645;
+  background: #a72645;
+}
+
+.report-dialog-modal .dialog-option .poll__input, .report-dialog-modal .dialog-option .poll__input:hover, .report-dialog-modal .dialog-option .poll__input:active, .report-dialog-modal .dialog-option .poll__input:focus {
+  border-color: #a72645;
+}
+
+.button:disabled:hover {
+    color: #000;
+}
+
+.sparkline {
+  background: #e8f6be;
+}
+
+a.sparkline:active, a.sparkline:focus, a.sparkline:hover {
+  background: #c5d882;
+}
+
+.dashboard__quick-access {
+  border-radius: 0px;
+  background: #c5d882;
+}
+
+.dashboard__quick-access:active, .dashboard__quick-access:focus, .dashboard__quick-access:hover {
+  color: #fff;
+  background-color: #a72c4c;
 }
