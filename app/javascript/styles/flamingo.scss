@@ -778,7 +778,6 @@ deal with borders
 .loading-indicator__figure,
 .button.button-secondary,
 .account__header__fields,
-    .account__header__fields dl:last-child,
 .account__action-bar,
     .account__action-bar__tab,
 .account__disclaimer,
@@ -1046,7 +1045,6 @@ material design overrides
 .account-timeline__header,
 .account
     {background: var(--bg)}
-.notification .account,
 .load-more
     {background: var(--bgPage)}
 .status__prepend,
@@ -2559,7 +2557,7 @@ a.sparkline:active, a.sparkline:focus, a.sparkline:hover {
   color: #999;
 }
 
-.trends__item--requires-review .trends__item__current, .trends__item--requires-review .trends__item__name, .trends__item--requires-review .trends__item__name a {
+.batch-table__row--attention .name-tag, .batch-table__row--attention .name-tag a, .batch-table__row--attention .name-tag strong, .trends__item--requires-review .trends__item__current, .trends__item--requires-review .trends__item__name, .trends__item--requires-review .trends__item__name a, .batch-table__row--attention .pending-account__header, .batch-table__row--attention .pending-account__header a, .batch-table__row--attention .pending-account__header strong {
   color: #f90;
 }
 
@@ -2573,4 +2571,27 @@ a.sparkline:active, a.sparkline:focus, a.sparkline:hover {
 
 .pending-account__header {
   color: #ddd;
+}
+
+.batch-table__row--attention, .batch-table__row--attention .accounts-table, .batch-table__row--attention .accounts-table__count, .batch-table__row--attention .accounts-table__count small, .batch-table__row--attention .accounts-table a, .batch-table__row--attention .accounts-table strong, .batch-table__row--attention .accounts-table tbody td.accounts-table__extra {
+  color: #ddd;
+}
+
+body.admin {
+  background: #222;
+}
+
+.account {
+	border: 0px;
+}
+
+.notification.notification-follow, .notification.notification-admin-sign-up {
+  margin: 8px;
+  background: #222;
+  border-radius: 2px;
+}
+
+
+.account__header__fields dl:last-child {
+	border-color: #111;
 }
