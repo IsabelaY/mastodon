@@ -468,13 +468,13 @@ pt-BR:
       no_email_domain_block_selected: Nenhum bloco de domínio de e-mail foi alterado, pois nenhum foi selecionado
       resolved_dns_records_hint_html: O nome de domínio resolve os seguintes domínios MX, que são responsáveis finais por aceitar o e-mail. Bloquear um domínio MX bloqueará inscrições de qualquer endereço de e-mail que use o mesmo domínio MX, mesmo que o nome de domínio visível seja diferente. <strong>Cuidado para não bloquear os principais provedores de e-mail.</strong>
       resolved_through_html: Resolvido através de %{domain}
-      title: Lista de e-mails bloqueados
+      title: E-mails bloqueados
     follow_recommendations:
       description_html: "<strong>A recomendação de contas ajuda noves usuáries a encontrar rapidamente conteúdo interessante</strong>. Quando ume usuárie ainda não tiver interagido o suficiente para gerar recomendações de contas, essas contas serão recomendadas. Essas recomendações são recalculadas diariamente a partir de uma lista de contas com alto engajamento e maior número de acompanhamentos locais em uma dada língua."
       language: Na língua
       status: Situação
       suppress: Remover recomendação de contas
-      suppressed: Removida
+      suppressed: Removidas
       title: Recomendações de contas
       unsuppress: Restaurar recomendação de contas
     instances:
@@ -515,7 +515,7 @@ pt-BR:
         instance_reports_measure: relatórios sobre eles
         instance_statuses_measure: publicações armazenadas
       delivery:
-        all: Todos
+        all: Todas
         clear: Limpar erros de entrega
         failing: Falhando
         restart: Reiniciar a entrega
@@ -1356,7 +1356,7 @@ pt-BR:
     preferences: Preferências
     profile: Perfil
     relationships: Acompanhamentos
-    statuses_cleanup: Exclusão automatizada de brilhos
+    statuses_cleanup: Exclusão automatizada
     strikes: Avisos de moderação
     two_factor_authentication: Autenticação de dois fatores
     webauthn_authentication: Chaves de segurança
