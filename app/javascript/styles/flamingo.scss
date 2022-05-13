@@ -1,3 +1,10 @@
+//mudança das variáveis originais (2022 por Aster, colocar antes de importar aplicação)
+$classic-base-color: #111;
+$classic-primary-color: #777;
+$classic-secondary-color: #ddd;
+$classic-highlight-color: #f09;
+//fim das mudanças
+
 @import 'application';
 
 /*------------------------------------------------------------------------------
@@ -21,7 +28,7 @@
     .landing-page .container {max-width: 1600px}
 }
 
-/* move tab bar to bottom on mobile */
+/* move tab bar to bottom on mobile 
 @media (max-width: 640px) {
     .tabs-bar {
         position: absolute;
@@ -32,8 +39,8 @@
     .react-swipeable-view-container {height: calc(100% - 50px)}
     .floating-action-button {margin-bottom: 50px}
     .tabs-bar {background: var(--bgHead) !important; color: var(--textHead) !important}
-}
-
+} */
+ 
 /* custom font */
 body,
 .landing-page #mastodon-timeline,
@@ -2407,4 +2414,160 @@ div.quote {
 .poll__chart {
     position: relative;
     height: 15%;
+}
+
+// 13/05/2022
+
+.tabs-bar__link {
+	border-color: transparent;
+}
+
+.tabs-bar__link:focus, .tabs-bar__link:hover, .tabs-bar__link:active {
+	border-color: #fff;
+}
+
+.explore__search-header {
+	background: #111;
+}
+
+.tabs-bar__wrapper {
+  background: #111;
+}
+
+.explore__search-header .search__input::placeholder {
+  color: #ddd;
+}
+
+.explore__search-header .search__input {
+  border-radius: 0;
+  background: #333;
+  color: #fff;
+}
+
+.explore__search-header .search .fa {
+	color: #ddd;
+}
+
+.search-popout {
+	border-radius: 0px;
+	color: #666;
+}
+
+.search-popout h4 {
+  color: #d07; // versão da cor rosa do tema apropriada para fundo branco
+}
+
+.report-dialog-modal {
+  color: #f09;
+  border-radius: 0;
+}
+
+.report-dialog-modal__container {
+  background: #333;
+  border-color: #777;
+}
+
+.icon-button:active, .icon-button:focus, .icon-button:hover {
+  background-color: #111;
+}
+
+.icon-button {
+  border-radius: 0;
+}
+
+.report-dialog-modal__lead, .report-dialog-modal .poll__option.dialog-option > .poll__option__text {
+  color: #ddd;
+}
+
+.report-dialog-modal .poll__option.dialog-option > .poll__option__text strong {
+  color: #fff;
+}
+
+.report-dialog-modal .dialog-option .poll__input.active {
+  border-color: #fff;
+  background: #fff;
+}
+
+.report-dialog-modal .dialog-option .poll__input, .report-dialog-modal .dialog-option .poll__input:active, .report-dialog-modal .dialog-option .poll__input:focus, .report-dialog-modal .dialog-option .poll__input:hover, .report-dialog-modal .poll__option.dialog-option {
+  border-color: #fff;
+}
+
+.report-dialog-modal .dialog-option .poll__input {
+  color: #333;
+}
+
+.status-check-box__status .detailed-status__display-name {
+  color: #ddd;
+}
+
+.report-dialog-modal .status__content, .report-dialog-modal .status__content p {
+  color: #fff;
+  background: transparent;
+}
+
+.status-check-box__status .detailed-status__display-name span {
+  color: #ddd;
+}
+
+  @media screen and (max-width: 600px)
+.admin-wrapper .sidebar ul a, .admin-wrapper .sidebar ul ul a, .dimension__item {
+  border-color: #333;
+}
+
+.sparkline {
+	border-radius: 0;
+	background: #333
+}
+
+.sparkline__graph path:first-child, .trends__item--requires-review .trends__item__sparkline path:first-child {
+fill: transparent !important
+}
+
+.sparkline__graph path:last-child {
+  stroke: #f09 !important;
+}
+
+.trends__item--requires-review .trends__item__sparkline path:last-child {
+  stroke: #f90 !important;
+}
+
+.sparkline__value__change.positive {
+  color: #0d9;
+}
+
+.sparkline__label {
+  color: #ddd;
+}
+
+.dashboard__quick-access {
+  border-radius: 0px;
+  background: #d07;
+}
+
+.dashboard__quick-access:hover {
+  background: #f09;
+}
+
+a.sparkline:active, a.sparkline:focus, a.sparkline:hover {
+  background: #222;
+}
+
+.sparkline__value__change {
+  color: #999;
+}
+
+.trends__item--requires-review .trends__item__current, .trends__item--requires-review .trends__item__name, .trends__item--requires-review .trends__item__name a {
+  color: #f90;
+}
+
+.retention__table__label {
+  color: #ddd;
+}
+
+.dimension__item__value {
+  color: #999;
+}
+
+.pending-account__header {
+  color: #ddd;
 }
