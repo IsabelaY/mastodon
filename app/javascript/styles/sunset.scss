@@ -951,11 +951,11 @@ body .muted-hint a:hover, .admin-wrapper .content .muted-hint a:hover, body .mut
     text-transform: uppercase;
 }
 
-.trends__item__sparkline path:first-child {
+.trends__item__sparkline path:first-child, .sparkline__graph path:first-child {
     fill: #EEB94F66 !important;
 }
 
-.trends__item__sparkline path:last-child {
+.trends__item__sparkline path:last-child, .sparkline__graph path:last-child {
     stroke: #EEB94F !important;
 }
 
@@ -1326,4 +1326,34 @@ body .muted-hint a:hover, .admin-wrapper .content .muted-hint a:hover, body .mut
 
 .report-dialog-modal .spoiler-button__overlay {
 	background: #8c3f00;
+	border: 0;
+}
+
+// 13/05/22 part 2 electric bug-aloo
+
+.report-dialog-modal .dialog-option .poll__input {
+  color: #fff;
+}
+
+.explore__search-header .search__input {
+  border: 1px solid #8c3f00;
+  color: #fff;
+  background: #000;
+}
+
+.dashboard__quick-access {
+  color: #000;
+}
+
+.dashboard__quick-access:active, .dashboard__quick-access:focus, .dashboard__quick-access:hover {
+  background-color: #ffd37c;
+}
+
+.sparkline {
+  background: #000;
+  border: 1px solid #8c3f00;
+}
+
+a.sparkline:active, a.sparkline:focus, a.sparkline:hover {
+  background: #2b2b2b;
 }
