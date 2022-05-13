@@ -64,7 +64,7 @@ class FanOutOnWriteService < BaseService
   def deliver_to_self!
     FeedManager.instance.push_to_home(@account, @status, update: update?) if @account.local?
   end
-  public_visibility
+
   def notify_mentioned_accounts!
     @status.active_mentions.where.not(id: @options[:silenced_account_ids] || []).joins(:account).merge(Account.local).select(:id, :account_id).reorder(nil).find_in_batches do |mentions|
       LocalNotificationWorker.push_bulk(mentions) do |mention|
