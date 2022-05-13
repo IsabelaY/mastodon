@@ -815,7 +815,7 @@ color: rgb(48, 221, 239);
 }
 
 .simple_form select, .simple_form input[type="text"], .simple_form input[type="number"], .simple_form input[type="email"], .simple_form input[type="password"], .simple_form textarea {
-border: none;
+border: 1px solid #58d9ba;
 border-radius: 0px;
 background: #170941;
 }
@@ -1667,4 +1667,21 @@ button.icon-button i.fa-retweet:hover {
   background: #1d0b53;
 }
 
+// 13/05/2022 part deux revenge of colorides
 
+.simple_form input[type="email"]:hover, .simple_form input[type="number"]:hover, .simple_form input[type="password"]:hover, .simple_form input[type="text"]:hover, .simple_form select:hover, .simple_form textarea:hover {
+	border: 0px;
+}
+
+.explore__search-header .search__input::placeholder {
+  color: #dadada;
+}
+
+.explore__search-header .search .fa {
+	color: #fff;
+}
+
+.explore__search-header .search__input {
+  border: 1px solid #58d9ba;
+  border-radius: 0px;
+}
