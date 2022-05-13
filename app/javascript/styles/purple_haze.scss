@@ -2,6 +2,14 @@
 /* Version 2.0 */
 /* Sogo Osaka love */
 
+
+
+//mudança das variáveis originais (2022 por Aster)
+$classic-highlight-color: #0070B2;
+$ui-highlight-color: $classic-highlight-color !default;
+$emojis-requiring-inversion: 'chains';
+//fim das mudanças
+
 @import 'application';
 
   html
@@ -2385,7 +2393,7 @@ button.icon-button.disabled i.fa-retweet
   border-bottom-color: rgba(112, 84, 128, .5);
 }
 
-.actions-modal .dropdown-menu__separator
+.actions-modal .dropdown-menu__separator, .report-dialog-modal .poll__option.dialog-option
 {
   border-bottom-color: rgba(112, 84, 128, .5);
 }
@@ -2404,9 +2412,9 @@ button.icon-button.disabled i.fa-retweet
   color: #9C77C2;
 }
 
-.report-modal__container
+.report-modal__container, .report-dialog-modal__container
 {
-  border-top: 1px solid #d9e1e8;
+  border-top: 1px solid #ae8cd1;
 }
 
 .report-modal__statuses .status__content a
@@ -4529,8 +4537,8 @@ div.quote, pre {
     color: #694e78;
 }
 
-.poll__input {
-    border: 1px solid #ae8cd1;
+.poll__input, .report-dialog-modal .dialog-option .poll__input, .report-dialog-modal .dialog-option .poll__input:active, .report-dialog-modal .dialog-option .poll__input:focus, .report-dialog-modal .dialog-option .poll__input:hover, .poll__input:hover, .poll__input:active, .poll__input:focus {
+    border-color: #ae8cd1;
 }
 
 .brand__tagline {
@@ -4575,7 +4583,7 @@ a.table-action-link:hover, button.table-action-link:hover {
     color: #fff;
 }
 
-.poll__input.active {
+.poll__input.active, .report-dialog-modal .dialog-option .poll__input.active {
     border-color: #ae8cd1;
     background: #ae8cd1;
 }
@@ -4990,3 +4998,39 @@ color: #705480;
 .column-link--transparent .icon-with-badge__badge {
   border-color: #f7efff;
 }
+
+// 12/05/2022
+
+.empty-column-indicator, .error-column, .follow_requests-unlocked_explanation {
+    background: #f7efff;
+}
+
+.follow_requests-unlocked_explanation {
+    color: #694E78;
+}
+
+.account__header__content {
+    color: #ae8cd1;
+}
+
+.account__header__bio .account__header__joined {
+	color: #f7efff;
+}
+
+.conversation__content__relative-time {
+	color: #606984;
+}
+
+.account__header__bio .account__header__fields a {
+  color: #80D0FF;
+}
+
+.report-dialog-modal {
+    background: #fbf6ff;
+    color: #705480;
+}
+
+.report-dialog-modal .dialog-option .poll__input {
+	color: #fbf6ff;
+}
+
