@@ -542,5 +542,23 @@ border: 2px groove #fff; }
     border-color: #77f;
 }
 
+.reply-indicator__content .status__content__spoiler-link, .status__content .status__content__spoiler-link {
+	background: #0002;
+}
+
+.reply-indicator__content .status__content__spoiler-link:focus, .status__content .status__content__spoiler-link:active, .reply-indicator__content .status__content__spoiler-link:focus, .status__content .status__content__spoiler-link:active {
+	background: #fff7;
+}
+
+.reply-indicator__content .status__content__spoiler-link:hover, .status__content .status__content__spoiler-link:hover {
+	background: #44f;
+    color: #fff;
+} 
+
+.scrollable .account-card {
+  background: #0001;
+}
+
+
 
 
