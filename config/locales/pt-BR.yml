@@ -463,7 +463,7 @@ pt-BR:
       language: Na língua
       status: Situação
       suppress: Remover recomendação de contas
-      suppressed: Removida
+      suppressed: Removidas
       title: Recomendações de contas
       unsuppress: Restaurar recomendação de contas
     instances:
@@ -505,7 +505,7 @@ pt-BR:
         instance_reports_measure: denúncias sobre elus
         instance_statuses_measure: publicações armazenadas
       delivery:
-        all: Todos
+        all: Todas
         clear: Limpar erros de entrega
         failing: Falhando
         restart: Reiniciar a entrega
@@ -1635,7 +1635,7 @@ pt-BR:
     profile: Perfil
     relationships: Acompanhamentos
     statuses_cleanup: Exclusão automatizada de brilhos
-    strikes: Bandeiras de moderação
+    strikes: Avisos de moderação
     two_factor_authentication: Autenticação de dois fatores
     webauthn_authentication: Chaves de segurança
   statuses:
