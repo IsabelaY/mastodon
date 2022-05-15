@@ -5165,3 +5165,12 @@ a.sparkline:active, a.sparkline:focus, a.sparkline:hover {
 }
 
 //fim da seção de administração, ainda falta a questão das revisões amarelas
+
+.column-settings__hashtags .column-select__multi-value {
+  background: #fcf8ff;
+}
+
+.column-settings__hashtags .column-select__multi-value__remove:hover, .column-settings__hashtags .column-select__multi-value__remove:active, .column-settings__hashtags .column-select__multi-value__remove:focus {
+  background: #ae8cd1;
+  color: #fff;
+}
