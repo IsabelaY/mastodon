@@ -3,10 +3,13 @@
 /* Sogo Osaka love */
 
 
-
-//mudança das variáveis originais (2022 por Aster)
+//mudança das variáveis originais e afins (2022 por Aster)
+@use "sass:math";
+$roxo-destaque: #9c77c2;
+$classic-base-color: #705480;
+$classic-primary-color: #AE8CD1;
+$classic-secondary-color: #dfc9f2;
 $classic-highlight-color: #0070B2;
-$ui-highlight-color: $classic-highlight-color !default;
 $emojis-requiring-inversion: 'chains';
 //fim das mudanças
 
@@ -269,7 +272,7 @@ $emojis-requiring-inversion: 'chains';
 
   .drawer__inner
   {
-    background: #F7EFFF;
+    background: #fbf6ff;
     border-radius: 0 0 4px 4px;
   }
 
@@ -4811,12 +4814,12 @@ border-bottom: 0px;
   color: #ae8cd1;
 }
 
-.trends__item__sparkline path:last-child {
-  stroke: #ae8cd1 !important;
+.trends__item__sparkline path:last-child, .sparkline__graph path:last-child {
+  stroke: #694e78 !important;
   fill: none !important;
 }
 
-.trends__item__sparkline path:first-child {
+.trends__item__sparkline path:first-child, .sparkline__graph path:first-child {
   fill: #ae8cd140 !important;
 }
 
@@ -5034,3 +5037,131 @@ color: #705480;
 	color: #fbf6ff;
 }
 
+// 15/05/2022
+
+
+.status.light .display-name span {
+  color: #606984;
+}
+
+// Explore
+
+.scrollable .account-card {
+  background: #dfc9f2;
+  border-radius: 8px;
+}
+
+.scrollable .account-card__bio::after {
+  background: linear-gradient(270deg,#dfc9f2,transparent);
+}
+
+.account-card__title .display-name, .account-card__counters__item small {
+  color: #606984;
+}
+
+.account-card__counters__item, .account-card__title .display-name bdi {
+  color: #694e78;
+}
+
+.scrollable .account-card__title__avatar .account__avatar, .scrollable .account-card__title__avatar img {
+  border-color: #dfc9f2;
+  background-color: #dfc9f2;
+}
+
+.account-card__bio a {
+  color: #008adb;
+}
+
+// fim de Explore
+
+
+//painel de administração novo
+
+.skeleton {
+  background-color: lighten(#9c77c2, 8%);
+  background-image: linear-gradient(90deg, lighten(#9c77c2, 8%), lighten(#9c77c2, 12%), lighten(#9c77c2, 8%));
+  border-radius: 8px;
+}
+
+.dimension__item__value {
+  color: #606984;
+}
+
+.dimension {
+  &__item {
+  border-color: #dfc9f2;
+    &__indicator {
+     background: $roxo-destaque;
+     @for $i from 0 through 10 {
+        &--#{10 * $i} {
+          background-color: rgba($roxo-destaque, 1 * (math.div(max(1, $i), 10)));
+          }
+        }
+    }
+  }
+}
+
+.dashboard__quick-access {
+  background: #9c77c2;
+  border-radius: 8px;
+}
+
+.dashboard__quick-access:hover, .dashboard__quick-access:focus, .dashboard__quick-access:active {
+    background: #694e78;
+}
+
+.sparkline {
+  background: #efdfff;
+  border-radius: 8px;
+  &__value {
+  &__total {
+    color: #694e78;
+  }
+  &__change { 
+    color: #606984;
+    &.positive {
+      color: #63883D;
+      }
+  }
+  }
+  &__label {
+  color: #606984;
+  }
+}
+
+a.sparkline:active, a.sparkline:focus, a.sparkline:hover {
+  background: #dfc9f2;
+}
+
+.retention__table__box {
+  background: #694e78;
+  @for $i from 0 through 10 {
+        &--#{10 * $i} {
+          background-color: rgba(105, 78, 120, 1 * (math.div(max(1, $i), 10)));
+    }
+  }
+}
+
+.retention__table__label {
+  color: #606984;
+}
+
+.admin-wrapper .sidebar__toggle {
+  background: #966dad;
+}
+
+.admin-wrapper .sidebar__toggle__icon {
+  color: #fff;
+}
+
+.admin-wrapper .sidebar__toggle a:active, .admin-wrapper .sidebar__toggle a:focus, .admin-wrapper .sidebar__toggle a:hover {
+  background: #705480;
+}
+
+  @media screen and (max-width: 600px) {
+  .admin-wrapper .sidebar ul a, .admin-wrapper .sidebar ul ul a {
+  border-color: #ae8cd1;
+  }
+}
+
+//fim da seção de administração, ainda falta a questão das revisões amarelas
