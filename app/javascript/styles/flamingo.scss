@@ -2595,3 +2595,48 @@ body.admin {
 .account__header__fields dl:last-child {
 	border-color: #111;
 }
+
+// 15/05/2022
+
+// notificações no celular
+.icon-with-badge__badge {
+  background: #d07;
+  border-color: #111;
+  padding: 1px 5px;
+  border-radius: 50%;
+}
+
+.scrollable .account-card {
+  background: #222;
+}
+
+.scrollable .account-card__bio::after {
+  background: linear-gradient(270deg,#222,transparent);
+}
+
+.account-card__counters__item small {
+  color: #ddd;
+}
+
+.scrollable .account-card__title__avatar .account__avatar, .scrollable .account-card__title__avatar img {
+  border-color: transparent;
+}
+
+.account-card__title__avatar .account__avatar, .account-card__title__avatar img {
+  background-color: transparent;
+  border-radius: 50%;
+  border-color: transparent;
+}
+
+.account-card__bio a {
+  color: #f09;
+}
+
+.account-card__header img {
+  background: transparent;
+}
+
+.back-link a {
+  color: #f09; }
+
+  

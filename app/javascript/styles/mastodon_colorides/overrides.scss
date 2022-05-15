@@ -1709,3 +1709,13 @@ $destaque: #58d9ba;
   }
 }
 
+// 15/05/2022
+
+.scrollable .account-card__title__avatar .account__avatar, .scrollable .account-card__title__avatar img {
+  border-color: transparent;
+}
+
+.account-card__title__avatar .account__avatar, .account-card__title__avatar img {
+  background-color: transparent;
+  border-radius: 0;
+}
