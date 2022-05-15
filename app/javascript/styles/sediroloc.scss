@@ -1805,3 +1805,26 @@ a.sparkline:active, a.sparkline:focus, a.sparkline:hover {
   color: #fff;
   background-color: #a72c4c;
 }
+
+// 15/05/2022
+
+.trends__item {
+    border-color: #c5d882;
+}
+
+.scrollable .account-card {
+  background: #e8f6be;
+}
+
+.scrollable .account-card__title__avatar .account__avatar, .scrollable .account-card__title__avatar img {
+  border-color: transparent;
+}
+
+.account-card__title__avatar .account__avatar, .account-card__title__avatar img {
+  background-color: transparent;
+  border-radius: 0;
+}
+
+.scrollable .account-card__bio::after {
+  background: linear-gradient(270deg,#e8f6be,transparent);
+}
