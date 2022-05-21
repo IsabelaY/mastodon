@@ -555,5 +555,13 @@ border: 2px groove #fff; }
 }
 
 
+// 20/05/2022
 
+.scrollable .account-card__title__avatar .account__avatar, .scrollable .account-card__title__avatar img {
+    border: 2px groove #fff;
+    border-radius: 0;
+}
 
+.scrollable .account-card__bio::after {
+  background: url("~images/palmeiras.png") no-repeat;
+  }
