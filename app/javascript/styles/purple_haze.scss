@@ -3,6 +3,7 @@
 /* Sogo Osaka love */
 
 
+
 //mudança das variáveis originais e afins (2022 por Aster)
 @use "sass:math";
 $roxo-destaque: #9c77c2;
@@ -12,7 +13,6 @@ $classic-secondary-color: #dfc9f2;
 $classic-highlight-color: #0070B2;
 $emojis-requiring-inversion: 'chains';
 //fim das mudanças
-
 @import 'application';
 
   html
@@ -5173,4 +5173,23 @@ a.sparkline:active, a.sparkline:focus, a.sparkline:hover {
 .column-settings__hashtags .column-select__multi-value__remove:hover, .column-settings__hashtags .column-select__multi-value__remove:active, .column-settings__hashtags .column-select__multi-value__remove:focus {
   background: #ae8cd1;
   color: #fff;
+}
+
+// 20/05/2022
+
+.explore__search-header {
+  background: #f7efff;
+}
+
+.explore__search-header .search__input {
+  border-radius: 8px;
+  border: 1px solid #ae8cd1;
+}
+
+.account-card__header img {
+  background: #ae8cd1;
+}
+
+.column-settings__hashtags .column-select__multi-value__label, .column-settings__hashtags .column-select__input, .column-settings__hashtags .column-select__input-container {
+  color: #705480;
 }
