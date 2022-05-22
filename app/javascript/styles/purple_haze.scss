@@ -2,17 +2,17 @@
 /* Version 2.0 */
 /* Sogo Osaka love */
 
-
-
 //mudança das variáveis originais e afins (2022 por Aster)
 @use "sass:math";
+
 $roxo-destaque: #9c77c2;
-$classic-base-color: #705480;
-$classic-primary-color: #AE8CD1;
-$classic-secondary-color: #dfc9f2;
-$classic-highlight-color: #0070B2;
+$classic-base-color: #705480 !default;
+$classic-primary-color: #AE8CD1 !default;
+$classic-secondary-color: #dfc9f2 !default;
+$classic-highlight-color: #0070B2 !default;
 $emojis-requiring-inversion: 'chains';
 //fim das mudanças
+
 @import 'application';
 
   html
@@ -5192,4 +5192,10 @@ a.sparkline:active, a.sparkline:focus, a.sparkline:hover {
 
 .column-settings__hashtags .column-select__multi-value__label, .column-settings__hashtags .column-select__input, .column-settings__hashtags .column-select__input-container {
   color: #705480;
+}
+
+// 22/05/2022
+
+.batch-table__row--attention, .batch-table__row--attention .accounts-table, .batch-table__row--attention .accounts-table__count, .batch-table__row--attention .accounts-table__count small, .batch-table__row--attention .accounts-table a, .batch-table__row--attention .accounts-table strong, .batch-table__row--attention .accounts-table tbody td.accounts-table__extra, .batch-table__row--attention .name-tag, .batch-table__row--attention .name-tag a, .batch-table__row--attention .name-tag strong, .batch-table__row--attention .pending-account__header, .batch-table__row--attention .pending-account__header a, .batch-table__row--attention .pending-account__header strong {
+  color: #5B3400;
 }
