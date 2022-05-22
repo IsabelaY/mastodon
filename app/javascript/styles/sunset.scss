@@ -1357,3 +1357,9 @@ body .muted-hint a:hover, .admin-wrapper .content .muted-hint a:hover, body .mut
 a.sparkline:active, a.sparkline:focus, a.sparkline:hover {
   background: #2b2b2b;
 }
+
+// 22/05/2022 fix pending stuff
+
+.batch-table__row--attention, .batch-table__row--attention .accounts-table, .batch-table__row--attention .accounts-table__count, .batch-table__row--attention .accounts-table__count small, .batch-table__row--attention .accounts-table a, .batch-table__row--attention .accounts-table strong, .batch-table__row--attention .accounts-table tbody td.accounts-table__extra, .batch-table__row--attention .name-tag, .batch-table__row--attention .name-tag a, .batch-table__row--attention .name-tag strong, .batch-table__row--attention .pending-account__header, .batch-table__row--attention .pending-account__header a, .batch-table__row--attention .pending-account__header strong {
+  color: #CA5400;
+}
