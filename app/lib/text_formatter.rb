@@ -91,6 +91,13 @@ class TextFormatter
   end
 
   def link_to_url(entity)
+    start_i = entity[:indices].first
+    end_i = entity[:indices].last
+    
+    if start_i >= 5 && text.length > end_i && text[start_i - 5, 5].downcase == "[url=" && text[end_i, 1] == "]"
+      return h(entity[:url])
+    end
+
     TextFormatter.shortened_link(entity[:url], rel_me: with_rel_me?)
   end
 
