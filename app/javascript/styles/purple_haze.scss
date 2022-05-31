@@ -11,6 +11,21 @@ $classic-primary-color: #AE8CD1 !default;
 $classic-secondary-color: #dfc9f2 !default;
 $classic-highlight-color: #0070B2 !default;
 $emojis-requiring-inversion: 'chains';
+
+$ui-base-color: $classic-secondary-color !default;
+$ui-base-lighter-color: #AE8CD1;
+$ui-primary-color: #F7EFFF;
+$ui-secondary-color: $classic-base-color !default;
+$ui-highlight-color: #0070B2;
+
+$primary-text-color: $black !default;
+$darker-text-color: $classic-base-color !default;
+$dark-text-color: #694E78;
+$action-button-color: #705480;
+
+$inverted-text-color: $black !default;
+$lighter-text-color: $classic-base-color !default;
+$light-text-color: #694E78;
 //fim das mudanças
 
 @import 'application';
@@ -5199,3 +5214,14 @@ a.sparkline:active, a.sparkline:focus, a.sparkline:hover {
 .batch-table__row--attention, .batch-table__row--attention .accounts-table, .batch-table__row--attention .accounts-table__count, .batch-table__row--attention .accounts-table__count small, .batch-table__row--attention .accounts-table a, .batch-table__row--attention .accounts-table strong, .batch-table__row--attention .accounts-table tbody td.accounts-table__extra, .batch-table__row--attention .name-tag, .batch-table__row--attention .name-tag a, .batch-table__row--attention .name-tag strong, .batch-table__row--attention .pending-account__header, .batch-table__row--attention .pending-account__header a, .batch-table__row--attention .pending-account__header strong {
   color: #5B3400;
 }
+
+// 31/05/22 3.5.3
+
+.status.light .status__relative-time, .status.light .status__visibility-icon {
+  color: #694e78;
+}
+
+.reply-indicator__content a.unhandled-link, .status__content a.unhandled-link {
+  color: #000ace;
+}
+

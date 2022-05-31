@@ -3,6 +3,12 @@ $classic-base-color: #111;
 $classic-primary-color: #777;
 $classic-secondary-color: #ddd;
 $classic-highlight-color: #f09;
+
+$ui-base-color: $classic-base-color !default;
+$ui-base-lighter-color: #333 !default;
+$ui-primary-color: $classic-primary-color !default;
+$ui-secondary-color: $classic-secondary-color !default;
+$ui-highlight-color: $classic-highlight-color !default;
 //fim das mudanças
 
 @import 'application';
@@ -2639,4 +2645,33 @@ body.admin {
 .back-link a {
   color: #f09; }
 
-  
+// 31/05/2022 3.5.3
+
+.language-dropdown__dropdown__results__item {
+  color: #222;
+}
+
+.language-dropdown__dropdown__results__item__common-name {
+  color: #666;
+}
+
+.language-dropdown__dropdown__results__item:active, .language-dropdown__dropdown__results__item:focus, .language-dropdown__dropdown__results__item:hover {
+  background: #f094;
+}
+
+.language-dropdown__dropdown__results__item.active {
+  background: #b06;
+}
+
+.language-dropdown__dropdown__results__item.active .language-dropdown__dropdown__results__item__common-name {
+  color: #ddd;
+}
+
+.language-dropdown__dropdown__results__item.active:hover, .language-dropdown__dropdown__results__item.active:focus {
+  background: #f09;
+}
+
+
+.emoji-mart-category .emoji-mart-emoji:hover::before {
+    background-color: #f09;
+}
