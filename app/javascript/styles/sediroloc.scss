@@ -1828,3 +1828,25 @@ a.sparkline:active, a.sparkline:focus, a.sparkline:hover {
 .scrollable .account-card__bio::after {
   background: linear-gradient(270deg,#e8f6be,transparent);
 }
+
+// 31/05/2022 3.5.3
+
+.language-dropdown__dropdown__results__item {
+    border-radius: 0;
+}
+
+.language-dropdown__dropdown__results__item .language-dropdown__dropdown__results__item__common-name {
+  color: #a72645;
+}
+
+.language-dropdown__dropdown__results__item.active {
+  background: #a72645;
+}
+
+.language-dropdown__dropdown__results__item.active:hover {
+  background: #cf2210;
+}
+
+.language-dropdown__dropdown__results__item:active, .language-dropdown__dropdown__results__item:focus, .language-dropdown__dropdown__results__item:hover, .reactions-bar__item:active, .reactions-bar__item:focus, .reactions-bar__item:hover {
+  background-color: #c5d882;
+}

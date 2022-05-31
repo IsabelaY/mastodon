@@ -602,7 +602,7 @@ button.icon-button i.fa-retweet:hover {
 
 .emoji-mart-search input::placeholder, .emoji-mart-search input::-webkit-input-placeholder, .emoji-mart-search input::-moz-placeholder, .emoji-mart-search input:-ms-input-placeholder, .emoji-mart-search input:-moz-placeholder
 {
-	color: #999 !important;
+	color: #dadada;
 }
 
 .trends__item__name
@@ -904,7 +904,7 @@ box-shadow: 0px 0px 0px 0px;
 
 .emoji-mart-search input {
     background: transparent;
-    color: #4019b5;
+    color: #f8f8f8;
     border: 1px solid #58d9ba;
     border-radius: 0px;
 }
@@ -1724,4 +1724,39 @@ $destaque: #58d9ba;
 
 .batch-table__row--attention, .batch-table__row--attention .accounts-table, .batch-table__row--attention .accounts-table__count, .batch-table__row--attention .accounts-table__count small, .batch-table__row--attention .accounts-table a, .batch-table__row--attention .accounts-table strong, .batch-table__row--attention .accounts-table tbody td.accounts-table__extra, .batch-table__row--attention .name-tag, .batch-table__row--attention .name-tag a, .batch-table__row--attention .name-tag strong, .batch-table__row--attention .pending-account__header, .batch-table__row--attention .pending-account__header a, .batch-table__row--attention .pending-account__header strong {
   color: #FFF729;
+}
+
+// 31/05/2022 3.5.3
+
+.text-icon-button, .language-dropdown__dropdown {
+    border-radius: 0;
+}
+
+.emoji-mart-scroll, .emoji-mart-search {
+  background: #070031;
+}
+
+.language-dropdown__dropdown__results__item {
+  color: #f8f8f8;
+  border-radius: 0;
+}
+
+.language-dropdown__dropdown__results__item:active, .language-dropdown__dropdown__results__item:focus, .language-dropdown__dropdown__results__item:hover {
+  background: #3a277d;
+}
+
+.emoji-mart-category-label span {
+  background: #070031;
+}
+
+.emoji-mart {
+  color: #f8f8f8;
+}
+
+.emoji-mart-category .emoji-mart-emoji:hover::before {
+    background-color: rgba(48,221,239,.9);
+}
+
+.admin-wrapper .content > p {
+  color: #f8f8f8;
 }
