@@ -777,7 +777,7 @@ pt-BR:
       preview_card_providers:
         allowed: Links desta fonte podem ficar em alta
         rejected: Links desta fonte não vão ficar em alta
-        title: Fonte
+        title: Fontes
       rejected: Rejeitada
       statuses:
         allow: Permitir postagem
@@ -796,7 +796,7 @@ pt-BR:
         not_usable: Não pode ser usada
         title: Hashtags em alta
         trendable: Aparecerá em alta
-        trending_rank: 'Em alta #%{rank}'
+        trending_rank: 'Em alta como #%{rank}'
         usable: Pode ser usada
         usage_comparison: Usada %{today} vezes hoje, em comparação com %{yesterday} de ontem
       title: Em alta
@@ -1552,6 +1552,7 @@ pt-BR:
     rosaceae: Rosaceae
     quartzo: Quartzo
     teal: Linha 10
+    terminal: Terminal (trabalho em progresso)
   time:
     formats:
       default: "%H:%M em %d de %b de %Y"
