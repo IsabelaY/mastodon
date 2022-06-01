@@ -1728,11 +1728,11 @@ $destaque: #58d9ba;
 
 // 31/05/2022 3.5.3
 
-.text-icon-button, .language-dropdown__dropdown {
+.text-icon-button, .language-dropdown__dropdown, .emoji-picker-dropdown__menu {
     border-radius: 0;
 }
 
-.emoji-mart-scroll, .emoji-mart-search {
+.emoji-mart-scroll, .emoji-mart-search, .emoji-picker-dropdown__menu {
   background: #070031;
 }
 
