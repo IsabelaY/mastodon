@@ -18,12 +18,12 @@ $ui-primary-color: #F7EFFF;
 $ui-secondary-color: $classic-base-color !default;
 $ui-highlight-color: #0070B2;
 
-$primary-text-color: $black !default;
+$primary-text-color: #000 !default;
 $darker-text-color: $classic-base-color !default;
 $dark-text-color: #694E78;
 $action-button-color: #705480;
 
-$inverted-text-color: $black !default;
+$inverted-text-color: #000 !default;
 $lighter-text-color: $classic-base-color !default;
 $light-text-color: #694E78;
 //fim das mudanças
@@ -5225,3 +5225,14 @@ a.sparkline:active, a.sparkline:focus, a.sparkline:hover {
   color: #000ace;
 }
 
+.language-dropdown__dropdown__results__item:focus, .language-dropdown__dropdown__results__item:active, .language-dropdown__dropdown__results__item:hover {
+  background: #dfc9f2;
+}
+
+.language-dropdown__dropdown__results__item.active {
+  background: #ae8cd1;
+}
+
+.language-dropdown__dropdown__results__item.active:hover, .language-dropdown__dropdown__results__item.active:focus {
+  background: #f7efff;
+}
