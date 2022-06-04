@@ -5236,3 +5236,23 @@ a.sparkline:active, a.sparkline:focus, a.sparkline:hover {
 .language-dropdown__dropdown__results__item.active:hover, .language-dropdown__dropdown__results__item.active:focus {
   background: #f7efff;
 }
+
+// 04/06/2022 correções baseadas nas novas variáveis
+
+.account__header__extra__links a strong, .account__header__tabs__name h1, .dashboard__quick-access {
+  color: #fff;
+}
+
+.button.logo-button svg, .public-layout .header .brand svg, .admin-wrapper .sidebar__toggle__logo svg {
+  fill: #fff;
+}
+
+.radio-button__input {
+  border: 1px solid #705480;
+}
+ 
+.radio-button__input.checked {
+  border-color: #ae8cd1;
+  background: #ae8cd1;
+}
+
