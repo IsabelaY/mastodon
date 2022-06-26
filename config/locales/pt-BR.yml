@@ -403,8 +403,8 @@ pt-BR:
         one: "<strong>%{count}</strong> hashtag pendente"
         other: "<strong>%{count}</strong> hashtags pendentes"
       pending_users_html:
-        one: "<strong>%{count}</strong> usuário pendente"
-        other: "<strong>%{count}</strong> usuários pendentes"
+        one: "<strong>%{count}</strong> conta pendente"
+        other: "<strong>%{count}</strong> contas pendentes"
       resolved_reports: denúncias solucionadas
       software: Software
       sources: Origem das inscrições
