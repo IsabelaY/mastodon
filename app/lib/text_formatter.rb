@@ -74,7 +74,7 @@ class TextFormatter
     start_i = entity[:indices].first
     end_i = entity[:indices].last
 
-    if start_i >= 5 && text.length > end_i && text[start_i - 5, 5].downcase == "[url=" && text[end_i, 1] == "]"
+    if start_i >= 5 && text.length > end_i && text[start_i - 5, 5].downcase == "[url="
       return h(entity[:url])
     end
 
