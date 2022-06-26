@@ -1760,3 +1760,11 @@ $destaque: #58d9ba;
 .admin-wrapper .content > p {
   color: #f8f8f8;
 }
+
+.icon-button {
+	border-radius: 0;
+}
+
+.batch-table__row--muted, .batch-table__row--muted .accounts-table, .batch-table__row--muted .accounts-table a, .batch-table__row--muted .accounts-table strong, .batch-table__row--muted .name-tag, .batch-table__row--muted .name-tag a, .batch-table__row--muted .name-tag strong, .batch-table__row--muted .pending-account__header, .batch-table__row--muted .pending-account__header a, .batch-table__row--muted .pending-account__header strong {
+  color: #ccc;
+}
