@@ -581,3 +581,17 @@ border: 2px groove #fff; }
 .language-dropdown__dropdown__results__item.active:hover, .language-dropdown__dropdown__results__item.active:focus {
   background: #77f9;
 }
+
+// 11/11/2022
+
+.dropdown-menu__item a, .dropdown-menu__item button {
+	background: #bebebe;
+	}
+	
+.compose-form .compose-form__modifiers .compose-form__upload .icon-button {
+  color: #fff;
+}
+
+.compose-form .compose-form__modifiers .compose-form__upload .icon-button:active, .compose-form .compose-form__modifiers .compose-form__upload .icon-button:focus, .compose-form .compose-form__modifiers .compose-form__upload .icon-button:hover {
+  color: #fff;
+}
