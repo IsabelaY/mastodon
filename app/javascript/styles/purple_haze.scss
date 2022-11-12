@@ -5259,3 +5259,18 @@ a.sparkline:active, a.sparkline:focus, a.sparkline:hover {
 .icon-with-badge__badge {
   color: #fff;
 }
+
+// 11/11/2022
+
+.relationship-tag {
+    color: #313543;
+    background-color: #fcf8ff;
+}
+
+.compose-form .compose-form__modifiers .compose-form__upload .icon-button {
+  color: #ae8cd1;
+}
+
+.compose-form .compose-form__modifiers .compose-form__upload .icon-button:hover, .compose-form .compose-form__modifiers .compose-form__upload .icon-button:focus, .compose-form .compose-form__modifiers .compose-form__upload .icon-button:active {
+  color: #fcf8ff;
+}
