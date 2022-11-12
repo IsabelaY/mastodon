@@ -1768,3 +1768,28 @@ $destaque: #58d9ba;
 .batch-table__row--muted, .batch-table__row--muted .accounts-table, .batch-table__row--muted .accounts-table a, .batch-table__row--muted .accounts-table strong, .batch-table__row--muted .name-tag, .batch-table__row--muted .name-tag a, .batch-table__row--muted .name-tag strong, .batch-table__row--muted .pending-account__header, .batch-table__row--muted .pending-account__header a, .batch-table__row--muted .pending-account__header strong {
   color: #ccc;
 }
+
+// 11/11/2022
+
+.batch-table__row--muted .accounts-table__count, .batch-table__row--muted .accounts-table__count small, .batch-table__row--muted .accounts-table tbody td.accounts-table__extra {
+  color: #ccc;
+}
+
+.status-card {
+  color: #58d9ba;
+}
+
+.log-entry:active, .log-entry:focus, .log-entry:hover {
+  background: #3a277d;
+}
+
+.log-entry:last-child {
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.log-entry:first-child {
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+
