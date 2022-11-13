@@ -84,6 +84,10 @@ class REST::StatusSerializer < ActiveModel::Serializer
   def url
     ActivityPub::TagManager.instance.url_for(object)
   end
+  
+  def public_in_local
+    object.public_in_local?
+  end
 
   def reblogs_count
     relationships&.attributes_map&.dig(object.id, :reblogs_count) || object.reblogs_count
