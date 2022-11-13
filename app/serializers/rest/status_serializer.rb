@@ -84,6 +84,10 @@ class REST::StatusSerializer < ActiveModel::Serializer
   def url
     ActivityPub::TagManager.instance.url_for(object)
   end
+  
+  def public_in_local
+    object.public_in_local?
+  end
 
   def favourited
     if instance_options && instance_options[:relationships]
