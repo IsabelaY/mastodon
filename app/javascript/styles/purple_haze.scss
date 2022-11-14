@@ -2386,11 +2386,7 @@ button.icon-button.disabled i.fa-retweet
   background-color: #9C77C2;
 }
 
-.boost-modal,
-.confirmation-modal,
-.report-modal,
-.actions-modal,
-.mute-modal
+.boost-modal, .confirmation-modal, .report-modal, .actions-modal, .mute-modal, .block-modal, .compare-history-modal
 {
   background: #FBF6FF;
   color: #705480;
@@ -5274,3 +5270,24 @@ a.sparkline:active, a.sparkline:focus, a.sparkline:hover {
 .compose-form .compose-form__modifiers .compose-form__upload .icon-button:hover, .compose-form .compose-form__modifiers .compose-form__upload .icon-button:focus, .compose-form .compose-form__modifiers .compose-form__upload .icon-button:active {
   color: #fcf8ff;
 }
+
+// 14/11/2022 (edit button)
+
+.dropdown-menu__item a, .dropdown-menu__item button {
+  background: #f7efff;
+}
+
+.dropdown-menu__item a:focus, .dropdown-menu__item a:hover, .dropdown-menu__item a:active, .dropdown-menu__item button:focus, .dropdown-menu__item button:hover, .dropdown-menu__item button:active {
+  background: #705480;
+  color: #f7efff;
+}
+
+.dropdown-menu__item {
+  color: #694e78;
+}
+
+.dropdown-menu__item.edited-timestamp__history__item {
+  border-bottom: 1px solid #694e78;
+}
+
+

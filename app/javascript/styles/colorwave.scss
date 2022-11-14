@@ -178,7 +178,7 @@ body .muted-hint a, .admin-wrapper .content .muted-hint a {
     color: #bebebe;
 }
 
-.actions-modal, .block-modal, .boost-modal, .confirmation-modal, .mute-modal, .report-modal {
+.actions-modal, .block-modal, .boost-modal, .confirmation-modal, .mute-modal, .report-modal, .compare-history-modal {
     background: linear-gradient(315deg,rgb(255,198,222) 0%, rgb(198,198,255) 50%, rgb(198,255,222) 100%);
   border-radius: 0px;
   border: 2px groove #fff;
@@ -594,4 +594,23 @@ border: 2px groove #fff; }
 
 .compose-form .compose-form__modifiers .compose-form__upload .icon-button:active, .compose-form .compose-form__modifiers .compose-form__upload .icon-button:focus, .compose-form .compose-form__modifiers .compose-form__upload .icon-button:hover {
   color: #fff;
+}
+
+// 14/11/2022
+
+.compare-history-modal .report-modal__target {
+  background: #40177d;
+  color: #fff;
+  text-align: left;
+}
+
+.compare-history-modal .report-modal__target .icon-button {
+  color: #fff;
+}
+
+.compare-history-modal .report-modal__target .icon-button:hover, .compare-history-modal .report-modal__target .icon-button:focus {
+  color: #000;
+  background: #bebebe;
+  border-radius: 0;
+  border: 2px inset #eee;
 }
