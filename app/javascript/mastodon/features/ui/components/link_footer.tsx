@@ -90,17 +90,20 @@ export const LinkFooter: React.FC<{
             defaultMessage='View source code'
           />
         </a>
-        <DividingCircle />v{version}
-      </p>
-      <p>
-        <strong>Mastodon</strong>:{' '}
+        <DividingCircle />
         <a href='https://joinmastodon.org' target='_blank' rel='noopener'>
-          <FormattedMessage id='footer.about' defaultMessage='About' />
+          Mastodon
         </a>
         <DividingCircle />
         <a href='https://joinmastodon.org/apps' target='_blank' rel='noopener'>
           <FormattedMessage id='footer.get_app' defaultMessage='Get the app' />
         </a>
+        <DividingCircle />v{version}
+      </p>
+
+      <p>
+        <strong>Colorid.es</strong>:{' '}
+        <a href='http://sobre.colorid.es' target='_blank'>sobre.colorid.es</a>
         <DividingCircle />
         <Link to='/keyboard-shortcuts'>
           <FormattedMessage
@@ -109,12 +112,7 @@ export const LinkFooter: React.FC<{
           />
         </Link>
         <DividingCircle />
-        <a href={source_url} rel='noopener' target='_blank'>
-          <FormattedMessage
-            id='footer.source_code'
-            defaultMessage='View source code'
-          />
-        </a>
+        <a href={source_url} rel='noopener noreferrer' target='_blank'><FormattedMessage id='footer.source_code' defaultMessage='View source code' /></a>
       </p>
     </div>
   );
