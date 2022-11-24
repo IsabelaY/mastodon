@@ -2675,3 +2675,98 @@ body.admin {
 .emoji-mart-category .emoji-mart-emoji:hover::before {
     background-color: #f09;
 }
+
+.log-entry__timestamp {
+  color: #777;
+}
+
+.log-entry .target, .log-entry .username, .log-entry a {
+  color: #fff;
+}
+
+.log-entry {
+  color: #ddd;
+}
+
+.report-card__summary__item__content__icon {
+  color: #777;
+}
+
+.report-card__summary__item__content a {
+  color: #ddd;
+}
+
+.dropdown-menu__container__header {
+  border-bottom-color: #111;
+  color: #ddd;
+}
+
+.dropdown-menu__item.edited-timestamp__history__item {
+  border-bottom-color: #111;
+}
+
+.dropdown-menu__item {
+  color: #fff;
+}
+
+.dropdown-menu__item a, .dropdown-menu__item button {
+  background: #222;
+}
+
+.dropdown-menu__item a:active, .dropdown-menu__item a:focus, .dropdown-menu__item a:hover, .dropdown-menu__item button:active, .dropdown-menu__item button:focus, .dropdown-menu__item button:hover {
+  color: #fff;
+  background: #f09;
+}
+
+.dropdown-menu__arrow.top {
+  border-top-color: #222;
+}
+
+.dropdown-menu__arrow.bottom {
+  border-bottom-color: #222;
+}
+
+.account__header__fields dd, .account__header__fields dt {
+  max-height: none;
+  white-space: normal;
+}
+
+.account__header .account__header__fields dl, .account__header__fields dl {
+  margin: 4px 0px;
+}
+
+.compare-history-modal__container {
+  background: #222;
+}
+
+.compare-history-modal .status__content {
+  color: #fff;
+  font-size: 16px;
+}
+
+.compare-history-modal .report-modal__target {
+  border-bottom: 0px;
+}
+
+.compare-history-modal .status__content hr {
+  height: .1rem;
+  background-color: #777;
+}
+
+.actions-modal, .block-modal, .boost-modal, .compare-history-modal, .confirmation-modal, .mute-modal, .report-modal {
+  background: none;
+  border-radius: 2px;
+}
+
+.actions-modal ul li:not(:empty) a {
+  color: #fff;
+  background: #333;
+}
+
+.modal-root__modal.actions-modal .icon-button.inverted {
+  color: #fff;
+}
+
+.actions-modal .status {
+  background: #222;
+}

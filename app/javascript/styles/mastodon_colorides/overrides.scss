@@ -48,7 +48,7 @@ body.about-body, body.tag-body, body.admin
         color: #fff
                                         }
 
-  .drawer__header, .column-header, .column-header__button, .column-header__back-button, .button:hover, .column-subheading, .static-content, .account__section-headline, .search__input:focus, .column-header__back-button, .drawer__inner.darker, .detailed-status__action-bar, .search-results__header, .search-results__section, .autosuggest-textarea__suggestions--visible:active, .autosuggest-textarea__suggestions--visible.active, .autosuggest-textarea__suggestions:active, .compose-form .autosuggest-textarea__suggestions__item.selected, .compose-form .autosuggest-textarea__suggestions__item:active, .compose-form .autosuggest-textarea__suggestions__item:focus, .compose-form .autosuggest-textarea__suggestions__item:hover, .compose-form__warning, .card.h-card.p-author, .activity-stream-tabs, .card__bio, .notification-bar, .notification-bar-active, .notification-bar-title, .account-grid-card__header, .accounts-grid .account-grid-card, .media-spoiler:active, .media-spoiler:focus, .media-spoiler:hover, .dropdown-menu__item a:active, .dropdown-menu__item a:focus, .dropdown-menu__item a:hover, .react-toggle--checked .react-toggle-track, .simple_form .block-button:active, .simple_form .block-button:focus, .simple_form .button:active, .simple_form .button:focus, .simple_form button:active, .simple_form button:focus, .simple_form .block-button, .simple_form .button, .simple_form button, .admin-wrapper .sidebar ul ul a.selected, .admin-wrapper .sidebar ul ul a:hover, .admin-wrapper .sidebar ul a:hover, .pagination .current, .log-entry__header, .landing-strip, .memoriam-strip, .account--follows-info, .account--muting-info, .flash-message
+  .drawer__header, .column-header, .column-header__button, .column-header__back-button, .button:hover, .column-subheading, .static-content, .account__section-headline, .search__input:focus, .column-header__back-button, .drawer__inner.darker, .detailed-status__action-bar, .search-results__header, .search-results__section, .autosuggest-textarea__suggestions--visible:active, .autosuggest-textarea__suggestions--visible.active, .autosuggest-textarea__suggestions:active, .compose-form .autosuggest-textarea__suggestions__item.selected, .compose-form .autosuggest-textarea__suggestions__item:active, .compose-form .autosuggest-textarea__suggestions__item:focus, .compose-form .autosuggest-textarea__suggestions__item:hover, .compose-form__warning, .card.h-card.p-author, .activity-stream-tabs, .card__bio, .notification-bar, .notification-bar-active, .notification-bar-title, .account-grid-card__header, .accounts-grid .account-grid-card, .media-spoiler:active, .media-spoiler:focus, .media-spoiler:hover, .dropdown-menu__item a:active, .dropdown-menu__item a:focus, .dropdown-menu__item a:hover, .react-toggle--checked .react-toggle-track, .simple_form .block-button:active, .simple_form .block-button:focus, .simple_form .button:active, .simple_form .button:focus, .simple_form button:active, .simple_form button:focus, .simple_form .block-button, .simple_form .button, .simple_form button, .admin-wrapper .sidebar ul ul a.selected, .admin-wrapper .sidebar ul ul a:hover, .admin-wrapper .sidebar ul a:hover, .pagination .current, .landing-strip, .memoriam-strip, .account--follows-info, .account--muting-info, .flash-message
   {
     background-color: rgb(58, 39, 125) !important;
     border-radius: 0px;
@@ -1836,4 +1836,24 @@ button.icon-button.reblogPrivate:hover i.fa-retweet {
 
 .compare-history-modal .report-modal__target {
   border-bottom-color: #58d9ba;
+}
+
+// 23/11/2022
+
+.log-entry {
+  background: #3a277d;
+  border: 0;
+  margin-bottom: 3px;
+}
+
+.log-entry:active, .log-entry:focus, .log-entry:hover {
+  background: #170941;
+}
+
+.report-card__summary__item__content__icon {
+  color: #30ddef;
+}
+
+.report-card__summary__item__content a {
+  color: #f8f8f8;
 }
