@@ -56,7 +56,7 @@ body.about-body, body.tag-body, body.admin
         color: #000
                                         }
 
-  .drawer__header, .column-header, .column-header__button, .column-header__back-button, .button:hover, .column-subheading, .static-content, .account__section-headline, .search__input:focus, .column-header__back-button, .drawer__inner.darker, .detailed-status__action-bar, .search-results__header, .search-results__section, .autosuggest-textarea__suggestions--visible:active, .autosuggest-textarea__suggestions--visible.active, .autosuggest-textarea__suggestions:active, .compose-form .autosuggest-textarea__suggestions__item.selected, .compose-form .autosuggest-textarea__suggestions__item:active, .compose-form .autosuggest-textarea__suggestions__item:focus, .compose-form .autosuggest-textarea__suggestions__item:hover, .compose-form__warning, .card.h-card.p-author, .activity-stream-tabs, .card__bio, .notification-bar, .notification-bar-active, .notification-bar-title, .account-grid-card__header, .accounts-grid .account-grid-card, .media-spoiler:active, .media-spoiler:focus, .media-spoiler:hover, .dropdown-menu__item a:active, .dropdown-menu__item a:focus, .dropdown-menu__item a:hover, .react-toggle--checked .react-toggle-track, .simple_form .block-button:active, .simple_form .block-button:focus, .simple_form .button:active, .simple_form .button:focus, .simple_form button:active, .simple_form button:focus, .simple_form .block-button, .simple_form .button, .simple_form button, .admin-wrapper .sidebar ul ul a.selected, .admin-wrapper .sidebar ul ul a:hover, .admin-wrapper .sidebar ul a:hover, .pagination .current, .log-entry__header, .landing-strip, .memoriam-strip, .account--follows-info, .account--muting-info, .flash-message
+  .drawer__header, .column-header, .column-header__button, .column-header__back-button, .button:hover, .column-subheading, .static-content, .account__section-headline, .search__input:focus, .column-header__back-button, .drawer__inner.darker, .detailed-status__action-bar, .search-results__header, .search-results__section, .autosuggest-textarea__suggestions--visible:active, .autosuggest-textarea__suggestions--visible.active, .autosuggest-textarea__suggestions:active, .compose-form .autosuggest-textarea__suggestions__item.selected, .compose-form .autosuggest-textarea__suggestions__item:active, .compose-form .autosuggest-textarea__suggestions__item:focus, .compose-form .autosuggest-textarea__suggestions__item:hover, .compose-form__warning, .card.h-card.p-author, .activity-stream-tabs, .card__bio, .notification-bar, .notification-bar-active, .notification-bar-title, .account-grid-card__header, .accounts-grid .account-grid-card, .media-spoiler:active, .media-spoiler:focus, .media-spoiler:hover, .dropdown-menu__item a:active, .dropdown-menu__item a:focus, .dropdown-menu__item a:hover, .react-toggle--checked .react-toggle-track, .simple_form .block-button:active, .simple_form .block-button:focus, .simple_form .button:active, .simple_form .button:focus, .simple_form button:active, .simple_form button:focus, .simple_form .block-button, .simple_form .button, .simple_form button, .admin-wrapper .sidebar ul ul a.selected, .admin-wrapper .sidebar ul ul a:hover, .admin-wrapper .sidebar ul a:hover, .pagination .current, .landing-strip, .memoriam-strip, .account--follows-info, .account--muting-info, .flash-message
   {
     background-color: rgb(197, 216, 130);
     border-radius: 0px;
@@ -309,7 +309,7 @@ body.error, .landing-page .information-board, .landing-page .information-board .
         border-radius: 0px !important;
 }
 
-  .drawer__header a:hover, .column-link:hover, .static-content.getting-started span, .reply-indicator, .button, .detailed-status, detailed-status__action-bar, .privacy-dropdown__option.active, .privacy-dropdown__option.active:hover, .privacy-dropdown__option:hover, .privacy-dropdown__value-icon.icon-button.inverted:active, .privacy-dropdown__value-icon.icon-button.inverted.active, .account__section-headline
+  .column-link:hover, .static-content.getting-started span, .reply-indicator, .button, .detailed-status, detailed-status__action-bar, .privacy-dropdown__option.active, .privacy-dropdown__option.active:hover, .privacy-dropdown__option:hover, .privacy-dropdown__value-icon.icon-button.inverted:active, .privacy-dropdown__value-icon.icon-button.inverted.active, .account__section-headline
   {
     background-color: rgb(197, 216, 130);
     border-top: 0px;
@@ -1849,4 +1849,78 @@ a.sparkline:active, a.sparkline:focus, a.sparkline:hover {
 
 .language-dropdown__dropdown__results__item:active, .language-dropdown__dropdown__results__item:focus, .language-dropdown__dropdown__results__item:hover, .reactions-bar__item:active, .reactions-bar__item:focus, .reactions-bar__item:hover {
   background-color: #c5d882;
+}
+
+// 23/11/22
+
+.column-link__badge, .column-subheading {
+  background: #c5d882;
+}
+
+.compose-form .compose-form__warning {
+  color: #070707;
+}
+
+.drawer__header a:hover, .drawer__header a:active, .drawer__header a:focus {
+  background-color: #e8f6be;
+}
+
+.audio-player, .box-widget input[type="email"], .box-widget input[type="password"], .box-widget input[type="text"], .box-widget textarea, .compose-form .spoiler-input__input, .compose-form__autosuggest-wrapper, .compose-form__poll-wrapper select, .poll__option input[type="text"], .report-dialog-modal__textarea, .search__input, .setting-text, .statuses-grid .detailed-status {
+  border-color: #c5d882;
+  border-radius: 0;
+}
+
+.report-dialog-modal__textarea::placeholder {
+  color: #070707;
+}
+
+.admin-wrapper .sidebar ul a.selected, .admin-wrapper .sidebar ul a, .log-entry:first-child, .log-entry:last-child {
+  border-radius: 0;
+}
+
+.dashboard__quick-access.negative {
+  background: #c5d882;
+  color: #a72645;
+}
+
+.dashboard__quick-access.positive {
+  background: #c5d882;
+  color: #007d2f;
+}
+
+.log-entry {
+  background: #c5d882;
+  border: 0;
+  margin-bottom: 3px;
+}
+
+.log-entry:active, .log-entry:focus, .log-entry:hover {
+  background: #e8f6be;
+}
+
+.simple_form .block-button:hover, .simple_form .button:hover, .simple_form button:hover {
+  color: #000;
+}
+
+.report-card {
+  border-radius: 0px;
+  background: #c5d882;
+}
+
+.report-card__summary__item {
+  border-top-color: #e7f2c6;
+}
+
+.report-card__summary__item:hover, .report-card__summary__item:focus, .report-card__summary__item:active {
+  background: #e8f6be;
+}
+
+.dropdown-menu__item a, .dropdown-menu__item button {
+  background: #c5d882;
+  color: #070707;
+}
+
+.dropdown-menu__item a:active, .dropdown-menu__item a:focus, .dropdown-menu__item a:hover, .dropdown-menu__item button:active, .dropdown-menu__item button:focus, .dropdown-menu__item button:hover {
+  background: #e8f6be;
+  color: #070707;
 }
