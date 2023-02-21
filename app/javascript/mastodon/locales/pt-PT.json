@@ -449,6 +449,7 @@
   "poll.vote": "Votar",
   "poll.voted": "Votaste nesta resposta",
   "poll.votes": "{votes, plural, one {# voto } other {# votos}}",
+  "poll.is_multiple": "Múltipla escolha",
   "poll_button.add_poll": "Adicionar votação",
   "poll_button.remove_poll": "Remover votação",
   "privacy.change": "Ajustar a privacidade da publicação",
