@@ -225,13 +225,17 @@ class TextFormatter
           :description => 'Make text pulse',
           :example => 'This is [pulse]pulse[/pulse].'},
         :b => {
-          :html_open => '<span class="bbcode__b">', :html_close => '</span>',
+          :html_open => '<b>', :html_close => '</b>',
           :description => 'Make text bold',
           :example => 'This is [b]bold[/b].'},
         :i => {
-          :html_open => '<span class="bbcode__i">', :html_close => '</span>',
+          :html_open => '<i>', :html_close => '</i>',
           :description => 'Make text italic',
           :example => 'This is [i]italic[/i].'},
+        :s => {
+          :html_open => '<s>', :html_close => '</s>',
+          :description => 'Make text with strike-through',
+          :example => 'This is [s]strike-through[/s].'},
         :flip => {
           :html_open => '<span class="bbcode__flip-%direction%">', :html_close => '</span>',
           :description => 'Flip text',
