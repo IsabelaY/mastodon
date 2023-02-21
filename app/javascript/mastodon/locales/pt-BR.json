@@ -449,6 +449,7 @@
   "poll.vote": "Votar",
   "poll.voted": "Você votou nesta opção",
   "poll.votes": "{votes, plural, one {# voto} other {# votos}}",
+  "poll.is_multiple": "Múltipla escolha",
   "poll_button.add_poll": "Adicionar enquete",
   "poll_button.remove_poll": "Remover enquete",
   "privacy.change": "Alterar privacidade do brilho",

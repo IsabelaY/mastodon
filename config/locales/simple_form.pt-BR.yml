@@ -50,6 +50,7 @@ pt-BR:
         scopes: Quais APIs o aplicativo vai ter permissão de acessar. Se você selecionar uma autorização de alto nível, você não precisa selecionar individualmente o resto.
         setting_aggregate_reblogs: Não mostra novos reflexos para brilhos que foram refletidos recentemente (afeta somente os reflexos mais recentes)
         setting_always_send_emails: Normalmente, as notificações por e-mail não serão enviadas enquanto você estiver usando ativamente sua conta
+        setting_default_federation: <ul><li>Se habilitado, seus novos brilhos irão federar para outras instâncias a menos que isto seja manualmente alterado na interface de postagem.</li><li>Se desabilitado, seus novos brilhos não irão federar a menos que isto seja alterado manualmente na interface de postagem.</li><li>Aplicativos postarão os brilhos respeitando esta configuração. <a href="https://github.com/hometown-fork/hometown/wiki/Local-only-posting#note-on-3rd-party-apps">Veja aqui para mais informações sobre aplicativos de terceires.</a></li></ul>
         setting_default_sensitive: Mídia sensível está oculta por padrão e pode ser revelada com um clique
         setting_display_media_default: Sempre ocultar mídia sensível
         setting_display_media_hide_all: Sempre ocultar todas as mídias
@@ -79,8 +80,10 @@ pt-BR:
         closed_registrations_message: Exibida quando as inscrições estiverem fechadas
         content_cache_retention_period: Postagens de outras instâncias serão excluídas após o número de dias especificados, se houver um valor positivo. Isso pode ser irreversível.
         custom_css: Você pode aplicar estilos personalizados na versão web da instância.
+        default_federation: Affects all users who have not changed this setting themselves. Unchecking this means new users will post local-only by default unless they change it in their preferences.
         mascot: Substitui a ilustração na interface web avançada.
         media_cache_retention_period: Os arquivos de mídia baixados serão excluídos após o número especificado de dias, se houver um valor positivo, e baixados novamente na demanda.
+        norss: Affects all users who have not changed this setting themselves.
         site_contact_username: Como as pessoas podem chegar até você no Mastodon.
         site_extended_description: Quaisquer informações adicionais que possam ser úteis para visitantes e sues usuáries. Podem ser estruturadas com formato Markdown.
         site_title: Como as pessoas podem se referir ao seu servidor além do nome do domínio.
@@ -191,6 +194,7 @@ pt-BR:
         setting_auto_play_gif: Reproduzir GIFs automaticamente
         setting_boost_modal: Mostrar diálogo de confirmação antes de refletir brilho
         setting_crop_images: Cortar imagens no formato 16x9 em brilhos não expandidos
+        setting_default_federation: Permitir que meus brilhos alcancem outras instâncias por padrão
         setting_default_language: Idioma de seus brilhos
         setting_default_privacy: Privacidade padrão de seus brilhos
         setting_default_sensitive: Sempre marcar mídia como sensível
@@ -201,8 +205,10 @@ pt-BR:
         setting_display_media_hide_all: Ocultar tudo
         setting_display_media_show_all: Mostrar tudo
         setting_expand_spoilers: Sempre expandir brilhos com aviso de conteúdo
+        setting_expand_usernames: Mostrar nomes de conta completos (incluindo domínio) para contas de outras instâncias
         setting_hide_network: Esconder suas redes
         setting_noindex: Não quero ser indexade por mecanismos de busca
+        setting_norss: Não quero que seja possível acompanhar minhas postagens públicas via RSS
         setting_reduce_motion: Reduzir movimento em animações
         setting_show_application: Mostrar o aplicativo usado para enviar brilhos
         setting_system_font_ui: Usar a fonte padrão de seu sistema
@@ -228,6 +234,8 @@ pt-BR:
           warn: Ocultar com um aviso
       form_admin_settings:
         custom_css: CSS personalizável
+        default_federation: Set the default posting privacy for new users to federated
+        norss: Opt users out of having an RSS feed of their public posts by default
         profile_directory: Ativar diretório de perfis
         registrations_mode: Quem pode se inscrever
         site_contact_email: E-mail de contato

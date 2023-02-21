@@ -50,6 +50,7 @@ pt-PT:
         scopes: Quais as APIs a que será concedido acesso. Se escolheres uma abrangência de nível superior, não precisarás de as seleccionar individualmente.
         setting_aggregate_reblogs: Não mostrar novas partilhas que foram partilhadas recentemente (só afecta as novas partilhas)
         setting_always_send_emails: Normalmente as notificações por e-mail não serão enviadas quando estiver a utilizar ativamente o Mastodon
+        setting_default_federation: <ul><li>Se habilitado, suas novas publicações irão federar para outras instâncias a menos que isto seja manualmente alterado na interface de publicação.</li><li>Se desabilitado, suas novas publicações não irão federar a menos que isto seja alterado manualmente na interface de publicação.</li><li>Aplicativos farão publicações respeitando esta configuração. <a href="https://github.com/hometown-fork/hometown/wiki/Local-only-posting#note-on-3rd-party-apps">Veja aqui para mais informações sobre aplicativos de terceires.</a></li></ul>
         setting_default_sensitive: Media sensível está oculta por padrão e pode ser revelada com um clique
         setting_display_media_default: Esconder media marcada como sensível
         setting_display_media_hide_all: Esconder sempre toda a media
@@ -79,8 +80,10 @@ pt-PT:
         closed_registrations_message: Exibido quando as inscrições estão encerradas
         content_cache_retention_period: Publicações de outros servidores serão excluídos após o número de dias especificado, quando definido com um valor positivo. Isso pode ser irreversível.
         custom_css: Pode aplicar estilos personalizados na versão web do Mastodon.
+        default_federation: Affects all users who have not changed this setting themselves. Unchecking this means new users will post local-only by default unless they change it in their preferences.
         mascot: Sobrepõe-se à ilustração na interface web avançada.
         media_cache_retention_period: Os ficheiros de media descarregados serão excluídos após o número de dias especificado, quando definido com um valor positivo, e descarregados novamente quando solicitados.
+        norss: Affects all users who have not changed this setting themselves.
         profile_directory: O diretório de perfis lista todos os utilizadores que optaram por a sua conta ser sugerida a outros.
         require_invite_text: Quando as incrições exigirem aprovação manual, faça o texto "Porque se quer juntar a nós?" da solicitação de convite, obrigatório ao invés de opcional
         site_contact_email: Como as pessoas podem entrar em contacto consigo para obter informações legais ou de suporte.
@@ -208,6 +211,7 @@ pt-PT:
         setting_auto_play_gif: Reproduzir GIFs automaticamente
         setting_boost_modal: Solicitar confirmação antes de partilhar uma publicação
         setting_crop_images: Cortar imagens em toots não expandidos para o formato 16x9
+        setting_default_federation: Permitir que meus brilhos alcancem outras instâncias por padrão
         setting_default_language: Língua de publicação
         setting_default_privacy: Privacidade da publicação
         setting_default_sensitive: Sempre marcar media como sensível
@@ -218,8 +222,10 @@ pt-PT:
         setting_display_media_hide_all: Esconder todos
         setting_display_media_show_all: Mostrar todos
         setting_expand_spoilers: Expandir sempre as publicações marcadas com avisos de conteúdo
+        setting_expand_usernames: Mostrar nomes de conta completos (incluindo @servidor) para contas de outros servidores
         setting_hide_network: Esconder a tua rede
         setting_noindex: Não quero ser indexado por motores de pesquisa
+        setting_norss: Não quero que seja possível acompanhar minhas publicações públicas via RSS
         setting_reduce_motion: Reduz movimento em animações
         setting_show_application: Revelar sempre qual a aplicação usada para enviar as publicações
         setting_system_font_ui: Usar a fonte padrão do teu sistema
@@ -251,6 +257,7 @@ pt-PT:
         custom_css: CSS Personalizado
         mascot: Mascote personalizada (legado)
         media_cache_retention_period: Período de retenção de ficheiros de media em cache
+        norss: Opt users out of having an RSS feed of their public posts by default
         profile_directory: Habilitar diretório de perfis
         registrations_mode: Quem pode inscrever-se
         require_invite_text: Requerer uma razão para entrar

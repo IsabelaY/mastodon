@@ -1,11 +1,62 @@
 ---
 pt-BR:
   about:
-    about_mastodon_html: 'A rede social do futuro: Sem anúncios, sem vigilância corporativa, com design ético e muita descentralização! Possua seus próprios dados com Mastodon!'
+    about_hashtag_html: Estas são postagens públicas descobertas pela instância colorid.es que contém <strong>#%{hashtag}</strong>. Você pode interagir com elas com sua conta em colorid.es ou com outras pelo fediverso.
+    about_mastodon_html: 'A rede social do futuro: Sem anúncios, sem vigilância corporativa, com design ético e muita descentralização!'
+    about_this: Sobre
+    active_count_after: contas ativas
+    active_footnote: Usuáries logades no último mês
+    administered_by: 'Administração:'
+    api: API
+    apps: Aplicativos
+    apps_platforms: Faltam funções neles, mas é possível utilizá-los...
+    browse_directory: Navegue pelo nosso diretório de perfis
+    browse_local_posts: Navegue pelas postagens locais desta instância
+    browse_public_posts: Veja a linha do tempo federada de %{title}
+    contact: Contato
     contact_missing: Não definido
     contact_unavailable: Indisponível
+    continue_to_web: Continue para a versão web
+    discover_users: Descubra contas
+    documentation: Documentação
+    federation_hint_html: Com uma conta em %{instance} você poderá acompanhar outras em servidores Hometown, Mastodon e afins.
+    get_apps: Onde baixar aplicativos
     hosted_on: Instância de Mastodon em %{domain}
+    instance_actor_flash: |
+       Esta conta é ume atore virtual usade para representar a própria instância.
+       É usada para fins de federação e não deve ser bloqueada a menos que você queira bloquear toda a instância, e nesse caso é melhor usar a função de bloquear domínios. 
+    learn_more: Aprenda mais
+    logged_in_as_html: Você entrou como %{username}.
+    logout_before_registering: Você já entrou na sua conta.
+    privacy_policy: Política de privacidade
+    rules: Regras da instância
+    rules_html: 'Aqui está um resumo sobre as regras de colorid.es. Esta comunidade é mantida por voluntáries atives, então pedimos para que preste atenção nelas:'
+    see_whats_happening: Veja o que está acontecendo
+    server_stats: 'Estatísticas da instância:'
+    source_code: Código-fonte
+    status_count_after:
+      one: brilho
+      other: brilhos
+    status_count_before: Que publicaram
+    tagline: Conheça pessoas e mantenha amizades
+    terms: Termos de serviço
     title: Sobre
+    unavailable_content: Instâncias limitadas
+    unavailable_content_description:
+      domain: Instância
+      reason: Motivo
+      rejecting_media: 'Arquivos de mídia vindos destas instâncias não serão processados ou armazenados e miniaturas não serão visíveis, requerendo que imagens sejam clicadas para ser vistas. Tais instâncias muitas vezes contém conteúdo inapropriado para menores de 18:'
+      rejecting_media_title: Mídia filtrada
+      silenced: 'Brilhos destas instâncias serão ocultos em linhas do tempo e conversas públicas, e nenhuma notificação será gerada a partir das interações de sues usuáries, a menos que as contas estejam sendo acompanhadas por você. Tais instâncias geralmente possuem moderação fraca e/ou muito conteúdo que vai contra nossas regras de aviso de conteúdo:'
+      silenced_title: Instâncias silenciadas
+      suspended: 'Você não será capaz de seguir ninguém destas instâncias, e nenhum dado delas será processado, armazenado ou trocado. Tais instâncias geralmente são pró-assédio e/ou não fazem nada contra conteúdo discriminatório:'
+      suspended_title: Instâncias banidas
+    unavailable_content_html: Hometown permite por padrão que você veja o conteúdo e interaja com usuáries de qualquer outra instância no fediverso. Estas são as exceções específicas de colorid.es.
+    user_count_after:
+      one: conta
+      other: contas
+    user_count_before: Lar de
+    what_is_mastodon: O que é Hometown/Mastodon?
   accounts:
     follow: Acompanhar
     followers:
@@ -695,6 +746,10 @@ pt-BR:
         all: Para todes
         disabled: Para ninguém
         users: Para usuáries locais logades
+      hometown:
+        title: Hometown
+        preamble: These site-wide settings are provided to you by Hometown. As the server admin, you should think carefully about what you want each setting to be, since this will have an impact in shaping your community.
+        privacy: Privacy
       registrations:
         preamble: Controle quem pode criar uma conta em sua instância.
         title: Inscrições
@@ -822,9 +877,11 @@ pt-BR:
     webhooks:
       add_new: Adicionar endpoint
       delete: Excluir
+      description_html: Um <strong>webhook</strong> permite que o Mastodon envie <strong>notificações em tempo real</strong> de eventos escolhidos para sua aplicação, para que sua aplicação possa <strong>reagir automaticamente</strong>.
       disable: Desabilitar
       disabled: Desativado
       edit: Editar endpoint
+      empty: Você não possui nenhum endpoint de webhook configurado ainda.
       enable: Habilitar
       enabled: Ativo
       enabled_events:
@@ -832,7 +889,7 @@ pt-BR:
         other: "%{count} eventos ativados"
       events: Eventos
       new: Novo webhook
-      rotate_secret: Girar segredo
+      rotate_secret: Rotacionar segredo
       secret: Assinatura secreta
       status: Status
       title: Webhooks
@@ -1387,7 +1444,7 @@ pt-BR:
     preferences: Preferências
     profile: Perfil
     relationships: Acompanhamentos
-    statuses_cleanup: Exclusão automatizada de brilhos
+    statuses_cleanup: Exclusão automatizada
     strikes: Avisos de moderação
     two_factor_authentication: Autenticação de dois fatores
     webauthn_authentication: Chaves de segurança
@@ -1454,6 +1511,8 @@ pt-BR:
     interaction_exceptions_explanation: Note que não há garantia de que os brilhos sejam excluídos se ficarem abaixo dos limites de brilhos favoritados ou refletidos depois destes terem sido ultrapassados.
     keep_direct: Manter mensagens diretas
     keep_direct_hint: Não exclui nenhuma de suas mensagens diretas
+    keep_local: Manter brilhos não federados
+    keep_local_hint: Não exclui nenhum de seus brilhos que não são federados
     keep_media: Manter brilhos com mídia
     keep_media_hint: Não exclui nenhum de seus brilhos com mídia
     keep_pinned: Manter brilhos destacados
