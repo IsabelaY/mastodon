@@ -695,6 +695,10 @@ pt-PT:
         all: Para toda a gente
         disabled: Para ninguém
         users: Para utilizadores locais que se encontrem autenticados
+      hometown:
+        title: Hometown
+        preamble: These site-wide settings are provided to you by Hometown. As the server admin, you should think carefully about what you want each setting to be, since this will have an impact in shaping your community.
+        privacy: Privacy
       registrations:
         preamble: Controle quem pode criar uma conta no seu servidor.
         title: Inscrições
@@ -1496,6 +1500,8 @@ pt-PT:
     interaction_exceptions_explanation: Note que não há garantia de que as publicações sejam excluídas se ficarem abaixo do limite de favoritos ou partilhas após as ter verificado uma vez.
     keep_direct: Manter mensagens diretas
     keep_direct_hint: Não apaga nenhuma das suas mensagens diretas
+    keep_local: Manter brilhos não federados
+    keep_local_hint: Não exclui nenhum de seus brilhos que não são federados
     keep_media: Manter publicações com anexos de multimédia
     keep_media_hint: Não exclui nenhuma das suas publicações com multimédia anexada
     keep_pinned: Manter publicações fixadas
