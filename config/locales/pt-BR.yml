@@ -6,6 +6,22 @@ pt-BR:
     contact_unavailable: Indisponível
     hosted_on: Instância de Hometown em %{domain}
     title: Sobre
+    unavailable_content: Instâncias limitadas
+    unavailable_content_description:
+      domain: Instância
+      reason: Motivo
+      rejecting_media: 'Arquivos de mídia vindos destas instâncias não serão processados ou armazenados e miniaturas não serão visíveis, requerendo que imagens sejam clicadas para ser vistas. Tais instâncias muitas vezes contém conteúdo inapropriado para menores de 18:'
+      rejecting_media_title: Mídia filtrada
+      silenced: 'Brilhos destas instâncias serão ocultos em linhas do tempo e conversas públicas, e nenhuma notificação será gerada a partir das interações de sues usuáries, a menos que as contas estejam sendo acompanhadas por você. Tais instâncias geralmente possuem moderação fraca e/ou muito conteúdo que vai contra nossas regras de aviso de conteúdo:'
+      silenced_title: Instâncias silenciadas
+      suspended: 'Você não será capaz de seguir ninguém destas instâncias, e nenhum dado delas será processado, armazenado ou trocado. Tais instâncias geralmente são pró-assédio e/ou não fazem nada contra conteúdo discriminatório:'
+      suspended_title: Instâncias banidas
+    unavailable_content_html: Hometown permite por padrão que você veja o conteúdo e interaja com usuáries de qualquer outra instância no fediverso. Estas são as exceções específicas de colorid.es.
+    user_count_after:
+      one: conta
+      other: contas
+    user_count_before: Lar de
+    what_is_mastodon: O que é Hometown/Mastodon?
   accounts:
     follow: Acompanhar
     followers:
@@ -763,6 +779,10 @@ pt-BR:
         all: Para todes
         disabled: Para ninguém
         users: Para usuáries locais logades
+      hometown:
+        title: Hometown
+        preamble: These site-wide settings are provided to you by Hometown. As the server admin, you should think carefully about what you want each setting to be, since this will have an impact in shaping your community.
+        privacy: Privacy
       registrations:
         preamble: Controle quem pode criar uma conta em sua instância.
         title: Inscrições
@@ -957,7 +977,7 @@ pt-BR:
         other: "%{count} eventos ativados"
       events: Eventos
       new: Novo webhook
-      rotate_secret: Girar segredo
+      rotate_secret: Rotacionar segredo
       secret: Assinatura secreta
       status: Status
       title: Webhooks
@@ -1634,7 +1654,7 @@ pt-BR:
     preferences: Preferências
     profile: Perfil
     relationships: Acompanhamentos
-    statuses_cleanup: Exclusão automatizada de brilhos
+    statuses_cleanup: Exclusão automatizada
     strikes: Avisos de moderação
     two_factor_authentication: Autenticação de dois fatores
     webauthn_authentication: Chaves de segurança
@@ -1700,6 +1720,8 @@ pt-BR:
     interaction_exceptions_explanation: Note que não há garantia de que os brilhos sejam excluídos se ficarem abaixo dos limites de brilhos favoritados ou refletidos depois destes terem sido ultrapassados.
     keep_direct: Manter mensagens diretas
     keep_direct_hint: Não exclui nenhuma de suas mensagens diretas
+    keep_local: Manter brilhos não federados
+    keep_local_hint: Não exclui nenhum de seus brilhos que não são federados
     keep_media: Manter brilhos com mídia
     keep_media_hint: Não exclui nenhum de seus brilhos com mídia
     keep_pinned: Manter brilhos destacados

@@ -82,6 +82,7 @@ pt-PT:
         closed_registrations_message: Apresentado quando as inscrições estiverem encerradas
         content_cache_retention_period: Publicações de outros servidores serão apagadas decorrido o número de dias especificado, se estiver definido um valor positivo. Isso pode ser irreversível.
         custom_css: Pode aplicar estilos personalizados na versão web do Mastodon.
+        default_federation: Affects all users who have not changed this setting themselves. Unchecking this means new users will post local-only by default unless they change it in their preferences.
         mascot: Sobrepõe-se à ilustração na interface web avançada.
         media_cache_retention_period: Os ficheiros de media descarregados serão apagados decorrido o número de dias especificado, quando definido com um valor positivo, e descarregados novamente quando solicitados.
         peers_api_enabled: Uma lista de nomes de domínio que este servidor encontrou no fediverso. Nenhum dado é incluído aqui sobre se você federa com um determinado servidor, apenas que o seu servidor o conhece. Este serviço é utilizado por serviços que recolhem estatísticas na federação, em termos gerais.
@@ -229,6 +230,7 @@ pt-PT:
         setting_bbcode_u: 'BBCode [u]'
         setting_bbcode_s: 'BBCode [s]'
         setting_expand_spoilers: Expandir sempre as publicações marcadas com avisos de conteúdo
+        setting_expand_usernames: Mostrar nomes de conta completos (incluindo @servidor) para contas de outros servidores
         setting_hide_network: Esconder a tua rede
         setting_reduce_motion: Reduz movimento em animações
         setting_system_font_ui: Usar o tipo de letra padrão do sistema
