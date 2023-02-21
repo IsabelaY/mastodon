@@ -265,6 +265,7 @@ pt-PT:
         setting_bbcode_u: 'BBCode [u]'
         setting_bbcode_s: 'BBCode [s]'
         setting_expand_spoilers: Expandir sempre as publicações marcadas com avisos de conteúdo
+        setting_expand_usernames: Mostrar nomes de conta completos (incluindo @servidor) para contas de outros servidores
         setting_hide_network: Esconder a tua rede
         setting_missing_alt_text_modal: Avisar-me antes de publicar media sem texto alternativo
         setting_quick_boosting: Ativar partilha rápida
