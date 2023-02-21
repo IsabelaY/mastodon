@@ -121,14 +121,14 @@
     - unless current_bbcode_b
       %style{nonce: request.content_security_policy_nonce}
         :plain
-          .bbcode__b {
+          .bbcode__b, .status__content b, .status__content strong {
             font-weight: inherit !important;
           }
         
     - unless current_bbcode_i
       %style{nonce: request.content_security_policy_nonce}
         :plain
-          .bbcode__i {
+          .bbcode__i, .status__content i, .status__content em {
             font-style: inherit !important;
             -webkit-font-feature-settings: inherit !important;
             font-feature-settings: inherit !important;
@@ -144,7 +144,7 @@
     - unless current_bbcode_s
       %style{nonce: request.content_security_policy_nonce}
         :plain
-          .status__content > div:first-child span {
+          .status__content s, .status__content del {
             text-decoration: none !important;
           }
 
