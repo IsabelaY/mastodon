@@ -1385,3 +1385,42 @@ a.sparkline:active, a.sparkline:focus, a.sparkline:hover {
 .emoji-mart-search-icon svg {
   fill: #8c0000;
 }
+
+// Hometown + 4.0 22.02.23
+
+#navigation-panel__publish.active i {
+  color: #000;
+}
+
+.account__header__bio .account__header__fields dl {
+  border-bottom-color: #dfa125;
+}
+
+@media screen and (max-width: 1174px) {
+    .columns-area__panels__pane--navigational .navigation-panel, .column-link--button, .navigation-panel hr {
+        border-color: #dfa125;
+    }
+    #navigation-panel__publish i {
+        background: #b35a10;
+    }
+}
+
+.column-link--transparent.active {
+    color: #fff;
+}
+
+.link-footer {
+  background: #000;
+  border-radius: 4px;
+  margin-bottom: 10px;
+  padding: 15px;
+  padding-bottom: 5px;
+}
+
+.link-footer p {
+  color: #fff;
+}
+
+.icon-button.bookmark-icon.active, .icon-button.star-icon.active {
+    color: #fff;
+}
