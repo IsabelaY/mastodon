@@ -561,7 +561,7 @@ button.icon-button i.fa-retweet:hover {
 .icon-button.disabled
 {
     color: #c5c5c5;
-    opacity: 0.4;
+    opacity: 0.5;
 }
 
 	.status__content__spoiler-link, .status__content__spoiler-link:focus, .status__content__spoiler-link:active, .status__content__spoiler-link:hover, .status__content__spoiler-link:default, .status__content__spoiler-link:link, .status__content__spoiler-link:enabled, .status__content__spoiler-link:checked, .status__content__spoiler-link:indeterminate, .status__content__spoiler-link:any-link, .status__content__spoiler-link::before, .status__content__spoiler-link::after
@@ -1879,3 +1879,35 @@ button.icon-button.reblogPrivate:hover i.fa-retweet {
   .simple_form .lead {
     color: #f8f8f8;
   }
+
+// 22.02.2023
+
+@media screen and (max-width: 1174px) {
+    .columns-area__panels__pane--navigational .navigation-panel {
+      background: transparent;
+      border-left: 0px;
+    }
+}
+
+.column-link--button {
+    border: 0px;
+}
+
+#navigation-panel__publish i {
+  background-color: #3a277d;
+  border-radius: 0px;
+}
+
+#navigation-panel__publish.active i {
+  background-color: transparent;
+  color: #58d9ba;
+}
+
+.account__header__bio .account__header__fields {
+    background: transparent;
+}
+
+.icon-button.disabled .fa-chain-broken {
+  color: #58d9ba;
+  opacity: 1;
+}
