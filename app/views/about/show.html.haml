@@ -12,22 +12,22 @@
         %div{:class => ("originalheader")}
           %h1
             = link_to root_url, class: 'brand' do
-              = site_title
+              %img{alt: site_title, draggable: 'false', src: "/styles/banners/banner_colorides.png", style: "width: 100%"}
           .box-widget
-            %p <a href="/auth/sign_in" id="login" class="btn button button-primary">Sign in</a>
+            %p <a href="/auth/sign_in" id="login" class="btn button button-primary">Entrar</a>
             - if !closed_registrations?
-              %p <a href="/auth/sign_up" id="register" class="btn button button-primary">Create account</a>
+              %p <a href="/auth/sign_up" id="register" class="btn button button-primary">Criar conta</a>
             - if closed_registrations? && @instance_presenter.closed_registrations_message.present?
               .closed
                 .rich-formatting
-                  %h3= 'Registrations closed.'
+                  %h3= 'Inscrições fechadas.'
                   %p= @instance_presenter.closed_registrations_message.html_safe
             - if closed_registrations? && !@instance_presenter.closed_registrations_message.present?
               %hr
                 .closed
                   .rich-formatting
-                    %h3= 'Registrations closed.'
-                    %p= 'This server is closed to registrations.'
+                    %h3= 'Inscrições fechadas.'
+                    %p= 'Este servidor não está aceitando novas contas.'
   .column-1
     .landing-page__call-to-action{ dir: 'ltr' }
       .row
