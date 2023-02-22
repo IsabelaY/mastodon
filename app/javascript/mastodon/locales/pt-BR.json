@@ -662,6 +662,7 @@
   "status.reblogs.empty": "Ninguém refletiu este brilho ainda. Quando alguém fizer isso, sua conta aparecerá aqui.",
   "status.redraft": "Apagar & usar como rascunho",
   "status.remove_bookmark": "Deixar de guardar",
+  "status.replied_to": "Resposta a {name}",
   "status.reply": "Responder",
   "status.replyAll": "Responder a conversa",
   "status.report": "Denunciar @{name}",
