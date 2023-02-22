@@ -1613,7 +1613,7 @@ pt-BR:
         spam: Spam
         violation: O conteúdo viola as seguintes diretrizes da comunidade
       explanation:
-        delete_statuses: Algumas de suas publicações infringiram uma ou mais diretrizes da comunidade e foram removidas pelos moderadores de %{instance}.
+        delete_statuses: Algumas de suas publicações infringiram uma ou mais diretrizes da comunidade e foram removidas pela moderação de %{instance}.
         disable: Você não poderá mais usar a sua conta, mas o seu perfil e outros dados permanecem intactos. Você pode solicitar um backup dos seus dados, mudar as configurações ou excluir sua conta.
         sensitive: A partir de agora, todos os seus arquivos de mídia enviados serão marcados como sensíveis e escondidos por trás de um aviso de clique.
       reason: 'Motivo:'

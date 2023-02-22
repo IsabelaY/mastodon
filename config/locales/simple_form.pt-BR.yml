@@ -263,7 +263,7 @@ pt-BR:
           sign_up_requires_approval: Limitar novas contas
         severity: Regra
       notification_emails:
-        appeal: Alguém recorre de uma decisão moderadora
+        appeal: Alguém apela uma decisão de moderação
         digest: Enviar e-mails de resumo
         favourite: Enviar e-mail quando alguém favoritar seus brilhos
         follow: Enviar e-mail quando alguém acompanhar sua conta
