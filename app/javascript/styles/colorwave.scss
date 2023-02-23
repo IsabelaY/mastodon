@@ -40,7 +40,7 @@ body, .ui {
     font-family: galyon, Helvetica, sans-serif;
 }
 
-.drawer__header, .search__input, .drawer__inner, .column-header, .column-header__button, .column > .scrollable, .notification__filter-bar button, .column-back-button, .column-header__button.active, .column-header__back-button, .empty-column-indicator, .error-column, .account__header__image, .account__header__bar, .account__header__fields dt, .getting-started__wrapper, .getting-started, .flex-spacer, .account__header__bar .avatar .account__avatar, .notification__filter-bar, .account__section-headline, .column-header__collapsible-inner, .column-subheading, .column-link, .drawer__inner__mastodon, .table-of-contents, .grid-4 .column-1, .nothing-here, .grid-4 .column-3, .landing-page__call-to-action, .public-layout .header, .public-layout .public-account-bio, .activity-stream .entry, .hero-widget__text, .public-layout .public-account-header__image, .public-layout .public-account-header__bar::before, .admin-wrapper .sidebar-wrapper__inner, .admin-wrapper .sidebar-wrapper, .batch-table__toolbar, .regeneration-indicator, .card__img, .card__bar, .card__bar .avatar img, .column-inline-form, .filter-form, .box-widget, .landing .hero-widget__footer, .page-header {
+.drawer__header, .search__input, .drawer__inner, .column-header, .column-header__button, .column > .scrollable, .notification__filter-bar button, .column-back-button, .column-header__button.active, .column-header__back-button, .empty-column-indicator, .error-column, .account__header__image, .account__header__bar, .account__header__fields dt, .getting-started__wrapper, .getting-started, .flex-spacer, .account__header__bar .avatar .account__avatar, .notification__filter-bar, .account__section-headline, .column-header__collapsible-inner, .column-link, .drawer__inner__mastodon, .table-of-contents, .grid-4 .column-1, .nothing-here, .grid-4 .column-3, .landing-page__call-to-action, .public-layout .header, .public-layout .public-account-bio, .activity-stream .entry, .hero-widget__text, .public-layout .public-account-header__image, .public-layout .public-account-header__bar::before, .admin-wrapper .sidebar-wrapper__inner, .admin-wrapper .sidebar-wrapper, .batch-table__toolbar, .regeneration-indicator, .card__img, .card__bar, .card__bar .avatar img, .column-inline-form, .filter-form, .box-widget, .landing .hero-widget__footer, .page-header {
     background: transparent;
 }
 
@@ -614,3 +614,78 @@ border: 2px groove #fff; }
   border-radius: 0;
   border: 2px inset #eee;
 }
+
+// 23.02.23 Hometown
+
+.link-footer p {
+  color: #222;
+}
+
+.link-footer p a {
+  color: #5d21b5;
+}
+
+.column-link--transparent.active:hover, .column-link--transparent.active:focus, .column-link--transparent.active:active {
+  color: #000080;
+}
+
+.navigation-panel hr, .trends__item {
+    border-color: #ffffff90;
+}
+.column-link--transparent:hover, .column-link--transparent:focus, .column-link--transparent:active {
+    background: #8181ff;
+    }
+
+@media screen and (max-width: 1174px) {
+    .columns-area__panels__pane--navigational .navigation-panel {
+        border-left: 0px;
+     }
+    .navigation-panel hr, .column-link--button {
+        border-color: #222;
+    }
+    #navigation-panel__publish.active i {
+        background-color: #000080;
+        color: #fff;
+    }
+    #navigation-panel__publish.active {
+        color: #000080;
+    }
+}
+
+.public-layout .footer ul a, .public-layout .footer .legal-xs a, .public-layout .footer .grid .column-2 h4 a {
+  color: #40177d;
+}
+
+.public-layout .footer {
+  color: #222;
+}
+
+.public-layout .footer h4 {
+  color: #000;
+}
+
+.trends__item--disabled .trends__item__current, .trends__item--disabled .trends__item__name, .trends__item--disabled .trends__item__name a {
+  color: #222c;
+}
+
+.announcements-list__item__meta, .filters-list__item__meta {
+  color: #000;
+}
+
+.announcements-list__item__meta a, .filters-list__item__meta a {
+  color: #40177d;
+}
+
+.admin-wrapper .sidebar .logo h2 .brand {
+  border-bottom: 0;
+}
+
+.dismissable-banner {
+    border: 0px;
+}
+
+.column-subheading {
+  color: #000;
+  background: #0001;
+}
+
