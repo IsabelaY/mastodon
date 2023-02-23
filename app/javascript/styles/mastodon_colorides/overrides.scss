@@ -1911,3 +1911,21 @@ button.icon-button.reblogPrivate:hover i.fa-retweet {
   color: #58d9ba;
   opacity: 1;
 }
+
+// 23.02.2023
+
+.status__wrapper--filtered__button {
+  color: #30ddef;
+}
+
+.trends__item--disabled .trends__item__current, .trends__item--disabled .trends__item__name, .trends__item--disabled .trends__item__name a {
+  color: #ccc;
+}
+
+.trends__item--disabled .trends__item__sparkline path:last-child {
+  stroke: #ccc !important;
+}
+
+.trends__item--disabled .trends__item__sparkline path:first-child {
+  fill: transparent !important;
+}
