@@ -87,7 +87,7 @@ background: #77f;
     border-width: 0px;
 }
 
-div.quote {
+div.quote, .reply-indicator__content .status__content__text blockquote, .status__content .status__content__text blockquote {
     border: groove #fff 2px;
     margin-left: 15px;
     padding: 5px;
@@ -689,3 +689,46 @@ border: 2px groove #fff; }
   background: #0001;
 }
 
+.button:active, .button:focus, .button:hover, .dashboard__quick-access:active, .dashboard__quick-access:focus, .dashboard__quick-access:hover {
+  background: #4e4eff;
+}
+
+.account__header__bar .avatar {
+  margin-left: 0px;
+}
+
+.account__avatar {
+  border-radius: 0px;
+}
+
+.getting-started__trends h4 {
+    border: 0;
+    color: #000;
+    background: #0001;
+}
+
+.account__header {
+  background: rgba(0,0,0,.0666666667);
+}
+
+.account__header__tabs__buttons .icon-button {
+  border-color: #40177D;
+}
+
+.icon-button.active {
+  color: #222;
+}
+.icon-button:focus {
+  background-color: #bebebe;
+  border-color: #bebebe;
+}
+
+.account__header__bio .account__header__fields dl {
+  border-bottom: 0px;
+  margin-bottom: 1px;
+  background: #fff7;
+}
+
+.account__header__bio .account__header__fields {
+  background: transparent;
+}

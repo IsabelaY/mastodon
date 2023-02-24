@@ -1091,7 +1091,7 @@ $light-text-color: #694E78;
 /* ------User Page Avatar End------ */
 
 /* ------User Page Self Intro------ */
-.account__header__fields
+/*.account__header__fields
 {
   border-top: 1px solid rgba(112, 84, 128, .5);
   border-bottom: 1px solid rgba(112, 84, 128, .5);
@@ -1112,7 +1112,7 @@ $light-text-color: #694E78;
 {
   color: #705480;
   background: #F7EFFF;
-}
+} */
 
 .account__header__fields a
 {
@@ -2061,7 +2061,7 @@ button.icon-button.disabled i.fa-retweet
 
 .column-back-button:hover
 {
-  color: #FAFAFA;
+  color: #000;
 }
 
 .column-header__back-button
@@ -2823,7 +2823,7 @@ body.error
   color: #FFF;
 }
 
-.account__header .account__header__fields dl
+/* .account__header .account__header__fields dl
 {
   border-top: 1px solid rgba(112, 84, 128, 0.3);
 }
@@ -2844,7 +2844,7 @@ body.error
 {
   border: 1px solid rgba(121, 189, 154, 0.5);
   background: rgba(121, 189, 154, 0.25);
-}
+} */
 
 .simple_form .input.boolean .label_input > label
 {
@@ -4523,10 +4523,6 @@ body {
     border-bottom: 0px;
 }
 
-div.quote, pre {
-    border: 1px solid #9c77c2;
-}
-
 .speech-bubble {
     border-left: 4px solid #694e78;
 }
@@ -4703,7 +4699,7 @@ a.table-action-link:hover, button.table-action-link:hover {
     border-top: 1px solid #b5a5bf;
 }
 
-div.quote {
+div.quote, .reply-indicator__content .status__content__text blockquote, .status__content .status__content__text blockquote {
     border: 0px;
     border-left: 4px solid #dfc9f2;
     padding: 5px 0px 5px 10px;
@@ -4712,6 +4708,7 @@ div.quote {
 }
 
 pre {
+    border: 1px solid #9c77c2;
     border-radius: 4px;
     padding: 5px;
     font-family: courier new,monospace,consolas;
@@ -4724,7 +4721,7 @@ pre {
     color: #705480;
 }
 
-.status.muted .quote, .status.muted .pre {
+.status.muted .quote, .status.muted .pre, .status,muted blockquote {
     color: #a888b8;
 }
 
@@ -5291,3 +5288,68 @@ a.sparkline:active, a.sparkline:focus, a.sparkline:hover {
 }
 
 
+// 24.02.23 Hometown + 4.0
+
+#navigation-panel__publish i {
+  background-color: #dfc9f2;
+}
+
+#navigation-panel__publish.active i {
+  background-color: #fbf6ff;
+  color: #765b85;
+}
+
+  @media screen and (max-width: 1174px) {
+  .columns-area__panels__pane--navigational .navigation-panel {
+    background: #fbf6ff;
+  }
+  .column-link--button {
+    border-bottom-color: #b5a5bf;
+  }
+  .columns-area__panels__pane--navigational .navigation-panel {
+    border-left-color: #b5a5bf;
+  }
+}
+
+.is-multiple-toggle__label {
+  color: #705480;
+}
+
+.account__header__tabs__name h1 a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.account__header .account__header__fields
+{
+  background: rgba(148, 136, 168, 0.3);
+}
+
+.account__header__bio .account__header__fields dt {
+  color: #F7EFFF;
+}
+
+.account__header__bio .account__header__fields dd {
+  color: #fff;
+}
+
+.account__header > div {
+  background: rgb(84, 61, 99);
+}
+
+.account__header__extra__links a {
+  color: #dfc9f2;
+}
+
+.account__header__content a {
+  color: #7FCCFB;
+}
+
+.account__header__tabs__buttons .icon-button:hover, .account__header__tabs__buttons .icon-button:focus {
+  color: #fff;
+  background: #ae8cd1;
+}
+
+.link-footer {
+  background: #fbf6ff;
+}
