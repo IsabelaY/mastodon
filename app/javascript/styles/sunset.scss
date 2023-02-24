@@ -246,7 +246,7 @@ body {
   color: #fff;
 }
 
-div.quote {
+div.quote, .reply-indicator__content .status__content__text blockquote, .status__content .status__content__text blockquote {
     border-color: #DF7925;
     border-style: solid;
     border-width: 0px 0px 0px 3px;

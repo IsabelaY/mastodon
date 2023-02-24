@@ -195,7 +195,7 @@ button.icon-button i.fa-retweet {
     background: #fff;
 }
 
-div.quote {
+div.quote, .reply-indicator__content .status__content__text blockquote, .status__content .status__content__text blockquote {
     border-top: 0px;
     border-bottom: 0px;
     border-right: 0px;

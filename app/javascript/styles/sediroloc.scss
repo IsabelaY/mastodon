@@ -1414,7 +1414,7 @@ button.icon-button i.fa-retweet:hover {
     border-bottom-color: #a72645;
 }
 
-div.quote {
+div.quote, .reply-indicator__content .status__content__text blockquote, .status__content .status__content__text blockquote {
     border: 0px;
     border-left: 4px solid #a72645;
     padding: 5px 0px 5px 10px;
