@@ -76,7 +76,7 @@ pre {
     font-family: monospace;
 }
 
-div.quote {
+div.quote, .reply-indicator__content .status__content__text blockquote, .status__content .status__content__text blockquote {
 	border: 0px;
     border-left: 3px solid #00827d;
     padding: 5px 0px 5px 7px;
