@@ -21,7 +21,7 @@ $primary-text-color: #070707;
 
   .ui, body
   {
-    background-color: #e8f6be;
+    background-color: #e9e9e9;
     background-image: url('~images/background/fundo3invertido.png');
     background-position: bottom right;
     background-repeat: repeat-x;
@@ -31,7 +31,7 @@ $primary-text-color: #070707;
 
 body.about-body, body.tag-body, body.admin
 {
-    background-color: #e8f6be;
+    background-color: #e9e9e9;
     background-image: url('~images/background/fundo3invertido.png');
     background-position: bottom right;
     background-repeat: repeat-x;
@@ -1923,4 +1923,101 @@ a.sparkline:active, a.sparkline:focus, a.sparkline:hover {
 .dropdown-menu__item a:active, .dropdown-menu__item a:focus, .dropdown-menu__item a:hover, .dropdown-menu__item button:active, .dropdown-menu__item button:focus, .dropdown-menu__item button:hover {
   background: #e8f6be;
   color: #070707;
+}
+
+// 25/02/23
+
+.dismissable-banner {
+  border: 0;
+  background: #e8f6be;
+}
+
+.circular-progress {
+    color: #a72645;
+}
+
+.account__header__bio .account__header__fields {
+  background: transparent;
+}
+
+.status__wrapper--filtered__button {
+    color: #cf2210;
+}
+
+.poll__option input[type="text"]:focus {
+  border-color: #a72645;
+}
+
+.muted .poll__chart.leading {
+  background: #a7264540;
+}
+
+.poll__chart.leading {
+  background: #a72645;
+}
+
+  @media screen and (max-width: 1174px) {
+    .columns-area__panels__pane--navigational .navigation-panel {
+        border-left: 0;
+        background: transparent;
+    }
+    .column-link--button {
+        border: 0;
+    }
+    .column-link.column-link--transparent.column-link--button {
+        background: #c5d882;
+    }
+    .column-link.column-link--transparent.column-link--button:hover, .column-link.column-link--transparent.column-link--button:focus {
+        background: #e8f6be;
+    }
+}
+
+.admin-wrapper .sidebar__toggle, .nothing-here, .page-header, .directory__tag > a, .directory__tag > div {
+    border: 0;
+}
+
+  @media screen and (max-width: 600px) {
+    .admin-wrapper .sidebar > ul.visible {
+        background: #e8f6be;
+    }
+}
+
+.admin-wrapper .sidebar__toggle__icon {
+    border-radius: 0;
+}
+
+#navigation-panel__publish i {
+    background: #c5d882;
+}
+
+#navigation-panel__publish.active i {
+  background: #a72645;
+  color: #fff;
+}
+
+.box-widget {
+    background: #e8f6be;
+}
+
+.public-layout .footer ul a, .public-layout .footer .legal-xs a {
+    color: #cf2210;
+}
+
+.explore__search-header .search__input {
+    border-color: #070707;
+}
+
+.explore__search-header .search__input:focus, .explore__search-header .search__input:active {
+    border-color: #a72645;
+}
+
+
+.search__icon .fa.active {
+    opacity: 1;
+    color: #a72645;
+    top: 16px;
+}
+
+.icon-with-badge__badge {
+  color: #000;
 }
