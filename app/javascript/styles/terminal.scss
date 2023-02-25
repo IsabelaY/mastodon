@@ -64,9 +64,9 @@ $font-monospace: 'monospace' !default;
 
 @import 'application';
 
-// murdering border-radius
+// stop using border-radius
 
-.icon-button, .button, .privacy-dropdown.active.top .privacy-dropdown__value, .text-icon-button, .column-settings__hashtags .column-select__control {
+.icon-button, .button, .privacy-dropdown.active.top .privacy-dropdown__value, .text-icon-button, .column-settings__hashtags .column-select__control, .flash-message, .simple_form input[type="text"], .simple_form input[type="number"], .simple_form input[type="email"], .simple_form input[type="password"], .simple_form input[type="url"], .simple_form input[type="datetime-local"], .simple_form textarea, .simple_form select, .admin-wrapper .sidebar ul a.selected, .admin-wrapper .sidebar ul, .account-role, .simple_form .recommended, .simple_form .not_recommended, #navigation-panel__publish i, .language-dropdown__dropdown__results__item, .language-dropdown__dropdown, .privacy-dropdown.active .privacy-dropdown__value, .privacy-dropdown__dropdown {
   border-radius: 0;
 }
 
@@ -149,6 +149,10 @@ $font-monospace: 'monospace' !default;
   color: #fff;
 }
 
+.text-icon-button:hover, .text-icon-button:active, .text-icon-button:focus {
+  color: #fff;
+}
+
 .icon-button.inverted:hover, .icon-button.inverted:active, .icon-button.inverted:focus {
   color: #fff;
   background-color: #008000;
@@ -169,6 +173,65 @@ $font-monospace: 'monospace' !default;
 .reply-indicator__cancel .icon-button.inverted {
   color: #fff;
 }
+
+.privacy-dropdown.active .privacy-dropdown__value {
+  background: #008000;
+}
+
+.language-dropdown__dropdown__results__item:focus, .language-dropdown__dropdown__results__item:active, .language-dropdown__dropdown__results__item:hover {
+  background: #c0c0c0;
+  color: #000;
+  .language-dropdown__dropdown__results__item__common-name {
+    color: #000080;
+  }
+}
+
+.language-dropdown__dropdown__results__item.active {
+  background: #800080;
+}
+
+.language-dropdown__dropdown__results__item.active .language-dropdown__dropdown__results__item__common-name {
+  color: #0ff;
+}
+
+.language-dropdown__dropdown__results__item.active:hover {
+  background: #000;
+  color: #fff;
+}
+
+.language-dropdown__dropdown__results__item {
+  color: #fff;
+}
+
+.privacy-dropdown__dropdown {
+  background: #000;
+}
+
+.privacy-dropdown__option {
+  color: #0f0;
+}
+
+.privacy-dropdown__option__content {
+  color: #c0c0c0;
+}
+
+.privacy-dropdown__option__content strong {
+  color: #fff;
+}
+
+.privacy-dropdown__option:hover, .privacy-dropdown__option:focus, .privacy-dropdown__option.active {
+  background: #c0c0c0;
+  color: #000;
+}
+
+.privacy-dropdown__option:hover .privacy-dropdown__option__content, .privacy-dropdown__option:hover .privacy-dropdown__option__content strong, .privacy-dropdown__option.active .privacy-dropdown__option__content, .privacy-dropdown__option.active .privacy-dropdown__option__content strong {
+  color: #000;
+}
+
+.is-multiple-toggle__label {
+  color: #fff;
+}
+
 
 //posts, colunas
 
@@ -199,6 +262,12 @@ $font-monospace: 'monospace' !default;
   border: 0px;
   margin-top: 6px;
   background: #000;
+}
+
+div.quote, .reply-indicator__content .status__content__text blockquote, .status__content .status__content__text blockquote {
+  border-style: double;
+  border-color: #c0c0c0;
+  border-width: 3px;
 }
 
 .account {
@@ -277,6 +346,16 @@ $font-monospace: 'monospace' !default;
 //menus, buttons
 
 .button {
+  color: #000;
+}
+
+#navigation-panel__publish i {
+  background-color: #f0f;
+  color: #000;
+}
+
+#navigation-panel__publish.active i {
+  background-color: #0f0;
   color: #000;
 }
 
@@ -368,4 +447,42 @@ button.icon-button:hover i.fa-retweet {
 
 .admin-wrapper .sidebar ul .simple-navigation-active-leaf a {
   color: #000;
+}
+
+.admin-wrapper .content h4 {
+  border: 0;
+  background: #c0c0c0;
+  color: #000;
+  padding: 5px;
+}
+
+.simple_form input[type="text"], .simple_form input[type="number"], .simple_form input[type="email"], .simple_form input[type="password"], .simple_form input[type="url"], .simple_form input[type="datetime-local"], .simple_form textarea {
+  border-style: double;
+  border-color: #c0c0c0;
+  border-width: 3px;
+}
+
+.flash-message.translation-prompt {
+  background: #000080;
+}
+
+.simple_form select {
+  border: 0;
+  background-image: none;
+  background-color: #00f;
+  color: #fff;
+}
+
+@media screen and (max-width: 600px) {
+  .admin-wrapper .sidebar ul a, .admin-wrapper .sidebar ul ul a {
+    border: 0;
   }
+}
+
+.admin-wrapper .sidebar ul a:hover, .admin-wrapper .sidebar ul a:focus {
+  background-color: #00f;
+}
+
+.admin-wrapper .sidebar__toggle {
+  border-color: #c0c0c0;
+}

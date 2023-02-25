@@ -732,3 +732,31 @@ border: 2px groove #fff; }
 .account__header__bio .account__header__fields {
   background: transparent;
 }
+
+// 25/02/23
+
+
+.dropdown-menu__item a:active, .dropdown-menu__item a:focus, .dropdown-menu__item a:hover, .dropdown-menu__item button:active, .dropdown-menu__item button:focus, .dropdown-menu__item button:hover {
+  color: #000;
+}
+
+.button.logo-button:active, .button.logo-button:focus, .button.logo-button:hover {
+  background: #4e4eff;
+}
+
+.explore__search-header {
+  background: transparent;
+}
+
+.search__input::placeholder {
+  color: #000;
+}
+
+.explore__search-header .search__input {
+  border-color: #acacac;
+}
+
+.search__input:focus {
+  background: #c8c8c8;
+  border-color: #c8c8c8;
+}
