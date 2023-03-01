@@ -1221,3 +1221,12 @@ button.icon-button.disabled i.fa-retweet {
 .button.button-tertiary {
   color: $darker-text-color;
 }
+
+// Aster's blockquote changes
+
+div.quote, .status__content .status__content__text blockquote, .reply-indicator__content .status__content__text blockquote {
+  padding-left: 10px;
+  border: 0px;
+  border-left: 3px solid #cff2e1;
+  color: #444b5d;
+}
