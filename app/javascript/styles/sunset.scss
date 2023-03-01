@@ -1424,3 +1424,25 @@ a.sparkline:active, a.sparkline:focus, a.sparkline:hover {
 .icon-button.bookmark-icon.active, .icon-button.star-icon.active {
     color: #fff;
 }
+
+// 28-02-23
+
+.dismissable-banner, .rules-list li, .table.horizontal-table > tbody > tr > td, .table.horizontal-table > tbody > tr > th {
+  border-color: #8c3f00;
+}
+
+.reply-indicator__content a.unhandled-link, .status__content a.unhandled-link {
+  color: #df7925;
+}
+
+.status.light .status__relative-time, .status.light .status__visibility-icon {
+  color: #2b2b2b;
+}
+
+.list-editor .drawer__inner.backdrop {
+  background: #2b2b2b;
+}
+
+.status.light .status__content__spoiler-link {
+  color: #000;
+}
