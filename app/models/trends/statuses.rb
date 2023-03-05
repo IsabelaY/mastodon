@@ -91,14 +91,13 @@ class Trends::Statuses < Trends::Base
   def eligible?(status)
     status.created_at.past? &&
       opted_into_trends?(status) &&
-      !sensitive_content?(status) &&
       !status.reply? &&
       valid_locale?(status.language) &&
       (status.quote.nil? || trendable_quote?(status.quote))
   end
 
   def opted_into_trends?(status)
-    status.public_visibility? &&
+    (status.public_visibility? || status.public_in_local?) &&
       status.account.discoverable? &&
       !status.account.silenced?
   end
