@@ -297,6 +297,8 @@ class StatusContent extends PureComponent {
         mentionsPlaceholder = <div>{mentionLinks}</div>;
       }
 
+      const articleClasses = status.get('activity_pub_type') === 'Article' ? `article-type ${!hidden ? 'article-type--visible' : ''}` : '';
+
       const output = [
         <div key={"__yells_at_linter__"} className={classNames} ref={this.setRef} tabIndex={0} onMouseDown={this.handleMouseDown} onMouseUp={this.handleMouseUp} onMouseEnter={this.handleMouseEnter} onMouseLeave={this.handleMouseLeave}>
           <p style={{ marginBottom: hidden && status.get('mentions').isEmpty() ? '0px' : null }}>
@@ -307,7 +309,7 @@ class StatusContent extends PureComponent {
 
           {mentionsPlaceholder}
 
-          <div tabIndex={!hidden ? 0 : null} className={`status__content__text ${!hidden ? 'status__content__text--visible' : ''} ${status.get('activity_pub_type') === 'Article' ? 'article-type' : ''} translate`} lang={language} dangerouslySetInnerHTML={content} />
+          <div tabIndex={!hidden ? 0 : null} className={`status__content__text ${!hidden ? 'status__content__text--visible' : ''} ${status.get('activity_pub_type') === 'Article' ? 'article-type' : ''} ${articleClasses} translate`} lang={language} dangerouslySetInnerHTML={content} />
           {!hidden && children}
           {!hidden && poll}
           {translateButton}

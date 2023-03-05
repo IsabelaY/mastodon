@@ -909,6 +909,18 @@ body > [data-popper-placement] {
       display: block;
     }
   }
+
+  .article-type {
+    margin-top: 10px;
+  }
+
+  .article-type--visible {
+    display: inline-block;
+  }
+
+  .article-type img {
+    max-width: 95%;
+  }
 }
 
 .announcements__item__content {
