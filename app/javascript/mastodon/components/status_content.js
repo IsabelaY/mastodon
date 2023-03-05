@@ -281,6 +281,8 @@ class StatusContent extends React.PureComponent {
         mentionsPlaceholder = <div>{mentionLinks}</div>;
       }
 
+      const articleClasses = status.get('activity_pub_type') === 'Article' ? `article-type ${!hidden ? 'article-type--visible' : ''}` : '';
+
       const output = [
         <div className={classNames} ref={this.setRef} tabIndex='0' onMouseDown={this.handleMouseDown} onMouseUp={this.handleMouseUp} onMouseEnter={this.handleMouseEnter} onMouseLeave={this.handleMouseLeave}>
           <p style={{ marginBottom: hidden && status.get('mentions').isEmpty() ? '0px' : null }}>
@@ -291,7 +293,7 @@ class StatusContent extends React.PureComponent {
 
           {mentionsPlaceholder}
 
-          <div tabIndex={!hidden ? 0 : null} className={`status__content__text ${!hidden ? 'status__content__text--visible' : ''} ${status.get('activity_pub_type') === 'Article' ? 'article-type' : ''} translate`} lang={lang} dangerouslySetInnerHTML={content} />
+          <div tabIndex={!hidden ? 0 : null} className={`status__content__text ${!hidden ? 'status__content__text--visible' : ''} ${articleClasses} translate`} lang={lang} dangerouslySetInnerHTML={content} />
           {!hidden && children}
           {!hidden && poll}
           {!hidden && translateButton}
