@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 require 'thor'
+require_relative 'mastodon/colorides_cli'
 require_relative 'mastodon/media_cli'
 require_relative 'mastodon/emoji_cli'
 require_relative 'mastodon/accounts_cli'
@@ -23,6 +24,9 @@ module Mastodon
     def self.exit_on_failure?
       true
     end
+
+    desc 'colorides SUBCOMMAND ...ARGS', 'Colorid.es custom scripts'
+    subcommand 'colorides', Mastodon::ColoridesCLI
 
     desc 'media SUBCOMMAND ...ARGS', 'Manage media files'
     subcommand 'media', Mastodon::MediaCLI
