@@ -2,6 +2,7 @@
 
 require_relative 'base'
 
+require_relative 'colorides'
 require_relative 'accounts'
 require_relative 'cache'
 require_relative 'canonical_email_blocks'
@@ -21,6 +22,9 @@ require_relative 'upgrade'
 
 module Mastodon::CLI
   class Main < Base
+    desc 'colorides SUBCOMMAND ...ARGS', 'Colorid.es custom scripts'
+    subcommand 'colorides', Colorides
+
     desc 'media SUBCOMMAND ...ARGS', 'Manage media files'
     subcommand 'media', Media
 
