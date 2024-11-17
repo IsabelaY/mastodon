@@ -4,6 +4,10 @@
 @use '../mastodon/variables' as mastodon;
 @use './variables' as *;
 
+.colorides_logo {
+  filter: invert(0);
+}
+
 html {
   scrollbar-color: $pink rgba($pink, 0.25);
 }
