@@ -1,6 +1,10 @@
 // Notes!
 // Sass color functions, "darken" and "lighten" are automatically replaced.
 
+.colorides_logo {
+  filter: invert(0);
+}
+
 html {
   scrollbar-color: $ui-base-color rgba($ui-base-color, 0.25);
 }
