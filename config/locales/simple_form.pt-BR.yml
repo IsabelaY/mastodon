@@ -55,11 +55,14 @@ pt-BR:
         scopes: Quais APIs o aplicativo vai ter permissão de acessar. Se você selecionar uma autorização de alto nível, você não precisa selecionar individualmente o resto.
         setting_aggregate_reblogs: Não mostra novos reflexos para brilhos que foram refletidos recentemente (afeta somente os reflexos mais recentes)
         setting_always_send_emails: Normalmente, as notificações por e-mail não serão enviadas enquanto você estiver usando ativamente sua conta
-        setting_default_federation: <ul><li>Se habilitado, seus novos brilhos irão federar para outras instâncias a menos que isto seja manualmente alterado na interface de postagem.</li><li>Se desabilitado, seus novos brilhos não irão federar a menos que isto seja alterado manualmente na interface de postagem.</li><li>Aplicativos postarão os brilhos respeitando esta configuração. <a href="https://github.com/hometown-fork/hometown/wiki/Local-only-posting#note-on-3rd-party-apps">Veja aqui para mais informações sobre aplicativos de terceires.</a></li></ul>
+        setting_default_federation_html: <ul><li>Se habilitado, seus novos brilhos irão federar para outras instâncias a menos que isto seja manualmente alterado na interface de postagem.</li><li>Se desabilitado, seus novos brilhos não irão federar a menos que isto seja alterado manualmente na interface de postagem.</li><li>Aplicativos postarão os brilhos respeitando esta configuração. <a href="https://github.com/hometown-fork/hometown/wiki/Local-only-posting#note-on-3rd-party-apps">Veja aqui para mais informações sobre aplicativos de terceires.</a></li></ul>
         setting_default_sensitive: Mídia sensível está oculta por padrão e pode ser revelada com um clique
         setting_display_media_default: Sempre ocultar mídia sensível
         setting_display_media_hide_all: Sempre ocultar todas as mídias
         setting_display_media_show_all: Sempre mostrar mídia sensível
+        setting_hide_network: Contas acompanhadas e que acompanham a sua não ficarão disponíveis publicamente em seu perfil
+        setting_noindex_html: Afeta seu perfil e suas postagens públicas. Respostas públicas a outras pessoas ainda poderão ficar disponíveis por meio de perfis alheios. <a href="https://github.com/hometown-fork/hometown/issues/1234">Leia isto para mais informações.</a>
+        setting_show_application: O aplicativo utilizado para publicar cada brilho ficará visível a todes
         setting_use_blurhash: O borrão é baseado nas cores da imagem oculta, ofusca a maioria dos detalhes
         setting_use_pending_items: Ocultar atualizações da linha do tempo atrás de um clique ao invés de rolar automaticamente
         username: Você pode usar letras, números e underlines
@@ -204,6 +207,7 @@ pt-BR:
         setting_advanced_layout: Ativar interface web avançada
         setting_aggregate_reblogs: Agrupar reflexos nas linhas do tempo
         setting_always_send_emails: Sempre enviar notificações por e-mail
+        setting_default_federation: Deixar que suas postagens sejam federadas (acessíveis por outros servidores) por padrão
         setting_emoji_size_simple: "Tamanho de emoji em brilhos simples (padrão: 20)"
         setting_emoji_size_detailed: "Tamanho de emoji em brilhos detalhados (padrão: 24)"
         setting_emoji_size_name: "Tamanho de emoji em nome de exibição (padrão: 16)"
@@ -231,7 +235,10 @@ pt-BR:
         setting_display_media_hide_all: Ocultar tudo
         setting_display_media_show_all: Mostrar tudo
         setting_expand_spoilers: Sempre expandir brilhos com aviso de conteúdo
+        setting_expand_usernames: Mostrar nome de tela completo de usuáries remotes em postagens (@usuárie@domínio)
         setting_hide_network: Esconder suas relações
+        setting_noindex: Recusar a indexação em sites de busca
+        setting_norss: Recusar a possibilidade de suas postagens serem acompanhadas via RSS
         setting_reduce_motion: Reduzir animações
         setting_system_font_ui: Usar fonte padrão do sistema
         setting_theme: Tema do site
