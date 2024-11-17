@@ -1446,3 +1446,29 @@ a.sparkline:active, a.sparkline:focus, a.sparkline:hover {
 .status.light .status__content__spoiler-link {
   color: #000;
 }
+
+// 17-11-2024 buttongate
+
+.button, .simple_form .block-button, .simple_form .button, .simple_form button {
+   background: #DF7925;
+}
+
+@media screen and (max-width: 1174px) {
+    .layout-single-column .ui__header {
+      border-color: #dfa125;
+    }
+  }
+
+.button.button-secondary {
+    color: #eeb94f;
+    border-color: #eeb94f;
+}
+
+.button.button-secondary:hover, .button.button-secondary:focus {
+    background-color: #DF7925;
+    border-color: #DF7925;
+}
+
+.column-header__button:last-child {
+    border-start-end-radius: 0;
+  }
