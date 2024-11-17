@@ -237,6 +237,7 @@ pt-BR:
         setting_advanced_layout: Ativar interface web avançada
         setting_aggregate_reblogs: Agrupar reflexos nas linhas do tempo
         setting_always_send_emails: Sempre enviar notificações por e-mail
+        setting_default_federation: Deixar que suas postagens sejam federadas (acessíveis por outros servidores) por padrão
         setting_emoji_size_simple: "Tamanho de emoji em brilhos simples (padrão: 20)"
         setting_emoji_size_detailed: "Tamanho de emoji em brilhos detalhados (padrão: 24)"
         setting_emoji_size_name: "Tamanho de emoji em nome de exibição (padrão: 16)"
