@@ -1,6 +1,6 @@
 require_relative 'base'
 
-module Mastodon
+module Mastodon::CLI
   class Colorides < Base
 
     option :concurrency, type: :numeric, default: 5, aliases: [:c]
