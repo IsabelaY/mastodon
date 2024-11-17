@@ -712,9 +712,6 @@ public page fixes
     mix-blend-mode: normal
 }
 
-/* add shadow to help with visibility on light bg */
-.brand img {filter: drop-shadow(1px 1px 1px black)}
-
 /* footer logo recolor */
 .public-layout .footer .brand svg path {fill: var(--textPageMuted)}
 .public-layout .footer .brand:hover svg path {fill: var(--accent)}

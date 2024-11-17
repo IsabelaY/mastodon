@@ -4,6 +4,14 @@
 @use '../mastodon/functions' as *;
 @use '../mastodon/variables' as *;
 
+.colorides_logo {
+  filter: invert(0);
+}
+
+html {
+  scrollbar-color: $ui-base-color rgba($ui-base-color, 0.25);
+}
+
 .simple_form .button.button-tertiary {
   color: $highlight-text-color;
 

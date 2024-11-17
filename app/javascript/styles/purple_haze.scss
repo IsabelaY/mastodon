@@ -30,6 +30,14 @@ $light-text-color: #694E78;
 
 @import 'application';
 
+.colorides_logo {
+  filter: invert(0);
+}
+
+.sidebar__toggle .colorides_logo {
+  filter: invert(1);
+}
+
   html
   {
     scrollbar-face-color: #313543;
