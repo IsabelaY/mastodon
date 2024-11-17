@@ -14,7 +14,7 @@ class UserSettings
   setting :show_application, default: true
   setting :default_language, default: nil
   setting :default_sensitive, default: false
-  setting :default_privacy, default: nil, in: %w(public unlisted private)
+  setting :default_privacy, default: nil, in: %w(public unlisted private local)
 
   # Hometown-specific: Opt-out of RSS feeds for public posts
   setting :norss, default: false
