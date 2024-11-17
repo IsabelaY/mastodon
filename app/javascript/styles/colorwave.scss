@@ -760,3 +760,41 @@ border: 2px groove #fff; }
   background: #c8c8c8;
   border-color: #c8c8c8;
 }
+
+// 17/11/2024 buttongate
+
+.button, .button.logo-button, .simple_form .block-button, .simple_form .button, .simple_form button {
+    background-color: #77f;
+    color: #000;
+
+    &:hover, &:focus {
+        background: #4e4eff;
+        color: #fff;
+    }
+}
+
+.button.button-secondary {
+    background: transparent;
+    color: #000;
+    &:hover, &:focus {
+        background: #000080;
+        color: #fff;
+    }
+}
+
+a.status-card {
+    border-radius: 0px; 
+    border: 2px groove #fff;
+}
+
+.status-card__description, .status-card__author, .status-card__host {
+    color: #414141;
+}
+
+a.status-card:hover, a.status-card:focus {
+    background-color: #000080;
+    .status-card__title, .status-card__description, .status-card__author, .status-card__host, .fa {
+      color: #fff;
+      text-decoration: none;
+    }
+  }
