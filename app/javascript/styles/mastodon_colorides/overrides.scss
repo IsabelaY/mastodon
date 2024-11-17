@@ -564,11 +564,16 @@ button.icon-button i.fa-retweet:hover {
     opacity: 0.5;
 }
 
-	.status__content__spoiler-link, .status__content__spoiler-link:focus, .status__content__spoiler-link:active, .status__content__spoiler-link:hover, .status__content__spoiler-link:default, .status__content__spoiler-link:link, .status__content__spoiler-link:enabled, .status__content__spoiler-link:checked, .status__content__spoiler-link:indeterminate, .status__content__spoiler-link:any-link, .status__content__spoiler-link::before, .status__content__spoiler-link::after
-{ color: #eee;
-    background-color: rgb(58, 39, 125) !important;
+.status__content__spoiler-link { 
+  color: #eee;
+    background-color: rgb(58, 39, 125);
     border-radius: 0px;
     margin-left: 3px;
+}
+
+.status__content__spoiler-link:hover, .status__content__spoiler-link:focus {
+  color: #30ddef;
+  background-color: #170a3e;
 }
 
 	.status__wrapper, .status, .account
@@ -600,7 +605,7 @@ button.icon-button i.fa-retweet:hover {
 	background-color: #eee;
 }
 
-.emoji-mart-search input::placeholder, .emoji-mart-search input::-webkit-input-placeholder, .emoji-mart-search input::-moz-placeholder, .emoji-mart-search input:-ms-input-placeholder, .emoji-mart-search input:-moz-placeholder
+.emoji-mart-search input::-webkit-input-placeholder, .emoji-mart-search input::-moz-placeholder, .emoji-mart-search input:-ms-input-placeholder, .emoji-mart-search input:-moz-placeholder
 {
 	color: #dadada;
 }
@@ -832,10 +837,6 @@ border-radius: 0px;
 
 .trends__header {
     color: #f8f8f8;
-}
-
-.emoji-mart-search input::placeholder {
-    color: #170941 !important;
 }
 
 .notice-widget a {
@@ -1956,4 +1957,31 @@ button.icon-button.reblogPrivate:hover i.fa-retweet {
 .dismissable-banner__action .icon-button:hover, .warning-banner__action .icon-button:hover, .dismissable-banner__action .icon-button:focus, .warning-banner__action .icon-button:focus {
   color: #30ddef;
   background: #170941;
+}
+
+// 17.11.2024
+
+.text-icon-button.active:active, .text-icon-button.active:focus, .text-icon-button.active:hover {
+  background-color: #3a277d;
+}
+
+.emoji-mart-search-icon:disabled, .emoji-mart-search input::placeholder {
+  color: #dadada;
+  opacity: 1;
+}
+
+@media screen and (max-width: 1174px) {
+  .layout-single-column .ui__header {
+    background: transparent;
+    border-color: transparent;
+  }
+}
+
+.account-role {
+  color: #58d9ba;
+  border-color: #58d9ba;
+}
+
+.admin-wrapper .sidebar__toggle {
+  border-bottom: transparent;
 }

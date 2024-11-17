@@ -239,10 +239,11 @@ html {
 }
 
 // Modificações no negócio de notificações novas no modo pra celular (padrão é texto escuro no fundo escuro e borda colorida clara)
+// edit 11/2024: mudaram padrão pra texto claro
 
 .icon-with-badge__badge {
-  background: #a2f5d6;
-  border: 1px solid #fff;
+  background: #00827d;
+  border-color: #c7f9e6;
 }
 
 //28/12/2020
@@ -290,3 +291,29 @@ html {
 .language-dropdown__dropdown__results__item .language-dropdown__dropdown__results__item__common-name {
   color: #00827d;
 }
+
+// 17/11/2024
+
+.button, .simple_form .block-button, .simple_form .button, .simple_form button {
+  color: #fff;
+  background: #00827d;
+  border-color: #00827d;
+}
+
+.button:hover, .button:focus, .simple_form .block-button:hover, .simple_form .button:hover, .simple_form button:hover, .simple_form .block-button:focus, .simple_form .button:focus, .simple_form button:focus {
+  background: #004f4c;
+  border-color: #004f4c;
+}
+
+.button.button-secondary {
+  border-color: #00827d;
+  color: #00827d;
+  background: #c7f9e6;
+}
+
+.button.button-secondary:hover, .button.button-secondary:focus {
+  color: #fff;
+  background: #00827d;
+  border-color: #00827d;
+}
+

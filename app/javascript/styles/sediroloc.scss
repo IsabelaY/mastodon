@@ -2021,3 +2021,12 @@ a.sparkline:active, a.sparkline:focus, a.sparkline:hover {
 .icon-with-badge__badge {
   color: #000;
 }
+
+// 17/11/2024
+
+@media screen and (max-width: 1174px) {
+    .layout-single-column .ui__header {
+      background: transparent;
+      border-bottom: transparent;
+    }
+  }

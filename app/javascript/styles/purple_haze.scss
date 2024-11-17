@@ -5353,3 +5353,11 @@ a.sparkline:active, a.sparkline:focus, a.sparkline:hover {
 .link-footer {
   background: #fbf6ff;
 }
+
+// 17/11/2024
+
+.button.button-secondary:hover, .button.button-secondary:focus {
+  border-color: #ae8cd1;
+  background-color: #ae8cd1;
+  color: #fff;
+}
