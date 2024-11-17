@@ -11,8 +11,12 @@
 
 //Fix buttons
 
-.button, .button.logo-button {
+.button, .button.logo-button, .simple_form .block-button, .simple_form .button, .simple_form button {
     background-color: #A81F56;
+
+    &:hover, &:focus {
+        background: #382833;
+    }
 }
 
 .react-toggle--checked .react-toggle-track {
@@ -211,7 +215,7 @@ pre {
 }
 
 .status.muted .quote, .status.muted .pre {
-  color: #5b4353
+  color: #5b4353;
 }
 
 //28/12/2020
@@ -239,3 +243,30 @@ pre {
 .batch-table__row--attention, .batch-table__row--attention .accounts-table, .batch-table__row--attention .accounts-table__count, .batch-table__row--attention .accounts-table__count small, .batch-table__row--attention .accounts-table a, .batch-table__row--attention .accounts-table strong, .batch-table__row--attention .accounts-table tbody td.accounts-table__extra, .batch-table__row--attention .name-tag, .batch-table__row--attention .name-tag a, .batch-table__row--attention .name-tag strong, .batch-table__row--attention .pending-account__header, .batch-table__row--attention .pending-account__header a, .batch-table__row--attention .pending-account__header strong {
   color: #AC2058;
 }
+
+// 17/11/2024
+
+.column-link--transparent .icon-with-badge__badge {
+    border-color: #f9c8dc;
+}
+
+.status__content a .fa {
+    color: #382833;
+}
+
+.button.button-secondary {
+    color: #382833;
+    border-color: #382833;
+  }
+  
+  .button.button-secondary:hover, .button.button-secondary:focus {
+    border-color: #AC2058;
+    background: #AC2058;
+    color: #fff;
+  }
+
+  
+.column-link--transparent:hover, .column-link--transparent:focus {
+    background: #AC2058;
+    color: #fff;
+  }

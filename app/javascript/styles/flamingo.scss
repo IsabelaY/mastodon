@@ -2832,3 +2832,23 @@ button.icon-button.reblogPrivate:hover i.fa-retweet {
   color: #000;
   background: #f09;
 }
+
+// 17/11/2024 
+
+.column-link--transparent .icon-with-badge__badge {
+    border-color: #222;
+}
+
+.column-header__button:last-child {
+    border-start-end-radius: 0;
+  }
+
+  .status-card__content {
+    padding: 18px;
+  }
+
+a.status-card:active .status-card__author, a.status-card:active .status-card__description, a.status-card:active .status-card__host, a.status-card:active .status-card__title, a.status-card:focus .status-card__author, a.status-card:focus .status-card__description, a.status-card:focus .status-card__host, a.status-card:focus .status-card__title, a.status-card:hover .status-card__author, a.status-card:hover .status-card__description, a.status-card:hover .status-card__host, a.status-card:hover .status-card__title {
+    color: #fff;
+    text-decoration: none;
+}
+
