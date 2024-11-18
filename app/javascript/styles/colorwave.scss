@@ -780,7 +780,7 @@ border: 2px groove #fff; }
 .button.button-secondary {
     background: transparent;
     color: #000;
-    &:hover, &:focus {
+    &:hover, &:focus, &:active {
         background: #000080;
         color: #fff;
     }

@@ -509,9 +509,8 @@ button.icon-button i.fa-retweet:hover {
     opacity: 0.8; 
 }
 
-.character-counter, ::-webkit-input-placeholder, .detailed-status__meta, .simple_form span.hint, .activity-stream .detailed-status.light .status__content a.status__content__spoiler-link, .activity-stream .status.light .status__content a.status__content__spoiler-link
-{
-   color: #f8f8f8 !important;
+.character-counter, ::-webkit-input-placeholder, .detailed-status__meta, .simple_form span.hint, .activity-stream .detailed-status.light .activity-stream .status.light .status__content a.status__content__spoiler-link {
+   color: #f8f8f8;
     opacity: 0.8; 
 }
 
@@ -564,14 +563,14 @@ button.icon-button i.fa-retweet:hover {
     opacity: 0.5;
 }
 
-.status__content__spoiler-link { 
+.reply-indicator__content .status__content__spoiler-link, .status__content .status__content__spoiler-link, .status__content__spoiler-link { 
   color: #eee;
     background-color: rgb(58, 39, 125);
     border-radius: 0px;
     margin-left: 3px;
 }
 
-.status__content__spoiler-link:hover, .status__content__spoiler-link:focus {
+.reply-indicator__content .status__content__spoiler-link:hover, .reply-indicator__content .status__content__spoiler-link:focus, .status__content status__content__spoiler-link:hover, .status__content .status__content__spoiler-link:focus, .status__content__spoiler-link:hover, .status__content__spoiler-link:focus {
   color: #30ddef;
   background-color: #170a3e;
 }
@@ -1984,4 +1983,12 @@ button.icon-button.reblogPrivate:hover i.fa-retweet {
 
 .admin-wrapper .sidebar__toggle {
   border-bottom: transparent;
+}
+
+.status__line {
+  border-inline-start-color: #58d9ba; 
+}
+
+a:focus {
+  border-radius: 0;
 }
