@@ -1464,11 +1464,30 @@ a.sparkline:active, a.sparkline:focus, a.sparkline:hover {
     border-color: #eeb94f;
 }
 
-.button.button-secondary:hover, .button.button-secondary:focus {
+.button.button-secondary:hover, .button.button-secondary:focus, .button.button-secondary:active {
     background-color: #DF7925;
     border-color: #DF7925;
 }
 
 .column-header__button:last-child {
     border-start-end-radius: 0;
-  }
+ }
+
+ @media screen and (max-width: 600px) {
+    .admin-wrapper .sidebar ul a, .admin-wrapper .sidebar ul ul a {
+      border-color: #dfa125;
+    }
+}
+
+.status__line {
+    border-inline-start-color: #DF7925;
+}
+
+.account-role {
+    color: #eeb94f;
+    border-color: #DF7925;
+}
+
+.account__header__bar {
+    border-color: #DF7925;
+}
