@@ -2030,3 +2030,27 @@ a.sparkline:active, a.sparkline:focus, a.sparkline:hover {
       border-bottom: transparent;
     }
   }
+
+a:focus {
+    border-radius: 0;
+  }
+
+.dismissable-banner__action .icon-button, .warning-banner__action .icon-button {
+    color: #070707;
+        &:hover, &:focus {
+            border: 1px solid #cf2210;
+        }
+}
+
+.column-link--transparent {
+    color: #070707;
+}
+
+.status__line {
+    border-inline-start-color: #a72645;
+}
+
+.account-role {
+    color: #a72645;
+    border-color: #a72645;
+}
