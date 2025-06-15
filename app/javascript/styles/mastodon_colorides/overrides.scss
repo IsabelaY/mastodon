@@ -1992,3 +1992,30 @@ button.icon-button.reblogPrivate:hover i.fa-retweet {
 a:focus {
   border-radius: 0;
 }
+
+// 15.06.2025
+
+.prose {
+  color: #f8f8f8;
+}
+
+.prose a {
+  color: #30ddef;
+}
+
+.about__section__body {
+  border: 0;
+  background-color: #1d0b53;
+}
+
+.about__section__title {
+  color: #fff;
+}
+
+.rules-list li::before {
+  color: #fff;
+}
+
+.about__footer {
+  color: #dadada;
+}
