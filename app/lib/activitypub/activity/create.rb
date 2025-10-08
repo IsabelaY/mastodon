@@ -136,8 +136,8 @@ class ActivityPub::Activity::Create < ActivityPub::Activity
   class Handler < ::Ox::Sax
     attr_reader :srcs, :alts
 
-    def initialize(_block)
-      super
+    def initialize
+      super()
       @stack = []
       @srcs = []
       @alts = {}
@@ -164,8 +164,8 @@ class ActivityPub::Activity::Create < ActivityPub::Activity
   end
 
   def process_inline_images
-    proc = proc { |name| Rails.logger.debug name }
-    handler = Handler.new(proc)
+    handler = Handler.new
+
     Ox.sax_parse(handler, @object['content'])
     handler.srcs.each do |src|
       # Handle images where the src is formatted as "/foo/bar.png"
