@@ -3,13 +3,15 @@ import { PureComponent } from 'react';
 
 import { FormattedMessage, defineMessages, injectIntl } from 'react-intl';
 
+import { Link } from 'react-router-dom';
+
 import { connect } from 'react-redux';
 
 import { fetchServer } from 'mastodon/actions/server';
+import { Account } from 'mastodon/components/account';
 import { ServerHeroImage } from 'mastodon/components/server_hero_image';
 import { ShortNumber } from 'mastodon/components/short_number';
 import { Skeleton } from 'mastodon/components/skeleton';
-import Account from 'mastodon/containers/account_container';
 import { domain } from 'mastodon/initial_state';
 
 const messages = defineMessages({
@@ -40,10 +42,12 @@ class ServerBanner extends PureComponent {
     return (
       <div className='server-banner'>
         <div className='server-banner__introduction'>
-          <FormattedMessage id='server_banner.introduction' defaultMessage='{domain} is part of the decentralized social network powered by {mastodon}.' values={{ domain: <strong>{domain}</strong>, mastodon: <a href='https://joinmastodon.org' target='_blank'>Mastodon</a> }} />
+          <FormattedMessage id='server_banner.is_one_of_many' defaultMessage='{domain} is one of the many independent Mastodon servers you can use to participate in the fediverse.' values={{ domain: <strong>{domain}</strong>, mastodon: <a href='https://joinmastodon.org' target='_blank' rel='noopener'>Mastodon</a> }} />
         </div>
 
-        <ServerHeroImage blurhash={server.getIn(['thumbnail', 'blurhash'])} src={server.getIn(['thumbnail', 'url'])} className='server-banner__hero' />
+        <Link to='/about'>
+          <ServerHeroImage blurhash={server.getIn(['thumbnail', 'blurhash'])} src={server.getIn(['thumbnail', 'url'])} className='server-banner__hero' />
+        </Link>
 
         <div className='server-banner__description'>
           {isLoading ? (
@@ -82,10 +86,6 @@ class ServerBanner extends PureComponent {
             )}
           </div>
         </div>
-
-        <hr className='spacer' />
-
-        <a className='button button--block button-secondary' href='/about'><FormattedMessage id='server_banner.learn_more' defaultMessage='Learn more' /></a>
       </div>
     );
   }

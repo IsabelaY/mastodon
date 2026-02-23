@@ -2,7 +2,7 @@
 
 require 'rails_helper'
 
-describe Admin::SystemCheck::SoftwareVersionCheck do
+RSpec.describe Admin::SystemCheck::SoftwareVersionCheck do
   include RoutingHelper
 
   subject(:check) { described_class.new(user) }
@@ -22,14 +22,17 @@ describe Admin::SystemCheck::SoftwareVersionCheck do
       before { allow(user).to receive(:can?).with(:view_devops).and_return(true) }
 
       it 'returns false' do
+        skip('version checks currently skipped in Hometown')
+
         expect(check.skip?).to be false
       end
 
       context 'when checks are disabled' do
         around do |example|
-          ClimateControl.modify UPDATE_CHECK_URL: '' do
-            example.run
-          end
+          original = Rails.configuration.x.mastodon.software_update_url
+          Rails.configuration.x.mastodon.software_update_url = ''
+          example.run
+          Rails.configuration.x.mastodon.software_update_url = original
         end
 
         it 'returns true' do
@@ -52,6 +55,8 @@ describe Admin::SystemCheck::SoftwareVersionCheck do
       end
 
       it 'returns false' do
+        skip('version checks currently skipped in Hometown')
+
         expect(check.pass?).to be false
       end
     end
@@ -62,6 +67,8 @@ describe Admin::SystemCheck::SoftwareVersionCheck do
       end
 
       it 'returns false' do
+        skip('version checks currently skipped in Hometown')
+
         expect(check.pass?).to be false
       end
     end
@@ -72,6 +79,8 @@ describe Admin::SystemCheck::SoftwareVersionCheck do
       end
 
       it 'returns false' do
+        skip('version checks currently skipped in Hometown')
+
         expect(check.pass?).to be false
       end
     end
@@ -82,6 +91,8 @@ describe Admin::SystemCheck::SoftwareVersionCheck do
       end
 
       it 'returns false' do
+        skip('version checks currently skipped in Hometown')
+
         expect(check.pass?).to be false
       end
     end
@@ -92,6 +103,8 @@ describe Admin::SystemCheck::SoftwareVersionCheck do
       end
 
       it 'returns false' do
+        skip('version checks currently skipped in Hometown')
+
         expect(check.pass?).to be false
       end
     end
@@ -104,6 +117,8 @@ describe Admin::SystemCheck::SoftwareVersionCheck do
       end
 
       it 'sends class name symbol to message instance' do
+        skip('version checks currently skipped in Hometown')
+
         allow(Admin::SystemCheck::Message).to receive(:new)
           .with(:software_version_patch_check, anything, anything)
 
@@ -120,13 +135,15 @@ describe Admin::SystemCheck::SoftwareVersionCheck do
       end
 
       it 'sends class name symbol to message instance' do
+        skip('version checks currently skipped in Hometown')
+
         allow(Admin::SystemCheck::Message).to receive(:new)
           .with(:software_version_critical_check, anything, anything, anything)
 
         check.message
 
         expect(Admin::SystemCheck::Message).to have_received(:new)
-          .with(:software_version_critical_check, nil, admin_software_updates_path, true)
+          .with(:software_version_critical_check, nil, admin_software_updates_path, critical: true)
       end
     end
   end

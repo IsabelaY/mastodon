@@ -6,6 +6,7 @@ class ActivityPub::ProcessAccountService < BaseService
   include Redisable
   include Lockable
 
+  MAX_PROFILE_FIELDS = 50
   SUBDOMAINS_RATELIMIT = 10
   DISCOVERIES_PER_REQUEST = 400
 
@@ -57,7 +58,7 @@ class ActivityPub::ProcessAccountService < BaseService
     after_suspension_change! if suspension_changed?
 
     unless @options[:only_key] || @account.suspended?
-      check_featured_collection! if @account.featured_collection_url.present?
+      check_featured_collection! if @json['featured'].present?
       check_featured_tags_collection! if @json['featuredTags'].present?
       check_links! if @account.fields.any?(&:requires_verification?)
     end
@@ -102,6 +103,7 @@ class ActivityPub::ProcessAccountService < BaseService
     @account.outbox_url              = valid_collection_uri(@json['outbox'])
     @account.shared_inbox_url        = valid_collection_uri(@json['endpoints'].is_a?(Hash) ? @json['endpoints']['sharedInbox'] : @json['sharedInbox'])
     @account.followers_url           = valid_collection_uri(@json['followers'])
+    @account.following_url           = valid_collection_uri(@json['following'])
     @account.url                     = url || @uri
     @account.uri                     = @uri
     @account.actor_type              = actor_type
@@ -121,16 +123,16 @@ class ActivityPub::ProcessAccountService < BaseService
   end
 
   def set_immediate_attributes!
-    @account.featured_collection_url = @json['featured'] || ''
-    @account.devices_url             = @json['devices'] || ''
-    @account.display_name            = @json['name'] || ''
-    @account.note                    = @json['summary'] || ''
+    @account.featured_collection_url = valid_collection_uri(@json['featured'])
+    @account.display_name            = (@json['name'] || '')[0...(Account::DISPLAY_NAME_LENGTH_HARD_LIMIT)]
+    @account.note                    = (@json['summary'] || '')[0...(Account::NOTE_LENGTH_HARD_LIMIT)]
     @account.locked                  = @json['manuallyApprovesFollowers'] || false
     @account.fields                  = property_values || {}
-    @account.also_known_as           = as_array(@json['alsoKnownAs'] || []).map { |item| value_or_id(item) }
+    @account.also_known_as           = as_array(@json['alsoKnownAs'] || []).take(Account::ALSO_KNOWN_AS_HARD_LIMIT).map { |item| value_or_id(item) }
     @account.discoverable            = @json['discoverable'] || false
     @account.indexable               = @json['indexable'] || false
     @account.memorial                = @json['memorial'] || false
+    @account.attribution_domains     = as_array(@json['attributionDomains'] || []).take(Account::ATTRIBUTION_DOMAINS_HARD_LIMIT).map { |item| value_or_id(item) }
   end
 
   def set_fetchable_key!
@@ -141,13 +143,13 @@ class ActivityPub::ProcessAccountService < BaseService
     begin
       @account.avatar_remote_url = image_url('icon') || '' unless skip_download?
       @account.avatar = nil if @account.avatar_remote_url.blank?
-    rescue Mastodon::UnexpectedResponseError, HTTP::TimeoutError, HTTP::ConnectionError, OpenSSL::SSL::SSLError
+    rescue Mastodon::UnexpectedResponseError, *Mastodon::HTTP_CONNECTION_ERRORS
       RedownloadAvatarWorker.perform_in(rand(30..600).seconds, @account.id)
     end
     begin
       @account.header_remote_url = image_url('image') || '' unless skip_download?
       @account.header = nil if @account.header_remote_url.blank?
-    rescue Mastodon::UnexpectedResponseError, HTTP::TimeoutError, HTTP::ConnectionError, OpenSSL::SSL::SSLError
+    rescue Mastodon::UnexpectedResponseError, *Mastodon::HTTP_CONNECTION_ERRORS
       RedownloadHeaderWorker.perform_in(rand(30..600).seconds, @account.id)
     end
     @account.statuses_count    = outbox_total_items    if outbox_total_items.present?
@@ -186,7 +188,7 @@ class ActivityPub::ProcessAccountService < BaseService
   end
 
   def check_featured_collection!
-    ActivityPub::SynchronizeFeaturedCollectionWorker.perform_async(@account.id, { 'hashtag' => @json['featuredTags'].blank?, 'request_id' => @options[:request_id] })
+    ActivityPub::SynchronizeFeaturedCollectionWorker.perform_async(@account.id, { 'hashtag' => @json['featuredTags'].blank?, 'collection' => @json['featured'], 'request_id' => @options[:request_id] })
   end
 
   def check_featured_tags_collection!
@@ -194,7 +196,7 @@ class ActivityPub::ProcessAccountService < BaseService
   end
 
   def check_links!
-    VerifyAccountLinksWorker.perform_async(@account.id)
+    VerifyAccountLinksWorker.perform_in(rand(10.minutes.to_i), @account.id)
   end
 
   def process_duplicate_accounts!
@@ -251,7 +253,10 @@ class ActivityPub::ProcessAccountService < BaseService
   def property_values
     return unless @json['attachment'].is_a?(Array)
 
-    as_array(@json['attachment']).select { |attachment| attachment['type'] == 'PropertyValue' }.map { |attachment| attachment.slice('name', 'value') }
+    as_array(@json['attachment'])
+      .select { |attachment| attachment['type'] == 'PropertyValue' }
+      .take(MAX_PROFILE_FIELDS)
+      .map { |attachment| attachment.slice('name', 'value') }
   end
 
   def mismatching_origin?(url)
@@ -291,7 +296,7 @@ class ActivityPub::ProcessAccountService < BaseService
     total_items = collection.is_a?(Hash) && collection['totalItems'].present? && collection['totalItems'].is_a?(Numeric) ? collection['totalItems'] : nil
     has_first_page = collection.is_a?(Hash) && collection['first'].present?
     @collections[type] = [total_items, has_first_page]
-  rescue HTTP::Error, OpenSSL::SSL::SSLError, Mastodon::LengthValidationError
+  rescue *Mastodon::HTTP_CONNECTION_ERRORS, Mastodon::LengthValidationError
     @collections[type] = [nil, nil]
   end
 

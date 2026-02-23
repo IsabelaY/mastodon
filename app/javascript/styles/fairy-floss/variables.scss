@@ -15,8 +15,8 @@ $lemon: #fff683;
 $coral: #ff857f;
 
 // Commonly used web colors
-$black: #000000; // Black
-$white: #ffffff; // White
+$black: #000; // Black
+$white: #fff; // White
 $success-green: #79bd9a !default; // Padua
 $error-red: #df405a !default; // Cerise
 $warning-red: #ff5050 !default; // Sunset Orange
@@ -27,6 +27,7 @@ $classic-base-color: $purple1; // Midnight Express
 $classic-primary-color: $purple4; // Echo Blue
 $classic-secondary-color: #d9e1e8; // Pattens Blue
 $classic-highlight-color: #ff857f; // Summer Sky
+$classic-lighter-text-color: #6a6388;
 
 // Variables for defaults in UI
 $base-shadow-color: $black !default;

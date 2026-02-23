@@ -3,6 +3,83 @@
 require 'rails_helper'
 
 RSpec.describe SoftwareUpdate do
+  describe 'Scopes' do
+    describe '.urgent' do
+      let!(:urgent_update) { Fabricate :software_update, urgent: true }
+      let!(:non_urgent_update) { Fabricate :software_update, urgent: false }
+
+      it 'returns records that are urgent' do
+        expect(described_class.urgent)
+          .to include(urgent_update)
+          .and not_include(non_urgent_update)
+      end
+    end
+  end
+
+  describe '.by_version' do
+    let!(:latest_update) { Fabricate :software_update, version: '4.0.0' }
+    let!(:older_update) { Fabricate :software_update, version: '3.0.0' }
+
+    it 'returns record in gem version order' do
+      expect(described_class.by_version)
+        .to eq([older_update, latest_update])
+    end
+  end
+
+  describe '#pending?' do
+    subject { described_class.new(version: update_version) }
+
+    before { allow(Mastodon::Version).to receive(:gem_version).and_return(Gem::Version.new(mastodon_version)) }
+
+    context 'when the runtime version is older than the update' do
+      let(:mastodon_version) { '4.0.0' }
+      let(:update_version) { '5.0.0' }
+
+      it { is_expected.to be_pending }
+    end
+
+    context 'when the runtime version is newer than the update' do
+      let(:mastodon_version) { '6.0.0' }
+      let(:update_version) { '5.0.0' }
+
+      it { is_expected.to_not be_pending }
+    end
+
+    context 'when the runtime version is same as the update' do
+      let(:mastodon_version) { '4.0.0' }
+      let(:update_version) { '4.0.0' }
+
+      it { is_expected.to_not be_pending }
+    end
+  end
+
+  describe '#outdated?' do
+    subject { described_class.new(version: update_version) }
+
+    before { allow(Mastodon::Version).to receive(:gem_version).and_return(Gem::Version.new(mastodon_version)) }
+
+    context 'when the runtime version is older than the update' do
+      let(:mastodon_version) { '4.0.0' }
+      let(:update_version) { '5.0.0' }
+
+      it { is_expected.to_not be_outdated }
+    end
+
+    context 'when the runtime version is newer than the update' do
+      let(:mastodon_version) { '6.0.0' }
+      let(:update_version) { '5.0.0' }
+
+      it { is_expected.to be_outdated }
+    end
+
+    context 'when the runtime version is same as the update' do
+      let(:mastodon_version) { '4.0.0' }
+      let(:update_version) { '4.0.0' }
+
+      it { is_expected.to be_outdated }
+    end
+  end
+
   describe '.pending_to_a' do
     before do
       allow(Mastodon::Version).to receive(:gem_version).and_return(Gem::Version.new(mastodon_version))
@@ -16,6 +93,8 @@ RSpec.describe SoftwareUpdate do
       let(:mastodon_version) { '3.4.0' }
 
       it 'returns the expected versions' do
+        skip('version checks currently skipped in Hometown')
+
         expect(described_class.pending_to_a.pluck(:version)).to contain_exactly('3.4.42', '3.5.0', '4.2.0')
       end
     end
@@ -36,6 +115,8 @@ RSpec.describe SoftwareUpdate do
       end
 
       it 'returns the expected versions' do
+        skip('version checks currently skipped in Hometown')
+
         expect(described_class.pending_to_a.pluck(:version)).to contain_exactly('4.3.0-nightly.2023-09-12')
       end
     end
@@ -44,6 +125,8 @@ RSpec.describe SoftwareUpdate do
       let(:mastodon_version) { '4.2.0-nightly.2023-07-10' }
 
       it 'returns the expected versions' do
+        skip('version checks currently skipped in Hometown')
+
         expect(described_class.pending_to_a.pluck(:version)).to contain_exactly('4.2.0')
       end
     end
@@ -56,6 +139,8 @@ RSpec.describe SoftwareUpdate do
       end
 
       it 'returns the expected versions' do
+        skip('version checks currently skipped in Hometown')
+
         expect(described_class.pending_to_a.pluck(:version)).to contain_exactly('4.3.0-0.dev.2')
       end
     end
@@ -68,6 +153,8 @@ RSpec.describe SoftwareUpdate do
       end
 
       it 'returns the expected versions' do
+        skip('version checks currently skipped in Hometown')
+
         expect(described_class.pending_to_a.pluck(:version)).to contain_exactly('4.3.0-beta2')
       end
     end
@@ -80,6 +167,8 @@ RSpec.describe SoftwareUpdate do
       end
 
       it 'returns the expected versions' do
+        skip('version checks currently skipped in Hometown')
+
         expect(described_class.pending_to_a.pluck(:version)).to contain_exactly('4.3.0-rc1')
       end
     end

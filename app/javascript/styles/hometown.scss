@@ -5,6 +5,23 @@
   color: inherit;
 }
 
+.account__header {
+  h1 {
+    div {
+      display: flex;
+
+      a,
+      span {
+        display: inline-flex;
+      }
+    }
+  }
+
+  .account-header__open-in-new__icon > svg {
+    height: 20px;
+  }
+}
+
 // app/javascript/mastodon/features/ui/components/navigation_panel.jsx
 // We hide the logo from the sidebar. It's kept in the JSX, to keep the modifications of the React
 // codebase as small as possible.
@@ -17,8 +34,8 @@
 // admin sidebar, therefore we unset the dimensions [1], center the link [2] and unset the color for it [3].
 .admin-wrapper .sidebar .logo {
   // 1
-  width: unset;
-  height: unset;
+  width: unset !important;
+  height: unset !important;
 
   // 2
   h2 {
@@ -44,15 +61,6 @@
   display: none;
 }
 
-// app/views/statuses/_simple_status.html.haml
-// Set width and height for the local-only indicator
-.status__action-bar-button.icon-button:has(.fw.fa-chain-broken) {
-  font-size: 18px;
-  width: 23.1429px;
-  height: 23.1429px;
-  line-height: 23.15px;
-}
-
 // app/javascript/mastodon/features/compose/components/poll_form.jsx
 // Add some custom styling for the "multiple choice" selection button
 .compose-form__poll-wrapper .is-multiple-toggle {
@@ -60,4 +68,16 @@
   display: inline-flex;
   align-items: center;
   gap: 10px; // same as the padding
+}
+
+.status__content.article {
+  h2 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+  }
+
+  em {
+    font-style: italic;
+  }
 }

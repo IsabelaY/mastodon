@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 class AdminMailer < ApplicationMailer
-  layout 'plain_mailer'
+  layout 'admin_mailer'
 
   helper :accounts
   helper :languages
@@ -9,13 +9,15 @@ class AdminMailer < ApplicationMailer
   before_action :process_params
   before_action :set_instance
 
+  after_action :set_important_headers!, only: :new_critical_software_updates
+
   default to: -> { @me.user_email }
 
   def new_report(report)
     @report = report
 
     locale_for_account(@me) do
-      mail subject: default_i18n_subject(instance: @instance, id: @report.id)
+      mail subject: default_i18n_subject(instance: @instance, id: @report.id, title: Setting.site_title)
     end
   end
 
@@ -23,7 +25,7 @@ class AdminMailer < ApplicationMailer
     @appeal = appeal
 
     locale_for_account(@me) do
-      mail subject: default_i18n_subject(instance: @instance, username: @appeal.account.username)
+      mail subject: default_i18n_subject(instance: @instance, username: @appeal.account.username, title: Setting.site_title)
     end
   end
 
@@ -31,7 +33,7 @@ class AdminMailer < ApplicationMailer
     @account = user.account
 
     locale_for_account(@me) do
-      mail subject: default_i18n_subject(instance: @instance, username: @account.username)
+      mail subject: default_i18n_subject(instance: @instance, username: @account.username, title: Setting.site_title)
     end
   end
 
@@ -41,29 +43,29 @@ class AdminMailer < ApplicationMailer
     @statuses               = statuses
 
     locale_for_account(@me) do
-      mail subject: default_i18n_subject(instance: @instance)
+      mail subject: default_i18n_subject(instance: @instance, title: Setting.site_title)
     end
   end
 
   def new_software_updates
+    @software_updates = SoftwareUpdate.by_version
+
     locale_for_account(@me) do
-      mail subject: default_i18n_subject(instance: @instance)
+      mail subject: default_i18n_subject(instance: @instance, title: Setting.site_title)
     end
   end
 
   def new_critical_software_updates
-    headers['Priority'] = 'urgent'
-    headers['X-Priority'] = '1'
-    headers['Importance'] = 'high'
+    @software_updates = SoftwareUpdate.urgent.by_version
 
     locale_for_account(@me) do
-      mail subject: default_i18n_subject(instance: @instance)
+      mail subject: default_i18n_subject(instance: @instance, title: Setting.site_title)
     end
   end
 
   def auto_close_registrations
     locale_for_account(@me) do
-      mail subject: default_i18n_subject(instance: @instance)
+      mail subject: default_i18n_subject(instance: @instance, title: Setting.site_title)
     end
   end
 
@@ -75,5 +77,13 @@ class AdminMailer < ApplicationMailer
 
   def set_instance
     @instance = Rails.configuration.x.local_domain
+  end
+
+  def set_important_headers!
+    headers(
+      'Importance' => 'high',
+      'Priority' => 'urgent',
+      'X-Priority' => '1'
+    )
   end
 end

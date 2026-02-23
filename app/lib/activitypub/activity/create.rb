@@ -1,58 +1,25 @@
 # frozen_string_literal: true
 
 class ActivityPub::Activity::Create < ActivityPub::Activity
-  include FormattingHelper
-
   def perform
     @account.schedule_refresh_if_stale!
 
     dereference_object!
 
-    case @object['type']
-    when 'EncryptedMessage'
-      create_encrypted_message
-    else
-      create_status
-    end
+    create_status
   end
 
   private
-
-  def create_encrypted_message
-    return reject_payload! if non_matching_uri_hosts?(@account.uri, object_uri) || @options[:delivered_to_account_id].blank?
-
-    target_account = Account.find(@options[:delivered_to_account_id])
-    target_device  = target_account.devices.find_by(device_id: @object.dig('to', 'deviceId'))
-
-    return if target_device.nil?
-
-    target_device.encrypted_messages.create!(
-      from_account: @account,
-      from_device_id: @object.dig('attributedTo', 'deviceId'),
-      type: @object['messageType'],
-      body: @object['cipherText'],
-      digest: @object.dig('digest', 'digestValue'),
-      message_franking: message_franking.to_token
-    )
-  end
-
-  def message_franking
-    MessageFranking.new(
-      hmac: @object.dig('digest', 'digestValue'),
-      original_franking: @object['messageFranking'],
-      source_account_id: @account.id,
-      target_account_id: @options[:delivered_to_account_id],
-      timestamp: Time.now.utc
-    )
-  end
 
   def create_status
     return reject_payload! if unsupported_object_type? || non_matching_uri_hosts?(@account.uri, object_uri) || tombstone_exists? || !related_to_local_activity?
 
     with_redis_lock("create:#{object_uri}") do
-      return if delete_arrived_first?(object_uri) || poll_vote?
+      Status.uncached do
+        return if delete_arrived_first?(object_uri) || poll_vote?
 
-      @status = find_existing_status
+        @status = find_existing_status
+      end
 
       if @status.nil?
         process_status
@@ -75,22 +42,29 @@ class ActivityPub::Activity::Create < ActivityPub::Activity
   def process_status
     @tags                 = []
     @mentions             = []
+    @unresolved_mentions  = []
     @silenced_account_ids = []
     @params               = {}
+    @quote                = nil
+    @quote_uri            = nil
 
     process_inline_images if @object['content'].present? && @object['type'] == 'Article'
     process_status_params
     process_tags
+    process_quote
     process_audience
 
     ApplicationRecord.transaction do
-      @status = Status.create!(@params)
+      @status = Status.create!(@params.merge(quote: @quote))
       attach_tags(@status)
       attach_mentions(@status)
+      attach_counts(@status)
     end
 
     resolve_thread(@status)
+    resolve_unresolved_mentions(@status)
     fetch_replies(@status)
+    fetch_and_verify_quote
     distribute
     forward_for_reply
   end
@@ -110,15 +84,23 @@ class ActivityPub::Activity::Create < ActivityPub::Activity
   end
 
   def process_status_params
-    @status_parser = ActivityPub::Parser::StatusParser.new(@json, followers_collection: @account.followers_url)
+    @status_parser = ActivityPub::Parser::StatusParser.new(
+      @json,
+      followers_collection: @account.followers_url,
+      following_collection: @account.following_url,
+      actor_uri: ActivityPub::TagManager.instance.uri_for(@account),
+      object: @object
+    )
+
+    attachment_ids = process_attachments.take(Status::MEDIA_ATTACHMENTS_LIMIT).map(&:id)
 
     @params = {
       uri: @status_parser.uri,
       url: @status_parser.url || @status_parser.uri,
       account: @account,
-      text: converted_object_type? ? converted_text : (@status_parser.text || ''),
+      text: @status_parser.processed_text,
       language: @status_parser.language,
-      spoiler_text: converted_object_type? ? '' : (@status_parser.spoiler_text || (@object['type'] == 'Article' && text_from_name) || ''),
+      spoiler_text: @status_parser.processed_spoiler_text || (@object['type'] == 'Article' && text_from_name),
       created_at: @status_parser.created_at,
       edited_at: @status_parser.edited_at && @status_parser.edited_at != @status_parser.created_at ? @status_parser.edited_at : nil,
       override_timestamps: @options[:override_timestamps],
@@ -127,9 +109,11 @@ class ActivityPub::Activity::Create < ActivityPub::Activity
       visibility: @status_parser.visibility,
       thread: replied_to_status,
       conversation: conversation_from_uri(@object['conversation']),
-      media_attachment_ids: process_attachments.take(4).map(&:id),
+      media_attachment_ids: attachment_ids,
+      ordered_media_attachment_ids: attachment_ids,
       poll: process_poll,
       activity_pub_type: @object['type'],
+      quote_approval_policy: @status_parser.quote_policy,
     }
   end
 
@@ -137,7 +121,7 @@ class ActivityPub::Activity::Create < ActivityPub::Activity
     attr_reader :srcs, :alts
 
     def initialize
-      super()
+      super
       @stack = []
       @srcs = []
       @alts = {}
@@ -267,6 +251,18 @@ class ActivityPub::Activity::Create < ActivityPub::Activity
     end
   end
 
+  def attach_counts(status)
+    likes = @status_parser.favourites_count
+    shares = @status_parser.reblogs_count
+    return if likes.nil? && shares.nil?
+
+    status.status_stat.tap do |status_stat|
+      status_stat.untrusted_reblogs_count = shares unless shares.nil?
+      status_stat.untrusted_favourites_count = likes unless likes.nil?
+      status_stat.save if status_stat.changed?
+    end
+  end
+
   def process_tags
     return if @object['tag'].nil?
 
@@ -279,6 +275,15 @@ class ActivityPub::Activity::Create < ActivityPub::Activity
         process_emoji tag
       end
     end
+  end
+
+  def process_quote
+    @quote_uri = @status_parser.quote_uri
+    return unless @status_parser.quote?
+
+    approval_uri = @status_parser.quote_approval_uri
+    approval_uri = nil if unsupported_uri_scheme?(approval_uri) || TagManager.instance.local_url?(approval_uri)
+    @quote = Quote.new(account: @account, approval_uri: approval_uri, legacy: @status_parser.legacy_quote?, state: @status_parser.deleted_quote? ? :deleted : :pending)
   end
 
   def process_hashtag(tag)
@@ -300,6 +305,8 @@ class ActivityPub::Activity::Create < ActivityPub::Activity
     return if account.nil?
 
     @mentions << Mention.new(account: account, silent: false)
+  rescue Mastodon::UnexpectedResponseError, *Mastodon::HTTP_CONNECTION_ERRORS
+    @unresolved_mentions << tag['href']
   end
 
   def process_emoji(tag)
@@ -330,7 +337,7 @@ class ActivityPub::Activity::Create < ActivityPub::Activity
     as_array(@object['attachment']).each do |attachment|
       media_attachment_parser = ActivityPub::Parser::MediaAttachmentParser.new(attachment)
 
-      next if media_attachment_parser.remote_url.blank? || media_attachments.size >= 4
+      next if media_attachment_parser.remote_url.blank? || media_attachments.size >= Status::MEDIA_ATTACHMENTS_LIMIT
 
       begin
         media_attachment = MediaAttachment.create(
@@ -349,10 +356,11 @@ class ActivityPub::Activity::Create < ActivityPub::Activity
         media_attachment.download_file!
         media_attachment.download_thumbnail!
         media_attachment.save
-      rescue Mastodon::UnexpectedResponseError, HTTP::TimeoutError, HTTP::ConnectionError, OpenSSL::SSL::SSLError
+      rescue Mastodon::UnexpectedResponseError, *Mastodon::HTTP_CONNECTION_ERRORS
         RedownloadMediaWorker.perform_in(rand(30..600).seconds, media_attachment.id)
       rescue Seahorse::Client::NetworkingError => e
         Rails.logger.warn "Error storing media attachment: #{e}"
+        RedownloadMediaWorker.perform_async(media_attachment.id)
       end
     end
 
@@ -389,7 +397,7 @@ class ActivityPub::Activity::Create < ActivityPub::Activity
     already_voted = true
 
     with_redis_lock("vote:#{replied_to_status.poll_id}:#{@account.id}") do
-      already_voted = poll.votes.where(account: @account).exists?
+      already_voted = poll.votes.exists?(account: @account)
       poll.votes.create!(account: @account, choice: poll.options.index(@object['name']), uri: object_uri)
     end
 
@@ -403,11 +411,17 @@ class ActivityPub::Activity::Create < ActivityPub::Activity
     ThreadResolveWorker.perform_async(status.id, in_reply_to_uri, { 'request_id' => @options[:request_id] })
   end
 
+  def resolve_unresolved_mentions(status)
+    @unresolved_mentions.uniq.each do |uri|
+      MentionResolveWorker.perform_in(rand(30...600).seconds, status.id, uri, { 'request_id' => @options[:request_id] })
+    end
+  end
+
   def fetch_replies(status)
     collection = @object['replies']
     return if collection.blank?
 
-    replies = ActivityPub::FetchRepliesService.new.call(status, collection, allow_synchronous_requests: false, request_id: @options[:request_id])
+    replies = ActivityPub::FetchRepliesService.new.call(status.account.uri, collection, allow_synchronous_requests: false, request_id: @options[:request_id])
     return unless replies.nil?
 
     uri = value_or_id(collection)
@@ -416,9 +430,19 @@ class ActivityPub::Activity::Create < ActivityPub::Activity
     Rails.logger.warn "Error fetching replies: #{e}"
   end
 
+  def fetch_and_verify_quote
+    return if @quote.nil?
+
+    embedded_quote = safe_prefetched_embed(@account, @status_parser.quoted_object, @json['context'])
+    ActivityPub::VerifyQuoteService.new.call(@quote, fetchable_quoted_uri: @quote_uri, prefetched_quoted_object: embedded_quote, request_id: @options[:request_id], depth: @options[:depth])
+  rescue Mastodon::RecursionLimitExceededError, Mastodon::UnexpectedResponseError, *Mastodon::HTTP_CONNECTION_ERRORS
+    ActivityPub::RefetchAndVerifyQuoteWorker.perform_in(rand(30..600).seconds, @quote.id, @quote_uri, { 'request_id' => @options[:request_id] })
+  end
+
   def conversation_from_uri(uri)
     return nil if uri.nil?
     return Conversation.find_by(id: OStatus::TagManager.instance.unique_tag_to_local_id(uri, 'Conversation')) if OStatus::TagManager.instance.local_id?(uri)
+    return ActivityPub::TagManager.instance.uri_to_resource(uri, Conversation) if ActivityPub::TagManager.instance.local_uri?(uri)
 
     begin
       Conversation.find_or_create_by!(uri: uri)
@@ -439,18 +463,6 @@ class ActivityPub::Activity::Create < ActivityPub::Activity
     end
   end
 
-  def in_reply_to_uri
-    value_or_id(@object['inReplyTo'])
-  end
-
-  def text_from_content
-    return converted_text if converted_object_type?
-
-    return article_format(@object['content']) if @object['content'].present? && @object['type'] == 'Article'
-
-    @status_parser.text || ''
-  end
-
   def text_from_name
     if @object['name'].present?
       @object['name']
@@ -463,16 +475,12 @@ class ActivityPub::Activity::Create < ActivityPub::Activity
     @object['nameMap'].is_a?(Hash) && !@object['nameMap'].empty?
   end
 
-  def converted_text
-    linkify([@status_parser.title.presence, @status_parser.spoiler_text.presence, @status_parser.url || @status_parser.uri].compact.join("\n\n"))
+  def in_reply_to_uri
+    value_or_id(@object['inReplyTo'])
   end
 
   def unsupported_media_type?(mime_type)
     mime_type.present? && !MediaAttachment.supported_mime_types.include?(mime_type)
-  end
-
-  def blurhash_valid_chars?(blurhash)
-    /^[\w#$%*+-.:;=?@\[\]^{|}~]+$/.match?(blurhash)
   end
 
   def skip_download?
@@ -497,11 +505,7 @@ class ActivityPub::Activity::Create < ActivityPub::Activity
   def addresses_local_accounts?
     return true if @options[:delivered_to_account_id]
 
-    local_usernames = (audience_to + audience_cc).uniq.select { |uri| ActivityPub::TagManager.instance.local_uri?(uri) }.map { |uri| ActivityPub::TagManager.instance.uri_to_local_id(uri, :username) }
-
-    return false if local_usernames.empty?
-
-    Account.local.where(username: local_usernames).exists?
+    ActivityPub::TagManager.instance.uris_to_local_accounts((audience_to + audience_cc).uniq).exists?
   end
 
   def tombstone_exists?
