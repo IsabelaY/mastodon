@@ -11,6 +11,10 @@ import { useAppSelector } from 'mastodon/store';
 
 // This needs to be kept in sync with app/models/report.rb
 const messages = defineMessages({
+  dislike: {
+    id: 'report_notification.categories.dislike_sentence',
+    defaultMessage: 'dislike',
+  },
   other: {
     id: 'report_notification.categories.other_sentence',
     defaultMessage: 'other',

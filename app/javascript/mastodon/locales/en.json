@@ -835,6 +835,8 @@
   "report.unfollow": "Unfollow @{name}",
   "report.unfollow_explanation": "You are following this account. To not see their posts in your home feed anymore, unfollow them.",
   "report_notification.attached_statuses": "{count, plural, one {{count} post} other {{count} posts}} attached",
+  "report_notification.categories.dislike": "I don't like it",
+  "report_notification.categories.dislike_sentence": "content they disliked",
   "report_notification.categories.legal": "Legal",
   "report_notification.categories.legal_sentence": "illegal content",
   "report_notification.categories.other": "Other",
