@@ -704,6 +704,21 @@ a.mention,
   font-weight: 900;
 }
 
+.dropdown-menu__item {
+  color: $black;
+
+  a,
+  button {
+    &:focus,
+    &:hover,
+    &:active {
+      &:not(:disabled, [aria-disabled='true']) {
+        color: $white;
+      }
+    }
+  }
+}
+
 .privacy-dropdown__option,
 .visibility-dropdown__option {
   &:focus,
