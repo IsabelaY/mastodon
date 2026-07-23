@@ -1,4 +1,4 @@
-@import 'light_pink_variables';
-@import 'application';
-@import 'mastodon-light/diff';
-@import 'light_pink_overrides';
+@use 'light_pink_variables';
+@use 'application';
+@use 'mastodon-light/diff';
+@use 'light_pink_overrides';

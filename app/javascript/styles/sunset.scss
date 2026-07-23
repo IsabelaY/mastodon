@@ -1,27 +1,40 @@
 // Dependent colors
-$black: #000000;
-
 $classic-base-color: #000;
+$black: #000000;
 $classic-primary-color: #EE974F;
 $classic-secondary-color: #EEB94F;
 $classic-highlight-color: #DF2525;
-
-$ui-base-color: $classic-base-color !default;
-$ui-primary-color: $classic-primary-color !default;
-$ui-secondary-color: $classic-secondary-color !default;
-
-// Differences
+$ui-primary-color: $classic-primary-color;
+$ui-secondary-color: $classic-secondary-color;
+$ui-base-color: $classic-base-color;
 $ui-highlight-color: #DF7925;
 
-$darker-text-color: lighten($ui-primary-color, 20%) !default;
-$dark-text-color: lighten($ui-primary-color, 12%) !default;
-$secondary-text-color: lighten($ui-secondary-color, 6%) !default;
-$highlight-text-color: $classic-highlight-color !default;
-$action-button-color: #DF7125;
+@use 'mastodon/variables' with (
+    $classic-base-color: $black,
+    $classic-primary-color: $classic-primary-color,
+    $classic-secondary-color: $classic-secondary-color,
+    $classic-highlight-color: $classic-highlight-color,
 
-$inverted-text-color: $black !default;
-$lighter-text-color: darken($ui-base-color, 6%) !default;
-$light-text-color: darken($ui-primary-color, 40%) !default;
+    $ui-base-color: $ui-base-color,
+    $ui-primary-color: $ui-primary-color,
+    $ui-secondary-color: $ui-secondary-color,
+
+    // Differences
+    $ui-highlight-color: $ui-highlight-color,
+
+    $darker-text-color: lighten($ui-primary-color, 20%),
+    $dark-text-color: lighten($ui-primary-color, 12%),
+    $secondary-text-color: lighten($ui-secondary-color, 6%),
+    $highlight-text-color: $classic-highlight-color,
+    $action-button-color: #DF7125,
+
+    $inverted-text-color: $black,
+    $lighter-text-color: darken($ui-base-color, 6%),
+    $light-text-color: darken($ui-primary-color, 40%),
+);
+
+@use 'application';
+@use 'contrast/diff';
 
 /* Paleta usada, das cores mais claras para as mais escuras (algumas cores foram levemente modificadas para obter valores de contraste ideais):
 Tons amarelos: #ffd37c, #eeb94f, #dfa125, #b37d10, #8c5d00
@@ -50,7 +63,7 @@ P&B&Cinzas: #fff, #a3a3a3, #666, #5c5c5c, #5a5a5a, #333, #2b2b2b, #000 */
 @font-face {
   font-family: 'opensans';
   src: local('Open Sans Bold Italic'),
-    url('~fonts/opensans/OpenSans-BoldItalic.woff2') format('woff2'),
+    url('~fonts/opensans/OpenSans-BoldItalic.woff2') format('woff2'),$classic-base-color
     url('~fonts/opensans/OpenSans-BoldItalic.ttf') format('truetype');
   font-weight: bold;
   font-style: italic;
@@ -172,9 +185,6 @@ P&B&Cinzas: #fff, #a3a3a3, #666, #5c5c5c, #5a5a5a, #333, #2b2b2b, #000 */
 @media (min-width: 1600px) {
     .landing-page .container {max-width: 1600px}
 }
-
-@import 'application';
-@import 'contrast/diff';
 
 .rich-formatting a,
 .rich-formatting p a,

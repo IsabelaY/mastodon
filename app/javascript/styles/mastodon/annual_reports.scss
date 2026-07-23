@@ -1,13 +1,13 @@
 @use 'variables' as *;
 
 :root {
-  --indigo-1: #17063b;
-  --indigo-2: #2f0c7a;
-  --indigo-3: #562cfc;
-  --indigo-5: #858afa;
-  --indigo-6: #cccfff;
+  --indigo-1: $blurple-600;
+  --indigo-2: $blurple-500;
+  --indigo-3: $blurple-400;
+  --indigo-5: $blurple-300;
+  --indigo-6: $grey-100;
   --lime: #baff3b;
-  --goldenrod-2: #ffc954;
+  --goldenrod-2: $gold-star;
 }
 
 .annual-report {

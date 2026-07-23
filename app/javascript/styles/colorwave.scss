@@ -1,5 +1,5 @@
-@import 'colorwave_variables';
-@import 'application';
+@use 'colorwave_variables' as *;
+@use 'application';
 
 @font-face {
   font-family: 'galyon';

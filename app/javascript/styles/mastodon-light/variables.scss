@@ -5,27 +5,33 @@
   $lighten-multiplier: -1
 );
 
-$black: #000; // Black
-$white: #fff; // White
-$blurple-500: #6364ff; // Brand purple
-$grey-600: hsl(240deg, 8%, 33%); // Trout
-$grey-100: hsl(240deg, 51%, 90%); // Topaz
+$black: #000 !default; // Black
+$white: #fff !default; // White
+$blurple-500: #6364ff !default; // Brand purple
+$grey-600: hsl(240deg, 8%, 33%) !default; // Trout
+$grey-100: hsl(240deg, 51%, 90%) !default; // Topaz
 
-$classic-base-color: hsl(240deg, 16%, 19%);
-$classic-secondary-color: hsl(255deg, 25%, 88%);
-$classic-highlight-color: $blurple-500;
-
-@use '../mastodon/variables' with (
-  $success-green: color.adjust(
+$classic-base-color: hsl(240deg, 16%, 19%) !default;
+$classic-secondary-color: hsl(255deg, 25%, 88%) !default;
+$classic-highlight-color: $blurple-500 !default;
+$success-green: color.adjust(
       hsl(138deg, 32%, 35%),
       $lightness: 8%,
       $space: hsl
-    ),
+    ) !default;
+$gold-star: #ca8f04 !default; // Dark Goldenrod
+$classic-primary-color: hsl(240deg, 29%, 70%) !default;
+$primary-text-color: $black !default;
+
+@use '../mastodon/variables' with (
+  $success-green: $success-green,
   $base-overlay-background: $white,
+  $gold-star: $gold-star,
 
   $ui-base-color: $classic-secondary-color,
   $ui-base-lighter-color: hsl(250deg, 24%, 75%),
   $ui-secondary-color: $classic-base-color,
+  $classic-primary-color: $classic-primary-color,
 
   $ui-button-secondary-color: $grey-600,
   $ui-button-secondary-border-color: $grey-600,
@@ -33,7 +39,7 @@ $classic-highlight-color: $blurple-500;
   $ui-button-tertiary-color: $blurple-500,
   $ui-button-tertiary-border-color: $blurple-500,
 
-  $primary-text-color: $black,
+  $primary-text-color: $primary-text-color,
   $darker-text-color: $classic-base-color,
   $lighter-text-color: $classic-base-color,
   $highlight-text-color: $classic-highlight-color,

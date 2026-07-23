@@ -5,8 +5,16 @@ $ui-primary-color: #9bcbed;
 $ui-secondary-color: #ba8d98;
 $ui-highlight-color: #CC7AFF;
 
+@use 'mastodon/variables' with (
+    $classic-base-color: $classic-base-color,
+    $ui-base-color: $ui-base-color,
+    $ui-base-lighter-color: $ui-base-lighter-color,
+    $ui-primary-color: $ui-primary-color,
+    $ui-secondary-color: $ui-secondary-color,
+    $ui-highlight-color: $ui-highlight-color,
+);
 
-@import 'application';
+@use 'application';
 
 .poll__chart {
     background: #885b8c;

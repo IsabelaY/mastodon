@@ -1,23 +1,22 @@
 
-@import 'mastodon-light/variables';
+@use 'mastodon-light/variables' as * with (
+    $black: #000,            // Black
+    $white: #fff,            // White
+    $success-green: #3c754d,    // Padua
+    $gold-star: #cf2210,        // link color\
+    
 
-$black: #000;            // Black
-$white: #fff;            // White
-$success-green: #3c754d;    // Padua
-$error-red: #df405a !default;        // Cerise
-$warning-red: #ff5050 !default;      // Sunset Orange
-$gold-star: #cf2210 !default;        // link color
+    // Values from the classic Mastodon UI
+    $classic-base-color: #e8f6be,         // lighter yellow
+    $classic-primary-color: #a72645,      // highlight pink
+    $classic-secondary-color: #cf2210,    // link color
+    $classic-highlight-color: #c5d882,    // darker yellow
 
-// Values from the classic Mastodon UI
-$classic-base-color: #e8f6be;         // lighter yellow
-$classic-primary-color: #a72645;      // highlight pink
-$classic-secondary-color: #cf2210;    // link color
-$classic-highlight-color: #c5d882;    // darker yellow
+    $primary-text-color: #070707
+);
 
-$primary-text-color: #070707;
-
-@import 'application';
-@import 'mastodon-light/diff';
+@use 'application';
+@use 'mastodon-light/diff';
 
   .ui, body
   {
@@ -56,7 +55,7 @@ body.about-body, body.tag-body, body.admin
         color: #000
                                         }
 
-  .drawer__header, .column-header, .column-header__button, .column-header__back-button, .button:hover, .column-subheading, .static-content, .account__section-headline, .search__input:focus, .column-header__back-button, .drawer__inner.darker, .detailed-status__action-bar, .search-results__header, .search-results__section, .autosuggest-textarea__suggestions--visible:active, .autosuggest-textarea__suggestions--visible.active, .autosuggest-textarea__suggestions:active, .compose-form .autosuggest-textarea__suggestions__item.selected, .compose-form .autosuggest-textarea__suggestions__item:active, .compose-form .autosuggest-textarea__suggestions__item:focus, .compose-form .autosuggest-textarea__suggestions__item:hover, .compose-form__warning, .card.h-card.p-author, .activity-stream-tabs, .card__bio, .notification-bar, .notification-bar-active, .notification-bar-title, .account-grid-card__header, .accounts-grid .account-grid-card, .media-spoiler:active, .media-spoiler:focus, .media-spoiler:hover, .dropdown-menu__item a:active, .dropdown-menu__item a:focus, .dropdown-menu__item a:hover, .react-toggle--checked .react-toggle-track, .simple_form .block-button:active, .simple_form .block-button:focus, .simple_form .button:active, .simple_form .button:focus, .simple_form button:active, .simple_form button:focus, .simple_form .block-button, .simple_form .button, .simple_form button, .admin-wrapper .sidebar ul ul a.selected, .admin-wrapper .sidebar ul ul a:hover, .admin-wrapper .sidebar ul a:hover, .pagination .current, .landing-strip, .memoriam-strip, .account--follows-info, .account--muting-info, .flash-message
+  .drawer__header, .column-header, .column-header__button, .column-header__back-button, .simple_form .btn:hover, .simple_form .btn:focus .button:hover, .column-subheading, .static-content, .account__section-headline, .search__input:focus, .column-header__back-button, .drawer__inner.darker, .detailed-status__action-bar, .search-results__header, .search-results__section, .autosuggest-textarea__suggestions--visible:active, .autosuggest-textarea__suggestions--visible.active, .autosuggest-textarea__suggestions:active, .compose-form .autosuggest-textarea__suggestions__item.selected, .compose-form .autosuggest-textarea__suggestions__item:active, .compose-form .autosuggest-textarea__suggestions__item:focus, .compose-form .autosuggest-textarea__suggestions__item:hover, .compose-form__warning, .card.h-card.p-author, .activity-stream-tabs, .card__bio, .notification-bar, .notification-bar-active, .notification-bar-title, .account-grid-card__header, .accounts-grid .account-grid-card, .media-spoiler:active, .media-spoiler:focus, .media-spoiler:hover, .dropdown-menu__item a:active, .dropdown-menu__item a:focus, .dropdown-menu__item a:hover, .react-toggle--checked .react-toggle-track, .simple_form .block-button:active, .simple_form .block-button:focus, .simple_form .button:active, .simple_form .button:focus, .simple_form button:active, .simple_form button:focus, .simple_form .block-button, .simple_form .button, .simple_form button, .admin-wrapper .sidebar ul ul a.selected, .admin-wrapper .sidebar ul ul a:hover, .admin-wrapper .sidebar ul a:hover, .pagination .current, .landing-strip, .memoriam-strip, .account--follows-info, .account--muting-info, .flash-message, .visibility-dropdown__button
   {
     background-color: rgb(197, 216, 130);
     border-radius: 0px;
@@ -303,19 +302,17 @@ body.error, .landing-page .information-board, .landing-page .information-board .
     color: #070707
 }
 
- .compose-form__buttons-wrapper, .compose-form__modifiers, .compose-form__autosuggest-wrapper, .autosuggest-textarea, .autosuggest-textarea__textarea, .spoiler-input__input, .autosuggest-textarea__suggestions, .dropdown-menu__item
+ .compose-form .autosuggest-textarea__textarea, .compose-form .spoiler-input__input, .compose-form__buttons-wrapper, .compose-form__modifiers, .compose-form__autosuggest-wrapper, .autosuggest-textarea, .autosuggest-textarea__textarea, .spoiler-input__input, .autosuggest-textarea__suggestions, .dropdown-menu__item
 {
     background-color: rgb(232, 246, 190);
-        border-radius: 0px !important;
+    border-radius: 0px !important;
 }
 
-  .column-link:hover, .static-content.getting-started span, .reply-indicator, .button, .detailed-status, detailed-status__action-bar, .privacy-dropdown__option.active, .privacy-dropdown__option.active:hover, .privacy-dropdown__option:hover, .privacy-dropdown__value-icon.icon-button.inverted:active, .privacy-dropdown__value-icon.icon-button.inverted.active, .account__section-headline
+  .column-link:hover, .simple_form .btn, .static-content.getting-started span, .reply-indicator, .button, .detailed-status, detailed-status__action-bar, .privacy-dropdown__option.active, .privacy-dropdown__option.active:hover, .privacy-dropdown__option:hover, .privacy-dropdown__value-icon.icon-button.inverted:active, .privacy-dropdown__value-icon.icon-button.inverted.active, .account__section-headline
   {
     background-color: rgb(197, 216, 130);
-    border-top: 0px;
-    border-left: 0px;
-    border-bottom: 0px;
-    border-right: 0px;
+    border-color: transparent;
+    border-radius: 0px;
   }
 
   .account__header > div > div > button.icon-button, .dropdown-menu, .card
@@ -595,7 +592,7 @@ button.icon-button i.fa-retweet:hover {
     margin-bottom: 0px;
 }
 
-.actions-modal, .boost-modal, .confirmation-modal, .mute-modal, .report-modal
+.actions-modal, .boost-modal, .confirmation-modal, .mute-modal, .report-modal, .dialog-modal
 {
   border-radius: 0px;
 	background-color: #e8f6be;
@@ -971,7 +968,7 @@ box-shadow: 0px 0px 0px 0px;
 }
 
 .actions-modal ul li:not(:empty) a.active, .actions-modal ul li:not(:empty) a.active button, .actions-modal ul li:not(:empty) a:active, .actions-modal ul li:not(:empty) a:active button, .actions-modal ul li:not(:empty) a:focus, .actions-modal ul li:not(:empty) a:focus button, .actions-modal ul li:not(:empty) a:hover, .actions-modal ul li:not(:empty) a:hover button, .admin-wrapper .sidebar ul ul a.selected, .dropdown-menu__item a:active, .dropdown-menu__item a:focus, .dropdown-menu__item a:hover, .privacy-dropdown__option.active .privacy-dropdown__option__content, .privacy-dropdown__option.active .privacy-dropdown__option__content strong, .privacy-dropdown__option:hover .privacy-dropdown__option__content, .privacy-dropdown__option:hover .privacy-dropdown__option__content strong, .simple_form .block-button, .simple_form .button, .simple_form button {
-    color: #000;
+    color: #000 !important;
 }
 
 .emoji-mart-search input {
@@ -1144,7 +1141,7 @@ box-shadow: 0px 0px 0px 0px;
 
 .button.button-secondary {
     color: #000;
-    border: 1px solid #3a277d;
+    border: 1px solid #c5d882;
 }
 
 .poll__input {
@@ -2053,4 +2050,254 @@ a:focus {
 .account-role {
     color: #a72645;
     border-color: #a72645;
+}
+
+// 21/07/2026 4.5.11
+
+.compose-form__highlightable {
+  border-radius: 0;
+  border-width: 0;
+  background-color: transparent;
+}
+
+.search__input {
+  border-radius: 0;
+  border-width: 0;
+  background-color: #e8f6be;
+}
+
+.dropdown-button {
+  border-radius: 0;
+  border-color: #070707;
+  color: #070707;
+}
+
+.dropdown-button:hover, .dropdown-button:focus {
+  color: #000;
+  border-color: transparent;
+  background-color: #c5d882;
+}
+
+.account__header__bio .account__header__fields, .account__header__image, .column > .scrollable, .account__section-headline, .account__header__bar, .column-back-button, .compose-form .spoiler-input .autosuggest-input, .detailed-status__meta__line, .detailed-status {
+    border-color: transparent;
+}
+
+.account__section-headline {
+  background-color: #c5d882;
+}
+
+.account__section-headline a:hover, .account__section-headline a:focus {
+  background-color: #e8f6be;
+}
+
+.account__header__extra__links a, .compose-form__poll__select__label, .notification-group__main__header__label, .notification-group__main__header__label time {
+    color: #333;
+}
+
+.account__header__tabs__name h1 small {
+    color: #a72645;
+}
+
+.account__domain-pill {
+  border-radius: 0;
+  border-width: 0;
+  background-color: #c5d882;
+  color: #070707;
+  margin-left: 0.2rem;
+}
+
+.icon-button.inverted:hover, .icon-button.inverted:focus {
+  background-color: #c5d882;
+  border-radius: 0;
+}
+
+.spoiler-input__border {
+  background-image: none !important;
+  background-color: #e8f6be !important;
+}
+
+.spoiler-input {
+  padding-bottom: 0.4rem;
+}
+
+.compose-form__poll__select__value {
+    background-color: #c5d882;
+    color: #070707;
+    padding: 0.2rem;
+    border: 1px solid transparent;
+
+}
+
+.compose-form__poll__select__value:hover, .compose-form__poll__select__value:focus, .fields-row button:hover, .fields-row button:focus {
+    background-color: #e8f6be;
+    color: #cf2210;
+    border-color: #cf2210;
+}
+
+.compose-form__poll__footer__sep {
+    background-color: transparent;
+}
+
+.compose-form__actions .icon-button.active, .admin-wrapper .content__heading__tabs a.selected, .admin-wrapper .content__heading__tabs a:hover, .admin-wrapper .content__heading__tabs a:focus, .dropdown-menu__item a:focus:not(:disabled):not([aria-disabled="true"]), .dropdown-menu__item a:hover:not(:disabled):not([aria-disabled="true"]), .dropdown-menu__item a:active:not(:disabled):not([aria-disabled="true"]), .dropdown-menu__item button:focus:not(:disabled):not([aria-disabled="true"]), .dropdown-menu__item button:hover:not(:disabled):not([aria-disabled="true"]), .dropdown-menu__item button:active:not(:disabled):not([aria-disabled="true"]) {
+    background-color: #c5d882;
+    border-radius: 0;
+}
+
+.react-toggle, .content-warning {
+    border-radius: 0;
+}
+
+.react-toggle:hover:not(.react-toggle--disabled) .react-toggle-track, .batch-table .nothing-here {
+  background: #e8f6be;
+}
+
+.react-toggle.react-toggle--checked:hover:not(.react-toggle--disabled) .react-toggle-track, .content-warning {
+    background: #c5d882;
+    border-color: transparent;
+}
+
+ .notification-group--relationships-severance-event .notification-group__icon, .notification-group--admin-report .notification-group__icon, .notification-group--admin-sign-up .notification-group__icon, .notification-ungrouped__header {
+    color: #a72645;
+ }
+
+ .notification__filter-bar button.active::before, .notification__filter-bar a.active::before, .account__section-headline button.active::before, .account__section-headline a.active::before {
+    display: none;
+ }
+
+ .notification__filter-bar button.active, .notification__filter-bar button:hover, .notification__filter-bar button:focus {
+        background: #c5d882;
+ }
+
+ .admin-wrapper .content__heading__tabs a, .dialog-modal__content__description a, .follow_requests-unlocked_explanation a, .switch-to-advanced a {
+    color: #cf2210;
+ }
+
+ .dropdown-menu {
+    border-color: #333;
+ }
+
+ .reply-indicator__line::before {
+    background-color: #a72645;
+ }
+
+ .reply-indicator {
+  padding: 0.5rem;
+  padding-top: 1rem;
+}
+
+.detailed-status, .detailed-status__action-bar {
+      background: #e8f6be;
+}
+
+.tabs-bar__wrapper {
+    backdrop-filter: none;
+}
+
+.emoji-mart-anchor, .about__header p {
+    color: #333;
+}
+
+.emoji-mart-anchor:hover, .emoji-mart-anchor:focus {
+    background-color: #c5d882;
+    color: #000;
+}
+
+.emoji-mart-bar:first-child {
+  background: transparent;
+}
+
+.emoji-mart-anchor-selected {
+  color: #a72645;
+}
+
+.emoji-mart-anchor-bar {
+    background-color: #a72645;
+}
+
+.column-back-button, .follow_requests-unlocked_explanation, .switch-to-advanced, {
+    background: #c5d882;
+    border-radius: 0;
+    color: #000;
+    border-color: transparent;
+}
+
+.error-column, .about__meta, .about__section__title {
+    border-radius: 0;
+    border-color: transparent;
+}
+
+.about__meta__column, .about__section__title {
+    background: #c5d882;
+}
+
+.about__meta__divider, .flash-message, .dialog-modal, .visibility-dropdown__button {
+    border-color: transparent;
+}
+
+.about__section.active .about__section__title {
+    border-radius: 0;
+    color: #a72645;
+}
+
+kbd {
+    border-radius: 0;
+    color: #a72645;
+    background: #e8f6be;
+}
+
+.fields-row button {
+    font-size: 1rem;
+    margin: 0.1rem 0.25rem;
+    padding: 0.5rem;
+}
+
+.admin-wrapper .content h4 {
+    border-top: none;
+}
+
+.dialog-modal__header {
+    background: #c5d882;
+    border-color: transparent;
+}
+.visibility-dropdown__option {
+    border: 1px solid transparent;
+}
+
+.visibility-dropdown__option.active {
+    background-color: #c5d882;
+    color: #000;
+    --dropdown-text-color: #000;
+    border-radius: 0;
+}
+
+.visibility-dropdown__dropdown, .language-dropdown__dropdown {
+    box-shadow: none;
+    border-radius: 0;
+    border-color: transparent;
+    background-color: #e8f6be;
+}
+
+.visibility-dropdown__option:hover, .visibility-dropdown__option:focus {
+    background-color: #c5d882;
+    border-radius: 0;
+}
+.visibility-dropdown__option.active:hover, .visibility-dropdown__option.active:focus {
+    background-color: #e8f6be;
+    border: 1px solid #a72645;
+    border-radius: 0;
+}
+
+.language-dropdown__dropdown .emoji-mart-scroll, .language-dropdown__dropdown .emoji-mart-search, .account__avatar {
+    background-color: transparent;
+}
+
+.button.load-more:hover, .button.load-more:focus {
+    background-color: #c5d882;
+}
+
+.emoji-picker-dropdown__menu {
+    background-color: #e8f6be;
+    border-color: transparent;
+    box-shadow: none;
+    border-radius: 0;
 }

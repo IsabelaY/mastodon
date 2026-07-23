@@ -1,5 +1,7 @@
 @use "sass:math";
 
+@use '../mastodon/variables' as *;
+
 // cores
 // #17093f fundo mais escuro
 // #3a277d fundo menos escuro
@@ -11,10 +13,10 @@
 @namespace url(http://www.w3.org/1999/xhtml);
 
 
-  .ui, body
+  .ui, body, .columns-area__panels
   {
     background-color: #171717;
-    background-image: url('../images/background/fundo3plus.png');
+    background-image: url('../../images/background/fundo3plus.png');
     background-position: bottom right;
     background-repeat: repeat-x;
     background-attachment: fixed;
@@ -24,7 +26,7 @@
 body.about-body, body.tag-body, body.admin
 {
     background-color: #171717;
-    background-image: url('../images/background/fundo3plus.png');
+    background-image: url('../../images/background/fundo3plus.png');
     background-position: bottom right;
     background-repeat: repeat-x;
     background-attachment: fixed;
@@ -45,15 +47,23 @@ body.about-body, body.tag-body, body.admin
 	{
         background: none;
         min-height: 0px;
-        color: #fff
-                                        }
+        color: #fff;
+        }
 
-  .drawer__header, .column-header, .column-header__button, .column-header__back-button, .button:hover, .column-subheading, .static-content, .account__section-headline, .search__input:focus, .column-header__back-button, .drawer__inner.darker, .detailed-status__action-bar, .search-results__header, .search-results__section, .autosuggest-textarea__suggestions--visible:active, .autosuggest-textarea__suggestions--visible.active, .autosuggest-textarea__suggestions:active, .compose-form .autosuggest-textarea__suggestions__item.selected, .compose-form .autosuggest-textarea__suggestions__item:active, .compose-form .autosuggest-textarea__suggestions__item:focus, .compose-form .autosuggest-textarea__suggestions__item:hover, .compose-form__warning, .card.h-card.p-author, .activity-stream-tabs, .card__bio, .notification-bar, .notification-bar-active, .notification-bar-title, .account-grid-card__header, .accounts-grid .account-grid-card, .media-spoiler:active, .media-spoiler:focus, .media-spoiler:hover, .dropdown-menu__item a:active, .dropdown-menu__item a:focus, .dropdown-menu__item a:hover, .react-toggle--checked .react-toggle-track, .simple_form .block-button:active, .simple_form .block-button:focus, .simple_form .button:active, .simple_form .button:focus, .simple_form button:active, .simple_form button:focus, .simple_form .block-button, .simple_form .button, .simple_form button, .admin-wrapper .sidebar ul ul a.selected, .admin-wrapper .sidebar ul ul a:hover, .admin-wrapper .sidebar ul a:hover, .pagination .current, .landing-strip, .memoriam-strip, .account--follows-info, .account--muting-info, .flash-message
+
+.drawer__header, .simple_form .btn, .column-header, .column-header__button, .column-header__back-button, .button, .column-subheading, .static-content, .account__section-headline, .search__input:focus, .column-header .column-header__back-button, .drawer__inner.darker, .detailed-status__action-bar, .search-results__header, .search-results__section, .autosuggest-textarea__suggestions--visible:active, .autosuggest-textarea__suggestions--visible.active, .autosuggest-textarea__suggestions:active, .compose-form .autosuggest-textarea__suggestions__item.selected, .compose-form .autosuggest-textarea__suggestions__item:active, .compose-form .autosuggest-textarea__suggestions__item:focus, .compose-form .autosuggest-textarea__suggestions__item:hover, .compose-form__warning, .card.h-card.p-author, .activity-stream-tabs, .card__bio, .notification-bar, .notification-bar-active, .notification-bar-title, .account-grid-card__header, .accounts-grid .account-grid-card, .media-spoiler:active, .media-spoiler:focus, .media-spoiler:hover, .dropdown-menu__item a:active, .dropdown-menu__item a:focus, .dropdown-menu__item a:hover, .react-toggle--checked .react-toggle-track, .simple_form .block-button:active, .simple_form .block-button:focus, .simple_form .button:active, .simple_form button:active, .simple_form button:focus, .simple_form .block-button, .simple_form .button, .simple_form button, .admin-wrapper .sidebar ul ul a.selected, .admin-wrapper .sidebar ul ul a:hover, .admin-wrapper .sidebar ul a:hover, .pagination .current, .landing-strip, .memoriam-strip, .account--follows-info, .account--muting-info, .flash-message
   {
-    background-color: rgb(58, 39, 125) !important;
+    background-color: rgb(58, 39, 125);
     border-radius: 0px;
-    color: #fff !important;
+    color: #fff;
+    border: 1px solid transparent;
   }
+
+ .button:hover, .button:focus, .simple_form .btn:hover, .simple_form .btn:focus {
+    color: #30ddef;
+    background-color: rgb(23, 9, 65);
+    border: 1px solid #30ddef;
+ }
 .detailed-status__action-bar
 {
     padding-top: 0px;
@@ -66,7 +76,7 @@ body.about-body, body.tag-body, body.admin
 
 ::-webkit-scrollbar-thumb
 {
-  background: rgb(58, 39, 125) !important;
+  background: rgb(58, 39, 125);
 }
 
 .regeneration-indicator__label strong
@@ -124,7 +134,7 @@ body.about-body, body.tag-body, body.admin
     border-bottom: 0px;
   }
 
-  .column-back-button, .column-icon collapsable-collapsed, .column-icon, .column-icon collapsable-collapsed, .landing-page .separator-or span
+  .column-icon collapsable-collapsed, .column-icon, .column-icon collapsable-collapsed, .landing-page .separator-or span
   {
     background-color: transparent;
     color: #fff;
@@ -173,16 +183,16 @@ body.about-body, body.tag-body, body.admin
 
   .entry.h-entry, h5, .search-results__section h5 span, .focusable:focus .status.status-direct, .status.status-direct:active, .focusable:focus, .account__section-headline a.active:after, .account__section-headline a.active:before, .account__header > div > div > button.icon-button
   {
-    background: transparent !important;
+    background: transparent;
   }
 
 .account__header__content, .account__header, .account__section-headline a:hover, .account__section-headline a.active, .account__section-headline a:before, .account__section-headline a:after, .setting-meta__label, .setting-toggle__label, .e-content, .activity-stream .detailed-status.light .detailed-status__display-name .display-name strong, .activity-stream .detailed-status.light .status__content, .admin-wrapper .content .muted-hint, .p-summary
 {
     background-color: transparent;
-    color: #f8f8f8 !important;
+    color: #f8f8f8;
 }
 
-.account__header>div, .floating-action-button:active, .floating-action-button:focus, .floating-action-button:hover, .admin-wrapper .content
+.account__header>div, .floating-action-button:active, .floating-action-button:focus, .floating-action-button:hover, .admin-wrapper .content, .admin-wrapper .sidebar-wrapper__inner
 {
 background-color: rgba(23, 9, 65, 0.8)
 }
@@ -304,9 +314,9 @@ body.error, .landing-page .information-board, .landing-page .information-board .
         border-radius: 0px !important;
 }
 
-  .drawer__header a:hover, .column-link:hover, .static-content.getting-started span, .reply-indicator, .button, .detailed-status, detailed-status__action-bar, .privacy-dropdown__option.active, .privacy-dropdown__option.active:hover, .privacy-dropdown__option:hover, .privacy-dropdown__value-icon.icon-button.inverted:active, .privacy-dropdown__value-icon.icon-button.inverted.active, .account__section-headline
+  .drawer__header a:hover, .column-link:hover, .static-content.getting-started span, .reply-indicator, .privacy-dropdown__option.active, .privacy-dropdown__option.active:hover, .privacy-dropdown__option:hover, .privacy-dropdown__value-icon.icon-button.inverted:active, .privacy-dropdown__value-icon.icon-button.inverted.active, .account__section-headline
   {
-    background-color: rgb(58, 39, 125) !important;
+    background-color: rgb(58, 39, 125);
     border-top: 0px;
     border-left: 0px;
     border-bottom: 0px;
@@ -343,7 +353,7 @@ body.error, .landing-page .information-board, .landing-page .information-board .
     border-radius: 0px;
 }
 
-    .account__section-headline, .community-timeline__section-headline, .public-timeline__section-headline
+.community-timeline__section-headline, .public-timeline__section-headline
 	{
 	 background-color: rgb(23, 9, 65);
 	 border-bottom: 0px;
@@ -399,7 +409,7 @@ body.error, .landing-page .information-board, .landing-page .information-board .
     background-color: transparent;
 }
 
-	.status, .search__input, status.light, .focusable:focus.status.status-direct, .status.status-direct, .status.status-direct:focus, .status.status-direct:active, .status__wrapper status__wrapper-direct focusable
+	.status, status.light, .focusable:focus.status.status-direct, .status.status-direct, .status.status-direct:focus, .status.status-direct:active, .status__wrapper status__wrapper-direct focusable
   {
     background-color: transparent !important;
     border-radius: 0px;
@@ -897,11 +907,6 @@ box-shadow: 0px 0px 0px 0px;
     color: #30ddef;
 }
 
-.emoji-mart-bar:first-child {
-    border-bottom-width: 0px;
-    background: #30ddef;
-}
-
 .emoji-mart-search input {
     background: transparent;
     color: #f8f8f8;
@@ -962,7 +967,7 @@ border-radius: 0px;
 body.lighter {
     background: #222;
     background: linear-gradient(to right, rgb(23,9,65), #4b1dd5);
-    background-image: url('../images/background/fundo3plus.png');
+    background-image: url('../../images/background/fundo3plus.png');
     background-position: 100% 100%;
     background-repeat: repeat-x;
     background-attachment: fixed;
@@ -975,26 +980,26 @@ body.lighter {
     border-radius: 0px;
 	}
 	
-.poll__text input[type="text"]:focus {
+.poll__option input[type="text"]:focus {
     border: 1px solid #58d9ba;
 }
-.poll__text input[type="text"] {
+.poll__option input[type="text"] {
     color: #f8f8f8;
     background: #3a277d;
     border: 0px;
     border-radius: 0px;
 }
 
-.compose-form__poll-wrapper .button.button-secondary {
+.compose-form__poll-wrapper .button.button-secondary, .account__header__buttons .icon-button {
     color: #f8f8f8;
     border-color: #3a277d;
 }
 
-.button.button-secondary:active, .button.button-secondary:focus, .button.button-secondary:hover {
+.button.button-secondary:active, .button.button-secondary:focus, .button.button-secondary:hover, .account__header__buttons .icon-button:hover, .account__header__buttons .icon-button:focus {
 
     color: #30ddef;
     border-color: #30ddef;
-
+    background: #3a277d;
 }
 
 .compose-form__poll-wrapper {
@@ -1043,7 +1048,7 @@ body.lighter {
     border-radius: 0px;
 }
 
-.account__header__bar .avatar .account__avatar {
+.account__header__bar .avatar .account__avatar, .account__avatar {
     background: transparent;
     border: 0px;
 }
@@ -1085,9 +1090,13 @@ body.lighter {
     border: 1px solid #3a277d;
 }
 
+.poll__input, .compose-form__poll .poll__input {
+    border-color: #58d9ba;
+
+}
+
 .poll__input.active {
 
-    border-color: #58d9ba;
     background: #58d9ba;
 
 }
@@ -1644,9 +1653,8 @@ button.icon-button i.fa-retweet:hover {
     border-color: #30ddef;
   }
 
-.report-dialog-modal .dialog-option .poll__input.active {
+.report-dialog-modal .dialog-option .poll__input {
   border-color: #58d9ba;
-  background: #58d9ba;
   color: #170941;
 }
   
@@ -1979,6 +1987,7 @@ button.icon-button.reblogPrivate:hover i.fa-retweet {
 .account-role {
   color: #58d9ba;
   border-color: #58d9ba;
+  border-radius: 0;
 }
 
 .admin-wrapper .sidebar__toggle {
@@ -2018,4 +2027,207 @@ a:focus {
 
 .about__footer {
   color: #dadada;
+}
+
+// 21/07/2026 4.5.11
+
+.compose-form__highlightable {
+  border-radius: 0;
+  border-width: 0;
+  background-color: transparent;
+}
+
+.search__input {
+  border-radius: 0;
+  border-width: 0;
+  background-color: rgb(23, 9, 65);
+}
+
+.dropdown-button {
+  border-radius: 0;
+  border-color: #ccc;
+  color: #f8f8f8;
+}
+
+.dropdown-button:hover, .dropdown-button:focus {
+  color: #fff;
+  border-color: transparent;
+  background-color: #3a277d;
+}
+
+.account__header__bio .account__header__fields, .account__header__image, .column > .scrollable, .account__section-headline, .account__header__bar, .column-back-button, .compose-form .spoiler-input .autosuggest-input, .detailed-status__meta__line, .detailed-status {
+    border-color: transparent;
+}
+
+.account__section-headline {
+  background-color: #3a277d;
+}
+
+.account__section-headline a:hover, .account__section-headline a:focus {
+  background-color: rgb(23, 9, 65);
+}
+
+.account__header__extra__links a, .compose-form__poll__select__label, .notification-group__main__header__label, .notification-group__main__header__label time {
+    color: #ccc;
+}
+
+.account__header__tabs__name h1 small {
+    color: #58d9ba;
+}
+
+.account__domain-pill {
+  border-radius: 0;
+  border-width: 0;
+  background-color: #3a277d;
+  color: #f8f8f8;
+  margin-left: 0.2rem;
+}
+
+.icon-button.inverted:hover, .icon-button.inverted:focus {
+  background-color: #3a277d;
+  border-radius: 0;
+}
+
+.spoiler-input__border {
+  background-image: none !important;
+  background-color: rgb(23, 9, 65) !important;
+}
+
+.spoiler-input {
+  padding-bottom: 0.4rem;
+}
+
+.compose-form__poll__select__value {
+    background-color: #3a277d;
+    color: #f8f8f8;
+    padding: 0.2rem;
+    border: 1px solid transparent;
+
+}
+
+.compose-form__poll__select__value:hover, .compose-form__poll__select__value:focus, .fields-row button:hover, .fields-row button:focus {
+    background-color: rgb(23, 9, 65);
+    color: #30ddef;
+    border-color: #30ddef;
+}
+
+.compose-form__poll__footer__sep {
+    background-color: transparent;
+}
+
+.compose-form__actions .icon-button.active, .admin-wrapper .content__heading__tabs a.selected, .admin-wrapper .content__heading__tabs a:hover, .admin-wrapper .content__heading__tabs a:focus, .dropdown-menu__item a:focus:not(:disabled):not([aria-disabled="true"]), .dropdown-menu__item a:hover:not(:disabled):not([aria-disabled="true"]), .dropdown-menu__item a:active:not(:disabled):not([aria-disabled="true"]), .dropdown-menu__item button:focus:not(:disabled):not([aria-disabled="true"]), .dropdown-menu__item button:hover:not(:disabled):not([aria-disabled="true"]), .dropdown-menu__item button:active:not(:disabled):not([aria-disabled="true"]) {
+    background-color: #3a277d;
+    border-radius: 0;
+}
+
+.react-toggle, .content-warning {
+    border-radius: 0;
+}
+
+.react-toggle:hover:not(.react-toggle--disabled) .react-toggle-track, .batch-table .nothing-here {
+  background: rgb(23, 9, 65);
+}
+
+.react-toggle.react-toggle--checked:hover:not(.react-toggle--disabled) .react-toggle-track, .content-warning {
+    background: #3a277d;
+    border-color: transparent;
+}
+
+ .notification-group--relationships-severance-event .notification-group__icon, .notification-group--admin-report .notification-group__icon, .notification-group--admin-sign-up .notification-group__icon, .notification-ungrouped__header {
+    color: #58d9ba;
+ }
+
+ .notification__filter-bar button.active::before, .notification__filter-bar a.active::before, .account__section-headline button.active::before, .account__section-headline a.active::before {
+    display: none;
+ }
+
+ .notification__filter-bar button.active, .notification__filter-bar button:hover, .notification__filter-bar button:focus {
+        background: #3a277d;
+ }
+
+ .admin-wrapper .content__heading__tabs a {
+    color: #30ddef;
+ }
+
+ .dropdown-menu {
+    border-color: #ccc;
+ }
+
+ .reply-indicator__line::before {
+    background-color: #58d9ba;
+ }
+
+ .reply-indicator {
+  padding: 0.5rem;
+  padding-top: 1rem;
+}
+
+.detailed-status, .detailed-status__action-bar {
+      background: rgb(23, 9, 65);
+}
+
+.tabs-bar__wrapper {
+    backdrop-filter: none;
+}
+
+.emoji-mart-anchor, .about__header p {
+    color: #ccc;
+}
+
+.emoji-mart-anchor:hover, .emoji-mart-anchor:focus {
+    background-color: #3a277d;
+    color: #fff;
+}
+
+.emoji-mart-bar:first-child {
+  background: transparent;
+}
+
+.emoji-mart-anchor-selected {
+  color: #58D9BA;
+}
+
+.emoji-mart-anchor-bar {
+    background-color: #58D9BA;
+}
+
+.column-back-button, .follow_requests-unlocked_explanation, .switch-to-advanced, {
+    background: #3a277d;
+    border-radius: 0;
+    color: #fff;
+    border-color: transparent;
+}
+
+.error-column, .about__meta, .about__section__title {
+    border-radius: 0;
+    border-color: transparent;
+}
+
+.about__meta__column, .about__section__title {
+    background: #3a277d;
+}
+
+.about__meta__divider {
+    border-color: transparent;
+}
+
+.about__section.active .about__section__title {
+    border-radius: 0;
+    color: #58d9ba;
+}
+
+kbd {
+    border-radius: 0;
+    color: #58d9ba;
+    background: rgb(23, 9, 65);
+}
+
+.fields-row button {
+    font-size: 1rem;
+    margin: 0.1rem 0.25rem;
+    padding: 0.5rem;
+}
+
+.admin-wrapper .content h4 {
+    border-top: none;
 }
