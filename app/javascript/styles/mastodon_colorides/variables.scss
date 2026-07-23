@@ -1,54 +1,53 @@
-// Commonly used web colors
-$black: #000000;            // Black
-$white: #ffffff;            // White
-$success-green: #79bd9a;    // Padua
-$error-red: #df405a;        // Cerise
-$warning-red: #ff5050;      // Sunset Orange
-$gold-star: #30ddef;        // link color
+$black: #000; // Black
+$white: #f8f8f8; // White
+
+$red-600: #b7253d !default; // Deep Carmine
+$red-500: #df405a !default; // Cerise
+$blurple-600: #3a277d; // Iris
+$blurple-500: #58D9BA; // Brand purple
+$blurple-400: #30ddef; // Medium slate blue
+$blurple-300: #30ddef; // Faded Blue
+$grey-600: #3a277d; // Trout
+$grey-100: #f8f8f8; // Topaz
+
+$success-green: #58D9BA !default; // Padua
+$error-red: $red-500 !default; // Cerise
+$warning-red: #f65055 !default; // Sunset Orange
+$gold-star: #30ddef !default; // Dark Goldenrod
+
+$red-bookmark: #f8f8f8;
 
 // Values from the classic Mastodon UI
 $classic-base-color: #170941;         // darker purple
 $classic-primary-color: #58D9BA;      // highlight green
 $classic-secondary-color: #30ddef;    // link color
-$classic-highlight-color: #3a277d;    // lighter purple
+$classic-highlight-color: $blurple-500;
+$ui-button-icon-hover-background-color: #3a277d !default;    // lighter purple
 
-// Variables for defaults in UI
-$base-shadow-color: $black;
-$base-overlay-background: $black;
-$base-border-color: $white;
-$simple-background-color: $white;
-$valid-value-color: $success-green;
-$error-value-color: $error-red;
+$ui-button-disabled-color: #170941 !default;
 
-// Tell UI to use selected colors
-$ui-base-color: $classic-base-color;                  // Darkest
-$ui-base-lighter-color: lighten($ui-base-color, 26%); // Lighter darkest
-$ui-primary-color: $classic-primary-color;            // Lighter
-$ui-secondary-color: $classic-secondary-color;        // Lightest
-$ui-highlight-color: $classic-highlight-color;
+@use '../mastodon/variables' with (
+  $red-600: $red-600,
+  $red-500: $red-500,
+  $blurple-600: $blurple-600,
+  $blurple-500: $blurple-500,
+  $blurple-400: $blurple-400,
+  $blurple-300: $blurple-300,
+  $grey-600: $grey-600,
+  $grey-100: $grey-100,
 
-// Variables for texts
-$primary-text-color: $white;
-$darker-text-color: $ui-primary-color;
-$dark-text-color: $ui-base-lighter-color;
-$secondary-text-color: $ui-secondary-color;
-$highlight-text-color: $ui-highlight-color;
-$action-button-color: $ui-base-lighter-color;
-// For texts on inverted backgrounds
-$inverted-text-color: $ui-base-color;
-$lighter-text-color: $ui-base-lighter-color;
-$light-text-color: $ui-primary-color;
+  $success-green: $success-green,
+  $error-red: $error-red,
+  $warning-red: $warning-red,
+  $gold-star: $gold-star,
 
-// Language codes that uses CJK fonts
-$cjk-langs: ja, ko, zh-CN, zh-HK, zh-TW;
+  $red-bookmark: $red-bookmark, 
 
-// Variables for components
-$media-modal-media-max-width: 100%;
-// put margins on top and bottom of image to avoid the screen covered by image.
-$media-modal-media-max-height: 80%;
+  $classic-base-color: $classic-base-color,
+  $classic-primary-color: $classic-primary-color,
+  $classic-secondary-color: $classic-secondary-color,
+  $classic-highlight-color: $classic-highlight-color,
+  $ui-button-icon-hover-background-color: $ui-button-icon-hover-background-color,
 
-$no-gap-breakpoint: 415px;
-
-$font-sans-serif: 'mastodon-font-sans-serif';
-$font-display: 'mastodon-font-display';
-$font-monospace: 'mastodon-font-monospace';
+  $ui-button-disabled-color: $ui-button-disabled-color,
+);

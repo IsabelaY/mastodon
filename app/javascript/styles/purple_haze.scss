@@ -28,7 +28,30 @@ $lighter-text-color: $classic-base-color !default;
 $light-text-color: #694E78;
 //fim das mudanças
 
-@import 'application';
+@use 'mastodon/variables' with (
+  $classic-base-color: $classic-base-color,
+  $classic-primary-color: $classic-primary-color,
+  $classic-secondary-color: $classic-secondary-color,
+  $classic-highlight-color: $classic-highlight-color,
+  $emojis-requiring-inversion: $emojis-requiring-inversion,
+
+  $ui-base-color: $ui-base-color,
+  $ui-base-lighter-color: $ui-base-lighter-color,
+  $ui-primary-color: $ui-primary-color,
+  $ui-secondary-color: $ui-secondary-color,
+  $ui-highlight-color: $ui-highlight-color,
+
+  $primary-text-color: $primary-text-color,
+  $darker-text-color: $darker-text-color,
+  $dark-text-color: $dark-text-color,
+  $action-button-color: $action-button-color,
+
+  $inverted-text-color: $inverted-text-color,
+  $lighter-text-color: $lighter-text-color,
+  $light-text-color: $light-text-color,
+);
+
+@use 'application';
 
 .colorides_logo {
   filter: invert(0);

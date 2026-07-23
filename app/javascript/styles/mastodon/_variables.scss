@@ -2,29 +2,29 @@
 @use 'functions' as *;
 
 // Commonly used web colors
-$black: #000; // Black
-$white: #fff; // White
+$black: #000 !default; // Black
+$white: #fff !default; // White
 $red-600: #b7253d !default; // Deep Carmine
 $red-500: #df405a !default; // Cerise
-$blurple-600: #563acc; // Iris
-$blurple-500: #6364ff; // Brand purple
-$blurple-400: #7477fd; // Medium slate blue
-$blurple-300: #858afa; // Faded Blue
-$grey-600: hsl(240deg, 8%, 33%); // Trout
-$grey-100: hsl(240deg, 51%, 90%); // Topaz
+$blurple-600: #563acc !default; // Iris
+$blurple-500: #6364ff !default; // Brand purple
+$blurple-400: #7477fd !default; // Medium slate blue
+$blurple-300: #858afa !default; // Faded Blue
+$grey-600: hsl(240deg, 8%, 33%) !default; // Trout
+$grey-100: hsl(240deg, 51%, 90%) !default; // Topaz
 
 $success-green: #79bd9a !default; // Padua
 $error-red: $red-500 !default; // Cerise
 $warning-red: #ff5050 !default; // Sunset Orange
 $gold-star: #ca8f04 !default; // Dark Goldenrod
 
-$red-bookmark: $warning-red;
+$red-bookmark: $warning-red !default;
 
 // Values from the classic Mastodon UI
-$classic-base-color: hsl(240deg, 16%, 19%);
-$classic-primary-color: hsl(240deg, 29%, 70%);
-$classic-secondary-color: hsl(255deg, 25%, 88%);
-$classic-highlight-color: $blurple-500;
+$classic-base-color: hsl(240deg, 16%, 19%) !default;
+$classic-primary-color: hsl(240deg, 29%, 70%) !default;
+$classic-secondary-color: hsl(255deg, 25%, 88%) !default;
+$classic-highlight-color: $blurple-500 !default;
 
 // Variables for defaults in UI
 $base-shadow-color: $black !default;

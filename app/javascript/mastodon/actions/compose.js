@@ -239,8 +239,7 @@ export function submitCompose(successCallback) {
         };
       });
     }
-
-    const visibility = getState().getIn(['compose', 'privacy']);
+    
     api().request({
       url: statusId === null ? '/api/v1/statuses' : `/api/v1/statuses/${statusId}`,
       method: statusId === null ? 'post' : 'put',
