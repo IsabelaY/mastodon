@@ -6,7 +6,7 @@
   src: local('Galyon'),
     url('../fonts/galyon/Galyon-Regular.woff') format("woff"),
     url('../fonts/galyon/Galyon-Regular.otf');
-  font-weight: normal;
+  font-weight: 500;
 }
 
 @font-face {
@@ -14,7 +14,7 @@
   src: local('Galyon Italic'),
     url('../fonts/galyon/Galyon-Italic.woff') format("woff"),
     url('../fonts/galyon/Galyon-Italic.otf');
-  font-weight: normal;
+  font-weight: 500;
   font-style: italic;
 }
 
@@ -23,7 +23,7 @@
   src: local('Galyon Bold'),
     url('../fonts/galyon/Galyon-Bold.woff') format("woff"),
     url('../fonts/galyon/Galyon-Bold.otf');
-  font-weight: bold;
+  font-weight: 600;
   font-style: normal;
 }
 
@@ -182,7 +182,7 @@ body .muted-hint a, .admin-wrapper .content .muted-hint a {
     color: #bebebe;
 }
 
-.actions-modal, .block-modal, .boost-modal, .confirmation-modal, .mute-modal, .report-modal, .compare-history-modal {
+.dialog-modal, .actions-modal, .block-modal, .boost-modal, .confirmation-modal, .mute-modal, .report-modal, .compare-history-modal {
     background: linear-gradient(315deg,rgb(255,198,222) 0%, rgb(198,198,255) 50%, rgb(198,255,222) 100%);
   border-radius: 0px;
   border: 2px groove #fff;
@@ -202,10 +202,6 @@ body .muted-hint a, .admin-wrapper .content .muted-hint a {
 
 .report-modal__comment {
     border-right: 1px solid #ffffff90;
-}
-
-.emoji-mart-bar:first-child, .emoji-mart-search input {
-    background: #fff;
 }
 
 .emoji-mart-category .emoji-mart-emoji:hover::before {
@@ -369,7 +365,8 @@ body .muted-hint a, .admin-wrapper .content .muted-hint a {
 }
 
 .poll__input, .report-dialog-modal .dialog-option .poll__input {
-    border: 1px solid #fff;
+    border: 2px inset #fff;
+    background: #fff;
 }
 
 .poll__input:hover, .report-dialog-modal .dialog-option .poll__input:hover {
@@ -582,13 +579,13 @@ border: 2px groove #fff; }
   background: #bebebe;
 }
 
-.language-dropdown__dropdown__results__item.active:hover, .language-dropdown__dropdown__results__item.active:focus {
+.language-dropdown__dropdown__results__item.active:hover, .language-dropdown__dropdown__results__item.active:focus, .privacy-dropdown__option.active:focus, .visibility-dropdown__option.active:hover, .privacy-dropdown__option.active:hover, .visibility-dropdown__option.active:focus {
   background: #77f9;
 }
 
 // 11/11/2022
 
-.dropdown-menu__item a, .dropdown-menu__item button {
+.dropdown-menu__item a, .dropdown-menu__item button, .privacy-dropdown__dropdown, .language-dropdown__dropdown, .visibility-dropdown__dropdown {
 	background: #bebebe;
 	}
 	
@@ -802,3 +799,256 @@ a.status-card:hover, a.status-card:focus {
       text-decoration: none;
     }
   }
+
+// 4.5 changes
+
+.admin-wrapper .sidebar ul .simple-navigation-active-leaf a {
+	color: #000;
+}
+
+.admin-wrapper .sidebar ul a:hover, .admin-wrapper .sidebar ul a:focus {
+	background-color: #fff7;
+}
+
+.status__quote, .status__quote-author-button, .account__avatar, .visibility-dropdown__button {
+    border: groove #fff 2px;
+    border-radius: 0;
+}
+
+.column-header {
+	border-color: transparent;
+}
+
+.column-header .column-header__back-button {
+	color: #40177D;
+}
+
+.compose-form__highlightable {
+    border: outset #fff 2px;
+    border-radius: 0;
+}
+
+.compose-form__dropdowns {
+	margin: 0px;
+	padding: 5px;
+	background-color: #000080;
+	background-image: linear-gradient(325deg, #4e4eff 0%, #000080 60%, #000080 100%);
+}
+
+.simple_form .btn, .simple_form button, .content-warning .link-button, .navigation-bar .icon-button, .account__header__buttons .icon-button, .button.button-secondary, .dropdown-button, .compose-form__actions .icon-button, .compose-form__actions .button, .emoji-mart-anchor, .dialog-modal__header__close.icon-button {
+	color: #000;
+	border-radius: 0;
+	border: 2px #fff outset;
+	background-color: #c8c8c8;
+}
+
+.simple_form .btn:hover, .simple_form button:hover, .content-warning .link-button:hover, .navigation-bar .icon-button:hover, .account__header__buttons .icon-button:hover, .button.button-secondary:hover, .dropdown-button:hover, .compose-form__actions .icon-button:hover, .compose-form__actions .button:hover, .emoji-mart-anchor:hover, .dialog-modal__header__close.icon-button:hover {
+	color: #000;
+	border: 2px #fff outset;
+	background-color: #fff;
+}
+
+.simple_form .btn:focus, .simple_form button:focus, .content-warning .link-button:focus, .navigation-bar .icon-button:focus, .account__header__buttons .icon-button:focus, .button.button-secondary:focus, .dropdown-button:focus, .compose-form__actions .icon-button:focus, .compose-form__actions .button:focus, .emoji-mart-anchor:focus, .dialog-modal__header__close.icon-button:focus {
+	color: #000;
+	border: 2px #414141 dotted;
+	background-color: #fff;
+}
+
+.simple_form .btn:active, .simple_form button:active, .content-warning .link-button:active, .navigation-bar .icon-button:active, .account__header__buttons .icon-button:active, .button.button-secondary:active, .button.button-secondary.active, .dropdown-button:active, .compose-form__actions .icon-button:active, .compose-form__actions .button:active, .compose-form__actions .icon-button.active, .emoji-mart-anchor:active, .dialog-modal__header__close.icon-button:active {
+	color: #000;
+	border: 2px #fff inset;
+	background-color: #fff;
+}
+
+.compose-form .autosuggest-textarea__textarea, .compose-form .spoiler-input__input, .poll__option input[type="text"] {
+	background-color: #fff7;
+	border-radius: 0;
+}
+
+.emoji-mart-search input, .language-dropdown__dropdown .emoji-mart-search input {
+    background: #fff;
+    border-radius: 0;
+    border-style: inset;
+}
+
+.emoji-mart-bar:first-child, .dialog-modal__header {
+	background-color: #000080;
+	background-image: linear-gradient(325deg, #4e4eff 0%, #000080 60%, #000080 100%);
+}
+
+.emoji-mart-anchor-selected {
+	color: #fff;
+	background: transparent;
+	border-color: transparent;
+}
+
+.emoji-mart-anchor-bar {
+	display: none;
+}
+
+.emoji-mart-anchor {
+	padding: 1px 1px 1px 0;
+	margin: 4px 2px;
+}
+
+.dropdown-menu, .language-dropdown__dropdown__results__item, .column-link:active, .privacy-dropdown__dropdown, .language-dropdown__dropdown, .visibility-dropdown__dropdown, .emoji-picker-dropdown__modifiers__menu, .privacy-dropdown__option.active, .visibility-dropdown__option.active {
+	border-radius: 0;
+}
+
+.emoji-picker-dropdown__modifiers__menu button:hover, .emoji-picker-dropdown__modifiers__menu button:focus, .language-dropdown__dropdown__results__item:hover, .language-dropdown__dropdown__results__item:focus {
+	background-color: #000080;
+}
+
+.emoji-picker-dropdown__menu {
+	background-color: #fff7;
+	border-radius: 0;
+}
+
+.dialog-modal__header, .language-dropdown__dropdown__results__item:hover,  .language-dropdown__dropdown__results__item:focus {
+	color: #fff;
+}
+
+.privacy-dropdown__option:hover, .visibility-dropdown__option:hover, .privacy-dropdown__option:focus, .visibility-dropdown__option:focus {
+	background-color: #000080;
+	color: #fff;
+	border-radius: 0;
+}
+.privacy-dropdown__option:hover .privacy-dropdown__option__content, .visibility-dropdown__option:hover .visibility-dropdown__option__content, .privacy-dropdown__option:focus .privacy-dropdown__option__content, .visibility-dropdown__option:focus .visibility-dropdown__option__content, .privacy-dropdown__option:hover .privacy-dropdown__option__content strong, .visibility-dropdown__option:hover .visibility-dropdown__option__content strong, .privacy-dropdown__option:focus .privacy-dropdown__option__content strong, .visibility-dropdown__option:focus .visibility-dropdown__option__content strong .privacy-dropdown__option__content strong {
+	color: #fff;
+}
+
+.language-dropdown__dropdown__results__item.active:hover, .language-dropdown__dropdown__results__item.active:focus, .privacy-dropdown__option.active:focus, .visibility-dropdown__option.active:hover, .privacy-dropdown__option.active:hover, .visibility-dropdown__option.active:focus {
+	background-color: #4e4eff;
+}
+
+.form-section {
+	background-color: #fff7;
+	border-radius: 0;
+}
+
+.sparkline__graph path:first-child {
+	 fill: none !important;
+}
+
+.sparkline__graph path:last-child {
+	stroke: #4e4eff !important;
+}
+
+.column-link.active {
+	color: #4e4eff;
+	background-color: #fff7;
+	border-radius: 0;
+}
+
+.compose-form__actions .icon-button.disabled {
+	color: #000;
+}
+
+.compose-form__actions .icon-button.disabled:hover, .language-dropdown__dropdown .emoji-mart-scroll, .language-dropdown__dropdown .emoji-mart-search {
+	background-color: #c8c8c8;
+}
+
+
+.language-dropdown__dropdown__results__item:hover .language-dropdown__dropdown__results__item__common-name, .language-dropdown__dropdown__results__item:focus .language-dropdown__dropdown__results__item__common-name {
+	color: #c5c5c5;
+}
+
+.dropdown-button.active {
+	color: #000;
+	border: 2px #fff inset;
+	background-color: #fff;
+}
+
+.detailed-status__meta__line, .column > .scrollable {
+	border-color: #fff7;
+}
+
+.account__header__image {
+	border-color: transparent;
+}
+
+.account-role, .compose-form__poll__select__value {
+	color: #4e4eff;
+}
+
+.account__domain-pill {
+	color: #222;
+	background-color: #0001;
+}
+
+.reply-indicator {
+  background: #c5c5c5;
+  padding: 0.5rem;
+  border: outset #fff 2px;
+}
+
+.reply-indicator__line {
+	display: none;
+}
+
+.search__input {
+	background-color: #fff7;
+	border-radius: 0;
+    border-style: inset;
+}
+
+.search.active .search__input {
+	border-radius: 0;
+	border-width: 2px;
+	background-color: #fff;
+}
+
+.search.active .search__popout {
+  background: #c5c5c5;
+  border: groove #fff 2px;
+  border-radius: 0;
+}
+
+.follow_requests-unlocked_explanation, .switch-to-advanced {
+	background-color: #0001;
+  border-radius: 0;
+}
+
+.compose-form__poll .poll__input {
+	border: 1px inset #000;
+}
+
+.compose-form .spoiler-input__border {
+	display: none;
+}
+
+.compose-form .spoiler-input .autosuggest-input {
+	border-bottom: 2px groove #fff;
+}
+
+.compose-form .spoiler-input__input {
+	color: #000;
+}
+
+.content-warning {
+	background-color: #000080;
+	background-image: linear-gradient(325deg, #4e4eff 0%, #000080 60%, #000080 100%);
+	color: #fff;
+	border: 2px outset #fff;
+	border-radius: 0;
+	font-weight: bolder;
+}
+
+.content-warning .link-button:hover {
+	text-decoration: none;
+}
+
+.content-warning .link-button {
+	padding: 0px 5px;
+}
+
+.simple_form button {
+	padding: 5px 5px;
+	margin: 0px 5px;
+}
+
+.flash-message {
+	color: #222;
+	border-radius: 0;
+	border-color: transparent;
+}

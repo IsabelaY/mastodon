@@ -18,6 +18,15 @@ $ui-primary-color: $classic-primary-color;            // Lighter
 $ui-secondary-color: $classic-secondary-color;        // Lightest
 $ui-highlight-color: $classic-highlight-color;
 
+$red-600: #ff8080; 
+$red-500: #ff0000;
+$blurple-600: #8000ff; // Iris
+$blurple-500: #ff00ff; // Brand purple
+$blurple-400: #ff0080; // Medium slate blue
+$blurple-300: #ff8080; // Faded Blue
+$grey-600: #5a5a5a;
+$grey-100: #ffd37c;
+
 @use 'mastodon/variables' with (
   $success-green: $success-green,    // Padua replacement
   $error-red: $error-red,        // Cerise replacement
@@ -25,6 +34,14 @@ $ui-highlight-color: $classic-highlight-color;
   $gold-star: $gold-star,        // Dark Goldenrod replacement
 
   $red-bookmark: $warning-red,
+  $blurple-600: $blurple-600,
+  $blurple-500: $blurple-500,
+  $blurple-400: $blurple-400,
+  $blurple-300: $blurple-300,
+  $grey-600: $grey-600,
+  $grey-100: $grey-100,
+  $red-600: $red-600, 
+  $red-500: $red-500,
 
   // Values from the classic Mastodon UI
   $classic-base-color: $classic-base-color,         // Midnight Express replacement
@@ -75,7 +92,7 @@ $ui-highlight-color: $classic-highlight-color;
 
 // stop using border-radius
 
-.icon-button, .button, .privacy-dropdown.active.top .privacy-dropdown__value, .text-icon-button, .column-settings__hashtags .column-select__control, .flash-message, .simple_form input[type="text"], .simple_form input[type="number"], .simple_form input[type="email"], .simple_form input[type="password"], .simple_form input[type="url"], .simple_form input[type="datetime-local"], .simple_form textarea, .simple_form select, .admin-wrapper .sidebar ul a.selected, .admin-wrapper .sidebar ul, .account-role, .simple_form .recommended, .simple_form .not_recommended, #navigation-panel__publish i, .language-dropdown__dropdown__results__item, .language-dropdown__dropdown, .privacy-dropdown.active .privacy-dropdown__value, .privacy-dropdown__dropdown {
+.simple_form .btn, .icon-button, .button, .privacy-dropdown.active.top .privacy-dropdown__value, .text-icon-button, .column-settings__hashtags .column-select__control, .flash-message, .simple_form input[type="text"], .simple_form input[type="number"], .simple_form input[type="email"], .simple_form input[type="password"], .simple_form input[type="url"], .simple_form input[type="datetime-local"], .simple_form textarea, .simple_form select, .admin-wrapper .sidebar ul a.selected, .admin-wrapper .sidebar ul, .account-role, .simple_form .recommended, .simple_form .not_recommended, #navigation-panel__publish i, .language-dropdown__dropdown__results__item, .language-dropdown__dropdown, .privacy-dropdown.active .privacy-dropdown__value, .privacy-dropdown__dropdown {
   border-radius: 0;
 }
 
@@ -455,7 +472,7 @@ button.icon-button:hover i.fa-retweet {
 // admin menu
 
 .admin-wrapper .sidebar ul .simple-navigation-active-leaf a {
-  color: #000;
+  color: #fff;
 }
 
 .admin-wrapper .content h4 {
@@ -494,4 +511,58 @@ button.icon-button:hover i.fa-retweet {
 
 .admin-wrapper .sidebar__toggle {
   border-color: #c0c0c0;
+}
+
+.compose-form .spoiler-input__border {
+	display: none;
+}
+
+.compose-form .spoiler-input .autosuggest-input, .autosuggest-textarea.compose-form__input {
+	border-top: 3px double #c0c0c0;
+}
+
+.search__popout, .search.active .search__input, .account__avatar, .dialog-modal, .dropdown-button, .privacy-dropdown__dropdown, .language-dropdown__dropdown, .visibility-dropdown__dropdown, .privacy-dropdown__option, .visibility-dropdown__option {
+	border-radius: 0;
+}
+
+.dropdown-button:focus, .dropdown-button:hover {
+	color: #fff;
+	background-color: #00f;
+	border-color: transparent;
+}
+
+.modal-root__overlay {
+  background: #c0c0c0;
+}
+
+.dialog-modal {
+	border: 3px double #c0c0c0;
+	background: #000;
+}
+
+.dialog-modal__header {
+	border-bottom: 3px double #c0c0c0;
+}
+
+.visibility-dropdown__button {
+	color: #000;
+	background-color: #ccc;
+	border-radius: 0;
+}
+
+.privacy-dropdown__option:focus, .privacy-dropdown__option.active, .visibility-dropdown__option:focus, .visibility-dropdown__option.active {
+	background: #00f;
+}
+
+.link-footer p {
+	color: #c0c0c0;
+}
+
+.link-footer p a {
+	color: #0f0;
+}
+
+.dropdown-menu__item a:focus:not(:disabled):not([aria-disabled="true"]), .dropdown-menu__item a:hover:not(:disabled):not([aria-disabled="true"]), .dropdown-menu__item a:active:not(:disabled):not([aria-disabled="true"]), .dropdown-menu__item button:focus:not(:disabled):not([aria-disabled="true"]), .dropdown-menu__item button:hover:not(:disabled):not([aria-disabled="true"]), .dropdown-menu__item button:active:not(:disabled):not([aria-disabled="true"]) {
+	background-color: #00f;
+	border-radius: 0;
 }

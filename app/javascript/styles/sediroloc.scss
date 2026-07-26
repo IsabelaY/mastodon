@@ -104,12 +104,8 @@ body.about-body, body.tag-body, body.admin
 
 .activity-stream .detailed-status.light .status-card, .activity-stream .detailed-status.light .status-card:hover, .activity-stream .detailed-status.light .status-card:active, .status-card:hover, .status-card:active, .status-card:focus, .status-card
 {
-    border-top: 1px solid #070707;
-    border-left: 1px solid #070707;
-    border-right: 1px solid #070707;
-    border-bottom: 1px solid #070707;
+	border-color: transparent;
     border-radius: 0px;
-    background-color: transparent !important;
 }
 
 .landing-page #mastodon-timeline .column {
@@ -1141,7 +1137,7 @@ box-shadow: 0px 0px 0px 0px;
 
 .button.button-secondary {
     color: #000;
-    border: 1px solid #c5d882;
+    border: 1px solid #070707;
 }
 
 .poll__input {
@@ -2300,4 +2296,107 @@ kbd {
     border-color: transparent;
     box-shadow: none;
     border-radius: 0;
+}
+
+// 21/07/2026 more 4.5.11 tweaks (:
+
+.dashboard__quick-access {
+  background: #c5d882;
+}
+
+.dashboard__quick-access:hover, .dashboard__quick-access:focus {
+  background: #e8f6be;
+}
+
+.simple_form textarea:active, .simple_form textarea:focus, .simple_form input[type="email"]:active, .simple_form input[type="number"]:active, .simple_form input[type="password"]:active, .simple_form input[type="text"]:active, .simple_form input[type="email"]:focus, .simple_form input[type="number"]:focus, .simple_form input[type="password"]:focus, .simple_form input[type="text"]:focus {
+	border: 2px solid #cf2210;
+}
+
+.account__header__content a {
+	color: #cf2210;
+}
+
+.autosuggest-textarea__suggestions {
+	border-color: transparent;
+}
+
+.autosuggest-textarea__suggestions__item.selected, .autosuggest-textarea__suggestions__item:hover, .autosuggest-textarea__suggestions__item:focus, .autosuggest-textarea__suggestions__item:active {
+	background: #c5d882;
+	color: #070707;
+}
+
+.autosuggest-textarea__suggestions__item:hover, .autosuggest-textarea__suggestions__item:focus, .autosuggest-textarea__suggestions__item:active {
+	border: 1px solid #cf2210;
+	color: #cf2210;
+}
+
+.autosuggest-textarea__suggestions__item:first-child, .autosuggest-textarea__suggestions__item:last-child {
+	border-radius: 0;
+}
+
+.hashtag-header {
+	border-color: transparent;
+	background: #e8f6be;
+	color: #333;
+}
+
+.hashtag-header__header__buttons .icon-button, .search.active .search__input, .account-role {
+	border-radius: 0;
+}
+
+.hashtag-header__header h1 {
+	color: #a72645;
+}
+
+.search__popout {
+	border-color: transparent;
+	border-radius: 0;
+}
+
+.search__popout__menu__message {
+	color: #070707;
+}
+
+.form-section {
+	background: transparent;
+}
+
+.simple_form .lead, .admin-wrapper .content h3 {
+	color: #070707;
+}
+
+.dashboard__quick-access, .focal-point__preview strong, .admin-wrapper .content__heading__tabs a.selected {
+	color: #070707;
+}
+
+.more-from-author {
+  border-radius: 0;
+  background: #c5d882;
+  border-color: transparent;
+  color: #070707;
+}
+
+.account__header__buttons .icon-button {
+	border-radius: 0;
+	border-color: #070707;
+}
+
+.account__header__buttons .icon-button:hover, .account__header__buttons .icon-button:focus {
+	border-color: transparent;
+	background: #c5d882;
+}
+
+.button.button-secondary:hover, .button.button-secondary:focus {
+	background: #c5d882;
+	border-color: transparent;
+	}
+
+
+.status__quote {
+	border: 0px;
+    border-left: 4px solid #a72645;
+    padding: 5px 0px 5px 10px;
+    margin-left: 10px;
+	border-radius: 0;
+	background: #c5d882;
 }

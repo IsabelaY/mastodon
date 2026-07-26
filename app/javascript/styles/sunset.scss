@@ -9,6 +9,15 @@ $ui-secondary-color: $classic-secondary-color;
 $ui-base-color: $classic-base-color;
 $ui-highlight-color: #DF7925;
 
+$red-600: #df2525; 
+$red-500: #ee4f4f;
+$blurple-600: #b35a10; // Iris substitute
+$blurple-500: #df7925; // Brand purple substitute
+$blurple-400: #ee974f; // Medium slate blue substitute
+$blurple-300: #ffb77c; // Faded Blue substitute
+$grey-600: #5a5a5a;
+$grey-100: #ffd37c;
+
 @use 'mastodon/variables' with (
     $classic-base-color: $black,
     $classic-primary-color: $classic-primary-color,
@@ -18,6 +27,16 @@ $ui-highlight-color: #DF7925;
     $ui-base-color: $ui-base-color,
     $ui-primary-color: $ui-primary-color,
     $ui-secondary-color: $ui-secondary-color,
+  
+    //4.5 values
+	$red-600: $red-600, 
+	$red-500: $red-500,
+    $blurple-600: $blurple-600,
+    $blurple-500: $blurple-500,
+    $blurple-400: $blurple-400,
+    $blurple-300: $blurple-300,
+    $grey-600: $grey-600,
+    $grey-100: $grey-100,
 
     // Differences
     $ui-highlight-color: $ui-highlight-color,
@@ -47,7 +66,7 @@ P&B&Cinzas: #fff, #a3a3a3, #666, #5c5c5c, #5a5a5a, #333, #2b2b2b, #000 */
   src: local('Open Sans ExtraBold'),
     url('~fonts/opensans/OpenSans-ExtraBold.woff2') format('woff2'),
     url('~fonts/opensans/OpenSans-ExtraBold.ttf') format('truetype');
-  font-weight: bolder;
+  font-weight: 700;
   font-style: normal;
 }
 
@@ -92,7 +111,7 @@ P&B&Cinzas: #fff, #a3a3a3, #666, #5c5c5c, #5a5a5a, #333, #2b2b2b, #000 */
   src: local('Open Sans Regular'),
     url('~fonts/opensans/OpenSans-Regular.woff2') format('woff2'),
     url('~fonts/opensans/OpenSans-Regular.ttf') format('truetype');
-  font-weight: normal;
+  font-weight: 400;
   font-style: normal;
 }
 
@@ -101,27 +120,8 @@ P&B&Cinzas: #fff, #a3a3a3, #666, #5c5c5c, #5a5a5a, #333, #2b2b2b, #000 */
   src: local('Open Sans Italic'),
     url('~fonts/opensans/OpenSans-Italic.woff2') format('woff2'),
     url('~fonts/opensans/OpenSans-Italic.ttf') format('truetype');
-  font-weight: normal;
-  font-style: italic;
-}
-
-@font-face {
-  font-family: 'opensans';
-  src: local('Open Sans Regular'),
-    url('~fonts/opensans/OpenSans-Regular.woff2') format('woff2'),
-    url('~fonts/opensans/OpenSans-Regular.ttf') format('truetype');
-  font-weight: lighter;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'opensans';
-  src: local('Open Sans Italic'),
-    url('~fonts/opensans/OpenSans-Italic.woff2') format('woff2'),
-    url('~fonts/opensans/OpenSans-Italic.ttf') format('truetype');
-  font-weight: lighter;
-  font-style: italic;
-}
+  font-weight: 400;
+  font-style: italic; }
 
 @font-face {
   font-family: 'opensans';
@@ -240,7 +240,7 @@ body {
 }
 
 .dropdown-menu__separator, .actions-modal .dropdown-menu__separator, .actions-modal .status {
-    border-color: #B31010;
+    border-color: #FFD37C;
 }
 
 .dropdown-menu__arrow.bottom {
@@ -580,8 +580,12 @@ a.status-card.compact:hover {
     text-transform: uppercase;
 }
 
+.privacy-dropdown__dropdown, .language-dropdown__dropdown, .visibility-dropdown__dropdown {
+    border-color: #B35A10;
+}
+
 .emoji-mart-bar:first-child {
-    background: #FFF;
+    background: #000;
 }
 
 .emoji-mart-bar {
@@ -820,11 +824,12 @@ a.status-card.compact:hover {
 }
 
 .admin-wrapper .sidebar ul .simple-navigation-active-leaf a {
-    color: #000;
+    color: #fff;
 }
 
 .admin-wrapper .sidebar ul .simple-navigation-active-leaf a:hover {
     background-color: #FFD37C;
+    color: #000;
 }
 
 .simple_form input[type=text]::placeholder,
@@ -845,7 +850,7 @@ a.status-card.compact:hover {
     border-bottom: 2px solid #fff;
 }
 
-.simple_form button, .simple_form .button, .simple_form .block-button {
+.simple_form button, .simple_form .button, .simple_form .btn, .simple_form .block-button {
     color: #000;
 }
 
@@ -853,7 +858,7 @@ a.status-card.compact:hover {
     background-color: #FFF;
 }
 
-.simple_form button:hover, .simple_form .button:hover, .simple_form .block-button:hover {
+.simple_form button:hover, .simple_form .button:hover, .simple_form .block-button:hover, .simple_form .btn:hover, .simple_form .btn:focus {
     background-color: #FFD37C;
 }
 
@@ -1403,7 +1408,7 @@ a.sparkline:active, a.sparkline:focus, a.sparkline:hover {
 }
 
 .account__header__bio .account__header__fields dl {
-  border-bottom-color: #dfa125;
+  border-bottom-color: #8C3F00;
 }
 
 @media screen and (max-width: 1174px) {
@@ -1469,7 +1474,7 @@ a.sparkline:active, a.sparkline:focus, a.sparkline:hover {
     }
   }
 
-.button.button-secondary {
+.button.button-secondary, .link-button {
     color: #eeb94f;
     border-color: #eeb94f;
 }
@@ -1498,6 +1503,152 @@ a.sparkline:active, a.sparkline:focus, a.sparkline:hover {
     border-color: #DF7925;
 }
 
-.account__header__bar {
+.account__header__bar, .dropdown-menu, .language-dropdown__dropdown .emoji-mart-search input {
     border-color: #DF7925;
+}
+
+// 4.5 changes
+
+.flash-message {
+	color: #ffd37c;
+}
+
+.admin-wrapper .content {
+  background: rgba(0, 0, 0, 0.4666666667);
+}
+
+.detailed-status__meta__line {
+    border-color: #f1c46b;
+}
+
+.status, .notification__filter-bar, .account__header__bar, .account__section-headline {
+	background: #000;
+}
+
+.column > .scrollable {
+	border-color: transparent;
+}
+
+.dropdown-button, .compose-form__actions .icon-button {
+	color: #f1c46b;
+	border-color: #f1c46b;
+}
+
+.dropdown-button:hover, .compose-form__actions .icon-button:hover, .dropdown-button:focus, .compose-form__actions .icon-button:focus {
+	color: #fff;
+	border-color: transparent;
+	background-color: #3a3a3a;
+	border-radius: 4px;
+}
+
+.account__info-wrapper {
+  padding: 0.2rem;
+}
+
+.compose-form .autosuggest-textarea__textarea, .compose-form .spoiler-input__input {
+	color: #fff;
+}
+
+.dialog-modal__content {
+	background-color: #3a3a3a;
+}
+
+.language-dropdown__dropdown__results__item__common-name {
+	color: #f1c46b;
+}
+
+.autosuggest-textarea__suggestions__item:hover, .autosuggest-textarea__suggestions__item:focus, .privacy-dropdown__option:hover, .privacy-dropdown__option:active, .visibility-dropdown__option:hover, .visibility-dropdown__option:active {
+	background-color: #3a3a3a;
+}
+
+.autosuggest-textarea__suggestions__item.selected, .visibility-dropdown__option.active {
+	color: #000;
+}
+
+.visibility-dropdown__option.active:hover, .visibility-dropdown__option.active:focus, .autosuggest-textarea__suggestions__item.selected:hover, .autosuggest-textarea__suggestions__item.selected:focus {
+	background-color: #eeb94f;
+}
+
+.link-button:hover, .link-button:focus {
+	color: #fff;
+}
+
+.account__domain-pill {
+	color: #ffd37c;
+	background: #3a3a3a;
+}
+
+.dropdown-menu, .dropdown-menu a {
+  background: #3a3a3a;
+}
+
+.admin-wrapper .sidebar ul a:hover {
+  background: #000;
+}
+
+.admin-wrapper .content h4:first-child {
+  border-top: none;
+  margin-top: -1rem;
+}
+// não entendo a linha em cima das listas de hashtag, embora seja possível que tenha algum propósito.
+
+.more-from-author a:hover, .more-from-author a:focus, .more-from-author a:active {
+	color: #df7925;
+}
+
+.admin-wrapper .content__heading__tabs a.selected {
+	color: #000;
+}
+
+.compose-form .spoiler-input .autosuggest-input {
+	border-top: 1px solid #DF7925;
+	border-bottom: 1px solid #DF7925;
+}
+
+.compose-form .spoiler-input__border {
+	display: none;
+}
+
+button.load-more:hover, button.load-more:focus, button.load-more:active {
+  background: #8C0000;
+  color: #fff;
+}
+
+.compose-form__actions .icon-button.disabled, .compose-form__actions .icon-button.disabled:hover {
+  color: #a3a3a3;
+  opacity: 0.5;
+  background-color: transparent;
+}
+
+.compose-form .status__quote {
+	border-color: #f1c46b;
+}
+
+.emoji-mart-search input {
+	background-color: #000;
+}
+
+.emoji-mart-anchor-selected {
+	color: #fff;
+}
+
+.emoji-mart-anchor-bar {
+	background-color: #fff;
+}
+
+.content-warning {
+	border-color: #eeb94f;
+	color: #fff;
+}
+
+.status__quote {
+	border-color: #df7925;
+}
+
+.status__quote .status {
+	border-radius: 12px;
+}
+
+.status__quote-author-button {
+	background-color: #3a3a3a;
 }

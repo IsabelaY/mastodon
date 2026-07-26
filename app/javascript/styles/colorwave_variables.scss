@@ -10,11 +10,24 @@ $classic-highlight-color: #40177D;
 // Differences
 $success-green: #3c754d;
 
+$blurple-600: #40177d; // Iris substitute
+$blurple-500: #77f; // Brand purple substitute
+$blurple-400: #c8c8c8; // Medium slate blue substitute
+$blurple-300: #d0d0d0; // Faded Blue substitute
+$grey-600: #535353;
+$grey-100: #fff;
+
 @use 'mastodon/variables' with (
   $classic-base-color: $classic-base-color,
   $classic-primary-color: $classic-primary-color,
   $classic-secondary-color: $classic-secondary-color,
   $classic-highlight-color: $classic-highlight-color,
+    $blurple-600: $blurple-600,
+    $blurple-500: $blurple-500,
+    $blurple-400: $blurple-400,
+    $blurple-300: $blurple-300,
+    $grey-600: $grey-600,
+    $grey-100: $grey-100,
 
   // Differences
   $success-green: $success-green,

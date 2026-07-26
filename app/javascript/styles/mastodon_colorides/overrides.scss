@@ -658,13 +658,12 @@ color: #d2cedf;
 }
 
 .rich-formatting li, .rich-formatting p {
-
     color: #f8f8f8;
 }
 
 .public-layout .header .nav-button {
-background: #1d0b53;
-border-radius: 0px;
+	background: #1d0b53;
+	border-radius: 0px;
 }
 
 .public-layout .header .nav-link {
@@ -672,11 +671,11 @@ border-radius: 0px;
 }
 
 .button {
-border-radius: 0px;
+	border-radius: 0px;
 }
 
 .public-layout {
-border-radius: 0px;
+	border-radius: 0px;
 }
 
 .account__header__fields dl {
@@ -1686,6 +1685,7 @@ button.icon-button i.fa-retweet:hover {
 
 .simple_form input[type="email"]:hover, .simple_form input[type="number"]:hover, .simple_form input[type="password"]:hover, .simple_form input[type="text"]:hover, .simple_form select:hover, .simple_form textarea:hover, .flash-message.warning {
 	border-color: transparent;
+	background: #3a277d;
 }
 
 .explore__search-header .search__input::placeholder {
@@ -2230,4 +2230,105 @@ kbd {
 
 .admin-wrapper .content h4 {
     border-top: none;
+}
+
+// 21/07/2026 more 4.5.11 tweaks (:
+
+.dashboard__quick-access {
+  background: #3a277d;
+}
+
+.dashboard__quick-access:hover, .dashboard__quick-access:focus {
+  background: rgb(23, 9, 65);
+}
+
+.simple_form textarea:active, .simple_form textarea:focus, .simple_form input[type="email"]:active, .simple_form input[type="number"]:active, .simple_form input[type="password"]:active, .simple_form input[type="text"]:active, .simple_form input[type="email"]:focus, .simple_form input[type="number"]:focus, .simple_form input[type="password"]:focus, .simple_form input[type="text"]:focus {
+	border: 2px solid #30ddef;
+}
+
+.language-dropdown__dropdown__results__item:focus, .language-dropdown__dropdown__results__item.active {
+	background: #3a277d;
+}
+
+.dropdown-button.active {
+	background: rgb(23, 9, 65);
+	color: #58D9BA;
+}
+
+.language-dropdown__dropdown .emoji-mart-search input {
+	color: #f8f8f8;
+	border: 1px solid #58D9BA;
+}
+
+.language-dropdown__dropdown .emoji-mart-scroll, .language-dropdown__dropdown .emoji-mart-search {
+	background: rgb(23, 9, 65);
+}
+
+.privacy-dropdown__dropdown, .language-dropdown__dropdown, .visibility-dropdown__dropdown, .emoji-mart-scroll, .emoji-mart-search, .emoji-picker-dropdown__menu {
+	box-shadow: none;
+	border-color: transparent;
+	background: rgb(23, 9, 65);
+}
+
+.emoji-mart-no-results {
+	color: #ccc;
+}
+
+.emoji-mart-category-label span {
+	background: transparent;
+}
+
+.account__header__content a {
+	color: #30ddef;
+}
+
+.autosuggest-textarea__suggestions {
+	border-color: transparent;
+}
+
+.autosuggest-textarea__suggestions__item.selected, .autosuggest-textarea__suggestions__item:hover, .autosuggest-textarea__suggestions__item:focus, .autosuggest-textarea__suggestions__item:active {
+	background: #3a277d;
+}
+
+.autosuggest-textarea__suggestions__item:hover, .autosuggest-textarea__suggestions__item:focus, .autosuggest-textarea__suggestions__item:active {
+	border: 1px solid #30ddef;
+	color: #30ddef;
+}
+
+.autosuggest-textarea__suggestions__item:first-child, .autosuggest-textarea__suggestions__item:last-child {
+	border-radius: 0;
+}
+
+.hashtag-header {
+	border-color: transparent;
+	background: #1d0b53;
+	color: #ccc;
+}
+
+.hashtag-header__header__buttons .icon-button, .search.active .search__input {
+	border-radius: 0;
+}
+
+.hashtag-header__header h1 {
+	color: #58D9BA;
+}
+
+.search__popout, .status__quote-author-button {
+	border-color: transparent;
+	border-radius: 0;
+}
+
+.search__popout__menu__message, .detailed-status__meta .animated-number {
+	color: #f8f8f8;
+}
+
+// quotes. does it ever end
+
+.status__quote {
+	border: 0px;
+    border-left: 4px solid #58d9ba;
+    padding: 5px 0px 5px 10px;
+    margin-left: 10px;
+	border-radius: 0;
+	background: #3a277d;
 }

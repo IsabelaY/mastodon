@@ -11,11 +11,26 @@ $classic-highlight-color: #2bd8b3;
 $success-green: #3c754d;
 $ui-base-color: $classic-secondary-color;
 
+$blurple-600: hsl(169,58.9%,51.4%); // Iris at 169
+$blurple-500: hsl(169,100%,42.9%); // darkened brand purple at 
+$blurple-400: hsl(157,97.2%,72.4%); // Medium slate blue at 157
+$blurple-300: hsl(157,92.1%,75.1%); // Faded Blue at 
+$grey-600: hsl(157deg, 8%, 33%); // Trout at 157
+$grey-100: hsl(157deg, 51%, 90%); // Topaz at 
+
 @use 'mastodon/variables' with (
   $classic-base-color: $classic-base-color,
   $classic-primary-color: $classic-primary-color,
   $classic-secondary-color: $classic-secondary-color,
   $classic-highlight-color: $classic-highlight-color,
+  
+  //4.5 values
+  $blurple-600: $blurple-600,
+  $blurple-500: $blurple-500,
+  $blurple-400: $blurple-400,
+  $blurple-300: $blurple-300,
+  $grey-600: $grey-600,
+  $grey-100: $grey-100,
 
   // Differences
   $success-green: $success-green,
@@ -45,6 +60,10 @@ $ui-base-color: $classic-secondary-color;
 @use 'mastodon-light/diff';
 
 // tons (hues) usados neste tema: 157, 169
+
+body {
+	background-color: hsl(157deg, 51%, 90%);
+} // apenas para configs/admin
 
 // deixar cor de mídia escondida sem blurhash diferente do fundo, mas sem deixar muito escura
 
@@ -94,7 +113,7 @@ div.quote, .reply-indicator__content .status__content__text blockquote, .status_
 // melhoras no menu da interface de somente uma coluna
 
 .navigation-panel {
-    background: #f7fcfa;
+    background: #f7fcfa77;
 }
 
 .column-link--transparent:hover, .column-link--transparent:focus, .column-link--transparent:active {
@@ -294,13 +313,13 @@ html {
 
 // 17/11/2024
 
-.button, .simple_form .block-button, .simple_form .button, .simple_form button {
+.button, .simple_form .block-button, .simple_form .button, .simple_form button, .simple_form .btn {
   color: #fff;
   background: #00827d;
   border-color: #00827d;
 }
 
-.button:hover, .button:focus, .simple_form .block-button:hover, .simple_form .button:hover, .simple_form button:hover, .simple_form .block-button:focus, .simple_form .button:focus, .simple_form button:focus {
+.button:hover, .button:focus, .simple_form .block-button:hover, .simple_form .button:hover, .simple_form button:hover, .simple_form .block-button:focus, .simple_form .button:focus, .simple_form button:focus simple_form .btn:hover, simple_form .btn:focus {
   background: #004f4c;
   border-color: #004f4c;
 }
@@ -317,3 +336,89 @@ html {
   border-color: #00827d;
 }
 
+//4.5 stuff
+
+.flash-message, .simple_form .recommended {
+	background-color: #28383211;
+	color: #283832;
+	border-color: #283832;
+}
+
+.admin-wrapper .sidebar ul .simple-navigation-active-leaf a {
+	color: #000;
+	font-weight: 700;
+}
+
+.simple_form input[type="text"], .simple_form input[type="number"], .simple_form input[type="email"], .simple_form input[type="password"], .simple_form input[type="url"], .simple_form input[type="datetime-local"], .simple_form textarea {
+	background-color: #f7fcfa;
+}
+
+.dashboard__quick-access {
+	color: #000;
+	background-color: #a2f5d6;
+}
+
+.status {
+  background: #f7fcfa;
+  }
+
+.column-header {
+	border-color: transparent;
+}
+
+.notification__filter-bar, .account__section-headline {
+  background-color: #f7fcfa;
+}
+
+.account__avatar {
+	background: transparent;
+}
+
+// 24/06/26 4.5 stuff cont
+
+.column-link.active {
+	color: #00827d;
+}
+
+.compose-form .autosuggest-textarea__textarea, .compose-form .spoiler-input__input, .filter-form {
+  color: #000;
+  background: #f7fcfa;
+}
+
+.compose-form__highlightable {
+  background: #f7fcfa77;
+}
+
+.dropdown-button, .compose-form__actions .icon-button {
+	border-color: #00827d;
+	color: #00827d;
+}
+
+.dropdown-button:hover, .dropdown-button:focus, .compose-form__actions .icon-button:hover, .compose-form__actions .icon-button:focus, .compose-form__actions .icon-button:active {
+	background-color: #00827d;
+	color: #fff;
+}
+
+.language-dropdown__dropdown .emoji-mart-search, .language-dropdown__dropdown .emoji-mart-scroll, .emoji-picker-dropdown__menu {
+	background-color: #f7fcfa;
+}
+
+.emoji-mart-search input, .language-dropdown__dropdown .emoji-mart-search input, .poll__option input[type="text"] {
+	background-color: #d9fbee;
+}
+
+.emoji-mart-category .emoji-mart-emoji:hover::before {
+	background-color: hsl(169,58.9%,51.4%);
+}
+
+.dialog-modal {
+	background: #eff9f5;
+}
+
+.admin-wrapper .sidebar-wrapper__inner {
+  background: #f7fcfa;
+}
+
+.admin-wrapper .sidebar ul ul {
+	background-color: #d8f3e9;
+}

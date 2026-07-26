@@ -9,14 +9,14 @@ $roxo-destaque: #9c77c2;
 $classic-base-color: #705480 !default;
 $classic-primary-color: #AE8CD1 !default;
 $classic-secondary-color: #dfc9f2 !default;
-$classic-highlight-color: #0070B2 !default;
+$classic-highlight-color: #705480 !default;
 $emojis-requiring-inversion: 'chains';
 
 $ui-base-color: $classic-secondary-color !default;
 $ui-base-lighter-color: #AE8CD1;
 $ui-primary-color: #F7EFFF;
 $ui-secondary-color: $classic-base-color !default;
-$ui-highlight-color: #0070B2;
+$ui-highlight-color: #705480;
 
 $primary-text-color: #000 !default;
 $darker-text-color: $classic-base-color !default;
@@ -26,6 +26,13 @@ $action-button-color: #705480;
 $inverted-text-color: #000 !default;
 $lighter-text-color: $classic-base-color !default;
 $light-text-color: #694E78;
+
+$blurple-600: #705480; // Iris substitute
+$blurple-500: #9c77c2; // Brand purple substitute
+$blurple-400: #AE8CD1; // Medium slate blue substitute
+$blurple-300: #dfc9f2; // Faded Blue substitute
+$grey-600: #705480;
+$grey-100: #F7EFFF;
 //fim das mudanças
 
 @use 'mastodon/variables' with (
@@ -34,6 +41,12 @@ $light-text-color: #694E78;
   $classic-secondary-color: $classic-secondary-color,
   $classic-highlight-color: $classic-highlight-color,
   $emojis-requiring-inversion: $emojis-requiring-inversion,
+    $blurple-600: $blurple-600,
+    $blurple-500: $blurple-500,
+    $blurple-400: $blurple-400,
+    $blurple-300: $blurple-300,
+    $grey-600: $grey-600,
+    $grey-100: $grey-100,
 
   $ui-base-color: $ui-base-color,
   $ui-base-lighter-color: $ui-base-lighter-color,
@@ -447,11 +460,6 @@ $light-text-color: #694E78;
 .search-results__section > div:last-child .status
   {
     border-bottom: none !important;
-  }
-
-  .status
-  {
-    border-bottom: 1px solid rgba(112, 84, 128, .5) !important;
   }
 
 
@@ -1483,7 +1491,8 @@ a.status-card.compact:hover
 .flash-message
 {
   background: #393f4f;
-  color: #9baec8;
+  color: #694E78;
+  border-color: #694E78;
 }
 
 .flash-message.notice
@@ -2417,7 +2426,7 @@ button.icon-button.disabled i.fa-retweet
   background-color: #9C77C2;
 }
 
-.boost-modal, .confirmation-modal, .report-modal, .actions-modal, .mute-modal, .block-modal, .compare-history-modal
+.dialog-modal, .boost-modal, .confirmation-modal, .report-modal, .actions-modal, .mute-modal, .block-modal, .compare-history-modal
 {
   background: #FBF6FF;
   color: #705480;
@@ -4689,10 +4698,6 @@ a.table-action-link:hover, button.table-action-link:hover {
   border: 1px solid #9c77c277;
 }
 
-.compose-form {
-    background: #fbf6ff;
-}
-
 .getting-started__footer {
     background: #fbf6ff;
     margin-bottom: 10px;
@@ -5391,4 +5396,65 @@ a.sparkline:active, a.sparkline:focus, a.sparkline:hover {
   border-color: #ae8cd1;
   background-color: #ae8cd1;
   color: #fff;
+}
+
+// 4.5 (26/jul/26)
+
+.compose-form__highlightable {
+	background: #fff;
+}
+
+.dropdown-button.active {
+	color: #fff;
+}
+
+.compose-panel {
+    background: #fbf6ff;
+    border-radius: 8px;
+}
+
+.link-footer, .compose-form__highlightable, .navigation-bar, .reply-indicator {
+	margin: 0.5rem;
+}
+
+.reply-indicator {
+	padding: 0.2rem;
+}
+
+.reply-indicator__line::before, .privacy-dropdown__dropdown, .visibility-dropdown__dropdown, .language-dropdown__dropdown .emoji-mart-search, .language-dropdown__dropdown .emoji-mart-scroll {
+	background-color: #f0e3fd;
+}
+
+.compose-form .spoiler-input__border {
+	display: none;
+}
+
+.privacy-dropdown__option:focus, .privacy-dropdown__option.active, .visibility-dropdown__option:focus, .visibility-dropdown__option.active {
+	background: #fff;
+}
+
+.account__domain-pill {
+	color: #fff;
+}
+
+.account-role {
+	background-color: #fff9;
+	color: #313543;
+}
+
+.status
+  {
+    border-bottom-color: rgba(112, 84, 128, .5);
+  }
+
+.status__quote {
+	border-color: rgba(112, 84, 128, .5);
+}
+
+.status__quote .status {
+	border-color: transparent;
+}
+
+.dropdown-menu__item a:focus:not(:disabled):not([aria-disabled="true"]), .dropdown-menu__item a:hover:not(:disabled):not([aria-disabled="true"]), .dropdown-menu__item a:active:not(:disabled):not([aria-disabled="true"]), .dropdown-menu__item button:focus:not(:disabled):not([aria-disabled="true"]), .dropdown-menu__item button:hover:not(:disabled):not([aria-disabled="true"]), .dropdown-menu__item button:active:not(:disabled):not([aria-disabled="true"]) {
+	background-color: #705480;
 }
