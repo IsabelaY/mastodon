@@ -11,7 +11,7 @@
 
 //Fix buttons
 
-.button, .button.logo-button, .simple_form .block-button, .simple_form .button, .simple_form button {
+.button, .button.logo-button, .simple_form .block-button, .simple_form .button, .simple_form button, .simple_form .btn {
     background-color: #A81F56;
 
     &:hover, &:focus, &:active {
@@ -159,6 +159,8 @@ button.icon-button i.fa-retweet {
 
 .admin-wrapper .sidebar ul .simple-navigation-active-leaf a.selected {
     color: #fff;
+    background-color: hsl(335.1,58.9%,51.4%);
+	border-radius: 4px 0 0 4px;
 }
 
 //28/05/2018
@@ -270,3 +272,29 @@ pre {
     background: #AC2058;
     color: #fff;
   }
+
+//4.5 changes
+
+.flash-message {
+	background-color: rgba(243,216,227, 0.2);
+}
+
+.admin-wrapper .sidebar ul a:hover {
+	background-color: rgb(243,216,227);
+	border-radius: 4px 0 0 4px;
+}
+.status {
+  background: #fbdae8;
+  }
+
+.column-header {
+	border-color: transparent;
+}
+
+.notification__filter-bar, .account__section-headline {
+  background-color: #fbdae8;
+}
+
+.account__avatar {
+	background: transparent;
+}
