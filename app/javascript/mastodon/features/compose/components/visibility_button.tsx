@@ -15,6 +15,7 @@ import type { StatusVisibility } from '@/mastodon/api_types/statuses';
 import { Icon } from '@/mastodon/components/icon';
 import { useAppSelector, useAppDispatch } from '@/mastodon/store';
 import AlternateEmailIcon from '@/material-icons/400-24px/alternate_email.svg?react';
+import GroupIcon from '@/material-icons/400-24px/group.svg?react';
 import LockIcon from '@/material-icons/400-24px/lock.svg?react';
 import PublicIcon from '@/material-icons/400-24px/public.svg?react';
 import QuietTimeIcon from '@/material-icons/400-24px/quiet_time.svg?react';
@@ -52,6 +53,12 @@ const visibilityOptions = {
     iconComponent: PublicIcon,
     value: 'public',
     text: privacyMessages.public_short,
+  },
+  local: {
+    icon: 'group',
+    iconComponent: GroupIcon,
+    value: 'local',
+    text: privacyMessages.local_short,
   },
   unlisted: {
     icon: 'unlock',
