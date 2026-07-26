@@ -295,6 +295,10 @@ class TextFormatter
           :quick_param_format => /(\d+)/,
           :quick_param_format_description => 'The size parameter \'%param%\' is incorrect, a number is expected',
           :param_tokens => [{:token => :size}]},
+        :quote => {
+          :html_open => '<blockquote class="quote">', :html_close => '</blockquote>',
+          :description => 'Quote text',
+          :example => '[quote]quoted text[/quote].'},
         :url => {
           :html_open => '<a target="_blank" rel="nofollow noopener" href="%url%">%between%', :html_close => '</a>',
           :description => 'Link to another page',

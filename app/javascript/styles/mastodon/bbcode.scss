@@ -10,9 +10,10 @@
     font-feature-settings: "ital";
 }
 
-div.quote {
+blockquote.quote {
   border: solid $darker-text-color 1px;
   margin-left: 20px;
+  display: block;
 }
 
 pre {
