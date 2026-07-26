@@ -5,7 +5,7 @@ module Status::Visibility
 
   included do
     enum :visibility,
-         { public: 0, unlisted: 1, private: 2, direct: 3, limited: 4 },
+         { public: 0, local: 5, unlisted: 1, private: 2, direct: 3, limited: 4 },
          suffix: :visibility,
          validate: true
 

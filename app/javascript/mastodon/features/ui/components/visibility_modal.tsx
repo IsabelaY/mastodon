@@ -17,6 +17,7 @@ import { messages as privacyMessages } from '@/mastodon/features/compose/compone
 import { createAppSelector, useAppSelector } from '@/mastodon/store';
 import AlternateEmailIcon from '@/material-icons/400-24px/alternate_email.svg?react';
 import CloseIcon from '@/material-icons/400-24px/close.svg?react';
+import GroupIcon from '@/material-icons/400-24px/group.svg?react';
 import LockIcon from '@/material-icons/400-24px/lock.svg?react';
 import PublicIcon from '@/material-icons/400-24px/public.svg?react';
 import QuietTimeIcon from '@/material-icons/400-24px/quiet_time.svg?react';
@@ -161,6 +162,13 @@ export const VisibilityModal: FC<VisibilityModalProps> = forwardRef(
             meta: intl.formatMessage(privacyMessages.public_long),
             icon: 'globe',
             iconComponent: PublicIcon,
+          },
+          {
+            value: 'local',
+            text: intl.formatMessage(privacyMessages.local_short),
+            meta: intl.formatMessage(privacyMessages.local_long),
+            icon: 'users',
+            iconComponent: GroupIcon,
           },
           {
             value: 'unlisted',
