@@ -201,14 +201,14 @@ button.icon-button i.fa-retweet {
     background: #fff;
 }
 
-div.quote, .reply-indicator__content .status__content__text blockquote, .status__content .status__content__text blockquote {
+/* div.quote, .reply-indicator__content .status__content__text blockquote, .status__content .status__content__text blockquote {
     border-top: 0px;
     border-bottom: 0px;
     border-right: 0px;
     border-left: 4px solid #a81f56;
     padding-left: 10px;
     margin-left: 15px;
-}
+} */
 
 pre {
     font-family: Consolas, Monospace, Courier;
@@ -297,4 +297,21 @@ pre {
 
 .account__avatar {
 	background: transparent;
+}
+
+blockquote.quote {
+	border: none;
+}
+
+.status__content__text blockquote, .e-content blockquote, .edit-indicator__content blockquote, .reply-indicator__content blockquote {
+	color: #382833;
+}
+
+.status--is-quote {
+  border-radius: 12px;
+  background-color: #f9c8dc;
+}
+
+.compose-form .spoiler-input__border {
+	display: none;
 }

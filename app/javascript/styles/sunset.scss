@@ -1652,3 +1652,11 @@ button.load-more:hover, button.load-more:focus, button.load-more:active {
 .status__quote-author-button {
 	background-color: #3a3a3a;
 }
+
+.status__content__text blockquote::before, .e-content blockquote::before, .edit-indicator__content blockquote::before, .reply-indicator__content blockquote::before {
+	display: none;
+}
+
+.status__content__text blockquote, .e-content blockquote, .edit-indicator__content blockquote, .reply-indicator__content blockquote {
+	color: #ffd37c;
+}

@@ -97,9 +97,9 @@ pre {
 
 div.quote, .reply-indicator__content .status__content__text blockquote, .status__content .status__content__text blockquote {
 	border: 0px;
-    border-left: 3px solid #00827d;
-    padding: 5px 0px 5px 7px;
-    margin-left: 10px;
+//    border-left: 3px solid #00827d;
+//    padding: 5px 0px 5px 7px;
+//    margin-left: 10px;
 }
 
 
@@ -421,4 +421,22 @@ html {
 
 .admin-wrapper .sidebar ul ul {
 	background-color: #d8f3e9;
+}
+
+// quotes quotes quotes
+
+.status--is-quote {
+	background-color: #eff9f5;
+}
+
+blockquote.quote {
+	color: #004f4c;
+}
+
+.status__content__text blockquote::before, .e-content blockquote::before, .edit-indicator__content blockquote::before, .reply-indicator__content blockquote::before {
+	background-color: hsl(169,58.9%,51.4%);
+}
+
+.compose-form .spoiler-input__border {
+	display: none;
 }

@@ -4737,10 +4737,10 @@ a.table-action-link:hover, button.table-action-link:hover {
 
 div.quote, .reply-indicator__content .status__content__text blockquote, .status__content .status__content__text blockquote {
     border: 0px;
-    border-left: 4px solid #dfc9f2;
-    padding: 5px 0px 5px 10px;
-    border-radius: 4px;
-    margin-left: 10px;
+//    border-left: 4px solid #dfc9f2;
+//    padding: 5px 0px 5px 10px;
+//    border-radius: 4px;
+//    margin-left: 10px;
 }
 
 pre {
@@ -5457,4 +5457,12 @@ a.sparkline:active, a.sparkline:focus, a.sparkline:hover {
 
 .dropdown-menu__item a:focus:not(:disabled):not([aria-disabled="true"]), .dropdown-menu__item a:hover:not(:disabled):not([aria-disabled="true"]), .dropdown-menu__item a:active:not(:disabled):not([aria-disabled="true"]), .dropdown-menu__item button:focus:not(:disabled):not([aria-disabled="true"]), .dropdown-menu__item button:hover:not(:disabled):not([aria-disabled="true"]), .dropdown-menu__item button:active:not(:disabled):not([aria-disabled="true"]) {
 	background-color: #705480;
+}
+
+blockquote.quote {
+	color: #313543;
+}
+
+.status__content__text blockquote::before, .e-content blockquote::before, .edit-indicator__content blockquote::before, .reply-indicator__content blockquote::before {
+	background-color: #dfc9f2;
 }
