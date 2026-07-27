@@ -1263,7 +1263,7 @@ body.lighter {
     margin-left: 10px;
 }
 
-div.quote, .reply-indicator__content .status__content__text blockquote, .status__content .status__content__text blockquote {
+div.quote, blockquote.quote, .reply-indicator__content .status__content__text blockquote, .status__content .status__content__text blockquote {
     border: 0px;
     border-left: 4px solid #58d9ba;
     padding: 5px 0px 5px 10px;
@@ -2322,6 +2322,16 @@ kbd {
 	color: #f8f8f8;
 }
 
+.content-warning {
+	color: #fff;
+}
+
+.compose-form__poll {
+	background: #1d0b53;
+	padding: 0.5rem 0;
+	margin-bottom: 0.5rem;
+}
+
 // quotes. does it ever end
 
 .status__quote {
@@ -2331,4 +2341,27 @@ kbd {
     margin-left: 10px;
 	border-radius: 0;
 	background: #3a277d;
+}
+
+.status__content__text blockquote::before {
+	display: none;
+}
+
+.status__content__text blockquote, .e-content blockquote, .edit-indicator__content blockquote, .reply-indicator__content blockquote {
+	color: #dadada;
+}
+
+.status__content__text blockquote::before, .e-content blockquote::before, .edit-indicator__content blockquote::before, .reply-indicator__content blockquote::before {
+	background-color: #58D9BA;
+}
+
+.reply-indicator__content blockquote, .e-content blockquote, .edit-indicator__content blockquote {
+	border: none;
+	padding: 0px 30px;
+}
+
+.dropdown-button[disabled] {
+	background: #3a277d;
+	border-color: transparent;
+	color: #fff;
 }

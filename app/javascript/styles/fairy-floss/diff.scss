@@ -788,3 +788,12 @@ a.mention,
   .language-dropdown__dropdown__results__item__common-name {
   background-color: $coral;
 }
+
+// Aster's fixes (v 4.5.11):
+blockquote.quote {
+	border: none;
+}
+
+.status__content__text blockquote, .e-content blockquote, .edit-indicator__content blockquote, .reply-indicator__content blockquote {
+	color: $secondary-text-color;
+}

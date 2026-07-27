@@ -2348,7 +2348,7 @@ kbd {
 	color: #a72645;
 }
 
-.search__popout {
+.search__popout, .privacy-dropdown__option, .visibility-dropdown__option {
 	border-color: transparent;
 	border-radius: 0;
 }
@@ -2391,6 +2391,19 @@ kbd {
 	border-color: transparent;
 	}
 
+.content-warning {
+	color: #000;
+}
+
+.compose-form__poll {
+	background: #e8f6be;
+	padding: 0.5rem 0;
+	margin-bottom: 0.5rem;
+}
+
+
+// quotes. does it ever end
+
 
 .status__quote {
 	border: 0px;
@@ -2399,4 +2412,55 @@ kbd {
     margin-left: 10px;
 	border-radius: 0;
 	background: #c5d882;
+}
+
+.status__content__text blockquote::before {
+	display: none;
+}
+
+.status__content__text blockquote, .e-content blockquote, .edit-indicator__content blockquote, .reply-indicator__content blockquote {
+	color: #2b2b2b;
+}
+
+.status__content__text blockquote::before, .e-content blockquote::before, .edit-indicator__content blockquote::before, .reply-indicator__content blockquote::before {
+	background-color: #a72645;
+}
+
+.reply-indicator__content blockquote, .e-content blockquote, .edit-indicator__content blockquote {
+	border: none;
+	padding: 0px 30px;
+}
+
+.dropdown-button[disabled], .emoji-mart-search input, .language-dropdown__dropdown .emoji-mart-search input, .poll__option input[type="text"] {
+	background: #c5d882;
+	border-color: transparent;
+	color: #000;
+}
+
+.compose-form__poll .poll__input {
+	border-color: #a72645;
+}
+
+.dialog-modal__content__description, .privacy-dropdown__option__content, .visibility-dropdown__option__content {
+	color: #070707;
+}
+
+.privacy-dropdown__option:hover, .privacy-dropdown__option:active, .visibility-dropdown__option:hover, .visibility-dropdown__option:active {
+	background-color: #c5d882;
+}
+
+.status__quote-author-button {
+	background: #e8f6be;
+	color: #333;
+	border-radius: 0;
+}
+
+.flash-message a {
+	color: #cf2210;
+}
+
+.simple_form .btn:active, .simple_form .btn:focus, .simple_form .btn:hover {
+	color: #cf2210;
+	border: 1px solid #cf2210;
+	background: #e8f6be;
 }
