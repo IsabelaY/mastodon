@@ -289,15 +289,15 @@ background-color: rgba(23, 9, 65, 0.8)
 
 .account__header__fields dt, .account__action-bar__tab>span, .activity-stream .detailed-status.light .detailed-status__display-name .display-name span
 {
-    background: transparent !important;
-	color: #58d9ba !important;
+    background: transparent;
+	color: #58d9ba;
     max-height: 77px;
     white-space: normal;
 }
 .account__header__fields dd, .account__disclaimer, .dropdown-menu__item a, .empty-column-indicator, .error-column, .column-header__collapsible a:hover
 {
-    background: transparent !important;
-	color: #f8f8f8 !important;
+    background: transparent;
+	color: #f8f8f8;
     max-height: 77px;
     white-space: normal;
 }
@@ -310,7 +310,7 @@ body.error, .landing-page .information-board, .landing-page .information-board .
 
  .compose-form__buttons-wrapper, .compose-form__modifiers, .compose-form__autosuggest-wrapper, .autosuggest-textarea, .autosuggest-textarea__textarea, .spoiler-input__input, .autosuggest-textarea__suggestions, .dropdown-menu__item
 {
-    background-color: rgb(23, 9, 65) !important;
+    background-color: rgb(23, 9, 65);
         border-radius: 0px !important;
 }
 
@@ -2412,11 +2412,49 @@ kbd {
   color: #f8f8f8;
 }
 
-.hover-card__numbers {
+.hover-card__numbers, .explore__search-header .search__icon {
   color: #ccc;
 }
 
 .button.button-secondary.button--destructive:active, .button.button-secondary.button--destructive:focus, .button.button-secondary.button--destructive:hover {
   border-color: #fbf759;
   color: #fbf759;
+}
+
+.privacy-dropdown__option:focus, .privacy-dropdown__option.active, .visibility-dropdown__option:focus, .visibility-dropdown__option.active, .visibility-dropdown__option:hover, .privacy-dropdown__option:hover {
+	border-radius: 0;
+	background-color: #3a277d;
+}
+
+.dialog-modal__content__description, .search__input, .edit-indicator__content {
+	color: #f8f8f8;
+}
+
+.search__popout__menu__item {
+	color: #dadada;
+}
+.visibility-dropdown__helper, .app-form__toggle__label .hint {
+  color: #dadada;
+}
+
+.column-settings section {
+	border-color: transparent;
+}
+
+.column-settings section:nth-child(2) {
+	background-color: #3a277d;
+}
+
+.column-header__wrapper.active::before {
+  width: 100%;
+  height: 14px;
+  background: linear-gradient(#f6515677, #f87b4a77, #fba23e77, #fece3377, #fff72977, #9fee4377, #3cfe5777, #58d9ba77, #30ddef77, #5680e777, #754efb77, #bc57b477);
+}
+
+.columns-area--mobile .column > .scrollable .compose-form .autosuggest-textarea__textarea, .columns-area--mobile .column > .scrollable .compose-form .spoiler-input__input, .columns-area--mobile .column > .scrollable .compose-form .spoiler-input__border {
+  background-color: #000;
+}
+
+.content-warning--filter .filter-name {
+  color: #58D9BA;
 }

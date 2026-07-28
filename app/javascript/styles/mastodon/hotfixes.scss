@@ -1,0 +1,6 @@
+@media (max-height: 850px) {
+.dialog-modal, .boost-modal, .confirmation-modal, .report-modal, .actions-modal, .mute-modal, .block-modal, .compare-history-modal {
+  top: 0;
+  position: absolute;
+  }
+}

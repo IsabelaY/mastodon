@@ -5479,7 +5479,12 @@ blockquote.quote {
 	color: #705480;
 }
 
+.button.button-secondary {
+  border-color: #ae8cd1;
+  color: #ae8cd1;
+  background-color: #0007;
+}
+
 .button.button-secondary.button--destructive:active, .button.button-secondary.button--destructive:focus, .button.button-secondary.button--destructive:hover {
   background: #fcf8ff;
 }
-
