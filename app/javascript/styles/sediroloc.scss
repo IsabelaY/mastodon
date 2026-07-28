@@ -2109,7 +2109,7 @@ a:focus {
 
 .spoiler-input__border {
   background-image: none !important;
-  background-color: #e8f6be !important;
+  background-color: #e8f6be;
 }
 
 .spoiler-input {
@@ -2266,7 +2266,7 @@ kbd {
     border-radius: 0;
 }
 
-.visibility-dropdown__dropdown, .language-dropdown__dropdown {
+.visibility-dropdown__dropdown, .language-dropdown__dropdown, .privacy-dropdown__dropdown, .language-dropdown__dropdown, .visibility-dropdown__dropdown {
     box-shadow: none;
     border-radius: 0;
     border-color: transparent;
@@ -2369,7 +2369,7 @@ kbd {
 	color: #070707;
 }
 
-.more-from-author {
+.more-from-author, .dropdown-button.active {
   border-radius: 0;
   background: #c5d882;
   border-color: transparent;
@@ -2533,4 +2533,26 @@ kbd {
 
 .admin-wrapper .sidebar__toggle__icon {
 	color: #070707;
+}
+
+.column-header__wrapper.active::before {
+  width: 100%;
+  height: 14px;
+  background: linear-gradient(#f6515677, #f87b4a77, #fba23e77, #fece3377, #fff72977, #9fee4377, #3cfe5777, #58d9ba77, #30ddef77, #5680e777, #754efb77, #bc57b477);
+}
+
+.app-form__toggle__label .hint, .search__icon {
+  color: #333;
+}
+
+.privacy-dropdown__option:focus, .privacy-dropdown__option.active, .visibility-dropdown__option:focus, .visibility-dropdown__option.active {
+  --dropdown-text-color: #000;
+}
+
+.columns-area--mobile .column > .scrollable .compose-form .autosuggest-textarea__textarea, .columns-area--mobile .column > .scrollable .compose-form .spoiler-input__input, .columns-area--mobile .column > .scrollable .compose-form .spoiler-input__border {
+  background-color: #fff;
+}
+
+.content-warning--filter .filter-name {
+  color: #a72645;
 }

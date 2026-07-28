@@ -2994,3 +2994,12 @@ blockquote.quote {
 .hover-card .account-fields dl dt, .hover-card .display-name span {
 	color: #ddd;
 }
+
+.privacy-dropdown__option:focus, .privacy-dropdown__option.active, .visibility-dropdown__option:focus, .visibility-dropdown__option.active {
+	color: #000;
+}
+
+.compose-form .spoiler-input__input {
+	padding: 12px;
+	font-size: 16px;
+}

@@ -5,6 +5,13 @@ $ui-primary-color: #9bcbed;
 $ui-secondary-color: #ba8d98;
 $ui-highlight-color: #CC7AFF;
 
+$blurple-600: #322a4f; // Iris substitute
+$blurple-500: #CC7AFF; // Brand purple substitute
+$blurple-400: #4d417a; // Medium slate blue substitute
+$blurple-300: #ba8d98; // Faded Blue substitute
+$grey-600: #885b8c;
+$grey-100: #9bcbed;
+
 @use 'mastodon/variables' with (
     $classic-base-color: $classic-base-color,
     $ui-base-color: $ui-base-color,
@@ -12,6 +19,12 @@ $ui-highlight-color: #CC7AFF;
     $ui-primary-color: $ui-primary-color,
     $ui-secondary-color: $ui-secondary-color,
     $ui-highlight-color: $ui-highlight-color,
+    $blurple-600: $blurple-600,
+    $blurple-500: $blurple-500,
+    $blurple-400: $blurple-400,
+    $blurple-300: $blurple-300,
+    $grey-600: $grey-600,
+    $grey-100: $grey-100,
 );
 
 @use 'application';
@@ -105,3 +118,15 @@ $ui-highlight-color: #CC7AFF;
 blockquote.quote {
 	border-color: transparent;
 }
+
+.compose-form .autosuggest-textarea__textarea, .compose-form .spoiler-input__input {
+	color: #fff;
+}
+
+.compose-form .spoiler-input__border {
+	display: none;
+}
+
+.compose-form .spoiler-input__input {
+  padding: 12px;
+  }
