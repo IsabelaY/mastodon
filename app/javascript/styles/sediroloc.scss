@@ -399,7 +399,7 @@ body.error, .landing-page .information-board, .landing-page .information-board .
 
 	.status, .search__input, status.light, .focusable:focus.status.status-direct, .status.status-direct, .status.status-direct:focus, .status.status-direct:active, .status__wrapper status__wrapper-direct focusable
   {
-    background-color: transparent !important;
+    background-color: transparent;
     border-radius: 0px;
     margin: 5px auto 10px auto;
     color: #070707 !important;   
@@ -2463,4 +2463,74 @@ kbd {
 	color: #cf2210;
 	border: 1px solid #cf2210;
 	background: #e8f6be;
+}
+
+.sign-in-banner p, .server-banner__introduction, .server-banner__description {
+    color: #070707;
+}
+
+.drawer__pager, .notification-ungrouped {
+  border: none;
+}
+
+.safety-action-modal__top, .safety-action-modal__bottom, .column-header__collapsible {
+  border-radius: 0;
+  border-width: 0;
+}
+
+.safety-action-modal__top, .safety-action-modal__bottom {
+	background: #e8f6be;
+}
+
+.safety-action-modal__header__icon, .safety-action-modal__header, .ui__navigation-bar__item.active {
+	color: #a72645;
+}
+
+.safety-action-modal__status {
+  border-radius: 0;
+  border-width: 0;
+  background-color: #c5d882;
+}
+
+.safety-action-modal__header__icon, .ui__navigation-bar {
+  background-color: #c5d882;
+}
+
+.dropdown-menu__item button {
+  background-color: transparent;
+}
+
+.notification-group__embedded-status__account bdi, .search__popout__menu__item {
+	color: #070707;
+}
+
+.safety-action-modal__status .content-warning, .search__popout {
+	background: #e8f6be;
+}
+
+.ui__navigation-bar {
+	border: none;
+}
+
+@media screen and (max-width: 759px) {
+  .columns-area__panels__pane--navigational .columns-area__panels__pane__inner { 
+	background: #e8f6be;
+  }
+  .search__input {
+	background-color: #c5d882;
+  }
+}
+
+.search__popout__menu__item:hover, .search__popout__menu__item:focus, .search__popout__menu__item:active, .search__popout__menu__item.selected {
+	background: #c5d882;
+	color: #070707;
+	border-radius: 0;
+}
+
+.search__popout__menu__item:hover mark, .search__popout__menu__item:hover .icon-button, .search__popout__menu__item:active mark, .search__popout__menu__item:active .icon-button, .search__popout__menu__item:focus mark, .search__popout__menu__item:focus .icon-button, .search__popout__menu__item.active mark, .search__popout__menu__item.active .icon-button {
+	color: #cf2210;
+}
+
+.admin-wrapper .sidebar__toggle__icon {
+	color: #070707;
 }

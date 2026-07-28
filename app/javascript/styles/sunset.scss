@@ -214,7 +214,7 @@ body {
     opacity: 1;
 }
 
-.status, .load-gap, .account, .notification__filter-bar, .account__section-headline, .account__header__fields dl, .account__header__fields, .account__header__bio .account__header__fields, .trends__item, .search-results__section h5, .detailed-status__action-bar, .account__header__account-note, .account__header__bar, .conversation, .status.status-direct:not(.read) {
+.status, .load-gap, .account, .notification__filter-bar, .account__section-headline, .account__header__fields dl, .account__header__fields, .account__header__bio .account__header__fields, .trends__item, .search-results__section h5, .detailed-status__action-bar, .account__header__account-note, .account__header__bar, .conversation, .status.status-direct:not(.read), .hashtag-header {
     border-color: #8C3F00;
 }
 
@@ -1659,4 +1659,30 @@ button.load-more:hover, button.load-more:focus, button.load-more:active {
 
 .status__content__text blockquote, .e-content blockquote, .edit-indicator__content blockquote, .reply-indicator__content blockquote {
 	color: #ffd37c;
+}
+
+// 27 jul post-prod changes
+
+.navigation-panel .search__input, .search__popout {
+	border: 1px solid #DF7925;
+}
+
+.hashtag-header {
+	background-color: #000;
+}
+
+.drawer__pager {
+	border: none;
+}
+
+.search__popout__menu__item:hover, .search__popout__menu__item:focus, .search__popout__menu__item:active, .search__popout__menu__item.selected {
+  color: #000;
+}
+
+.search__popout__menu__item mark {
+	color: #000;
+}
+
+.ui__navigation-bar__item.active {
+	color: #DF7925;
 }
