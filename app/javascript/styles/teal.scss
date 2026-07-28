@@ -358,7 +358,7 @@ html {
 	background-color: #a2f5d6;
 }
 
-.status {
+.status, .notification-ungrouped {
   background: #f7fcfa;
   }
 
@@ -439,4 +439,18 @@ blockquote.quote {
 
 .compose-form .spoiler-input__border {
 	display: none;
+}
+
+// in-prod changes
+
+.column-link.active:hover, .column-link.active:focus {
+	color: #fff;
+}
+
+.safety-action-modal__top, .safety-action-modal__bottom {
+	background-color: #f7fcfa;
+}
+
+.safety-action-modal__status {
+	border-color: #00827d;
 }

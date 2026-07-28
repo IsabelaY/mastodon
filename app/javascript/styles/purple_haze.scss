@@ -5466,3 +5466,7 @@ blockquote.quote {
 .status__content__text blockquote::before, .e-content blockquote::before, .edit-indicator__content blockquote::before, .reply-indicator__content blockquote::before {
 	background-color: #dfc9f2;
 }
+
+.safety-action-modal__top, .safety-action-modal__bottom, .search__popout__menu__item:hover, .search__popout__menu__item:focus {
+    background: #fbf6ff;
+}

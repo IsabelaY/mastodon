@@ -2952,3 +2952,37 @@ blockquote.quote {
 	background-color: #000;
 	border-color: transparent;
 }
+
+.search__popout__menu__item:hover, .search__popout__menu__item:focus, .search__popout__menu__item:active, .search__popout__menu__item.selected, .search__popout__menu__item:hover mark, .search__popout__menu__item:focus mark, .search__popout__menu__item:active mark {
+  color: #000;
+}
+
+.safety-action-modal__header__icon {
+	background-color: #333;
+}
+
+.safety-action-modal__status {
+	background-color: #111;
+	border: none;
+}
+
+.safety-action-modal__header {
+	color: #ddd;
+}
+
+.notification-group__embedded-status .reply-indicator__attachments {
+	color: #777;
+}
+
+.notification-group__embedded-status__account bdi {
+	color: #fff;
+}
+
+.safety-action-modal__top, .safety-action-modal__bottom {
+	border: none;
+}
+
+.modal-root__overlay {
+	background: #222;
+	opacity: 0.8;
+}

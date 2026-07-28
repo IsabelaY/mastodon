@@ -314,16 +314,19 @@ body.error, .landing-page .information-board, .landing-page .information-board .
         border-radius: 0px !important;
 }
 
-  .drawer__header a:hover, .column-link:hover, .static-content.getting-started span, .reply-indicator, .privacy-dropdown__option.active, .privacy-dropdown__option.active:hover, .privacy-dropdown__option:hover, .privacy-dropdown__value-icon.icon-button.inverted:active, .privacy-dropdown__value-icon.icon-button.inverted.active, .account__section-headline
-  {
+.column-link:hover, .column-link:focus, .static-content.getting-started span, .reply-indicator .account__section-headline, .privacy-dropdown__option.active:hover, .privacy-dropdown__option:hover, .privacy-dropdown__value-icon.icon-button.inverted:active, .privacy-dropdown__option.active, .privacy-dropdown__value-icon.icon-button.inverted.active {
     background-color: rgb(58, 39, 125);
     border-top: 0px;
     border-left: 0px;
     border-bottom: 0px;
     border-right: 0px;
   }
+  
+.drawer__header a:hover, .drawer__header a:focus {
+	background-color: rgb(23, 9, 65);
+}
 
-  .account__header > div > div > button.icon-button, .dropdown-menu, .card
+.account__header > div > div > button.icon-button, .dropdown-menu, .card
   {
     background-color: rgb(23, 9, 65);
     border-radius: 0px;
@@ -2364,4 +2367,39 @@ kbd {
 	background: #3a277d;
 	border-color: transparent;
 	color: #fff;
+}
+
+//post 4.5.11 prod fixes
+
+.sign-in-banner p, .server-banner__introduction, .server-banner__description {
+    color: #f8f8f8;
+}
+
+.drawer__pager, .notification-ungrouped {
+  border: none;
+}
+
+.safety-action-modal__top, .safety-action-modal__bottom, .column-header__collapsible {
+  border-radius: 0;
+  border-width: 0;
+}
+
+.safety-action-modal__status {
+  border-radius: 0;
+  border-width: 0;
+  background-color: #3a277d;
+}
+
+.safety-action-modal__header__icon {
+  background-color: #3a277d;
+}
+
+.ui__navigation-bar {
+	border: none;
+}
+
+.search__popout__menu__item:hover, .search__popout__menu__item:focus, .search__popout__menu__item:active, .search__popout__menu__item.selected {
+  background: #3a277d;
+  color: #30deff;
+  border-radius: 0;
 }

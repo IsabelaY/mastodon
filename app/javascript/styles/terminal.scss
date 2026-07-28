@@ -592,3 +592,22 @@ button.icon-button:hover i.fa-retweet {
 	color: #000;
 	background: #c0c0c0;
 }
+
+.column-link.active {
+	color: #fff;
+}
+
+.safety-action-modal__top, .safety-action-modal__bottom {
+	border-radius: 0;
+	background-color: #000;
+}
+
+.hotkey-combination kbd {
+	background: #c0c0c0;
+	color: #000;
+	border-radius: 0;
+}
+
+.privacy-dropdown__option:focus, .privacy-dropdown__option.active, .visibility-dropdown__option:focus, .visibility-dropdown__option.active {
+	background: #0f0;
+}

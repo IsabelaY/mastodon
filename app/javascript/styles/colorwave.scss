@@ -149,10 +149,6 @@ body .muted-hint a, .admin-wrapper .content .muted-hint a {
     border: 0;
 }
 
-.dropdown-menu, .dropdown-menu__item a {
-    background: #bebebe;
-}
-
 .dropdown-menu__arrow.bottom {
     border-bottom-color: #bebebe;
 }
@@ -182,7 +178,7 @@ body .muted-hint a, .admin-wrapper .content .muted-hint a {
     color: #bebebe;
 }
 
-.dialog-modal, .actions-modal, .block-modal, .boost-modal, .confirmation-modal, .mute-modal, .report-modal, .compare-history-modal {
+.dialog-modal, .actions-modal, .block-modal, .boost-modal, .confirmation-modal, .mute-modal, .report-modal, .compare-history-modal, .safety-action-modal, .interaction-modal {
     background: linear-gradient(315deg,rgb(255,198,222) 0%, rgb(198,198,255) 50%, rgb(198,255,222) 100%);
   border-radius: 0px;
   border: 2px groove #fff;
@@ -584,10 +580,6 @@ border: 2px groove #fff; }
 }
 
 // 11/11/2022
-
-.dropdown-menu__item a, .dropdown-menu__item button, .privacy-dropdown__dropdown, .language-dropdown__dropdown, .visibility-dropdown__dropdown {
-	background: #bebebe;
-	}
 	
 .compose-form .compose-form__modifiers .compose-form__upload .icon-button {
   color: #fff;
@@ -835,33 +827,34 @@ a.status-card:hover, a.status-card:focus {
 	background-image: linear-gradient(325deg, #4e4eff 0%, #000080 60%, #000080 100%);
 }
 
-.simple_form .btn, .simple_form button, .content-warning .link-button, .navigation-bar .icon-button, .account__header__buttons .icon-button, .button.button-secondary, .dropdown-button, .compose-form__actions .icon-button, .compose-form__actions .button, .emoji-mart-anchor, .dialog-modal__header__close.icon-button {
+.dropdown-menu__item button, .simple_form .btn, .simple_form button, .content-warning .link-button, .navigation-bar .icon-button, .account__header__buttons .icon-button, .button.button-secondary, .dropdown-button, .compose-form__actions .icon-button, .compose-form__actions .button, .emoji-mart-anchor, .dialog-modal__header__close.icon-button {
 	color: #000;
 	border-radius: 0;
 	border: 2px #fff outset;
 	background-color: #c8c8c8;
 }
 
-.simple_form .btn:hover, .simple_form button:hover, .content-warning .link-button:hover, .navigation-bar .icon-button:hover, .account__header__buttons .icon-button:hover, .button.button-secondary:hover, .dropdown-button:hover, .compose-form__actions .icon-button:hover, .compose-form__actions .button:hover, .emoji-mart-anchor:hover, .dialog-modal__header__close.icon-button:hover {
+.dropdown-menu__item button:hover, .simple_form .btn:hover, .simple_form button:hover, .content-warning .link-button:hover, .navigation-bar .icon-button:hover, .account__header__buttons .icon-button:hover, .button.button-secondary:hover, .dropdown-button:hover, .compose-form__actions .icon-button:hover, .compose-form__actions .button:hover, .emoji-mart-anchor:hover, .dialog-modal__header__close.icon-button:hover {
 	color: #000;
 	border: 2px #fff outset;
 	background-color: #fff;
 }
 
-.simple_form .btn:focus, .simple_form button:focus, .content-warning .link-button:focus, .navigation-bar .icon-button:focus, .account__header__buttons .icon-button:focus, .button.button-secondary:focus, .dropdown-button:focus, .compose-form__actions .icon-button:focus, .compose-form__actions .button:focus, .emoji-mart-anchor:focus, .dialog-modal__header__close.icon-button:focus {
+.dropdown-menu__item button:focus, .simple_form .btn:focus, .simple_form button:focus, .content-warning .link-button:focus, .navigation-bar .icon-button:focus, .account__header__buttons .icon-button:focus, .button.button-secondary:focus, .dropdown-button:focus, .compose-form__actions .icon-button:focus, .compose-form__actions .button:focus, .emoji-mart-anchor:focus, .dialog-modal__header__close.icon-button:focus {
 	color: #000;
 	border: 2px #414141 dotted;
 	background-color: #fff;
 }
 
-.simple_form .btn:active, .simple_form button:active, .content-warning .link-button:active, .navigation-bar .icon-button:active, .account__header__buttons .icon-button:active, .button.button-secondary:active, .button.button-secondary.active, .dropdown-button:active, .compose-form__actions .icon-button:active, .compose-form__actions .button:active, .compose-form__actions .icon-button.active, .emoji-mart-anchor:active, .dialog-modal__header__close.icon-button:active {
+.dropdown-menu__item button:active, .simple_form .btn:active, .simple_form button:active, .content-warning .link-button:active, .navigation-bar .icon-button:active, .account__header__buttons .icon-button:active, .button.button-secondary:active, .button.button-secondary.active, .dropdown-button:active, .compose-form__actions .icon-button:active, .compose-form__actions .button:active, .compose-form__actions .icon-button.active, .emoji-mart-anchor:active, .dialog-modal__header__close.icon-button:active {
 	color: #000;
 	border: 2px #fff inset;
 	background-color: #fff;
 }
 
 .compose-form .autosuggest-textarea__textarea, .compose-form .spoiler-input__input, .poll__option input[type="text"] {
-	background-color: #fff7;
+	background-color: #fff;
+	border: 2px inset #fff;
 	border-radius: 0;
 }
 
@@ -1061,4 +1054,88 @@ a.status-card:hover, a.status-card:focus {
 	margin-left: -15px;
 	margin-top: -10px;
 	background-image: linear-gradient(325deg, #77f 0%, #4e4eff 30%, #000080 100%);
+}
+
+// colorwave 4.5.11 post prod july 27
+
+.drawer__header, .account__header__bio .account__header__fields {
+    border: transparent;
+}
+
+.notification-group__main__status {
+    border: transparent;
+    background-color: #0001;
+}
+
+.notification__filter-bar button.active::before, .notification__filter-bar a.active::before, .account__section-headline button.active::before, .account__section-headline a.active::before {
+    background-color: #77f;
+    background-image: linear-gradient(325deg,#4e4eff,navy 60%,navy);
+}
+
+.notification__filter-bar button:hover, .notification__filter-bar a:hover, .account__section-headline button:hover, .account__section-headline a:hover, .notification__filter-bar button:focus, .notification__filter-bar a:focus, .account__section-headline button:focus, .account__section-headline a:focus {
+    background-color: #77f;
+}
+
+.account__header__bio .account__header__fields dl {
+  margin-bottom: 0.5rem;
+}
+
+.icon-button.active {
+    background-image: linear-gradient(325deg,#4e4eff,navy 60%,navy);
+    color: #fff;
+}
+
+.dropdown-menu {
+  border: 2px outset #fff;
+  background: #c0c0c0;
+}
+
+.dropdown-menu__separator {
+  border-bottom: 2px groove #fff;
+}
+
+.dropdown-menu {
+  min-width: 180px;
+}
+
+.notification-ungrouped {
+  border-color: #fff7;
+  border-top-width: 1px;
+  border-bottom-width: 0px;
+  border-style: solid;
+}
+
+.drawer__pager {
+	border-color: transparent;
+}
+
+.notification-ungrouped .status:not(.quote) {
+  border: 1px outset #fff;
+  background-color: #c0c0c0;
+  padding: 2px;
+}
+
+.safety-action-modal__top, .safety-action-modal__bottom {
+	background: transparent;
+	backdrop-filter: none;
+	border-color: transparent;
+}
+
+.safety-action-modal__status {
+  border-radius: 0;
+  border: 2px outset #fff;
+  background: #c0c0c0;
+}
+
+.safety-action-modal__status blockquote {
+  border: 2px groove #fff;
+  padding-left: 1rem;
+}
+
+.hotkey-combination kbd {
+  border-color: transparent;
+}
+
+.link-button {
+	color: #40177D;
 }

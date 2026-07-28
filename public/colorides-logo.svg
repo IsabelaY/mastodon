@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="143.20763"
+   height="144.65906"
+   viewBox="-80 -5 6.873966 15.189201"
+   version="1.1"
+   id="svg8"
+   inkscape:version="0.92.3 (2405546, 2018-03-11)"
+   sodipodi:docname="colorides.svg"
+   inkscape:export-filename="colorides-logo.svg"
+   inkscape:export-xdpi="96"
+   inkscape:export-ydpi="96"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <defs
+     id="defs2">
+    <linearGradient
+       inkscape:collect="always"
+       id="linearGradient880">
+      <stop
+         style="stop-color:#f68286;stop-opacity:1;"
+         offset="0"
+         id="stop876" />
+      <stop
+         style="stop-color:#f89f7c;stop-opacity:1;"
+         offset="0.09"
+         id="stop3788" />
+      <stop
+         style="stop-color:#fbba71;stop-opacity:1;"
+         offset="0.18000001"
+         id="stop3790" />
+      <stop
+         style="stop-color:#feda66;stop-opacity:1;"
+         offset="0.27000001"
+         id="stop3792" />
+      <stop
+         style="stop-color:#fff95c;stop-opacity:1;"
+         offset="0.36000001"
+         id="stop3794" />
+      <stop
+         style="stop-color:#b9fa6c;stop-opacity:1;"
+         offset="0.44999999"
+         id="stop3796" />
+      <stop
+         style="stop-color:#70fe84;stop-opacity:1;"
+         offset="0.56"
+         id="stop3798" />
+      <stop
+         style="stop-color:#7bf2d7;stop-opacity:1;"
+         offset="0.63"
+         id="stop3800" />
+      <stop
+         style="stop-color:#60e1ef;stop-opacity:1;"
+         offset="0.72000003"
+         id="stop3802" />
+      <stop
+         style="stop-color:#84a1e7;stop-opacity:1;"
+         offset="0.81"
+         id="stop3804" />
+      <stop
+         style="stop-color:#9c80fb;stop-opacity:1;"
+         offset="0.89999998"
+         id="stop3806" />
+      <stop
+         style="stop-color:#bc7cb7;stop-opacity:1;"
+         offset="0.99951172"
+         id="stop3808" />
+    </linearGradient>
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient880"
+       id="linearGradient882"
+       x1="139.24242"
+       y1="512.97089"
+       x2="196.07442"
+       y2="512.97089"
+       gradientUnits="userSpaceOnUse" />
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.35"
+     inkscape:cx="-1146.2815"
+     inkscape:cy="-26.559088"
+     inkscape:document-units="mm"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0"
+     showborder="false"
+     inkscape:window-width="1920"
+     inkscape:window-height="1017"
+     inkscape:window-x="-8"
+     inkscape:window-y="282"
+     inkscape:window-maximized="1"
+     inkscape:showpageshadow="2"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1" />
+  <metadata
+     id="metadata5">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Camada 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-152.67264,-131.61704)">
+    <g
+       aria-label="colorid.es"
+       transform="matrix(0.26458333,0,0,0.26458333,31.75,-1.5119048)"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:18.6667px;line-height:1.25;font-family:c;-inkscape-font-specification:c;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none"
+       id="flowRoot815">
+      <path
+         d="m 168.13842,499.14688 q -2.784,0 -5.184,1.152 -2.304,1.056 -4.032,2.88 -1.728,1.824 -2.688,4.32 -0.96,2.496 -0.96,5.184 0,2.784 0.864,5.376 0.96,2.496 2.592,4.416 1.728,1.92 4.032,3.072 2.4,1.056 5.376,1.056 3.264,0 5.28,-1.152 2.112,-1.152 3.744,-2.592 1.632,-1.44 3.168,-2.592 1.536,-1.152 3.84,-1.152 h 11.904 q -1.152,5.088 -3.84,9.216 -2.688,4.128 -6.432,7.104 -3.744,2.976 -8.448,4.608 -4.608,1.632 -9.792,1.632 -5.952,0 -11.136,-2.208 -5.184,-2.304 -9.024,-6.144 -3.744,-3.936 -5.952,-9.12 -2.208,-5.184 -2.208,-11.136 0,-5.952 2.208,-11.136 2.304,-5.28 6.24,-9.216 3.936,-3.936 9.12,-6.144 5.28,-2.304 11.232,-2.304 2.784,0 6.72,0.96 4.032,0.96 7.68,2.784 3.744,1.824 6.336,4.512 2.592,2.688 2.592,6.144 0,3.168 -2.304,5.472 -2.208,2.208 -5.376,2.208 h -3.744 q -2.016,-3.072 -4.992,-5.088 -2.976,-2.112 -6.816,-2.112 z"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:96px;font-family:Llewie;-inkscape-font-specification:Llewie;fill:url(#linearGradient882);fill-opacity:1"
+         id="path831"
+         inkscape:connector-curvature="0" />
+    </g>
+  </g>
+</svg>
