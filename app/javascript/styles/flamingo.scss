@@ -2986,3 +2986,11 @@ blockquote.quote {
 	background: #222;
 	opacity: 0.8;
 }
+
+.button.button-secondary.button--destructive:active, .button.button-secondary.button--destructive:focus, .button.button-secondary.button--destructive:hover {
+  background-color: #000;
+}
+
+.hover-card .account-fields dl dt, .hover-card .display-name span {
+	color: #ddd;
+}

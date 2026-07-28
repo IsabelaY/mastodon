@@ -335,7 +335,7 @@ pre {
 }
 
 .icon-button.inverted.active {
-    color: #fff;
+    color: #000;
 }
 
 .button.button-secondary:active, .button.button-secondary:focus, .button.button-secondary:hover {
@@ -654,7 +654,7 @@ a.status-card.compact:hover {
 
 
 .empty-column-indicator a, .error-column a, .follow_requests-unlocked_explanation a {
-    color: #EE4F4F;
+    color: #ff7c7c;
     text-decoration: underline;
 }
 
@@ -1686,3 +1686,17 @@ button.load-more:hover, button.load-more:focus, button.load-more:active {
 .ui__navigation-bar__item.active {
 	color: #DF7925;
 }
+
+.status__prepend {
+	background: #000;
+}
+
+.column > .scrollable {
+  background: #000;
+}
+
+.follow_requests-unlocked_explanation, .switch-to-advanced {
+  background: #3a3a3a;
+  color: #fff;
+}
+
