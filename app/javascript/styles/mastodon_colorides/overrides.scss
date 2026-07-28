@@ -2403,3 +2403,20 @@ kbd {
   color: #30deff;
   border-radius: 0;
 }
+
+.hover-card .display-name span {
+  color: #58D9BA;
+}
+
+.hover-card__bio, .hover-card .account-fields dl dt {
+  color: #f8f8f8;
+}
+
+.hover-card__numbers {
+  color: #ccc;
+}
+
+.button.button-secondary.button--destructive:active, .button.button-secondary.button--destructive:focus, .button.button-secondary.button--destructive:hover {
+  border-color: #fbf759;
+  color: #fbf759;
+}

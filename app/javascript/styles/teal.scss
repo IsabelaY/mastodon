@@ -358,9 +358,9 @@ html {
 	background-color: #a2f5d6;
 }
 
-.status, .notification-ungrouped {
+.column > .scrollable {
   background: #f7fcfa;
-  }
+}
 
 .column-header {
 	border-color: transparent;
@@ -452,5 +452,13 @@ blockquote.quote {
 }
 
 .safety-action-modal__status {
+	border-color: #00827d;
+}
+
+.button.button-secondary.button--destructive:active, .button.button-secondary.button--destructive:focus, .button.button-secondary.button--destructive:hover {
+  background-color: #fff;
+}
+
+.follow_requests-unlocked_explanation a, .switch-to-advanced a {
 	border-color: #00827d;
 }
