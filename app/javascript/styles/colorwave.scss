@@ -827,26 +827,26 @@ a.status-card:hover, a.status-card:focus {
 	background-image: linear-gradient(325deg, #4e4eff 0%, #000080 60%, #000080 100%);
 }
 
-.dropdown-menu__item button, .simple_form .btn, .simple_form button, .content-warning .link-button, .navigation-bar .icon-button, .account__header__buttons .icon-button, .button.button-secondary, .dropdown-button, .compose-form__actions .icon-button, .compose-form__actions .button, .emoji-mart-anchor, .dialog-modal__header__close.icon-button {
+.dialog-modal__header button, .compose-form__upload .icon-button, .dropdown-menu__item button, .simple_form .btn, .simple_form button, .content-warning .link-button, .navigation-bar .icon-button, .account__header__buttons .icon-button, .button.button-secondary, .dropdown-button, .compose-form__actions .icon-button, .compose-form__actions .button, .emoji-mart-anchor, .dialog-modal__header__close.icon-button {
 	color: #000;
 	border-radius: 0;
 	border: 2px #fff outset;
 	background-color: #c8c8c8;
 }
 
-.dropdown-menu__item button:hover, .simple_form .btn:hover, .simple_form button:hover, .content-warning .link-button:hover, .navigation-bar .icon-button:hover, .account__header__buttons .icon-button:hover, .button.button-secondary:hover, .dropdown-button:hover, .compose-form__actions .icon-button:hover, .compose-form__actions .button:hover, .emoji-mart-anchor:hover, .dialog-modal__header__close.icon-button:hover {
+.dialog-modal__header button:hover, .compose-form__upload .icon-button:hover, .dropdown-menu__item button:hover, .simple_form .btn:hover, .simple_form button:hover, .content-warning .link-button:hover, .navigation-bar .icon-button:hover, .account__header__buttons .icon-button:hover, .button.button-secondary:hover, .dropdown-button:hover, .compose-form__actions .icon-button:hover, .compose-form__actions .button:hover, .emoji-mart-anchor:hover, .dialog-modal__header__close.icon-button:hover {
 	color: #000;
 	border: 2px #fff outset;
 	background-color: #fff;
 }
 
-.dropdown-menu__item button:focus, .simple_form .btn:focus, .simple_form button:focus, .content-warning .link-button:focus, .navigation-bar .icon-button:focus, .account__header__buttons .icon-button:focus, .button.button-secondary:focus, .dropdown-button:focus, .compose-form__actions .icon-button:focus, .compose-form__actions .button:focus, .emoji-mart-anchor:focus, .dialog-modal__header__close.icon-button:focus {
+.dialog-modal__header button:focus, .compose-form__upload .icon-button:focus, .dropdown-menu__item button:focus, .simple_form .btn:focus, .simple_form button:focus, .content-warning .link-button:focus, .navigation-bar .icon-button:focus, .account__header__buttons .icon-button:focus, .button.button-secondary:focus, .dropdown-button:focus, .compose-form__actions .icon-button:focus, .compose-form__actions .button:focus, .emoji-mart-anchor:focus, .dialog-modal__header__close.icon-button:focus {
 	color: #000;
 	border: 2px #414141 dotted;
 	background-color: #fff;
 }
 
-.dropdown-menu__item button:active, .simple_form .btn:active, .simple_form button:active, .content-warning .link-button:active, .navigation-bar .icon-button:active, .account__header__buttons .icon-button:active, .button.button-secondary:active, .button.button-secondary.active, .dropdown-button:active, .compose-form__actions .icon-button:active, .compose-form__actions .button:active, .compose-form__actions .icon-button.active, .emoji-mart-anchor:active, .dialog-modal__header__close.icon-button:active {
+.dialog-modal__header button:active, .compose-form__upload .icon-button:active, .dropdown-menu__item button:active, .simple_form .btn:active, .simple_form button:active, .content-warning .link-button:active, .navigation-bar .icon-button:active, .account__header__buttons .icon-button:active, .button.button-secondary:active, .button.button-secondary.active, .dropdown-button:active, .compose-form__actions .icon-button:active, .compose-form__actions .button:active, .compose-form__actions .icon-button.active, .emoji-mart-anchor:active, .dialog-modal__header__close.icon-button:active {
 	color: #000;
 	border: 2px #fff inset;
 	background-color: #fff;
@@ -1154,3 +1154,48 @@ a.status-card:hover, a.status-card:focus {
   color: #fff;
   background-color: #40177D;
 }
+
+.dialog-modal__popout {
+	border: 2px groove #fff;
+	background: #c0c0c0;
+	border-radius: 0;
+}
+
+.simple_form input[type="text"], .simple_form input[type="number"], .simple_form input[type="email"], .simple_form input[type="password"], .simple_form input[type="url"], .simple_form input[type="datetime-local"], .simple_form textarea {
+	background-color: #fff;
+}
+
+.compose-form__upload__preview, .media-gallery__item, .compose-form__upload .icon-button.compose-form__upload__delete, .account__avatar img {
+  border-radius: 0;
+}
+
+.media-gallery__item {
+  border: 2px groove #fff;
+}
+
+.status__content a.unhandled-link, .edit-indicator__content a.unhandled-link, .reply-indicator__content a.unhandled-link {
+	color: #40177D;
+}
+
+.hashtag-bar a {
+	background-color: #fff7;
+}
+
+.button.button-secondary:disabled, .button.button-secondary.disabled, .button.button-secondary:disabled:hover, .button.button-secondary.disabled:hover {
+  background-color: #bebebe;
+  border: 2px outset #bebebe;
+  color: #000;
+  opacity: 0.5;
+}
+
+.compose-form__poll__select__value {
+  background: #fff;
+  border: 2px outset #fff;
+  padding: 2px;
+}
+
+.content-warning--filter .filter-name {
+  font-weight: 600;
+  color: #fff;
+}
+

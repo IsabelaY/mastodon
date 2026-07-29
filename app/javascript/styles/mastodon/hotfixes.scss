@@ -1,6 +1,11 @@
 @media (max-height: 850px) {
-.dialog-modal, .boost-modal, .confirmation-modal, .report-modal, .actions-modal, .mute-modal, .block-modal, .compare-history-modal {
+.visibility-modal {
   top: 0;
   position: absolute;
   }
+}
+
+.account-card__counters__item small {
+  overflow: hidden;
+  text-overflow: ellipsis;
 }

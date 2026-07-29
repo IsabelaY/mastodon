@@ -4,19 +4,21 @@ $white: #ffffff;
 
 $classic-base-color: #283832;
 $classic-primary-color: #99c6b5;
-$classic-secondary-color: #c7f9e6;
-$classic-highlight-color: #2bd8b3;
+$classic-secondary-color: #c0f0e0;
+$classic-highlight-color: #3ec5a8;
 
 // Differences
 $success-green: #3c754d;
 $ui-base-color: $classic-secondary-color;
 
-$blurple-600: hsl(169,58.9%,51.4%); // Iris at 169
-$blurple-500: hsl(169,100%,42.9%); // darkened brand purple at 
-$blurple-400: hsl(157,97.2%,72.4%); // Medium slate blue at 157
-$blurple-300: hsl(157,92.1%,75.1%); // Faded Blue at 
+$blurple-600: #4db9a5;
+$blurple-500: #00847e;
+$blurple-400: #61fdc1;
+$blurple-300: #c5f9e6;
 $grey-600: hsl(157deg, 8%, 33%); // Trout at 157
 $grey-100: hsl(157deg, 51%, 90%); // Topaz at 
+
+$ui-highlight-color: #00625D;
 
 @use 'mastodon/variables' with (
   $classic-base-color: $classic-base-color,
@@ -42,7 +44,7 @@ $grey-100: hsl(157deg, 51%, 90%); // Topaz at
   $ui-base-lighter-color: #afcec2,
   $ui-primary-color: #9aedcd,
   $ui-secondary-color: $classic-base-color,
-  $ui-highlight-color: #00827D,
+  $ui-highlight-color: $ui-highlight-color,
 
   $primary-text-color: $black,
   $darker-text-color: $classic-base-color,

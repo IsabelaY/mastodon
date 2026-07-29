@@ -2379,7 +2379,7 @@ kbd {
   border: none;
 }
 
-.safety-action-modal__top, .safety-action-modal__bottom, .column-header__collapsible {
+.safety-action-modal__top, .safety-action-modal__bottom, .column-header__collapsible, .account__avatar img {
   border-radius: 0;
   border-width: 0;
 }
@@ -2445,6 +2445,10 @@ kbd {
 	background-color: #3a277d;
 }
 
+.compose-form .spoiler-input__input {
+	background: #1d0b53;
+}
+
 .column-header__wrapper.active::before {
   width: 100%;
   height: 14px;
@@ -2457,4 +2461,43 @@ kbd {
 
 .content-warning--filter .filter-name {
   color: #58D9BA;
+}
+
+.flash-message.alert {
+  color: #ff607a;
+}
+
+.notification-group__embedded-status .reply-indicator__attachments, .safety-action-modal__header {
+	color: #ccc;
+}
+
+.hashtag-bar a {
+  border-radius: 0;
+  color: #30ddef;
+  background-color: #0005;
+}
+
+.button.button-secondary:disabled, .button.button-secondary.disabled, .button.button-secondary:disabled:active, .button.button-secondary:disabled:focus, .button.button-secondary:disabled:hover, .button.button-secondary.disabled:active, .button.button-secondary.disabled:focus, .button.button-secondary.disabled:hover {
+  border-color: #3a277d;
+  background-color: #3a277d;
+  color: #ccc;
+}
+
+button.load-more:hover, button.load-more:focus, button.load-more:active {
+	background-color: #3a277d;
+	z-index: 5;
+}
+
+button.load-more:hover, button.load-more:focus, button.load-more:active {
+	background-color: #3a277d;
+}
+
+.notification-group__main__status {
+  border-color: transparent;
+  background-color: #1d0b53;
+  border-radius: 0;
+}
+
+.notification-group {
+	border-color: transparent;
 }
