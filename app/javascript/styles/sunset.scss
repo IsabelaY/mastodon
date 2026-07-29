@@ -10,7 +10,7 @@ $ui-base-color: $classic-base-color;
 $ui-highlight-color: #DF7925;
 
 $red-600: #df2525; 
-$red-500: #ee4f4f;
+$red-500: #FF7C7C;
 $blurple-600: #b35a10; // Iris substitute
 $blurple-500: #df7925; // Brand purple substitute
 $blurple-400: #ee974f; // Medium slate blue substitute
@@ -205,7 +205,7 @@ body {
 }
 
 .boost-modal, .confirmation-modal, .report-modal, .actions-modal, .mute-modal, .block-modal, .boost-modal__action-bar, .confirmation-modal__action-bar, .mute-modal__action-bar, .block-modal__action-bar {
-    background: #FFD37C;
+//    background: #FFD37C;
 }
 
 .compose-form::placeholder, .compose-form .autosuggest-textarea__textarea::placeholder,
@@ -321,7 +321,7 @@ pre {
 }
 
 .poll__option input[type="text"] {
-  border-color: #000;
+  border-color: #fff;
 }
 
 .poll__input.active {
@@ -1675,7 +1675,7 @@ button.load-more:hover, button.load-more:focus, button.load-more:active {
 	border: none;
 }
 
-.search__popout__menu__item:hover, .search__popout__menu__item:focus, .search__popout__menu__item:active, .search__popout__menu__item.selected {
+.search__popout__menu__item:hover, .search__popout__menu__item:focus, .search__popout__menu__item:active, .search__popout__menu__item.selected, .search__popout__menu__item:hover .icon-button, .search__popout__menu__item:focus .icon-button {
   color: #000;
 }
 
@@ -1699,4 +1699,103 @@ button.load-more:hover, button.load-more:focus, button.load-more:active {
   background: #3a3a3a;
   color: #fff;
 }
+
+.navigation-panel__list-panel__header .icon-button {
+  border: 1px solid #f1c46b;
+  color: #f1c46b;
+}
+
+a.status-card:hover .status-card__title, a.status-card:hover .status-card__host, a.status-card:hover .status-card__author, a.status-card:hover .status-card__description, a.status-card:focus .status-card__title, a.status-card:focus .status-card__host, a.status-card:focus .status-card__author, a.status-card:focus .status-card__description, a.status-card:active .status-card__title, a.status-card:active .status-card__host, a.status-card:active .status-card__author, a.status-card:active .status-card__description {
+	color: #fff;
+}
+
+.hashtag-bar a {
+	background-color: #3a3a3a;
+}
+
+.modal-root__overlay {
+  background: #666;
+}
+
+.safety-action-modal__status {
+  border-color: #eeb94f;
+}
+
+.notification-group__embedded-status__content {
+	color: #fff;
+}
+
+.notification__filter-bar button.active, .notification__filter-bar a.active, .account__section-headline button.active, .account__section-headline a.active {
+  color: #df7925;
+}
+
+.notification__filter-bar button.active::before, .notification__filter-bar button.active::after, .notification__filter-bar a.active::before, .notification__filter-bar a.active::after, .account__section-headline button.active::before, .account__section-headline button.active::after, .account__section-headline a.active::before, .account__section-headline a.active::after {
+  border-color: transparent transparent #df7925;
+}
+
+.dropdown-menu__item a:focus:not(:disabled):not([aria-disabled="true"]), .dropdown-menu__item a:hover:not(:disabled):not([aria-disabled="true"]), .dropdown-menu__item a:active:not(:disabled):not([aria-disabled="true"]), .dropdown-menu__item button:focus:not(:disabled):not([aria-disabled="true"]), .dropdown-menu__item button:hover:not(:disabled):not([aria-disabled="true"]), .dropdown-menu__item button:active:not(:disabled):not([aria-disabled="true"]) {
+	background-color: #B35A10;
+}
+
+.setting-text__toolbar .link-button, .report-modal__target .icon-button {
+  color: #dfa125;
+}
+
+a.status-card:hover, a.status-card:focus, a.status-card:active {
+	background-color: #3a3a3a;
+}
+
+.setting-text__toolbar .link-button:hover, .report-modal__target .icon-button:hover, .setting-text__toolbar .link-button:focus, .report-modal__target .icon-button:focus {
+  color: #fff;
+}
+
+.report-dialog-modal__textarea {
+	border-color: #eeb94f;
+	background-color: #3a3a3a;
+}
+
+.report-dialog-modal__textarea::placeholder {
+  color: #eeb94f;
+}
+
+.simple_form .lead {
+  color: #eee;
+}
+
+.report-card__summary__item__content a:hover, .report-card__summary__item__content a:focus {
+  color: #fff;
+}
+
+.filters .filter-subset a {
+  border-bottom-color: #f7ceac;
+}
+.compose-form__poll__select__value {
+  color: #000;
+  background-color: #df7925;
+  padding: 2px;
+  border-radius: 4px;
+}
+
+.search__popout__menu__item {
+	color: #fff;
+}
+
+.search__popout__menu__item mark {
+  color: #dfa125;
+}
+
+.search__popout__menu__item:hover mark, .search__popout__menu__item:focus mark, .search__popout__menu__item:active mark {
+  color: #000;
+}
+
+.button {
+  font-size: 0.8rem;
+ }
+ 
+ .button.button-secondary.button--destructive:active, .button.button-secondary.button--destructive:focus, .button.button-secondary.button--destructive:hover {
+  border-color: #df2525;
+  color: #fff;
+  background: #df2525;
+}
+
 
