@@ -2445,7 +2445,7 @@ kbd {
 	background-color: #3a277d;
 }
 
-.compose-form .spoiler-input__input {
+.compose-form .spoiler-input__input, .compose-form .autosuggest-textarea__textarea {
   background: #170941;
 }
 
@@ -2550,3 +2550,4 @@ button.load-more:hover, button.load-more:focus, button.load-more:active {
 .poll__footer .button.button-secondary {
 	background-color: #3a277d;
 }
+
