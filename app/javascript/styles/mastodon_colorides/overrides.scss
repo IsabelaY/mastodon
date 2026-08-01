@@ -2093,7 +2093,7 @@ a:focus {
 
 .spoiler-input__border {
   background-image: none !important;
-  background-color: rgb(23, 9, 65) !important;
+  background-color: rgb(23, 9, 65);
 }
 
 .spoiler-input {
@@ -2511,7 +2511,7 @@ button.load-more:hover, button.load-more:focus, button.load-more:active {
   border-radius: 0;
   }
   
-.app-form__avatar-input .icon, .app-form__header-input .icon {
+.app-form__avatar-input .icon, .app-form__header-input .icon, .more-from-author a:hover, .more-from-author a:focus, .more-from-author a:active {
   color: #30ddef;
 }
 
@@ -2547,7 +2547,26 @@ button.load-more:hover, button.load-more:focus, button.load-more:active {
   border-color: transparent;
 }
 
-.poll__footer .button.button-secondary {
+.poll__footer .button.button-secondary, .ui__navigation-bar {
 	background-color: #3a277d;
 }
 
+body .warning-hint, .admin-wrapper .content .warning-hint {
+  color: #f8f8f8;
+}
+
+.warning-hint .text-btn {
+	color: #30ddef;
+}
+
+.ui__navigation-bar__item.active {
+	color: #58d9BA;
+}
+
+a.status-card:hover .status-card__title, a.status-card:hover .status-card__host, a.status-card:hover .status-card__author, a.status-card:hover .status-card__description, a.status-card:focus .status-card__title, a.status-card:focus .status-card__host, a.status-card:focus .status-card__author, a.status-card:focus .status-card__description, a.status-card:active .status-card__title, a.status-card:active .status-card__host, a.status-card:active .status-card__author, a.status-card:active .status-card__description {
+	color: #f8f8f8;
+}
+
+.status-card.bottomless {
+	border-radius: 0;
+}
