@@ -413,11 +413,6 @@ pre {
     border-color: transparent transparent #EE4F4F;
 }
 
-.notification__filter-bar button:focus, .notification__filter-bar a:focus, .account__section-headline button:focus, .account__section-headline a:focus, .notification__filter-bar button:hover, .notification__filter-bar a:hover, .account__section-headline button:hover, .account__section-headline a:hover {
-    background: #B35A10;
-    color: #fff;
-}
-
 .account__header__bio .account__header__fields a {
   color: #DF7925;
 }
@@ -884,7 +879,7 @@ button.table-action-link:hover, a.table-action-link:hover {
 }
 
 body .muted-hint a, .admin-wrapper .content .muted-hint a, .admin-wrapper .simple_form .hint a {
-    color: #EE4F4F;
+    color: #FE5F5F;
 }
 
 body .muted-hint a:hover, .admin-wrapper .content .muted-hint a:hover, body .muted-hint a:focus, .admin-wrapper .content .muted-hint a:focus, body .muted-hint a:active, .admin-wrapper .content .muted-hint a:active {
@@ -1514,7 +1509,7 @@ a.sparkline:active, a.sparkline:focus, a.sparkline:hover {
 }
 
 .admin-wrapper .content {
-  background: rgba(0, 0, 0, 0.4666666667);
+  background: rgba(0, 0, 0, 1);
 }
 
 .detailed-status__meta__line {
@@ -1600,9 +1595,9 @@ a.sparkline:active, a.sparkline:focus, a.sparkline:hover {
 	color: #000;
 }
 
-.compose-form .spoiler-input .autosuggest-input {
-	border-top: 1px solid #DF7925;
-	border-bottom: 1px solid #DF7925;
+.compose-form .autosuggest-textarea__textarea, .compose-form .spoiler-input__input {
+	border: 1px solid #DF7925;
+	border-radius: 4px;
 }
 
 .compose-form .spoiler-input__border {
@@ -1730,7 +1725,8 @@ a.status-card:hover .status-card__title, a.status-card:hover .status-card__host,
 }
 
 .notification__filter-bar button.active::before, .notification__filter-bar button.active::after, .notification__filter-bar a.active::before, .notification__filter-bar a.active::after, .account__section-headline button.active::before, .account__section-headline button.active::after, .account__section-headline a.active::before, .account__section-headline a.active::after {
-  border-color: transparent transparent #df7925;
+//  border-color: transparent transparent #df7925;
+	background-color: #df7925;
 }
 
 .dropdown-menu__item a:focus:not(:disabled):not([aria-disabled="true"]), .dropdown-menu__item a:hover:not(:disabled):not([aria-disabled="true"]), .dropdown-menu__item a:active:not(:disabled):not([aria-disabled="true"]), .dropdown-menu__item button:focus:not(:disabled):not([aria-disabled="true"]), .dropdown-menu__item button:hover:not(:disabled):not([aria-disabled="true"]), .dropdown-menu__item button:active:not(:disabled):not([aria-disabled="true"]) {
@@ -1798,4 +1794,11 @@ a.status-card:hover, a.status-card:focus, a.status-card:active {
   background: #df2525;
 }
 
+.compose-form .spoiler-input {
+	margin-bottom: 0.3rem;
+}
 
+.notification__filter-bar button:focus, .notification__filter-bar a:focus, .account__section-headline button:focus, .account__section-headline a:focus, .notification__filter-bar button:hover, .notification__filter-bar a:hover, .account__section-headline button:hover, .account__section-headline a:hover {
+    background: #B35A10;
+    color: #fff;
+}

@@ -310,7 +310,7 @@ pt-BR:
         local_topic_feed_access: Acessar hasthtag e endereços de feed com destaque em publicações locais
         mascot: Mascote personalizado (legado)
         media_cache_retention_period: Período de retenção do cachê de mídia
-        min_age: Requisito de idade mínimia
+        min_age: Requisito de idade mínima
         peers_api_enabled: Publicar lista de servidores descobertos na API
         profile_directory: Ativar diretório de perfis
         registrations_mode: Quem pode se inscrever

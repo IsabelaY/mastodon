@@ -995,10 +995,10 @@ body.lighter {
 .compose-form__poll-wrapper .button.button-secondary, .account__header__buttons .icon-button {
     color: #f8f8f8;
     border-color: #3a277d;
+    border-radius: 0;
 }
 
 .button.button-secondary:active, .button.button-secondary:focus, .button.button-secondary:hover, .account__header__buttons .icon-button:hover, .account__header__buttons .icon-button:focus {
-
     color: #30ddef;
     border-color: #30ddef;
     background: #3a277d;
@@ -2446,7 +2446,7 @@ kbd {
 }
 
 .compose-form .spoiler-input__input {
-	background: #1d0b53;
+  background: #170941;
 }
 
 .column-header__wrapper.active::before {
@@ -2460,7 +2460,7 @@ kbd {
 }
 
 .content-warning--filter .filter-name {
-  color: #58D9BA;
+  color: #fff;
 }
 
 .flash-message.alert {
@@ -2500,4 +2500,53 @@ button.load-more:hover, button.load-more:focus, button.load-more:active {
 
 .notification-group {
 	border-color: transparent;
+}
+
+.rules-list li::before {
+	background-color: #3a277d;
+}
+
+.onboarding__profile .app-form__avatar-input, .onboarding__profile .app-form__header-input {
+  border: 1px solid #30ddef;
+  border-radius: 0;
+  }
+  
+.app-form__avatar-input .icon, .app-form__header-input .icon {
+  color: #30ddef;
+}
+
+.app-form__avatar-input:hover, .app-form__header-input:hover, .app-form__avatar-input:focus, .app-form__header-input:focus {
+  background-color: #1d0b53;
+}
+
+
+.account__header__bio .account__header__fields dd {
+	color: #f8f8f8;
+}
+
+.account__header__bio .account__header__fields dt {
+	color: #58D9BA;
+}
+
+.admin-wrapper .sidebar__toggle__icon {
+	border-radius: 0;
+}
+
+.progress-tracker .label {
+	color: #dadada;
+}
+
+.progress-tracker .active .circle {
+  border-color: #58d9BA;
+}
+
+.progress-tracker .active .circle::before {
+  background-color: #58d9BA;
+}
+.app-form__toggle__toggle > div {
+  border-color: transparent;
+}
+
+.poll__footer .button.button-secondary {
+	background-color: #3a277d;
 }
