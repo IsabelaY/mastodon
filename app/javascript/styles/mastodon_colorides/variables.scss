@@ -1,13 +1,13 @@
 $black: #000; // Black
-$white: #f8f8f8; // White
+$white: #fff; // White
 
 $red-600: #b7253d !default; // Deep Carmine
 $red-500: #df405a !default; // Cerise
-$blurple-600: #3a277d; // Iris
-$blurple-500: #58D9BA; // Brand purple
+$blurple-600: #170941; // Iris
+$blurple-500: #3a277d; // Brand purple
 $blurple-400: #30ddef; // Medium slate blue
-$blurple-300: #30ddef; // Faded Blue
-$grey-600: #3a277d; // Trout
+$blurple-300: #dadada; // Faded Blue
+$grey-600: #58D9BA; // Trout
 $grey-100: #f8f8f8; // Topaz
 
 $success-green: #58D9BA !default; // Padua
@@ -18,11 +18,11 @@ $gold-star: #30ddef !default; // Dark Goldenrod
 $red-bookmark: #f8f8f8;
 
 // Values from the classic Mastodon UI
-$classic-base-color: #170941;         // darker purple
+$classic-base-color: #3a277d;         // gray
 $classic-primary-color: #58D9BA;      // highlight green
 $classic-secondary-color: #30ddef;    // link color
 $classic-highlight-color: $blurple-500;
-$ui-button-icon-hover-background-color: #3a277d !default;    // lighter purple
+$ui-button-icon-hover-background-color: #3a277d;    // lighter purple
 
 $ui-button-disabled-color: #170941 !default;
 
