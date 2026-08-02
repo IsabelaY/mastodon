@@ -275,7 +275,7 @@ body .muted-hint a, .admin-wrapper .content .muted-hint a {
     border-bottom: 1px solid #ffffff90;
 }
 
-.announcements-list {
+.announcements-list, .notification-group {
     border: 1px solid #ffffff90;
 }
 
@@ -1110,9 +1110,8 @@ a.status-card:hover, a.status-card:focus {
 }
 
 .notification-ungrouped .status:not(.quote) {
-  border: 1px outset #fff;
-  background-color: #c0c0c0;
-  padding: 2px;
+  background-color: #fff7;
+  padding: 0.5rem;
 }
 
 .safety-action-modal__top, .safety-action-modal__bottom {
@@ -1221,4 +1220,39 @@ a.status-card:hover, a.status-card:focus {
   width: 100%;
   height: 1rem;
   background: linear-gradient(rgba(255, 0, 255, 0.01) 0%, rgba(255, 0, 255, 0.4) 80%);
+}
+
+.button.button-tertiary {
+	color: #40177D;
+	border-color: #40177D;
+}
+
+.status-card:hover .status-card__image > .icon, .status-card:focus .status-card__image > .icon {
+  color: #fff;
+}
+
+.status__line {
+	border-color: #fff;
+}
+
+.icon-with-badge__badge {
+	background: linear-gradient(45deg,rgb(255,198,222) 0%, rgb(198,198,255) 50%, rgb(198,255,222) 100%);
+}
+
+.status__wrapper.status__wrapper-public.status__wrapper-reply.focusable, .notification-ungrouped .status:not(.quote) {
+  border-radius: 8px;
+}
+
+.more-from-author a:hover, .more-from-author a:focus, .more-from-author a:active {
+	color: #fff;
+	text-shadow: 2px 2px 1px magenta, -2px -2px 1px blue;
+	transition: 0.2s;
+}
+
+.status-card.bottomless, .more-from-author {
+	border-radius: 0;
+}
+
+.more-from-author {
+	border-color: transparent;
 }

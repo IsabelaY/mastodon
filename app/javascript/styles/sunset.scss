@@ -1802,3 +1802,27 @@ a.status-card:hover, a.status-card:focus, a.status-card:active {
     background: #B35A10;
     color: #fff;
 }
+
+.reply-indicator {
+  background: #3a3a3a;
+  padding: 0.1rem;
+  border-radius: 4px;
+}
+
+.reply-indicator__line::before {
+  background: #dfa125;
+}
+
+.button.button--plain {
+	color: #df7925;
+}
+
+.button.button--plain:hover, .button.button--plain:focus {
+	color: #ffb77c;
+}
+
+.info-tooltip--solid {
+	background: #3a3a3a;
+	border-color: #df7925;
+	color: #fff;
+}

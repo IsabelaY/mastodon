@@ -1080,11 +1080,11 @@ body.lighter {
 
 .poll__chart {
     border-radius: 0px;
-	background: #5C45A1;
+	background: #c5c5c5;
 }
 
 .poll__chart.leading {
-    background: #105D5F;
+    background: #58d9ba;
 }
 
 .button.button-secondary {
@@ -2555,7 +2555,7 @@ body .warning-hint, .admin-wrapper .content .warning-hint {
   color: #f8f8f8;
 }
 
-.warning-hint .text-btn {
+.warning-hint .text-btn, .status__content a.unhandled-link, .edit-indicator__content a.unhandled-link, .reply-indicator__content a.unhandled-link {
 	color: #30ddef;
 }
 
@@ -2569,4 +2569,13 @@ a.status-card:hover .status-card__title, a.status-card:hover .status-card__host,
 
 .status-card.bottomless {
 	border-radius: 0;
+}
+
+button.table-action-link:hover, a.table-action-link:hover {
+  color: #f8f8f8;
+}
+
+.more-from-author {
+	border-radius: 0;
+	color: #f8f8f8;
 }

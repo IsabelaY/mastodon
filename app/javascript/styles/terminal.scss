@@ -3,7 +3,7 @@ $black: #000000;            // Black
 $white: #ffffff;            // White
 
 $success-green: #00ff00;    // Padua replacement
-$error-red: #0000ff;        // Cerise replacement
+$error-red: #ff00ff;        // Cerise replacement
 $warning-red: #ff0000;      // Sunset Orange replacement
 $gold-star: #ffff00;        // Dark Goldenrod replacement
 
@@ -20,12 +20,16 @@ $ui-highlight-color: $classic-highlight-color;
 
 $red-600: #ff8080; 
 $red-500: #ff0000;
-$blurple-600: #8000ff; // Iris
+$blurple-600: #0000ff; // Iris
 $blurple-500: #ff00ff; // Brand purple
 $blurple-400: #ff0080; // Medium slate blue
 $blurple-300: #ff8080; // Faded Blue
 $grey-600: #5a5a5a;
 $grey-100: #ffd37c;
+
+$font-sans-serif: "monospace";
+$font-display: "monospace";
+$font-monospace: "monospace";
 
 @use 'mastodon/variables' with (
   $success-green: $success-green,    // Padua replacement
@@ -78,21 +82,51 @@ $grey-100: #ffd37c;
   $lighter-text-color: $ui-base-lighter-color,
   $light-text-color: $ui-primary-color,
 
-  $font-sans-serif: 'monospace',
-  $font-display: 'monospace',
-  $font-monospace: 'monospace',
+  $font-sans-serif: $font-sans-serif,
+  $font-display: $font-display,
+  $font-monospace: $font-monospace,
 );
 
 @use 'application';
+
+@font-face {
+  font-family: "Modern DOS 14";
+  src: url("../fonts/modern_dos/ModernDOS9x14.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Modern DOS 16";
+  src: url("../fonts/modern_dos/ModernDOS9x16.ttf") format("truetype");
+}
 
 .ui {
   background-image: repeating-linear-gradient(180deg, #004000 0px, #004000 1px, #000000 1px, #000000 2px);
   background-attachment: fixed;
 }
 
+body, .link-button, .autosuggest-textarea__item, .compose-form__warning, .autosuggest-textarea__textarea, .spoiler-input__input, .copy-paste-text, .admin-wrapper .content h4 {
+	font-size: 14px;
+	font-family: "Modern DOS 14", monospace;
+}
+
+body h1 {
+	font-size: 28px !important;
+	font-family: "Modern DOS 14", monospace;
+}
+
+.help-button, .column-title h3, .status-card__title {
+	font-size: 28px;
+	font-family: "Modern DOS 14", monospace;
+}
+
+.error-boundary, .app-holder noscript, .columns-area--mobile .autosuggest-textarea__textarea, .drawer__tab, .columns-area--mobile .search__input, .column-title p, .navigation-panel__compose-button, .drawer__header, .column-back-button, .column-link, .regeneration-indicator__label, .column-header, .column-header__button, .spoiler-button__overlay__label, .column-settings h3, .column-settings__hashtags .column-select, .language-dropdown__dropdown, .safety-action-modal__confirmation h1, .safety-action-modal__confirmation__bullet-points, .safety-action-modal__confirmation__field-group label, .dialog-modal__header__title, .report-modal__target, .reactions-bar .emoji__button, .notifications-permission-banner h2, .button, .status__content p, .edit-indicator__content p, .reply-indicator__content p  {
+	font-size: 16px;
+	font-family: "Modern DOS 16", monospace;
+}
+
 // stop using border-radius
 
-.simple_form .btn, .icon-button, .button, .privacy-dropdown.active.top .privacy-dropdown__value, .text-icon-button, .column-settings__hashtags .column-select__control, .flash-message, .simple_form input[type="text"], .simple_form input[type="number"], .simple_form input[type="email"], .simple_form input[type="password"], .simple_form input[type="url"], .simple_form input[type="datetime-local"], .simple_form textarea, .simple_form select, .admin-wrapper .sidebar ul a.selected, .admin-wrapper .sidebar ul, .account-role, .simple_form .recommended, .simple_form .not_recommended, #navigation-panel__publish i, .language-dropdown__dropdown__results__item, .language-dropdown__dropdown, .privacy-dropdown.active .privacy-dropdown__value, .privacy-dropdown__dropdown {
+a:focus, .search__input, .simple_form .btn, .icon-button, .button, .privacy-dropdown.active.top .privacy-dropdown__value, .text-icon-button, .column-settings__hashtags .column-select__control, .flash-message, .simple_form input[type="text"], .simple_form input[type="number"], .simple_form input[type="email"], .simple_form input[type="password"], .simple_form input[type="url"], .simple_form input[type="datetime-local"], .simple_form textarea, .simple_form select, .admin-wrapper .sidebar ul a.selected, .admin-wrapper .sidebar ul, .account-role, .simple_form .recommended, .simple_form .not_recommended, #navigation-panel__publish i, .language-dropdown__dropdown__results__item, .language-dropdown__dropdown, .privacy-dropdown.active .privacy-dropdown__value, .privacy-dropdown__dropdown {
   border-radius: 0;
 }
 
@@ -281,13 +315,12 @@ $grey-100: #ffd37c;
 }
 
 .column > .scrollable {
-  background: transparent;
+  background: #0008;
 }
 
 .status {
   border: 0px;
   margin-top: 6px;
-  background: #000;
 }
 
 div.quote, .reply-indicator__content .status__content__text blockquote, .status__content .status__content__text blockquote {
@@ -610,4 +643,70 @@ button.icon-button:hover i.fa-retweet {
 
 .privacy-dropdown__option:focus, .privacy-dropdown__option.active, .visibility-dropdown__option:focus, .visibility-dropdown__option.active {
 	background: #0f0;
+}
+
+.button:active, .button:focus, .button:hover {
+	background: #c0c0c0;
+	color: #000;
+}
+
+.status-card, .status-card__image, .status-card__content, .status-card.bottomless {
+  color: #000;
+  background-color: #c0c0c0;
+  border-radius: 0;
+}
+
+.status-card .status-card__content .status-card__title {
+	color: #00f;
+}
+
+.status-card:hover .status-card__content .status-card__title, .status-card:focus .status-card__content .status-card__title, .status-card:hover, .status-card:hover .status-card__image, .status-card:hover .status-card__content, .status-card:focus, .status-card:focus .status-card__image, .status-card:focus .status-card__content {
+  color: #fff;
+  background-color: #00f;
+}
+
+.dismissable-banner, .warning-banner {
+  border-radius: 0;
+  background: #000;
+  border: 3px double #ffff;
+}
+
+.link-button {
+	color: #0ff;
+}
+
+.column-header__title .logo {
+	display: none;
+}
+
+.notification__filter-bar button.active::before, .notification__filter-bar a.active::before, .account__section-headline button.active::before, .account__section-headline a.active::before {
+  width: 100%;
+  border-radius: 0;
+}
+
+.column-search-header input::placeholder {
+	color: #0f0;
+	font-family: "Modern DOS 16", monospace;
+}
+
+.column-search-header input {
+	color: #fff;
+	font-family: "Modern DOS 16", monospace;
+	border-radius: 0;
+}
+
+.reply-indicator__line::before {
+	background-color: #c0c0c0;
+}
+
+.follow_requests-unlocked_explanation a, .switch-to-advanced a {
+	color: #0ff;
+}
+
+a.status-card:hover .status-card__title, a.status-card:hover .status-card__host, a.status-card:hover .status-card__author, a.status-card:hover .status-card__description, a.status-card:focus .status-card__title, a.status-card:focus .status-card__host, a.status-card:focus .status-card__author, a.status-card:focus .status-card__description, a.status-card:active .status-card__title, a.status-card:active .status-card__host, a.status-card:active .status-card__author, a.status-card:active .status-card__description {
+	color: #c0c0c0;
+}
+
+.navigation-panel hr, .compose-panel hr {
+	border-color: transparent;
 }
