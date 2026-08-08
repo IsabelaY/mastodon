@@ -1821,7 +1821,7 @@ button.icon-button.reblogPrivate:hover i.fa-retweet {
 
 .dropdown-menu__item a:focus, .dropdown-menu__item a:hover, .dropdown-menu__item a:active, .dropdown-menu__item button:focus, .dropdown-menu__item button:hover, .dropdown-menu__item button:active {
   background: #3a277d;
-  color: #58d9ba;
+  color: #30ddef;
 }
 
 .dropdown-menu__item {
@@ -2066,7 +2066,7 @@ a:focus {
   background-color: #3a277d;
 }
 
-.account__section-headline a:hover, .account__section-headline a:focus {
+.account__section-headline a:hover, .account__section-headline a:focus, .compose-form .spoiler-input__border {
   background-color: rgb(23, 9, 65);
 }
 
@@ -2567,7 +2567,7 @@ a.status-card:hover .status-card__title, a.status-card:hover .status-card__host,
 	color: #f8f8f8;
 }
 
-.status-card.bottomless {
+.status-card.bottomless, .account__header__account-note textarea {
 	border-radius: 0;
 }
 
@@ -2578,4 +2578,83 @@ button.table-action-link:hover, a.table-action-link:hover {
 .more-from-author {
 	border-radius: 0;
 	color: #f8f8f8;
+}
+
+// 08/08/26
+
+.column-search-header input {
+	border-radius: 0;
+	color: #f8f8f8;
+}
+
+.column-search-header input::placeholder {
+	color: #ccc;
+}
+
+.navigation-panel__list-panel__header__sep {
+	display: none;
+}
+
+.account__header__account-note {
+  border-bottom-color: #ccc;
+}
+
+.avatar-group--compact .account__avatar {
+	box-shadow: none;
+}
+
+.dropdown-menu__separator {
+  border-color: inherit;
+}
+
+.explore__search-header .search__popout {
+	border-color: transparent;
+}
+
+.search__popout {
+	background-color: #1d0b53;
+}
+
+@media screen and (max-width: 759px) {
+  .columns-area__panels__pane--navigational .columns-area__panels__pane__inner {
+	background-color: rgb(23, 9, 65);
+  }
+  .search__input {
+	background-color: #000;
+  }
+}
+
+.dialog-modal__content__description a {
+	color: #30ddef;
+}
+
+
+.dialog-modal, .safety-action-modal__top, .safety-action-modal__bottom {
+	border-radius: 0;
+	border-color: transparent;
+	background-color: #1d0b53;
+}
+
+.dialog-modal__header {
+	background-color: #3a277d;
+	border-color: transparent;
+}
+
+.visibility-dropdown__button, .hotkey-combination kbd {
+	border-radius: 0;
+	border-color: transparent;
+}
+
+.hover-card {
+	background-color: rgb(23, 9, 65);
+	border-radius: 0;
+	border-color: #58d9BA;
+}
+
+.hover-card__note-label {
+	color: #58d9BA;
+}
+
+.hover-card__note dd {
+	color: #dadada;
 }

@@ -78,7 +78,7 @@ body.about-body, body.tag-body, body.admin
 
 .regeneration-indicator__label strong
 {
-  color: #a72645
+  color: #a72645;
 }
 
 .admin-wrapper .sidebar ul ul, .admin-wrapper .sidebar ul ul a:focus, .log-entry__extras, .media-spoiler
@@ -112,7 +112,11 @@ body.about-body, body.tag-body, body.admin
         border-radius: 0px;
 }
 
-.status-card__content, .status-card__image, .status-card__content:hover, .status-card__image:hover, .table>tbody>tr:nth-child(odd)>td, .table>tbody>tr:nth-child(odd)>th
+.status-card__content {
+	background-color: rgb(197, 216, 130);
+}
+
+.status-card__image, .status-card__content:hover, .status-card__image:hover, .table>tbody>tr:nth-child(odd)>td, .table>tbody>tr:nth-child(odd)>th
 {
     background-color: transparent;
 }
@@ -2577,4 +2581,122 @@ kbd {
 
 .admin-wrapper .sidebar__toggle__icon {
 	border-radius: 0;
+}
+
+.progress-tracker .label {
+	color: #252525;
+}
+
+.progress-tracker .active .circle {
+  border-color: #a72645;
+}
+
+.progress-tracker .active .circle::before {
+  background-color: #a72645;
+}
+.app-form__toggle__toggle > div {
+  border-color: transparent;
+}
+
+.poll__footer .button.button-secondary, .ui__navigation-bar {
+	background-color: #c5d882;
+}
+
+body .warning-hint, .admin-wrapper .content .warning-hint {
+  color: #070707;
+}
+
+.warning-hint .text-btn, .status__content a.unhandled-link, .edit-indicator__content a.unhandled-link, .reply-indicator__content a.unhandled-link {
+	color: #cf2210;
+}
+
+.ui__navigation-bar__item.active {
+	color: #a72645;
+}
+
+a.status-card:hover .status-card__title, a.status-card:hover .status-card__host, a.status-card:hover .status-card__author, a.status-card:hover .status-card__description, a.status-card:focus .status-card__title, a.status-card:focus .status-card__host, a.status-card:focus .status-card__author, a.status-card:focus .status-card__description, a.status-card:active .status-card__title, a.status-card:active .status-card__host, a.status-card:active .status-card__author, a.status-card:active .status-card__description {
+	color: #070707;
+}
+
+.status-card.bottomless, .account__header__account-note textarea {
+	border-radius: 0;
+}
+
+button.table-action-link:hover, a.table-action-link:hover {
+  color: #070707;
+}
+
+.more-from-author {
+	border-radius: 0;
+	color: #070707;
+}
+
+
+.rules-list li::before {
+	background-color: #c5d882;
+}
+
+.onboarding__profile .app-form__avatar-input, .onboarding__profile .app-form__header-input {
+  border: 1px solid #cf2210;
+  border-radius: 0;
+  }
+  
+.app-form__avatar-input .icon, .app-form__header-input .icon, .more-from-author a:hover, .more-from-author a:focus, .more-from-author a:active {
+  color: #cf2210;
+}
+
+.app-form__avatar-input, .app-form__header-input {
+  background-color: #c5d882;
+}
+
+.app-form__avatar-input:hover, .app-form__header-input:hover, .app-form__avatar-input:focus, .app-form__header-input:focus {
+  background-color: #e8f6be;
+}
+
+
+.account__header__bio .account__header__fields dd {
+	color: #070707;
+}
+
+.account__header__bio .account__header__fields dt {
+	color: #a72645;
+}
+
+.column-search-header input {
+ background-color: #c5d882;
+ border-radius: 0;
+ border-color: transparent;
+}
+
+.navigation-panel__list-panel__header__sep {
+	display: none;
+}
+
+
+.avatar-group--compact .account__avatar {
+	box-shadow: none;
+}
+
+.dropdown-menu__separator {
+  border-color: inherit;
+}
+
+
+.hover-card {
+	background-color: #e8f6be;
+	border-radius: 0;
+	border-color: #a72645;
+	color: #000;
+}
+
+.hover-card__bio, .hover-card .account-fields {
+	color: inherit;
+}
+
+.hover-card__note-label {
+	color: #a72645;
+}
+
+.hover-card__note dd, .hover-card__numbers {
+	color: #252525;
 }

@@ -18,7 +18,7 @@ $ui-primary-color: $classic-primary-color;            // Lighter
 $ui-secondary-color: $classic-secondary-color;        // Lightest
 $ui-highlight-color: $classic-highlight-color;
 
-$red-600: #ff8080; 
+$red-600: #ff0000; 
 $red-500: #ff0000;
 $blurple-600: #0000ff; // Iris
 $blurple-500: #ff00ff; // Brand purple
@@ -104,7 +104,7 @@ $font-monospace: "monospace";
   background-attachment: fixed;
 }
 
-body, .link-button, .autosuggest-textarea__item, .compose-form__warning, .autosuggest-textarea__textarea, .spoiler-input__input, .copy-paste-text, .admin-wrapper .content h4 {
+body, .link-button, .autosuggest-textarea__item, .compose-form__warning, .autosuggest-textarea__textarea, .spoiler-input__input, .copy-paste-text, .admin-wrapper .content h4, .account__header__bio .account__header__fields dd, .account__header__bio .account__header__fields dt {
 	font-size: 14px;
 	font-family: "Modern DOS 14", monospace;
 }
@@ -126,7 +126,7 @@ body h1 {
 
 // stop using border-radius
 
-a:focus, .search__input, .simple_form .btn, .icon-button, .button, .privacy-dropdown.active.top .privacy-dropdown__value, .text-icon-button, .column-settings__hashtags .column-select__control, .flash-message, .simple_form input[type="text"], .simple_form input[type="number"], .simple_form input[type="email"], .simple_form input[type="password"], .simple_form input[type="url"], .simple_form input[type="datetime-local"], .simple_form textarea, .simple_form select, .admin-wrapper .sidebar ul a.selected, .admin-wrapper .sidebar ul, .account-role, .simple_form .recommended, .simple_form .not_recommended, #navigation-panel__publish i, .language-dropdown__dropdown__results__item, .language-dropdown__dropdown, .privacy-dropdown.active .privacy-dropdown__value, .privacy-dropdown__dropdown {
+.account__avatar img, a:focus, .search__input, .simple_form .btn, .icon-button, .button, .privacy-dropdown.active.top .privacy-dropdown__value, .text-icon-button, .column-settings__hashtags .column-select__control, .flash-message, .simple_form input[type="text"], .simple_form input[type="number"], .simple_form input[type="email"], .simple_form input[type="password"], .simple_form input[type="url"], .simple_form input[type="datetime-local"], .simple_form textarea, .simple_form select, .admin-wrapper .sidebar ul a.selected, .admin-wrapper .sidebar ul, .account-role, .simple_form .recommended, .simple_form .not_recommended, #navigation-panel__publish i, .language-dropdown__dropdown__results__item, .language-dropdown__dropdown, .privacy-dropdown.active .privacy-dropdown__value, .privacy-dropdown__dropdown {
   border-radius: 0;
 }
 
@@ -709,4 +709,19 @@ a.status-card:hover .status-card__title, a.status-card:hover .status-card__host,
 
 .navigation-panel hr, .compose-panel hr {
 	border-color: transparent;
+}
+
+.account__header__bio .account__header__fields {
+	background-color: #000;
+}
+
+.account__header__bio .account__header__fields dt {
+	color: #00ff00;
+}
+
+.icon-with-badge__badge {
+	border-radius: 0;
+	font-size: 14px;
+	background-color: #c0c0c0;
+	color: #000;
 }
