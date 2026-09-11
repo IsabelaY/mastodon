@@ -1089,7 +1089,7 @@ body.lighter {
 
 .button.button-secondary {
     color: #fff;
-    border: 1px solid #3a277d;
+    border: 1px solid #30ddef;
 }
 
 .poll__input, .compose-form__poll .poll__input {
@@ -2656,5 +2656,39 @@ button.table-action-link:hover, a.table-action-link:hover {
 }
 
 .hover-card__note dd {
+	color: #dadada;
+}
+
+// 17/08/2026
+
+.notification-group__main__additional-content {
+	color: #ccc;
+}
+
+
+.notification-group--follow .notification-group__icon, .notification-group--follow-request .notification-group__icon {
+  color: #3cfe57;
+}
+
+.status-card a:hover .status-card__title, .status-card a:hover .status-card__host, .status-card a:hover .status-card__author, .status-card a:hover .status-card__description, .status-card a:focus .status-card__title, .status-card a:focus .status-card__host, .status-card a:focus .status-card__author, .status-card a:focus .status-card__description, .status-card a:active .status-card__title, .status-card a:active .status-card__host, .status-card a:active .status-card__author, .status-card a:active .status-card__description {
+	color: #fff;
+}
+
+.search-results__section__header button {
+	color: #30ddef;
+}
+
+.search-results__section__header {
+	border-color: transparent;
+	background-color: #3a277d;
+}
+
+@media screen and (min-width: 1175px) {
+  .explore__search-results {
+    border-color: transparent;
+  }
+}
+
+.status__wrapper-direct .status__prepend, .status__wrapper-direct .notification-ungrouped__header, .notification-ungrouped--direct .status__prepend, .notification-ungrouped--direct .notification-ungrouped__header {
 	color: #dadada;
 }
