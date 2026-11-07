@@ -1299,3 +1299,7 @@ a.status-card:hover, a.status-card:focus {
 .status__content__read-more-button, .status__content__translate-button {
     color: #40177D;
 }
+
+.batch-table__row--muted, .batch-table__row--muted .pending-account__header, .batch-table__row--muted .pending-account__header a, .batch-table__row--muted .pending-account__header strong, .batch-table__row--muted .accounts-table, .batch-table__row--muted .accounts-table a, .batch-table__row--muted .accounts-table strong, .batch-table__row--muted .name-tag, .batch-table__row--muted .name-tag a, .batch-table__row--muted .name-tag strong {
+	color: #222c;
+}
