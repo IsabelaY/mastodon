@@ -2071,7 +2071,7 @@ a:focus {
 }
 
 .account__header__extra__links a, .compose-form__poll__select__label, .notification-group__main__header__label, .notification-group__main__header__label time {
-    color: #ccc;
+    color: #ddd;
 }
 
 .account__header__tabs__name h1 small {
@@ -2691,4 +2691,41 @@ button.table-action-link:hover, a.table-action-link:hover {
 
 .status__wrapper-direct .status__prepend, .status__wrapper-direct .notification-ungrouped__header, .notification-ungrouped--direct .status__prepend, .notification-ungrouped--direct .notification-ungrouped__header {
 	color: #dadada;
+}
+
+// 11/09/2026
+
+.batch-table__select-all {
+	color: #f8f8f8;
+}
+
+.batch-table__select-all button {
+	color: #30ddef;
+}
+
+.batch-table__select-all button:hover, .batch-table__select-all button:focus, .batch-table__select-all button:active {
+  background: #3a277d;
+  border-radius: 0;
+}
+
+.column-header__select-row {
+  background-color: rgb(23, 9, 65);
+  border-color: transparent;
+}
+
+.column-header__select-row__mode-button {
+  color: #30ddef;
+  border: 1px solid transparent;
+  padding: 4px;
+}
+
+.column-header__select-row__mode-button:focus, .column-header__select-row__mode-button:hover, .column-header__select-row__mode-button:active {
+  border-color: #fff;
+  color: #fff;
+}
+
+.filtered-notifications-banner {
+	background: #3a277d;
+	border-color: transparent;
+	color: #fff;
 }
